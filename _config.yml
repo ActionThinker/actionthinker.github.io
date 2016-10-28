@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: 知行合一
+title: 知行合一 | 陈露的网络日志
 
 # Short description of your site
 description: 一个纯粹记录个人学习、思考和想法的地方。
@@ -42,7 +42,7 @@ avatar: "/img/avatar-icon.png"
 author:
   name: ActionThinker
   email: "chenluaihr@gmail.com"
-  facebook: yourname  # eg. daattali
+  facebook: chenluaihr  # eg. daattali
   github: ActionThinker    # eg. daattali
   twitter: ActionThinker   # eg. daattali
   google-plus: +ActionThinker   # eg. +DeanAttali or 109424658772469020925
@@ -79,7 +79,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "ActionThinker.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "ActionThinker.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
