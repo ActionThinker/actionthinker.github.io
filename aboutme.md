@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 关于我
+title: about me
 subtitle: 我的个人情况简述
 ---
 
