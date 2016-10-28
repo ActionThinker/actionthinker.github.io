@@ -25,7 +25,7 @@ description: 一个纯粹记录个人学习、思考和想法的地方。
 navbar-links:
   首页: "http://actionthinker.github.io"
   关于我: "aboutme"
-  我的项目: ""
+  我的项目: "#./projects.md"
   资源列表:
     - 数字营销: "http://hicape.com"
     - 青年发展: "http://hicape.com"
