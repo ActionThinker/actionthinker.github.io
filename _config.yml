@@ -23,7 +23,7 @@ description: 一个纯粹记录个人学习、思考和想法的地方。
 
 # List of links in the navigation bar
 navbar-links:
-  关于我: "about me"
+  About me: "about me"
   资源列表:
     - 数字营销: "http://hicape.com"
     - 青年发展: "http://hicape.com"
