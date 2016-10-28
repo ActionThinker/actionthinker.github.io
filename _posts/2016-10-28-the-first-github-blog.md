@@ -1,8 +1,10 @@
 ---
 layout: post
-title:《知行合一》发刊词
+title: 《知行合一》发刊词
 subtitle: 坚持做一个行动中的思考者，By ActionThinker
+bigimg: /img/path.jpg
 ---
+
 
 >我想最佳的时机就是当下，而当下最佳的时机就是开始行动起来的这个时刻。
 
