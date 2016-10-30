@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 《知行合一》发刊词
-subtitle: 坚持做一个行动中的思考者
 bigimg: /img/path.jpg
 tags: [发刊词, 独立博客]
 ---
