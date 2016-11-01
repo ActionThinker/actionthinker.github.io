@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Recommend Blogger
+title: Recommend
 subtitle: 打破地域和领域限制，向智者学习
 ---
 
