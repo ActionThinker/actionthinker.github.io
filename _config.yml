@@ -23,7 +23,7 @@ description: 一个纯粹记录个人学习、思考和想法的地方。
 
 # List of links in the navigation bar
 navbar-links:
-  首页: "http://actionthinker.github.io"
+  博客: "http://actionthinker.github.io"
   关于我: "aboutme"
   我的项目: "projects"
   资源列表:
@@ -48,7 +48,7 @@ author:
   github: ActionThinker    # eg. daattali
   twitter: ActionThinker   # eg. daattali
   google-plus: +ActionThinker   # eg. +DeanAttali or 109424658772469020925
-  linkedin: yourname  # eg. daattali
+  linkedin: chenluaihr  # eg. daattali
   xing: yourname      # eg. daattali
   stackoverflow: yourlink  # eg. "3943160/daattali"
   snapchat: yourname  # eg. daattali
@@ -81,14 +81,14 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "ActionThinker.github.io"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "ActionThinker.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
 #disqus: ""
 
 # Fill in your Google Analytics ID to track your website using GA
-#google_analytics: ""
+#google_analytics: "UA-86660227-1"
 
 # Facebook App ID
 # fb_app_id: ""
