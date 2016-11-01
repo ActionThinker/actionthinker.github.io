@@ -26,12 +26,13 @@ navbar-links:
   博客: "http://actionthinker.github.io"
   关于我: "aboutme"
   我的项目: "projects"
-  资源列表:
-    - 数字营销: "http://hicape.com"
-    - 青年发展: "http://hicape.com"
-    - 推荐博主: "http://hicape.com"
-    - 创业导航: "http://www.quqiaoqiao.com/"
   我的在行: "http://www.zaih.com/mentor/84789490/"
+  资源列表:
+    - 数字营销: "digital"
+    - 青年发展: "youthdevelpment"
+    - 推荐博主: "recommend"
+    - 创业导航: "http://www.quqiaoqiao.com/"
+  
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
