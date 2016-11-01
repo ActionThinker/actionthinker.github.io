@@ -1,7 +1,7 @@
 
 ---
 layout: page
-title: 青年导航
+title: Youth Development Guide
 subtitle: 没有什么可以限制青年面向未来的发展渴望
 ---
 

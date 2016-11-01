@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 推荐博主
-subtitle: 向智者学习，向大师学习
+title: Recommend Blogger
+subtitle: 打破地域和领域限制，向智者学习
 ---
 
 **排名不分先后**

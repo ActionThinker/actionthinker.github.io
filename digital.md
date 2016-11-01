@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 数字营销
+title: Digital Marketing
 subtitle: 给数字营销从业者的一份参考
 ---
 
