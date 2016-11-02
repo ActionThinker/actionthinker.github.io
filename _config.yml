@@ -2,7 +2,7 @@
 
 # url is the full website URL
 # baseurl is the website's URL without the hostname
-<meta name="baidu-site-verification" content="LBbqWP9C5b" />
+
 # If you are building a simple GitHub user page (http://actionthinker.github.io) then use these settings:
 url: "http://actionthinker.github.io"
 baseurl: ""
@@ -12,6 +12,8 @@ baseurl: ""
 #baseurl: "/projectname"
 
 # Of course don't forget to change the username and projectname to YOUR username and project
+
+<meta name="baidu-site-verification" content="LBbqWP9C5b" />
 
 # Name of website
 title: 知行合一 | 陈露的网络日志
