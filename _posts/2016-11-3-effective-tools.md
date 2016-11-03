@@ -37,15 +37,15 @@ tags:[工具，效率]
 * 鱼摆摆：翻墙软件
 
 ### Chorme浏览器插件
-* Momentum：每日一副美图，开启一天好心情
-* 印象笔记·剪藏：同步到云端
-* Save to Pocket：网页收藏，稍后阅读
-* 二维码生成器：网页生成二维码
+* [Momentum](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca)：每日一副美图，开启一天好心情
+* [印象笔记·剪藏](https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc)：同步到云端
+* [Save to Pocket](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj)：网页收藏，稍后阅读
+* [二维码生成器](https://chrome.google.com/webstore/detail/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8/ajaomcmkalmeeahjfdklkcjbljhbokjl)：网页生成二维码
 * 短连接生成器：生成短连接
 * 网页截图·注释批注：全屏/选择截屏+批注保存图片
 
 
-### 软件类（iPhone）
+### 软件类（iPhone app）
 ***阅读类：***
 1. 多看阅读：电子书
 2. 豆瓣阅读：
