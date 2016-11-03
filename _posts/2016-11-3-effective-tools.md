@@ -1,9 +1,8 @@
 ---
 layout: post
 title: 工欲善其事，必先利其器
-tags:[工具，效率]
+tags: [工具，效率]
 ---
-
 
 >用了好的工具，才容易做到事半功倍
 
@@ -22,6 +21,8 @@ tags:[工具，效率]
 * 坚果投影仪：非常棒的家庭影院（与爱奇艺会员内容同步）
 * 极路由：智能路由器
  
+ ---
+ 
 ### 软件类（Mac端）
 * Omnifocus：时间管理
 * Evernote：笔记整理与写作
@@ -37,6 +38,8 @@ tags:[工具，效率]
 * Chorme：浏览器
 * 鱼摆摆：翻墙软件
 
+---
+
 ### Chorme浏览器插件
 * [Momentum](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca)：每日一副美图，开启一天好心情
 * [印象笔记·剪藏](https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc)：同步到云端
@@ -45,8 +48,10 @@ tags:[工具，效率]
 * 短连接生成器：生成短连接
 * 网页截图·注释批注：全屏/选择截屏+批注保存图片
 
+---
 
 ### 软件类（iPhone app）
+
 #### 阅读类
 * 多看阅读：电子书
 * 豆瓣阅读：
@@ -117,5 +122,4 @@ tags:[工具，效率]
 当然，围绕工具软硬件层面的分享，我还发现有一个叫做[利器](www.liqi.io)的网站，他们采访优秀的创造者，邀请他们来分享工作时所使用的工具，以及使用工具的方式和原则。
 
 我也借此机会推荐给大家，希望大家早日发现适合自己的好利器，实现事半功倍的效果。
-
 
