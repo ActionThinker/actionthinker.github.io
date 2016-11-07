@@ -8,15 +8,15 @@ subtitle: 欢迎加入CC社群，迈入自由文化新世界
 
 我比较早接触到OliverDing关于数字版权协议的详细介绍，我也成为“创作共用Creative Commons”的支持者，于是我决定把他的博客版权声明内容贴过来（部分内容有删减），作为接力，共同普及这个让所有人受益的版权协议。
 
-原文阅读这里：http://swordi.com/cc/
+原文阅读这里：[http://swordi.com/cc/](http://swordi.com/cc/)
 
 ---
 
 这个版权声明目的在于向你介绍：
 
-— “创作共用”的基本常识；
-— 本blog所选用的创作共用协议类型；
-— 以及根据此类型的协议，你可以如何合理地使用本blog的内容。
+* “创作共用”的基本常识；
+* 本blog所选用的创作共用协议类型；
+* 以及根据此类型的协议，你可以如何合理地使用本blog的内容。
 
 ### 1、了解创作共用
 
@@ -36,9 +36,9 @@ subtitle: 欢迎加入CC社群，迈入自由文化新世界
 
 本Blog所选用的创作共用协议类型为“署名-非商业性使用-相同方式共享 3.0”，你可以通过以下链接看此协议的相关文本：
 
-– 中文简要文本：http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh
-– 英文简要文本：http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US
-– 英文法律文本：http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode
+* 中文简要文本：http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh
+* 英文简要文本：http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US
+* 英文法律文本：http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode
 
 
 **该协议简要内容为：**
@@ -80,7 +80,7 @@ b、如上述前提，你可以自由：
 
 当你在使用这些标记有“[署名(允许商业使用)](https://creativecommons.org/licenses/by/2.5/cn/deed.zh)”协议的内容时，请不要忘记感谢原作者、CC协议机构，以及整个CC协议社群。滴水之恩，当涌泉相报。当你的创业计划取得一定阶段的里程碑进展时，请不要忘记以任何的形式回馈CC社群。
 
-请记住这个CC资源的搜索网址：http://search.creativecommons.org/
+请记住这个CC资源的搜索网址：[http://search.creativecommons.org/](http://search.creativecommons.org/)
 
 4、创造性演绎
 
