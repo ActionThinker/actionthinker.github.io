@@ -86,6 +86,12 @@ tags: [博客，网络写作]
 
 * [36氪：为什么创业者需要写博客](https://36kr.com/p/19279.html)
 
+* [Why Blog? Should I Start a Blog? 34 Reasons You Should](http://howtostartablogonline.net/why-blog/)
+
+* [9 Reasons Why A Blog is Important for Your Career and Life](http://www.jeffbullas.com/2015/10/31/9-reasons-why-a-blog-is-important-career-life/)
+
+* [Why Blog? The Benefits of Blogging for Business and Marketing](http://blog.hubspot.com/marketing/the-benefits-of-business-blogging-ht#sm.0001ixasx710hucs4rtrv156epi60)
+
 
 看到自己大学时几乎保持每周三篇文章的更新频率，现在看来都非常惊讶，说来惭愧，这两年因为创业或者工作的原因，给自己写作的停滞找了很多理由，没时间、没精力似乎是永远的借口！
 
