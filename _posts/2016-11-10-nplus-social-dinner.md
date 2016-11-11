@@ -1,7 +1,8 @@
-
+---
 layout：post
 title：约领导共进午餐是职场新鲜人必修课
 tags：[企业文化，员工对话，Social Dinner]
+---
 
 > 约饭，是一门艺术。
 
@@ -64,6 +65,7 @@ tags：[企业文化，员工对话，Social Dinner]
 曾经朋友给我推荐过一个她在国外参加的开放品牌聚餐活动，名叫[Social Media Breakfast](http://www.socialmediabreakfast.com/)，目标用户聚焦社交媒体相关从业者，目前已经扩散到40多个城市，大家通过一起吃早餐的方式，交流社交媒体领域的案例、创新、趋势发展等，促进彼此的行业信息交流和潜在的商业合作，他们是行业人士一起吃早饭，我们就先从三地公司跨部门开始吃中午饭吧！**以一种相对有仪式感的方式完成一顿有意义的午餐对话**。
 
 **关于Social Media Breakfast**
+
 >**The Social Media Breakfast** was founded by Bryan Person in August 2007 as an event where social media experts and newbies alike come together to eat, meet, share, and learn. Marketers, PR pros, entrepreneurs, bloggers, podcasters, new-media fanatics, and online social networkers are all welcome to attend.
 
 >**The vision**：Social Media Breakfasts bring together people who are interested in teaching, sharing, and learning about trends, case studies, and best practices in social media. This educational focus is critical for moving the social media industry forward.
