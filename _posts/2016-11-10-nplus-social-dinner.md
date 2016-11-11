@@ -1,7 +1,7 @@
 ---
-layout：post
-title：约领导共进午餐是职场新鲜人必修课
-tags：[企业文化，员工对话，Social Dinner]
+layout: post
+title: 约领导共进午餐是职场新鲜人必修课
+tags: [企业文化，员工对话，NPLUS Social Dinner]
 ---
 
 > 约饭，是一门艺术。
@@ -90,8 +90,5 @@ tags：[企业文化，员工对话，Social Dinner]
 
 
 ***后续我也会跟进活动测试效果和大家分享，更多方案思路，我还希望听到大家的声音和建议。***
-
-
-
 
 
