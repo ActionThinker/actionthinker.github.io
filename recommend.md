@@ -11,9 +11,11 @@ subtitle: 打破地域和领域限制，向智者学习
 * [阮一峰](http://www.ruanyifeng.com/blog/) 
 * [王健硕](http://home.wangjianshuo.com/cn/)
 * [小石](http://www.simple-education.org/xiaoshi) 
-* TonyYet 
-* 安猪 
-* 魏武辉
+* [TonyYet](http://www.tonyyet.com/) 
+* [安猪](http://anzhu.net/) 
+* [魏武辉](http://weiwuhui.com/)
+
+陆续添加和更新
 
 
 
