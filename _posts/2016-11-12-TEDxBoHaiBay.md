@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TEDx渤海湾2016大会，一场打破边界的认知旅程
+title: TEDx渤海湾 2016年度大会，一场打破边界的认知旅程
 tags: [TEDxBoHaiBay,边界]
 ---
 
