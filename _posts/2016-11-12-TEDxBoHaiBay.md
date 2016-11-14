@@ -15,7 +15,6 @@ tags: [TEDxBoHaiBay,边界]
 会后，我才知道，原来他们[<24小时，从“零”开始打造一场TEDx渤海湾大会!>](http://mp.weixin.qq.com/s?__biz=MjM5NTQ2OTE2Mg==&mid=2459396758&idx=1&sn=0ae5098fabfae14a95bec22d2aa3233e&chksm=b19bc89386ec4185d900ce4a00aa88bef11de47359ed491a37053d7dfb4b3a7ac73096de649e&mpshare=1&scene=23&srcid=1114tInK8djD1tZ86UPC7z17#rd)
 
 ## 关于大会主题： “边界”
-/Users/apple/Documents/actionthinker.github.io/img/tickets.jpg
 
 在这个世界上，万事万物都有其边界，也在联系中相互影响与融合。
 
