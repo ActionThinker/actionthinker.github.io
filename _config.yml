@@ -43,13 +43,24 @@ avatar: "/img/avatar-icon.png"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
+<<<<<<< HEAD
   name: ActionThinker
   email: "chenluaihr@gmail.com"
   facebook: chenluaihr  # eg. daattali
   github: ActionThinker    # eg. daattali
-  twitter: ActionThinker   # eg. daattali
+  twitter: Action_Thinker   # eg. daattali
   google-plus: +ActionThinker   # eg. +DeanAttali or 109424658772469020925
   linkedin: chenluaihr  # eg. daattali
+=======
+  name: Some Person
+  email: "youremail@domain.com"
+  facebook: yourname  # eg. daattali
+  github: yourname    # eg. daattali
+  twitter: yourname   # eg. daattali
+  reddit: yourname    # eg. daattali
+  google-plus: +yourname   # eg. +DeanAttali or 109424658772469020925
+  linkedin: yourname  # eg. daattali
+>>>>>>> daattali/master
   xing: yourname      # eg. daattali
   stackoverflow: yourlink  # eg. "3943160/daattali"
   snapchat: yourname  # eg. daattali
@@ -65,7 +76,12 @@ footer-links-active:
   twitter: true
   google-plus: false
   github: true
+<<<<<<< HEAD
   linkedin: true
+=======
+  reddit: false
+  linkedin: false
+>>>>>>> daattali/master
   xing: false
   stackoverflow: false
   snapchat: false
@@ -86,7 +102,7 @@ url-pretty: "ActionThinker.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-#disqus: ""
+#disqus: "http-actionthinker-com"
 
 # Fill in your Google Analytics ID to track your website using GA
 #google_analytics: "UA-86660227-1"
@@ -105,7 +121,7 @@ timezone: "China/Beijing"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 5
+paginate: 6
 
 kramdown:
   input: GFM
