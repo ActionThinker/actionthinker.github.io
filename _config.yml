@@ -3,8 +3,8 @@
 # url is the full website URL
 # baseurl is the website's URL without the hostname
 
-# If you are building a simple GitHub user page (http://actionthinker.github.io) then use these settings:
-url: "http://actionthinker.github.io"
+# If you are building a simple GitHub user page (http://username.github.io) then use these settings:
+url: "http://ActionThinker.github.io"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -17,7 +17,7 @@ baseurl: ""
 title: 知行合一 | 陈露的网络日志
 
 # Short description of your site
-description: 一个纯粹记录个人学习、思考和想法的地方。
+description: A virtual proof that name is awesome!
 
 # --- Navigation bar options --- #
 
@@ -32,7 +32,6 @@ navbar-links:
     - 青年发展: "youthdevelpment"
     - 推荐博主: "recommend"
   版权声明: "copyright"
-  
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -43,7 +42,6 @@ avatar: "/img/avatar-icon.png"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-<<<<<<< HEAD
   name: ActionThinker
   email: "chenluaihr@gmail.com"
   facebook: chenluaihr  # eg. daattali
@@ -51,7 +49,6 @@ author:
   twitter: Action_Thinker   # eg. daattali
   google-plus: +ActionThinker   # eg. +DeanAttali or 109424658772469020925
   linkedin: chenluaihr  # eg. daattali
->>>>>>> daattali/master
   xing: yourname      # eg. daattali
   stackoverflow: yourlink  # eg. "3943160/daattali"
   snapchat: yourname  # eg. daattali
@@ -67,16 +64,12 @@ footer-links-active:
   twitter: true
   google-plus: false
   github: true
-<<<<<<< HEAD
-  linkedin: true
-=======
   reddit: false
-  linkedin: false
->>>>>>> daattali/master
+  linkedin: true
   xing: false
   stackoverflow: false
   snapchat: false
-  instagram: false
+  instagram: true
   youtube: false
   spotify: false
 
