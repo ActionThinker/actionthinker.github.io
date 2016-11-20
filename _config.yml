@@ -50,16 +50,6 @@ author:
   twitter: Action_Thinker   # eg. daattali
   google-plus: +ActionThinker   # eg. +DeanAttali or 109424658772469020925
   linkedin: chenluaihr  # eg. daattali
-=======
-  name: Some Person
-  email: "youremail@domain.com"
-  facebook: yourname  # eg. daattali
-  github: yourname    # eg. daattali
-  twitter: yourname   # eg. daattali
-  reddit: yourname    # eg. daattali
-  google-plus: +yourname   # eg. +DeanAttali or 109424658772469020925
-  linkedin: yourname  # eg. daattali
->>>>>>> daattali/master
   xing: yourname      # eg. daattali
   stackoverflow: yourlink  # eg. "3943160/daattali"
   snapchat: yourname  # eg. daattali
@@ -76,11 +66,7 @@ footer-links-active:
   google-plus: false
   github: true
   reddit: false
-<<<<<<< HEAD
   linkedin: true
-=======
-  linkedin: false
->>>>>>> daattali/master
   xing: false
   stackoverflow: false
   snapchat: false
