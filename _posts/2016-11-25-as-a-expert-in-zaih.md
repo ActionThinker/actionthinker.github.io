@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 如果你想开启一份新事业，不访先去在行开个话题
+title: 如果你想开启一份新事业，不妨先去在行开个话题
 tags: [在行，知识付费]
 ---
 
@@ -50,7 +50,7 @@ tags: [在行，知识付费]
 
 **如果你想开启一份新事业，不妨先去在行开个话题。**
 
-`关注我的在行主页：http://www.zaih.com/mentor/84789490/`
+关注我的在行主页：[http://www.zaih.com/mentor/84789490/](http://www.zaih.com/mentor/84789490/)
 
 
 文/ActionThinker
