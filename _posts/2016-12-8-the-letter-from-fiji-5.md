@@ -7,7 +7,7 @@ tags: [旅行，斐济]
 >生命本身就是一场旅行。
 
 
-## 第四封来自斐济的信
+## 第五封来自斐济的信
 
 露，
 
@@ -40,7 +40,7 @@ Good night,I Love You.
 
 -------
 
-## 我给笑芸的第三封回信
+## 我给笑芸的第四封回信
 
 雨，
 
@@ -53,43 +53,42 @@ Good night,I Love You.
 对于旅行的体验和感受，曾经看见过一只LV的广告，我把它分享给你，开启你下一段营地体验和旅程。
 
 >What is a journey?
-何为旅行?
-
+>何为旅行?
+　　
 >A journey is not a trip.
-旅行不是一次出行，
+>旅行不是一次出行，
 
 >It's not a vacation.
-也不只是一个假期。
+>也不只是一个假期。
 
 >It's a process. A discovery.
-旅行是一个过程，一次发现。
+>旅行是一个过程，一次发现。
 
 >It's a process of self-discovery.
-是一个自我发现的过程。
+>是一个自我发现的过程。
 
 >A journey brings us face to face with ourselves.
-真正的旅行让我们直面自我。
+>真正的旅行让我们直面自我。
 
 >A journey shows us not only the world,
-旅行不仅让我们看到世界，
+>旅行不仅让我们看到世界，
 
 >but how we fit in it.
-更让我们看到自己在其中的位置。
+>更让我们看到自己在其中的位置。
 
 >Does the person create the journey,
-究竟，是我们创造了旅行，
+>究竟，是我们创造了旅行，
 
 >or does the journey creat the person?
-还是旅行造就了我们？　
+>还是旅行造就了我们？　
 
 >The journey is life itself.
-生命本身就是一场旅行。
+>生命本身就是一场旅行。
 
 >Where will life take you?
-生命将引领你去向何方？
+>生命将引领你去向何方？
 
 
 爱你的露
-
 2016.3.25
 
