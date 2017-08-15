@@ -28,5 +28,4 @@ subtitle: Learning by doing是最好的学习方式
 
 - Airbnb房东：经营民宿、自由导游
 - 在行行家：个人专业技能和经验分享
-- Digital Nomad：边通过个人技能赚取收益（设计、编程、写作等）、然后边在世界各地旅行
 
