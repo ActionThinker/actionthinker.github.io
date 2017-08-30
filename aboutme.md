@@ -57,21 +57,20 @@ subtitle: 嗨,欢迎你来了解我！
 
 ### 相关媒体报道
 
-- South Morining Post[《Chen Lu founded online community to help students go abroad》](www.scmp.com/news/china/article/1151911/chen-lu-founded-online-community-help-students-go-abroad)
+- South Morining Post[《Chen Lu founded online community to help students go abroad》](http://www.scmp.com/news/china/article/1151911/chen-lu-founded-online-community-help-students-go-abroad)
 
-- Beijing Today[《Young global network helps students broaden horizons》](beijingtoday.com.cn/2012/11/young-global-network-helps-students-broaden-horizons/)
+- Beijing Today[《Young global network helps students broaden horizons》](http://www.beijingtoday.com.cn/2012/11/young-global-network-helps-students-broaden-horizons/)
 
-- YeeMedia[《陈露：新媒体让屌丝逆袭》](mp.weixin.qq.com/s?__biz=MjM5NTAwODEwMA==&mid=203862141&idx=2&sn=f478a68ee8bdf805cf7587c65d06c91e&3rd=MzA3MDU4NTYzMw==&scene=6#rd)
-
+- YeeMedia [《陈露：新媒体让屌丝逆袭》](https://mp.weixin.qq.com/s?__biz=MjM5NTAwODEwMA==&mid=203862141&idx=2&sn=f478a68ee8bdf805cf7587c65d06c91e&3rd=MzA3MDU4NTYzMw==&scene=6#rd)
  ---
  
 ### 相关演讲视频
 
-- [UCCA 《自组织论坛》 29分钟开始](v.youku.com/v_show/id_XNTM4OTQ1MzYw.html?from=s1.8-1-1.2)
+- [UCCA 《自组织论坛》 29分钟开始](http://v.youku.com/v_show/id_XNTM4OTQ1MzYw.html?from=s1.8-1-1.2)
 
-- [TEDxNanjing 《分享传递价值，行动创造未来》](v.youku.com/v_show/id_XNjQwNjE4MTAw.html)
+- [TEDxNanjing 《分享传递价值，行动创造未来》](http://v.youku.com/v_show/id_XNjQwNjE4MTAw.html)
 
-- [TEDxNingbo 《让“青年发展”成为社会议题》](v.qq.com/boke/page/r/0/h/r0146isdzkh.html)
+- [TEDxNingbo 《让“青年发展”成为社会议题》](https://v.qq.com/x/page/r0146isdzkh.html)
 
 ---
 
