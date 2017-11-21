@@ -77,6 +77,6 @@ subtitle: 嗨,欢迎你来了解我！
 ### 想要联系我
 
 可以给我发邮件：chenluaihr#gmail.com
-新浪微博上给我留言：@ActionThinker
+关注微信公众号：ActionThinker
 
 
