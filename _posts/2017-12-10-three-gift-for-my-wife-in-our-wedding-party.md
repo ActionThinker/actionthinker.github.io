@@ -56,13 +56,13 @@ You Are The Love Of My Life.
 ![](https://ws4.sinaimg.cn/large/006tKfTcgy1fmwl3scq8qj31kw11snph.jpg)
 *唱完歌后，跪地求婚*
 
-### 2 情书记录《Love》
+### 2 情书记录《Our love story》
 
 
 >在婚礼之前，我给爱妻写了一封手写的情书，希望在这样一个重要的时刻，在亲朋的见证下亲自念给心爱的妻子听，也把这份爱情和幸福分享给了所有到场的嘉宾。
 
 ![](https://ws4.sinaimg.cn/large/006tKfTcgy1fmwl3mhh1lj31kw11zhe4.jpg)
-*婚礼现场读信*
+*现场读信*
 
 ----
 
@@ -89,6 +89,7 @@ You Are The Love Of My Life.
 2017年8月8日，我们在苏州领取了结婚证，这一天我们在一起刚好919天，我愿：“执子之手，与子偕老”。
 
 ![](https://ws4.sinaimg.cn/large/006tKfTcgy1fmwlejlhznj31kw11ze8h.jpg)
+*互戴婚戒*
 
 这一路，我们像做项目管理一样经营爱情，互相扶持，共同成长；
 而未来，我希望我们可以像LIFE杂志座右铭那般：“开拓视野，看见世界，贴近彼此，感受生活，这就是生活的目的”。
@@ -98,6 +99,7 @@ You Are The Love Of My Life.
 而我们认定彼此就是那个人。
 
 ![](https://ws1.sinaimg.cn/large/006tKfTcgy1fmwlbpchp9j31kw11z7wu.jpg)
+*现场拥吻*
 
 今天是2017年12月10日，我们已经在一起1043天了，这是我人生中最重要的一天。
 
@@ -114,7 +116,7 @@ You Are The Love Of My Life.
 我为新娘精选的一本集合了三十五首古今中外情诗的合集《One life One love》，而且还亲自用钢笔进行了书写，在今天这个特别的日子作为礼物送给她。
 
 ![](https://ws1.sinaimg.cn/large/006tKfTcgy1fmwl24tkv7j31kw11zu17.jpg)
-*展示手写情诗*
+*展示手抄情诗*
 
 >百页千行，一字一句。
 从每天一笔一划的抄写中，感受幸福的点点渗透。
@@ -122,7 +124,8 @@ You Are The Love Of My Life.
 
 我写的很慢但写的很用心，前面的一半我已经书写完成，我希望接下来的幸福，由我和新娘一起书写...
 
-2017／12/10于襄阳
+
+2017/12/10于襄阳
 
 
 文/ActionThinker
