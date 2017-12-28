@@ -12,46 +12,46 @@ tags: [婚礼惊喜，襄阳，Wedding Party]
 
 >这是我第一次在公众面前唱歌，也是最动情的一次。
 
-You Are The Love Of My Life
-I knew it right from the start
-The moment I looked at you
-You found the place in my heart
-You Are The Love Of My Life
-You give me reason to live
-You taught me how to be strong
-With you is where I belong
-No one's ever touched me
-Quite the way you touched me
-People search a life time
-To find what we have
-You Are The Love Of My Life
-One thing that's good in this life
-I'll spend the rest of my days
-Just loving you......
+> You Are The Love Of My Life
+> I knew it right from the start
+> The moment I looked at you
+> You found the place in my heart
+> You Are The Love Of My Life
+> You give me reason to live
+> You taught me how to be strong
+> With you is where I belong
+> No one's ever touched me
+> Quite the way you touched me
+> People search a life time
+> To find what we have
+> You Are The Love Of My Life
+> One thing that's good in this life
+> I'll spend the rest of my days
+> Just loving you......
 
-You Are The Love Of My Life
-The heart and soul of my life
-Once I was lost and alone
-With you at last I am home
-You give me so much of you
-And leave me room to be free
-No one's ever touched me
-Quite the way you touched me
-People search a life time
-To find what we have
-You Are The Love Of My Life
-One thing that's good in this life
-And in the world full of change
-One thing I'm sure of
-You Are The Love Of My Life
-one thing that makes sense in this life
-I'll spend the rest of my days
-Just loving you...
+> You Are The Love Of My Life
+> The heart and soul of my life
+> Once I was lost and alone
+> With you at last I am home
+> You give me so much of you
+> And leave me room to be free
+> No one's ever touched me
+> Quite the way you touched me
+> People search a life time
+> To find what we have
+> You Are The Love Of My Life
+> One thing that's good in this life
+> And in the world full of change
+> One thing I'm sure of
+> You Are The Love Of My Life
+> one thing that makes sense in this life
+> I'll spend the rest of my days
+> Just loving you...
 
-You Are The Love Of My Life
-And I thank GOD I'm alive
-To spend my lifetime with you
-You Are The Love Of My Life.
+> You Are The Love Of My Life
+> And I thank GOD I'm alive
+> To spend my lifetime with you
+> You Are The Love Of My Life.
 
 ![](https://ws4.sinaimg.cn/large/006tKfTcgy1fmwl3scq8qj31kw11snph.jpg)
 *唱完歌后，跪地求婚*
