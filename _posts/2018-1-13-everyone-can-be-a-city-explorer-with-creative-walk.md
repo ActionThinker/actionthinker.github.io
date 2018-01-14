@@ -45,23 +45,48 @@ IDEO的Tom Kelley说，我们要Think like a traveler，像一个旅行者一样
 
 也以此为开端，设定了2018年的一个小目标：每月至少一次的创意行走及摄影实践。
 
-小试牛刀，分享第一次行走的摄影作品：
+#### 走进钱学森图书馆
 ![](https://ws2.sinaimg.cn/large/006tNc79ly1fng9ckshz0j31kw2d6nph.jpg)
 *钱学森图书馆*
+
+![](https://ws4.sinaimg.cn/large/006tNc79ly1fngb7sjvdqj31kw23vnpd.jpg)
+*生命不息，奋进不止*
 
 ![](https://ws3.sinaimg.cn/large/006tNc79ly1fng9cqy7mmj31kw0cte84.jpg)
 *琢磨钱学森的系统知识架构体系*
 
+![](https://ws2.sinaimg.cn/large/006tNc79ly1fngb7w9rw6j31kw16o7wi.jpg)
+*综合集成法·知识管理*
+
+![](https://ws1.sinaimg.cn/large/006tNc79ly1fngb7x77pej31kw23vhdt.jpg)
+*综合集成法·群体决策*
+
+在钱学森博物馆参观过程，让我最为印象深刻的是他的终生学习追求以及系统性思维和方法，没想到自己一直实践学习的知识管理议题，其实人家早就有了非常深入的系统实践经验和理论成果，也是中国现代科学体系的建设者和推动者。
+
+![](https://ws3.sinaimg.cn/large/006tNc79ly1fngbzl8xi9j311u0myx4v.jpg)
+*阅读·博览群书*
+
+![](https://ws3.sinaimg.cn/large/006tNc79ly1fngbzmi9wwj311y0kch9j.jpg)
+*交流·跨界对话*
+
+![](https://ws2.sinaimg.cn/large/006tNc79ly1fngbzm0cw5j311u0ge4k9.jpg)
+*分享·著作等身*
+
+>我一直倡导并践行的系统学习四步法：**阅读>交流>实践>分享**，没想到在钱老的成功经验中得到了正向的印证。
+
+#### 漫步上海交通大学
+![](https://ws2.sinaimg.cn/large/006tNc79ly1fng9d5k1hyj31kw120b2e.jpg)
+*校园的美好*
+
 ![](https://ws1.sinaimg.cn/large/006tNc79ly1fng9curp57j31kw120u12.jpg)
 *图书馆·厚重*
+
 ![](https://ws3.sinaimg.cn/large/006tNc79ly1fng9dcsm5gj31kw120npj.jpg)
 *教学楼·严谨*
 
 ![](https://ws3.sinaimg.cn/large/006tNc79ly1fng9iyc00bj31kw120b2f.jpg)
 *运动场·奔跑的青春*
 
-![](https://ws2.sinaimg.cn/large/006tNc79ly1fng9d5k1hyj31kw120b2e.jpg)
-*校园的美好*
 
 希望到年底的时候，能够创造出一份年度创意行走地图及摄影作品合集，以后请叫我——城市探索家。
 
