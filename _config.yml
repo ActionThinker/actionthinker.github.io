@@ -24,10 +24,10 @@ description: A virtual proof that name is awesome!
 # List of links in the navigation bar
 navbar-links:
   博客: "http://actionthinker.com"
-  关于我: "aboutme"
-  我的项目: "projects"
-  我的在行: "http://www.zaih.com/mentor/84789490/"
-  资源列表:
+  关于: "aboutme"
+  项目: "projects"
+  在行: "http://www.zaih.com/mentor/84789490/"
+  资源:
     - 数字营销: "digital"
     - 青年发展: "youthdevelpment"
     - 推荐博主: "recommend"
