@@ -4,7 +4,7 @@ title: 文章合集
 subtitle: 终有一日可实现著作等身之目标
 ---
 ### 斐济来信：
->记录了女朋友只身一人前往斐济做国际志愿者的经历及跨文化实践探索。
+>我和女朋友通过邮件书信的方式，记录了她只身一人前往斐济做国际志愿者的经历及跨文化实践探索。
 
 * [斐济来信（一）](http://actionthinker.com/2016-11-16-the-letter-from-fiji-1/)
 * [斐济来信（二）](http://actionthinker.com/2016-11-28-the-letter-from-fiji-2/)
