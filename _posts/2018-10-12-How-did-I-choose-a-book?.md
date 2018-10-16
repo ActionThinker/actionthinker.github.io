@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ActionThinker:我是如何选书的？
+title: 我是如何选书的？
 tags: [读书，选书方法]
 ---
 
