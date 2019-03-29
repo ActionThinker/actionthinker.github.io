@@ -22,17 +22,17 @@ subtitle: 嗨,欢迎你来了解我！
 ---
 
 ### 创业者
-2011年5月，因为好友李可佳的邀请，我一周之内辞去了北京的工作。什么都没有问，我就买了当周的火车票南下去到吴越文化的发源地无锡，开启了跌跌撞撞的创业旅程，一干就是五年多。
+2011年5月，因为好友李可佳的邀请，我一周之内辞去了北京的工作。什么都没有问，我就买了当周的火车票南下去到吴越文化的发源地无锡，开启了跌跌撞撞的创业旅程。
 
 那个时候，创业还没有像今天这样流行，只是我们都隐约觉得互联网、数字媒体、数字化进程是一个有前景的方向，加上一帮志同道合的好哥们，没考虑那么多，我们就All in投身了进去！
 
-致力于推动营销与技术深度融合的我们，也算是比较早的数字营销和数字商业探索者与实践者（早在四年前，我们的公司品牌就取名为[NPLUS](http://www.nplusgroup.com)，寓意Net +，N种可能性——这比总理提出互联网+ 国家战略早了两三年时间），和诸多客户一起见证了：数字营销从Minisite的流行到新浪微博的崛起；再从App的火热到微信的迅速崛起；我们见证了一波一波的互联网颠覆与革新。
+致力于推动营销与技术深度融合的我们，也算是比较早的数字营销和数字商业探索者与实践者（我们的公司品牌就取名为[NPLUS](http://www.nplusgroup.com)，寓意Net +，N种可能性），和诸多客户一起见证了：数字营销从Minisite的流行到新浪微博的崛起；再从App的火热到微信的迅速崛起；我们见证了一波一波的互联网颠覆与革新。
 
 记得起初，我们只是一个在无锡拥有五六人的草根团队，还只是众多4A公司的技术外包供应商身份，零星的只能参与一些品牌客户的小需求委托；一步一步走来，5年时间，我们发展到今天北京、上海、无锡三地80人左右的规模，且整合了策划、内容、设计和技术的综合性专业团队，服务着诸多行业的领先知名品牌。
 
 看似美好的过程，并没有人知道我们曾经经历过现金流紧张；核心创始团队分裂；丢掉重要客户等致命风险；还好，我们还活着，还活的不错。
 
-创业五年，这也是我成长最快的五年！
+创业这几年，这也是我成长最快的几年！
 
 ---
 
@@ -61,7 +61,7 @@ subtitle: 嗨,欢迎你来了解我！
 
 - Beijing Today[《Young global network helps students broaden horizons》](http://www.beijingtoday.com.cn/2012/11/young-global-network-helps-students-broaden-horizons/)
 
-- YeeMedia [《陈露：新媒体让屌丝逆袭》](https://mp.weixin.qq.com/s?__biz=MjM5NTAwODEwMA==&mid=203862141&idx=2&sn=f478a68ee8bdf805cf7587c65d06c91e&3rd=MzA3MDU4NTYzMw==&scene=6#rd)
+- YeeMedia[《陈露：新媒体让屌丝逆袭》](https://mp.weixin.qq.com/s?__biz=MjM5NTAwODEwMA==&mid=203862141&idx=2&sn=f478a68ee8bdf805cf7587c65d06c91e&3rd=MzA3MDU4NTYzMw==&scene=6#rd)
  ---
  
 ### 相关演讲视频
@@ -79,4 +79,29 @@ subtitle: 嗨,欢迎你来了解我！
 可以给我发邮件：chenluaihr#gmail.com
 关注微信公众号：ActionThinker
 
+
+---
+ActionThinker is an entrepreneur, experienced digital marketer, integrated marketing communications, digital innovation exploration and implementation, mobile and emerging technologies. Currently a co-founder and chief knowledge officer of NPLUS Digital,a digital Marketing leading agency located in Beijing,Shanghai and Wuxi. His clients include Wyeth Nutrition, OPPO, Maxwell Coffee, Thepaper,CKGSB,Tencent Public Welfare, Baidu, SKF, TRT Health, Luzhou Laojiao,Wuxi Tourism Bureau etc.
+
+ActionThinker is a contributing writer for Digitaling.com focus on digital transformation and marketing insight.He also shared knowledge management and personal branding topics through Zaihang.com（http://www.zaih.com/mentor/84789490/）.
+
+He is heavily involved with volunteering with youth development programs and has a passion for all aspects of social innovation.Previously found CAPE(http://hicape.com/),a global youth development community and served as a brand consultant to a number of nonprofit organizations includes iJoin,ChinaHouse,DFC China,CNature,NPI,GSVC China,SEE etc.
+
+Speakers and Judges:
+- Judge for Tiger Roar Award 2019 
+- Judge for Golden Craftsman Award 2018
+- Speaker for CMO Value Marketing Conference 2018
+- Speaker for Yunqi 2050 Conference 2018
+- Judge for Wrigley-Youth Charity Practice Competition 2017
+- Speaker for TEDxNingbo Conference 2014,Theme<Echo>
+- Speaker for TEDxNanjing Conference 2013, Theme<NEXT>
+- Speaker for TEDxSuzou Conference 2013,Theme<Community>
+- Speaker for 798 UCCA 2013,Theme <Self-organizing forum>
+- Speaker for Microsoft NPO IT Day 2012 
+
+Media reports:
+- South Morining Post<Chen Lu founded online community to help students go abroad>
+- Beijing Today<Young global network helps students broaden horizons>
+- YeeMedia<Chenlu:New media makes grassroots rise> 
+- MarTeker<Chenlu: Digital transformation requires enterprise managers to be the leaders of innovation>
 
