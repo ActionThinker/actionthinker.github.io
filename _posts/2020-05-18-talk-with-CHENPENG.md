@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CHENPENG：顶级买手的经验告诉我，首先你得好看
+title: 对话服装设计师：CHENPENG
 tags: [CHENPENG，潮流，设计]
 ---
 
