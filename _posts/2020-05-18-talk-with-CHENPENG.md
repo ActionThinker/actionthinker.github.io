@@ -71,3 +71,6 @@ tags: [CHENPENG，潮流，设计]
 *注：​陈鹏,品牌设计总监,毕业于伦敦时装学院男装研究生专业,同年保送英国皇家艺术学院。曾就职于Christian Dior, Harrods, Gareth Pugh等国际品牌。拥多年化妆造型经验,担任过伦敦时装周,伦敦电影节,CCTV-1《开讲了》London专场 造型总监。 其造型顾客包括:Zaha-hadi, Kelly Hoppen,马云,王石,姚明, 撒贝宁等。*
 
 
+文/ActionThinker
+
+
