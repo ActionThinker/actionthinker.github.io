@@ -39,7 +39,7 @@ subtitle: 嗨,欢迎你来了解我！
 ### 咨询顾问
 我作为数字营销咨询顾问，长期从事基于数字媒体的互动创意策划、移动营销与品牌社区运营、微信企业级商业应用、企业数字化平台建设等咨询服务。
 
-我和我所在的公司致力于通过新思维和新技术驱动企业创新，先后为滴滴快车、美泰玩具、同仁堂健康、漾美家居、爱普生中国、惠氏营养品、泸州老窖、长江商学院、万通地产、冠群驰骋、OPPO手机、腾讯公益、百度、国际铂金协会等知名品牌提供过包括社会化媒体运营、微信平台建设、青年社群营销，社会化客户关系管理，新媒体传播策略与创意等服务。
+我和我所在的公司致力于通过新思维和新技术驱动企业创新，先后为爱彼迎、惠氏营养品、滴滴快车、同仁堂健康、漾美家居、爱普生中国、惠氏营养品、泸州老窖、长江商学院、万通地产、OPPO手机、腾讯公益、百度、中智等知名品牌提供过包括社会化媒体运营、微信平台建设、青年社群营销，社会化客户关系管理，新媒体传播策略与创意等服务。
 
 ---
 
@@ -60,8 +60,8 @@ subtitle: 嗨,欢迎你来了解我！
 - South Morining Post[《Chen Lu founded online community to help students go abroad》](http://www.scmp.com/news/china/article/1151911/chen-lu-founded-online-community-help-students-go-abroad)
 
 - Beijing Today[《Young global network helps students broaden horizons》](http://www.beijingtoday.com.cn/2012/11/young-global-network-helps-students-broaden-horizons/)
-
 - YeeMedia[《陈露：新媒体让屌丝逆袭》](https://mp.weixin.qq.com/s?__biz=MjM5NTAwODEwMA==&mid=203862141&idx=2&sn=f478a68ee8bdf805cf7587c65d06c91e&3rd=MzA3MDU4NTYzMw==&scene=6#rd)
+ 
  ---
  
 ### 相关演讲视频
