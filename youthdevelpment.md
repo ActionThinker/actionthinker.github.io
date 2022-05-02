@@ -7,7 +7,7 @@ subtitle: 没有什么可以限制青年面向未来的发展渴望
 我会把我所知道和看到的，适合青年开阔全球化视野的项目整理出来分享给大家。
 
 ## 推荐项目
-- [CAPE](http://www.hicape.org)，分享全球青年海外实践经验和故事
+- [CAPE](http://www.capechina.org)，分享全球青年海外实践经验和故事
 - [AIESEC](http://www.aiesec.cn)，提供海外实习交流项目的学生组织
 - [TEDtoChina](http://www.tedtochina.com)，把TED带进中国
 - [JA中国](http://www.jachina.org/)
