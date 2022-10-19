@@ -23,13 +23,13 @@ description: A virtual proof that name is awesome!
 
 # List of links in the navigation bar
 navbar-links:
-  最新文章: "http://actionthinker.com"
+  文章: "http://actionthinker.com"
   关于我: "aboutme"
-  在线课程: "courses"
-  付费咨询: "http://www.zaih.com/mentor/84789490/"
-  文章合集: "collection"
-  探索项目: "project"
-  学习资源:
+  课程: "courses"
+  咨询: "http://www.zaih.com/mentor/84789490/"
+  精选: "collection"
+  项目: "projects"
+  资源:
     - 数字营销: "digital"
     - 青年发展: "youthdevelpment"
     - 个人品牌: "PersonalBranding"
