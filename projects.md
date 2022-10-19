@@ -10,8 +10,5 @@ subtitle: Learning by doing是最好的学习方式
 
 - [CAPE全球青年实践网络](www.capechina.org)
 
-### 视频号：陈露首席知识官
->我通过持续化视频内容输出，分享知识管理系统化认知、经验、方法和案例。
-
 
 
