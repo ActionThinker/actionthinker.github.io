@@ -4,7 +4,7 @@ title: About ActionThinker
 subtitle: 嗨,欢迎你来了解我！
 ---
 ### AI探索者与实践者
-2022年11月30日，Open AI发布GPT-3.5，ChatGPT首次向公众推出(GPT-3.5通过ChatGPT揭开了面纱，ChatGPT可以涉及一系列领域，包括编程、电视剧本和科学概念等).
+2022年11月30日，Open AI发布GPT-3.5，ChatGPT首次向公众推出(GPT-3.5通过ChatGPT揭开了面纱，ChatGPT可以涉及一系列领域，包括编程、电视剧本和科学概念等)。
 
 我在发布后第一周便抢先注册成为了首批尝鲜用户，挤入了全球前100万分之一，如同最早的微博内测用户和公众号注册用户一样，希望自己始终保持好奇，成为新世界的体验者和探索者。
 
@@ -113,13 +113,87 @@ subtitle: 嗨,欢迎你来了解我！
 
 
 ---
-ActionThinker is an entrepreneur, experienced digital marketer, integrated marketing communications, digital innovation exploration and implementation, mobile and emerging technologies. Currently a co-founder and chief knowledge officer of NPLUS Digital,a digital Marketing leading agency located in Beijing,Shanghai and Wuxi. His clients include Wyeth Nutrition, OPPO, Maxwell Coffee, Thepaper,CKGSB,Tencent Public Welfare, Baidu, SKF, TRT Health, Luzhou Laojiao,Wuxi Tourism Bureau etc.
+### AI Explorer
 
-ActionThinker is a contributing writer for Digitaling.com focus on digital transformation and marketing insight.He also shared knowledge management and personal branding topics through Zaihang.com（http://www.zaih.com/mentor/84789490/）.
+On November 30, 2022, Open AI released GPT-3.5, and ChatGPT was launched to the public for the first time (GPT-3.5 was unveiled through ChatGPT, which can cover a range of fields including programming, TV scripts, and scientific concepts).
 
-He is heavily involved with volunteering with youth development programs and has a passion for all aspects of social innovation.Previously found CAPE(http://hicape.com/),a global youth development community and served as a brand consultant to a number of nonprofit organizations includes iJoin,ChinaHouse,DFC China,CNature,NPI,GSVC China,SEE etc.
+In the first week after the release, I quickly registered to become one of the first users to try it out, squeezing into the top one millionth globally. Just like the earliest Weibo beta users and public account registrants, I hope to always stay curious and become an experimenter and explorer in this new world.
 
-Speakers and Judges:
+From English translation to copywriting, from advertising marketing plans to professional research outlines, to the development of new field courses and the writing of business plans, as well as the advanced exploration of parent-child education for my two children, I have had in-depth conversations with ChatGPT on every aspect I can think of. It seems that I have found the entrance to a new world. As I step in with one foot, I also hope to guide more partners to join me. I started by promoting the company's full embrace of AI and gradually carried out experiments.
+
+I pride myself on being an AI learner, explorer, and practitioner. I am committed to constantly exploring, experimenting, and implementing various personal and institutional AI projects. I am eager to discover new AI advancements, interpret their meanings, and convert them into replicable knowledge, experiences, and workflows.
+
+I firmly believe in the power of AI, which can not only revolutionize our work but also enhance every aspect of our lives. In the era of AI, I see infinite possibilities for personal growth, especially innovations in personalized learning and collective intelligence. I also see that every individual without programming skills will have the ability to create personal software.
+
+In the world of AI, I see endless possibilities and opportunities. I believe that through our joint efforts, we can turn these opportunities into reality. Let's seize the moment of AI together and shape the future we want to live in!
+
+--
+### Lifelong Learner
+
+I graduated from the Higher Vocational College of Xi'an International Studies University, majoring in English Education.
+
+In fact, during my time in university clubs and social practices, I found that I was more interested in other academic fields, especially new media, an emerging field not yet offered as a subject in any domestic university. Since this industry had not yet matured, there were no textbooks or professors to learn from in China (this is a very practice-oriented subject, and the professors did not have practical experience).
+
+Therefore, starting from my sophomore year, I independently sought all relevant books from the library, bought books related to the Internet, read blogs from industry practitioners in Beijing, Shanghai and Guangzhou, and joined relevant vertical online communities to learn. I taught myself about public relations communications, digital marketing, and organizational management.
+
+During this process of independent learning, I gradually formed my unique learning method and positive cycle: **reading --> communication --> practice --> sharing**. I also became an advocate and practitioner of lifelong learning.
+
+For example, if I wanted to build an independent personal blog, I would spend a week watching video or graphic tutorials to learn about open-source software applications; seek advice from experts in this field or read discussions on Q&A websites; then follow the tutorial and do it myself until it can run normally; finally, I would compile my learning process and experience into a guide post and share it on my blog.
+
+Whenever I want to learn a new subject or knowledge, I can find what I want to learn through internet channels, follow industry pioneers and practitioners to learn, and learn from the world's top think tanks. This type of learning is not limited by your background, geographical conditions, or even your university ranking. It only relates to your desire to learn, your learning goals, your perseverance in learning, and your methods.
+
+Over the past few years, I have continued to share publicly on paid knowledge platforms like Zaihang during my spare time. I firmly believe that teaching is a better way to learn. By structuring and productizing knowledge, I want everyone to realize that they can achieve lifelong learning and maximize their personal value.
+
+--
+### Entrepreneur
+
+In May 2011, at the invitation of my friend Li Kejia, I quit my job in Beijing within a week. Without asking anything, I bought a train ticket that week and headed south to Wuxi, the birthplace of Wu-Yue culture, to embark on a bumpy entrepreneurial journey.
+
+At that time, entrepreneurship was not as popular as it is today. We just vaguely felt that the Internet, digital media, and the digitalization process were promising directions. With a group of like-minded good friends, we didn't think too much, we just went all in!
+
+Committed to driving sustainable innovation in enterprises with new thinking and new technologies, we were among the early explorers and practitioners of digital marketing and digital business (our company brand is named NPLUS, implying Net +, N kinds of possibilities). We witnessed with many customers: the popularity of digital marketing from Minisite to the rise of Sina Weibo; from the heat of Apps to the rapid rise of the WeChat ecosystem, to the development of all-media channels such as TikTok and Xiaohongshu; we witnessed wave after wave of mobile internet subversions and technological innovations.
+
+I remember at the beginning, we were just a grassroots team of five or six people in Wuxi, merely a technical outsourcing supplier for many 4A companies, sporadically involved in some small demand commissions from brand customers. Step by step, our offices have now spread across Beijing, Shanghai, Shenzhen, and Wuxi.
+
+Our business scope includes integrated marketing, social media operation, creative visual design, TikTok operation, IP & brand joint marketing, KOL marketing, corporate WeChat & member operation, digital experience design and technology development, AIGC business co-creation, etc. We rank among the top in both the Digital Marketing Agency Index and the Advertising Door Digital Marketing Agency Index, and have won numerous awards such as Golden Investment Award, Golden Mouse Award, Digital British Award, China Digital Media Award, Golden Craftsman Award, Golden Flag Award and Tiger Roar Award.
+
+We always put customers at the center, adhere to the concept of new thinking and new technology driving sustainable innovation in enterprises, and are committed to creating continuous value for brands. Looking forward to the future, we will rely on our many years of accumulation and experience advantages in the field of digital marketing, actively embrace the AIGC strategy, become a company with creativity and AI transformation capabilities, and help brands achieve continuous business growth.
+
+### Marketing Consultant
+
+As a digital marketing consultant, I have long provided integrated marketing consulting, digital transformation, membership system construction, new media operations, social communication, creative design, and other comprehensive services for leading brands across various industries.
+
+I have served well-known brands including Midea, Little Swan, COLMO, Huazhu Group, SMILEY, Tencent Public Welfare, TRT Health, Wyeth Nutrition, Luzhou Laojiao, Yellow Swan, CKGSB , OPPO, Nielsen, Zhongzhi, Airbnb, Freitag, Lazhou Distillery, Maxwell, The Paper News, and others.
+
+I have served as a judge for several industry media awards such as the Digital British Award, Tiger Roar Award, Effie Award, Golden Craftsman Award, etc.
+
+I have led the team to complete multiple innovative projects including:
+
+* Tencent's 99 Public Welfare Day "How Many Little Red Flowers Do You Have" Interactive Creative Project
+* Huazhu Group Brand Official Website Reshaping Upgrade Project
+* Airbnb Host Membership System Consultation and Construction and Host Conference Communication Project
+* SMILEY Social Media Matrix Operation and Campaign Project
+* CCTV ✖️ The Paper News "Writing Brilliant China" H5 Project
+* Wuxi Tourism Bureau - "Wuxi Creative Design Contest from the Eyes of Designers" Project
+* and many more.
+
+### Public Welfare & Social Innovator
+
+I am also very passionate about social activities. In May 2011, I founded [CAPE](capechina.org) Global Youth Practice Network with overseas students. Because of the experience of founding CAPE, I was invited as a guest speaker at TEDxNanjing, TEDxNingbo, 798 UCCA Ullens Center for Contemporary Art, Microsoft NPO IT Day and others. I was rated as one of the 2012 China Youth Newcomers by "New Younger" magazine and selected for the 2014 "City Pictorial" Post-85 Youth Elite List 100.
+
+Based on my long-term practice in the field of youth communities, I have collaborated with partners to promote and support the landing of hundreds of youth-themed salons in more than 60 cities worldwide through social collaboration. At the same time, I have participated in and supported the initial development and landing process of innovative projects such as DFC China, ChinaHouse, Micro English Learning, in Wuxi, Living in Chaoshan and others. I have been reported by well-known media such as The Atlantic magazine, Australian National Broadcasting Corporation, South China Morning Post and Today Beijing.
+
+In addition, I am also passionate about public welfare project practice. I have provided services including new media training and creative planning for public welfare groups such as iJoin Social Innovation Consulting, CNature Foundation, NPI, GSVC, Alashan Environmental Protection Association, Environmental Advocacy Action Network, China Public Welfare Charity Network through professional output. During my university years, I also volunteered in the operation of public welfare projects such as Woxue.net (formerly Kaifu Student Network), Hope Spring E-magazine and others.
+
+### Father of Two Children
+
+The most magical gift I have received in this world.
+
+Older brother Dayang: The vastness of the ocean.
+Younger brother Dayu: The vastness of the universe.
+
+
+### Speakers and Judges:
 - Judge for Tiger Roar Award 2019 
 - Judge for Golden Craftsman Award 2018
 - Speaker for CMO Value Marketing Conference 2018
@@ -131,8 +205,8 @@ Speakers and Judges:
 - Speaker for 798 UCCA 2013,Theme <Self-organizing forum>
 - Speaker for Microsoft NPO IT Day 2012 
 
-Media reports:
-- South Morining Post<Chen Lu founded online community to help students go abroad>
+### Media reports:
+- South Morining Post<[Chen Lu founded online community to help students go abroad](http://www.scmp.com/news/china/article/1151911/chen-lu-founded-online-community-help-students-go-abroad)>
 - Beijing Today<Young global network helps students broaden horizons>
 - YeeMedia<Chenlu:New media makes grassroots rise> 
 - MarTeker<Chenlu: Digital transformation requires enterprise managers to be the leaders of innovation>
