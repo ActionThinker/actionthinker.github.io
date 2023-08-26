@@ -100,5 +100,5 @@ tags: 私董会，智库，决策咨询
 
 总之，私董会是一种非常有价值的决策支持工具。通过正确地理解并运用私董会，我们可以更好地解决我们面临的问题和挑战，并从中学习到宝贵的知识和经验。
 
-文/ActionThinker
+文/ActionThinker（WeChat ID：ActionThinker）
 
