@@ -9,6 +9,11 @@ subtitle: 数字分身与智能助手
 Brief Master：Analyzes and advises on advertising briefs with a global perspective and China-specific insights.
 
 
+## 个人品牌系列GPTs
+[Personal Brand Builder Pro](https://chat.openai.com/g/g-5K78yoYOu-personal-brand-builder-pro):一款为专业人士提供个人品牌咨询和个人品牌介绍包装的专家。
+A personal brand advisor for professionals, offering guided creation and refinement of personal branding pages.
+
+
 #more coming soon
 
 
