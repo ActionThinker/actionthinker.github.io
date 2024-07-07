@@ -64,8 +64,7 @@ tags: 十万个为什么，想象力宝箱，问题驱动成长
 
 加入我们的旅程，一起激发孩子的想象力！
 
-免费下载[想象力激发宝箱](【腾讯文档】小工具_想象力激发宝箱by ActionThinker
-https://docs.qq.com/document/DY2hIUUtGc3hwVEFV)
+免费下载[想象力激发宝箱](https://docs.qq.com/document/DY2hIUUtGc3hwVEFV)
 
 
 文/[ActionThinker](https://actionthinker.com/)（WeChat ID：ActionThinker）
