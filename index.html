@@ -64,17 +64,52 @@ use-site-title: true
   {% endfor %}
 </div>
 
-{% if paginator.total_pages > 1 %}
-<ul class="pager main-pager">
-  {% if paginator.previous_page %}
-  <li class="previous">
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
+<button id="toggle-view">切换展示模式</button>
+<main id="main">
+    <div class="posts-container">
+        {% for post in paginator.posts %}
+        <article class="post-card">
+            <header class="post-header">
+                <h2 class="post-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                </h2>
+            </header>
+            
+            <div class="post-content">
+                {{ post.excerpt }}
+            </div>
+            
+            <footer class="post-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%b %-d, %Y" }}
+                </time>
+            </footer>
+        </article>
+        {% endfor %}
+    </div>
+    
+    <!-- 保留分页导航 -->
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+      <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+      </li>
+      {% endif %}
+      {% if paginator.next_page %}
+      <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+      </li>
+      {% endif %}
+    </div>
+    {% endif %}
+</main>
+<script>
+  const toggleView = document.getElementById('toggle-view');
+  const postsContainer = document.querySelector('.posts-container');
+
+  toggleView.addEventListener('click', () => {
+    postsContainer.classList.toggle('list-view');
+    postsContainer.classList.toggle('masonry-view');
+  });
+</script>
