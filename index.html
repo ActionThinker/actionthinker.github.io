@@ -1,115 +1,71 @@
----
-layout: page
-<<<<<<< HEAD
-title: Hi, I'm ActionThinker
-subtitle: Life-long learner/ Entrepreneur/ Innovator
-=======
-title: My website
-subtitle: This is where I will tell my friends way too much about me
-use-site-title: true
-<<<<<<< HEAD
->>>>>>> daattali/master
-=======
->>>>>>> daattali/master
----
-
-<div class="posts-list">
-  {% for post in paginator.posts %}
-  <article class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-	  <h2 class="post-title">{{ post.title }}</h2>
-
-	  {% if post.subtitle %}
-	  <h3 class="post-subtitle">
-	    {{ post.subtitle }}
-	  </h3>
-	  {% endif %}
-    </a>
-
-    <p class="post-meta">
-      Posted on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-
-    <div class="post-entry-container">
-      {% if post.image %}
-      <div class="post-image">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <img src="{{ post.image }}">
-        </a>
-      </div>
-      {% endif %}
-      <div class="post-entry">
-        {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
-        {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
-          <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
-        {% endif %}
-      </div>
-    </div>
-
-    {% if post.tags.size > 0 %}
-    <div class="blog-tags">
-      Tags:
-      {% if site.link-tags %}
-      {% for tag in post.tags %}
-      <a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>
-      {% endfor %}
-      {% else %}
-        {{ post.tags | join: ", " }}
-      {% endif %}
-    </div>
-    {% endif %}
-
-   </article>
-  {% endfor %}
+<div class="layout-toggle">
+  <button class="list-view-btn active">列表视图</button>
+  <button class="masonry-view-btn">瀑布流视图</button>
 </div>
-
-<button id="toggle-view">切换展示模式</button>
-<main id="main">
-    <div class="posts-container">
-        {% for post in paginator.posts %}
-        <article class="post-card">
-            <header class="post-header">
-                <h2 class="post-title">
-                    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-                </h2>
-            </header>
-            
-            <div class="post-content">
-                {{ post.excerpt }}
-            </div>
-            
-            <footer class="post-meta">
-                <time datetime="{{ post.date | date_to_xmlschema }}">
-                    {{ post.date | date: "%b %-d, %Y" }}
-                </time>
-            </footer>
-        </article>
-        {% endfor %}
-    </div>
-    
-    <!-- 保留分页导航 -->
-    {% if paginator.total_pages > 1 %}
-    <div class="pagination">
-      {% if paginator.previous_page %}
-      <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-      </li>
-      {% endif %}
-      {% if paginator.next_page %}
-      <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-      </li>
-      {% endif %}
-    </div>
-    {% endif %}
-</main>
 <script>
-  const toggleView = document.getElementById('toggle-view');
+  const toggleBtns = document.querySelectorAll('.layout-toggle button');
   const postsContainer = document.querySelector('.posts-container');
 
-  toggleView.addEventListener('click', () => {
-    postsContainer.classList.toggle('list-view');
-    postsContainer.classList.toggle('masonry-view');
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      toggleBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      postsContainer.classList.toggle('list-view');
+      postsContainer.classList.toggle('masonry-view');
+    });
+  });
+</script>
+
+<div class="posts-container list-view">
+  {% for post in site.posts %}
+    <div class="post-preview">
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">{{ post.title }}</h2>
+        <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+      </a>
+      <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+      <div class="post-entry">
+        {{ post.excerpt | strip_html | truncatewords: 50 }}
+      </div>
+<script>
+  const toggleBtns = document.querySelectorAll('.layout-toggle button');
+  const postsContainer = document.querySelector('.posts-container');
+
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      toggleBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      postsContainer.classList.toggle('list-view');
+      postsContainer.classList.toggle('masonry-view');
+    });
+  });
+</script>
+    </div>
+<script>
+  const toggleBtns = document.querySelectorAll('.layout-toggle button');
+  const postsContainer = document.querySelector('.posts-container');
+
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      toggleBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      postsContainer.classList.toggle('list-view');
+      postsContainer.classList.toggle('masonry-view');
+    });
+  });
+</script>
+  {% endfor %}
+</div>
+<script>
+  const toggleBtns = document.querySelectorAll('.layout-toggle button');
+  const postsContainer = document.querySelector('.posts-container');
+
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      toggleBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      postsContainer.classList.toggle('list-view');
+      postsContainer.classList.toggle('masonry-view');
+    });
   });
 </script>
