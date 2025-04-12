@@ -1,0 +1,57 @@
+.posts-container.list-view {
+    column-count: 1;
+}
+
+.posts-container.masonry-view {
+    column-count: 3;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .posts-container.masonry-view {
+        column-count: 1;
+    }
+}
+
+/* 新增产品卡片样式 */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 课程瀑布流布局 */
+.course-masonry {
+  columns: 3;
+  column-gap: 2rem;
+}
+
+.course-card {
+  break-inside: avoid;
+  margin-bottom: 2rem;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .course-masonry {
+    columns: 1;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
