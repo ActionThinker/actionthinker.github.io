@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 智能体
+title: Agent
 subtitle: 数字分身与智能助手
 ---
 
