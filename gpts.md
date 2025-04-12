@@ -1,14 +1,13 @@
 ---
 layout: page
-title: My GPTs
+title: 智能体
 subtitle: 数字分身与智能助手
 ---
 
 
-## 亲子教育系列GPTs
+## 亲子教育系列智能体
 本系列工具旨在帮助大部分家长打开对应的GPT连接，只需要简单的输入教育诉求和想法，GPT将会针对性提供该场景下的亲子教育解决方案和建议，一起探索AI时代下的高效亲子教育之道，一起发现孩子独特的天赋和才能。
 
-访问要求：GPTPlus注册用户，拥有VPN科学上网前提。
 
 #### [Kid's Talent Explorer 儿童天赋探索家](https://chat.openai.com/g/g-ZkxNjm9u0-kid-s-talent-explorer) 
 **Friendly guide for parents to discover and nurture their child's talents with AI.**
