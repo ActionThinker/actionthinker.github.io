@@ -17,7 +17,7 @@ baseurl: ""
 title: 知行合一 | 陈露的个人网站
 
 # Short description of your site
-description: A virtual proof that name is awesome!
+description: A Agent Creator!
 
 # --- Navigation bar options --- #
 
@@ -25,12 +25,13 @@ description: A virtual proof that name is awesome!
 navbar-links:
   文章: "http://actionthinker.com"
   关于我: "aboutme"
+  Agent: "Agents"
   课程: "courses"
   咨询: "http://www.zaih.com/mentor/84789490/"
   精选: "collection"
   项目: "projects"
   资源:
-    - 亲子教育: "parent-child education"
+    - 亲子教育: "ParentChildEdu"
     - 青年发展: "youthdevelpment"
     - 个人品牌: "PersonalBranding"
    
