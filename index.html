@@ -57,21 +57,27 @@ use-site-title: true
 <div class="projects-section">
   <h2 class="section-title">实践项目</h2>
   <div class="project-cards">
+    <a href="/opclab" class="project-card-link">
     <div class="project-card">
       <h3>OPClab</h3>
       <p class="project-type">一人公司实验室</p>
       <p>AI知识资产化实践品牌，聚集相信"一个人可以像一支队伍"的人</p>
     </div>
+    </a>
+    <a href="/about" class="project-card-link">
     <div class="project-card">
       <h3>NPLUS Digital</h3>
       <p class="project-type">数字营销机构</p>
       <p>2011年联合创立，服务美的、华住、Airbnb等头部品牌</p>
     </div>
+    </a>
+    <a href="/about" class="project-card-link">
     <div class="project-card">
       <h3>CAPE</h3>
       <p class="project-type">全球青年实践网络</p>
       <p>2011年发起，推动60+城市上百场青年主题沙龙</p>
     </div>
+    </a>
   </div>
 </div>
 
@@ -223,6 +229,17 @@ use-site-title: true
   background: #f8f9fa;
   padding: 30px 25px;
   border-radius: 12px;
+  text-decoration: none;
+  display: block;
+}
+.project-card-link {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.3s;
+}
+.project-card-link:hover .project-card {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .project-card h3 {
