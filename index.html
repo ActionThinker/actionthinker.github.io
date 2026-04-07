@@ -7,40 +7,277 @@ use-site-title: true
 
 <div class="hero-section">
   <h1 class="hero-title">知识即资产</h1>
-  <p class="hero-subtitle">在AI时代，把你的知识变成可积累、可迭代、可变现的核心资本</p>
-  <p class="hero-tagline">O+P+C — 开口表达 · 亲身实践 · 一人公司</p>
+  <p class="hero-subtitle">在AI时代，让一个人的经验变成可积累、可增值、可传承的核心资本</p>
+  <p class="hero-tagline">陈露 / AI知识资产化引领者 / OPClab发起人</p>
 </div>
 
-<div class="posts-list">
-  <h2 class="section-title">最新文章</h2>
-  {% for post in paginator.posts limit:5 %}
-  <article class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-      <h3 class="post-title">{{ post.title }}</h3>
-      {% if post.subtitle %}
-      <h4 class="post-subtitle">{{ post.subtitle }}</h4>
-      {% endif %}
-    </a>
-    <p class="post-meta">{{ post.date | date: "%Y年%-m月%-d日" }}</p>
-    <div class="post-entry">
-      {{ post.excerpt | strip_html | truncatewords: 30 }}
-      <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">继续阅读 →</a>
+<div class="framework-section">
+  <h2 class="section-title">O+P+C 框架</h2>
+  <p class="framework-intro">把这套方法论，变成你的第二大脑</p>
+  <div class="framework-cards">
+    <div class="framework-card">
+      <span class="card-letter">O</span>
+      <h3>开口表达</h3>
+      <p>不表达的知识，不属于你。博客比简历好使——这件事我亲身验证了。</p>
     </div>
-  </article>
-  {% endfor %}
+    <div class="framework-card">
+      <span class="card-letter">P</span>
+      <h3>亲身实践</h3>
+      <p>不躬身入局，永远只是观众。实践是知识的唯一验证方式。</p>
+    </div>
+    <div class="framework-card">
+      <span class="card-letter">C</span>
+      <h3>一人公司</h3>
+      <p>一个人就是一支队伍。用AI杠杆，放大你的知识资产。</p>
+    </div>
+  </div>
 </div>
 
-{% if paginator.total_pages > 1 %}
-<ul class="pager main-pager">
-  {% if paginator.previous_page %}
-  <li class="previous">
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">← 较新文章</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">较旧文章 →</a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
+<div class="audience-section">
+  <h2 class="section-title">你是谁？</h2>
+  <div class="audience-cards">
+    <a href="/about" class="audience-card">
+      <h3>有经验的人</h3>
+      <p>想把多年积累变成可积累、可复用的资产</p>
+      <span class="card-action">构建第二大脑 →</span>
+    </a>
+    <a href="/about" class="audience-card">
+      <h3>探索副业者</h3>
+      <p>有专业能力，想用AI放大一份时间卖出多次</p>
+      <span class="card-action">用AI放大能力 →</span>
+    </a>
+    <a href="/about" class="audience-card">
+      <h3>企业/机构</h3>
+      <p>想让经验不随人员流动而流失</p>
+      <span class="card-action">知识资产沉淀 →</span>
+    </a>
+  </div>
+</div>
+
+<div class="projects-section">
+  <h2 class="section-title">实践项目</h2>
+  <div class="project-cards">
+    <div class="project-card">
+      <h3>OPClab</h3>
+      <p class="project-type">一人公司实验室</p>
+      <p>AI知识资产化实践品牌，聚集相信"一个人可以像一支队伍"的人</p>
+    </div>
+    <div class="project-card">
+      <h3>NPLUS Digital</h3>
+      <p class="project-type">数字营销机构</p>
+      <p>2011年联合创立，服务美的、华住、Airbnb等头部品牌</p>
+    </div>
+    <div class="project-card">
+      <h3>CAPE</h3>
+      <p class="project-type">全球青年实践网络</p>
+      <p>2011年发起，推动60+城市上百场青年主题沙龙</p>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <a href="/about" class="cta-button">深入了解我的故事 →</a>
+</div>
+
+<style>
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.hero-tagline {
+  font-size: 14px;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+.framework-section, .audience-section, .projects-section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a1a2e;
+}
+
+.framework-intro {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.framework-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.framework-card {
+  background: #f8f9fa;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.framework-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card-letter {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background: #1a1a2e;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.framework-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.framework-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.audience-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.audience-card {
+  display: block;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid #eee;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.audience-card:hover {
+  border-color: #1a1a2e;
+  transform: translateY(-3px);
+}
+
+.audience-card h3 {
+  font-size: 20px;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+}
+
+.audience-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card-action {
+  font-size: 14px;
+  color: #1a1a2e;
+  font-weight: 600;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: #f8f9fa;
+  padding: 30px 25px;
+  border-radius: 12px;
+}
+
+.project-card h3 {
+  font-size: 22px;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.project-type {
+  font-size: 12px;
+  color: #19616390;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fa;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 16px 40px;
+  background: #1a1a2e;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #2d2d4a;
+}
+
+@media (max-width: 768px) {
+  .framework-cards, .audience-cards, .project-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-title {
+    font-size: 32px;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px;
+  }
+}
+</style>
