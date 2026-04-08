@@ -5,296 +5,462 @@ subtitle: AI知识资产化引领者
 use-site-title: true
 ---
 
-<div class="hero-section">
-  <h1 class="hero-title">知识即资产</h1>
-  <p class="hero-subtitle">在AI时代，让一个人的经验变成可积累、可增值、可传承的核心资本</p>
-  <p class="hero-tagline">陈露 / AI知识资产化引领者 / OPClab发起人</p>
-</div>
-
-<div class="framework-section">
-  <h2 class="section-title">O+P+C 框架</h2>
-  <p class="framework-intro">把这套方法论，变成你的第二大脑</p>
-  <div class="framework-cards">
-    <div class="framework-card">
-      <span class="card-letter">O</span>
-      <h3>开口表达</h3>
-      <p>不表达的知识，不属于你。博客比简历好使——这件事我亲身验证了。</p>
-    </div>
-    <div class="framework-card">
-      <span class="card-letter">P</span>
-      <h3>亲身实践</h3>
-      <p>不躬身入局，永远只是观众。实践是知识的唯一验证方式。</p>
-    </div>
-    <div class="framework-card">
-      <span class="card-letter">C</span>
-      <h3>一人公司</h3>
-      <p>一个人就是一支队伍。用AI杠杆，放大你的知识资产。</p>
-    </div>
-  </div>
-</div>
-
-<div class="audience-section">
-  <h2 class="section-title">你是谁？</h2>
-  <div class="audience-cards">
-    <a href="/about" class="audience-card">
-      <h3>有经验的人</h3>
-      <p>想把多年积累变成可积累、可复用的资产</p>
-      <span class="card-action">构建第二大脑 →</span>
-    </a>
-    <a href="/about" class="audience-card">
-      <h3>探索副业者</h3>
-      <p>有专业能力，想用AI放大一份时间卖出多次</p>
-      <span class="card-action">用AI放大能力 →</span>
-    </a>
-    <a href="/about" class="audience-card">
-      <h3>企业/机构</h3>
-      <p>想让经验不随人员流动而流失</p>
-      <span class="card-action">知识资产沉淀 →</span>
-    </a>
-  </div>
-</div>
-
-<div class="projects-section">
-  <h2 class="section-title">实践项目</h2>
-  <div class="project-cards">
-    <a href="/opclab" class="project-card-link">
-    <div class="project-card">
-      <h3>OPClab</h3>
-      <p class="project-type">一人公司实验室</p>
-      <p>AI知识资产化实践品牌，聚集相信"一个人可以像一支队伍"的人</p>
-    </div>
-    </a>
-    <a href="/about" class="project-card-link">
-    <div class="project-card">
-      <h3>NPLUS Digital</h3>
-      <p class="project-type">数字营销机构</p>
-      <p>2011年联合创立，服务美的、华住、Airbnb等头部品牌</p>
-    </div>
-    </a>
-    <a href="/about" class="project-card-link">
-    <div class="project-card">
-      <h3>CAPE</h3>
-      <p class="project-type">全球青年实践网络</p>
-      <p>2011年发起，推动60+城市上百场青年主题沙龙</p>
-    </div>
-    </a>
-  </div>
-</div>
-
-<div class="cta-section">
-  <a href="/about" class="cta-button">深入了解我的故事 →</a>
-</div>
-
 <style>
-.hero-section {
+/* ================================================
+   INDEX v2.0 — P0 视觉升级版
+   ================================================ */
+
+/* HERO */
+.hero-index {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  color: #fff;
-  margin-bottom: 40px;
+  padding: 60px 24px;
+  position: relative;
+  background: #1A1A2E;
+  overflow: hidden;
 }
-
-.hero-title {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
+.hero-index::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(200,140,40,0.12) 0%, transparent 70%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
-
-.hero-subtitle {
-  font-size: 20px;
-  opacity: 0.9;
-  max-width: 600px;
-  margin: 0 auto 30px;
-  line-height: 1.6;
+.hero-index-content { position: relative; max-width: 820px; }
+.hero-index-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(232,168,56,0.8);
+  margin-bottom: 28px;
+  font-weight: 500;
 }
-
-.hero-tagline {
-  font-size: 14px;
-  opacity: 0.7;
-  letter-spacing: 1px;
+.hero-index-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(56px, 8vw, 96px);
+  font-weight: 600;
+  color: #FAFAF8;
+  line-height: 1.05;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
 }
+.hero-index-title em {
+  font-style: italic;
+  color: #E8A838;
+}
+.hero-index-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  color: rgba(250,250,248,0.65);
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto 40px;
+  font-weight: 300;
+}
+.hero-index-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tag-item {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(250,250,248,0.5);
+  padding: 6px 16px;
+  border: 1px solid rgba(250,250,248,0.15);
+  border-radius: 20px;
+}
+.tag-sep { color: rgba(250,250,248,0.2); }
 
-.framework-section, .audience-section, .projects-section {
-  padding: 40px 20px;
-  max-width: 1000px;
+/* SECTION COMMON */
+.index-section {
+  padding: 100px 24px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
-.section-title {
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 30px;
-  color: #1a1a2e;
+/* OPC FRAMEWORK */
+.framework-v2 { background: #FAFAF8; }
+.framework-inner { text-align: center; }
+.framework-lead {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #777;
+  margin-bottom: 56px;
+  letter-spacing: 0.5px;
 }
-
-.framework-intro {
-  text-align: center;
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 30px;
-}
-
-.framework-cards {
+.opc-track {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 2px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(26,26,46,0.08);
 }
-
-.framework-card {
-  background: #f8f9fa;
-  padding: 30px 20px;
-  border-radius: 12px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.framework-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.card-letter {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  background: #1a1a2e;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.framework-card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #1a1a2e;
-}
-
-.framework-card p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
-}
-
-.audience-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.audience-card {
-  display: block;
+.opc-node {
+  padding: 48px 32px;
   background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  border: 2px solid #eee;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.audience-card:hover {
-  border-color: #1a1a2e;
-  transform: translateY(-3px);
-}
-
-.audience-card h3 {
-  font-size: 20px;
-  color: #1a1a2e;
-  margin-bottom: 15px;
-}
-
-.audience-card p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.card-action {
-  font-size: 14px;
-  color: #1a1a2e;
-  font-weight: 600;
-}
-
-.project-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.project-card {
-  background: #f8f9fa;
-  padding: 30px 25px;
-  border-radius: 12px;
-  text-decoration: none;
-  display: block;
-}
-.project-card-link {
-  text-decoration: none;
-  display: block;
-  transition: transform 0.3s;
-}
-.project-card-link:hover .project-card {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.project-card h3 {
-  font-size: 22px;
-  color: #1a1a2e;
-  margin-bottom: 8px;
-}
-
-.project-type {
-  font-size: 12px;
-  color: #19616390;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-}
-
-.project-card p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
-}
-
-.cta-section {
   text-align: center;
-  padding: 60px 20px;
-  background: #f8f9fa;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 16px 40px;
-  background: #1a1a2e;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
+  position: relative;
   transition: background 0.3s;
 }
-
-.cta-button:hover {
-  background: #2d2d4a;
+.opc-node:hover { background: #FEF9F2; }
+.opc-node:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #C4882F;
+  font-size: 18px;
+  background: #FAFAF8;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.opc-letter-v2 {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #1A1A2E;
+  color: #E8A838;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 auto 24px;
+  letter-spacing: 1px;
+}
+.opc-node h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1A1A2E;
+}
+.opc-node p {
+  font-size: 14px !important;
+  color: #666 !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+}
+.opc-node .scene-tag {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #C4882F;
+  margin-top: 16px;
+  font-family: 'DM Sans', sans-serif;
 }
 
+/* AUDIENCE */
+.audience-v2 { background: #fff; }
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.audience-card-v2 {
+  display: block;
+  padding: 40px 32px;
+  border-radius: 16px;
+  border: 1.5px solid rgba(26,26,46,0.1);
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
+  background: #FAFAF8;
+  position: relative;
+  overflow: hidden;
+}
+.audience-card-v2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #E8A838, #C4882F);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s;
+}
+.audience-card-v2:hover::before { transform: scaleX(1); }
+.audience-card-v2:hover {
+  border-color: transparent;
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(26,26,46,0.1);
+}
+.audience-icon {
+  font-size: 36px;
+  margin-bottom: 20px;
+  display: block;
+}
+.audience-card-v2 h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1A1A2E;
+  margin-bottom: 12px;
+}
+.audience-card-v2 p {
+  font-size: 14px !important;
+  color: #666 !important;
+  line-height: 1.7 !important;
+  margin-bottom: 20px !important;
+}
+.audience-cta {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #C4882F;
+  font-weight: 500;
+}
+
+/* PROJECTS */
+.projects-v2 { background: #1A1A2E; }
+.projects-v2 .section-label { color: rgba(232,168,56,0.8) !important; }
+.projects-v2 .section-title { color: #FAFAF8 !important; }
+.projects-v2 .section-intro { color: rgba(250,250,248,0.5) !important; }
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.project-card-v2 {
+  display: block;
+  padding: 36px 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(250,250,248,0.08);
+  text-decoration: none;
+  background: rgba(250,250,248,0.04);
+  transition: all 0.35s;
+}
+.project-card-v2:hover {
+  background: rgba(250,250,248,0.08);
+  transform: translateY(-4px);
+}
+.project-card-v2 h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #FAFAF8;
+  margin-bottom: 8px;
+}
+.project-type-v2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #E8A838;
+  margin-bottom: 16px;
+}
+.project-card-v2 p {
+  font-size: 13px !important;
+  color: rgba(250,250,248,0.55) !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+}
+.project-arrow {
+  display: inline-block;
+  margin-top: 20px;
+  color: rgba(232,168,56,0.6);
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+.project-card-v2:hover .project-arrow { transform: translateX(6px); }
+
+/* CTA */
+.cta-index {
+  background: linear-gradient(135deg, #1A1A2E 0%, #2D2B55 100%);
+  text-align: center;
+  padding: 100px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.cta-index::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 80% at 50% 100%, rgba(232,168,56,0.1) 0%, transparent 70%);
+}
+.cta-index h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 600;
+  color: #FAFAF8;
+  margin-bottom: 16px;
+  position: relative;
+}
+.cta-index p {
+  font-size: 15px !important;
+  color: rgba(250,250,248,0.5) !important;
+  margin-bottom: 40px !important;
+  position: relative;
+}
+.cta-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.btn-primary-v2 {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #E8A838;
+  color: #1A1A2E;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+}
+.btn-primary-v2:hover { background: #C4882F; color: #fff; }
+.btn-ghost-v2 {
+  display: inline-block;
+  padding: 14px 36px;
+  border: 1.5px solid rgba(250,250,248,0.25);
+  color: rgba(250,250,248,0.7);
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.btn-ghost-v2:hover {
+  border-color: #E8A838;
+  color: #E8A838;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .framework-cards, .audience-cards, .project-cards {
-    grid-template-columns: 1fr;
-  }
-  
-  .hero-title {
-    font-size: 32px;
-  }
-  
-  .hero-subtitle {
-    font-size: 16px;
-  }
+  .opc-track { grid-template-columns: 1fr; border-radius: 12px; }
+  .opc-node:not(:last-child)::after { display: none; }
+  .audience-grid { grid-template-columns: 1fr; }
+  .project-grid { grid-template-columns: 1fr; }
+  .index-section { padding: 60px 20px; }
 }
 </style>
+
+<div class="hero-index">
+  <div class="hero-index-content">
+    <div class="hero-index-eyebrow">陈露 · ActionThinker</div>
+    <h1 class="hero-index-title">知识<br><em>即资产</em></h1>
+    <p class="hero-index-sub">在AI时代，让一个人的经验变成<br>可积累、可增值、可传承的核心资本</p>
+    <div class="hero-index-tag">
+      <span class="tag-item">AI知识资产化</span>
+      <span class="tag-sep">·</span>
+      <span class="tag-item">OPClab发起人</span>
+      <span class="tag-sep">·</span>
+      <span class="tag-item">一人公司实践</span>
+    </div>
+  </div>
+</div>
+
+<div class="index-section framework-v2">
+  <div class="framework-inner">
+    <div class="section-label">核心方法论</div>
+    <h2 class="section-title">O+P+C 框架</h2>
+    <p class="framework-lead">把15年的知识管理实践，凝练成一套可复制的方法论</p>
+    <div class="opc-track">
+      <div class="opc-node">
+        <div class="opc-letter-v2">O</div>
+        <h3>开口表达</h3>
+        <p>不表达的知识，不属于你。<br>写出来，说出来，发出去。</p>
+        <div class="scene-tag">博客 · 社交媒体 · 演讲</div>
+      </div>
+      <div class="opc-node">
+        <div class="opc-letter-v2">P</div>
+        <h3>亲身实践</h3>
+        <p>不躬身入局，永远只是观众。<br>做出来，验证它，迭代它。</p>
+        <div class="scene-tag">项目 · 试错 · 迭代</div>
+      </div>
+      <div class="opc-node">
+        <div class="opc-letter-v2">C</div>
+        <h3>一人公司</h3>
+        <p>一个人就是一支队伍。<br>用AI杠杆，放大你的资产。</p>
+        <div class="scene-tag">AI工具 · 产品化 · 规模化</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="index-section audience-v2">
+  <div class="section-label">找到你的入口</div>
+  <h2 class="section-title">你是谁？</h2>
+  <div class="audience-grid">
+    <a href="/about" class="audience-card-v2">
+      <span class="audience-icon">🧠</span>
+      <h3>有经验的人</h3>
+      <p>想把多年积累变成可积累、可复用的资产，建立自己的第二大脑</p>
+      <div class="audience-cta">构建第二大脑 →</div>
+    </a>
+    <a href="/about" class="audience-card-v2">
+      <span class="audience-icon">⚡</span>
+      <h3>探索副业者</h3>
+      <p>有专业能力，想用AI放大一份时间卖出多次，实现规模化</p>
+      <div class="audience-cta">用AI放大能力 →</div>
+    </a>
+    <a href="/about" class="audience-card-v2">
+      <span class="audience-icon">🏢</span>
+      <h3>企业 / 机构</h3>
+      <p>想让经验不随人员流动而流失，构建可传承的组织知识资产</p>
+      <div class="audience-cta">知识资产沉淀 →</div>
+    </a>
+  </div>
+</div>
+
+<div class="index-section projects-v2">
+  <div class="section-label">实践项目</div>
+  <h2 class="section-title">15年，持续验证</h2>
+  <p class="section-intro">从个人博客到AI时代，每一个项目都是方法论的亲身实践</p>
+  <div class="project-grid">
+    <a href="/opclab" class="project-card-v2">
+      <h3>OPClab</h3>
+      <div class="project-type-v2">一人公司实验室</div>
+      <p>AI知识资产化实践品牌，让一个人活成一支队伍</p>
+      <div class="project-arrow">→</div>
+    </a>
+    <a href="/about" class="project-card-v2">
+      <h3>NPLUS Digital</h3>
+      <div class="project-type-v2">数字营销机构 · 2011</div>
+      <p>服务美的、华住、Airbnb等头部品牌，CKO实践基地</p>
+      <div class="project-arrow">→</div>
+    </a>
+    <a href="/about" class="project-card-v2">
+      <h3>CAPE</h3>
+      <div class="project-type-v2">全球青年实践网络 · 2011</div>
+      <p>推动60+城市上百场青年主题沙龙，影响力社会实践</p>
+      <div class="project-arrow">→</div>
+    </a>
+  </div>
+</div>
+
+<div class="cta-index">
+  <h2>深入了解我的故事</h2>
+  <p>从博客到AI时代，15年知识资产化的完整叙事</p>
+  <div class="cta-btns">
+    <a href="/about" class="btn-primary-v2">关于陈露 →</a>
+    <a href="/posts" class="btn-ghost-v2">阅读观点</a>
+  </div>
+</div>
