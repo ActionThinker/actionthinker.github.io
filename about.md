@@ -53,7 +53,8 @@ subtitle: AI知识资产化的实践者
 
 他邀请我加入他的团队。后来他成为我的创业合伙人，我们一起创立了NPLUS。
 
-> 博客，比简历好使。这是我对"知识即资产"最原始的直觉认知。
+> 博客，比简历好使。
+这是我对"知识即资产"最原始的直觉认知。
 
 ---
 
@@ -67,12 +68,13 @@ subtitle: AI知识资产化的实践者
 
 > "如果有100个国家，每个国家有5个中国年轻人参与，会怎么样？"
 
-三年间，推动了全球60多个城市上百场青年主题沙龙。孵化了中南对话、DFC中国、活现潮汕、微学英语等项目。
+三年间，推动了全球30多个国家，60多个城市，上百场青年主题沙龙。孵化了中南对话、DFC中国、微学英语等项目。
 
 TEDxNanjing 2013：《分享传递价值，行动创造未来》
 TEDxNingbo 2014：《让"青年发展"成为社会议题》
 
-> 分享不仅是个人学习的方法，更是推动社会连接的力量。这是我的第二个认知跃迁。
+> 分享不仅是个人学习的方法，更是推动社会连接的力量。
+这是我的第二个认知跃迁。
 
 ---
 
@@ -156,7 +158,7 @@ AI极大降低了知识管理的门槛——不需要编程，不需要团队，
 
 ## 社会证明
 
-**TEDx演讲：** TEDxNanjing 2013、TEDxNingbo 2014、TEDxSuzou 2013、UCCA，云栖2050
+**社会演讲：** TEDxNanjing 2013、TEDxNingbo 2014、TEDxSuzou 2013、UCCA，云栖2050、Microsoft NPO IT Day
 
 **服务品牌：** 美的、小天鹅、COLMO、华住、SMILEY、Airbnb、腾讯公益、泸州老窖、长江商学院、OPPO等
 
@@ -168,7 +170,7 @@ AI极大降低了知识管理的门槛——不需要编程，不需要团队，
 
 ## 联系我
 
-📧 **chenluaihr#gmail.com**（#换成@）
+📧 **chenlu@opclab.cn
 🌐 **actionthinker.com**
 
 ---
@@ -185,7 +187,7 @@ I am Chen Lu — an AI Knowledge Strategist.
 
 **2011** — Co-founded [CAPE Global Youth Practice Network](https://capechina.org). 60+ cities, 100+ youth salons. Also co-founded [NPLUS Digital](https://www.nplusgroup.com) as CKO.
 
-**2011-2023** — Built organizational knowledge management systems at NPLUS. Served Midea, Huazhu, Airbnb, Tencent Public Welfare and others. Top 5 in industry agency index.
+**2011-2023** — Built organizational knowledge management systems at NPLUS. Served Midea, Huazhu, Airbnb, Tencent,SMILEY，Freitag and others. Top 50 in industry agency index.
 
 **2023-present** — Launched [OPClab](https://www.actionthinker.com) to explore AI-driven personal knowledge capitalization.
 
