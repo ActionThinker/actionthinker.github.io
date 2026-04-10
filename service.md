@@ -631,6 +631,23 @@ subtitle: 让知识真正成为资产
     <span class="hero-tag">MEMORY.md 协议</span>
   </div>
 </div>
+<!-- Karpathy 热点背书 -->
+<div style="padding:60px 24px;max-width:800px;margin:0 auto;text-align:center;">
+  <div style="padding:32px;border-radius:16px;background:rgba(232,168,56,0.08);border:1px solid rgba(232,168,56,0.15);">
+    <div style="font-family:var(--font-sans);font-size:11px;letter-spacing:2px;color:var(--amber);text-transform:uppercase;margin-bottom:12px;">热点速览</div>
+    <p style="font-family:var(--font-serif);font-size:18px;font-style:italic;color:var(--ink);line-height:1.7;margin:0 0 16px;">
+      "为非开发人员搭建此类系统的产品化方案，蕴含着巨大机遇。"
+    </p>
+    <p style="font-size:13px;color:#888;margin:0;">
+      — Andrej Karpathy，2026年4月
+    </p>
+    <p style="font-size:13px;color:#666;margin:16px 0 0;line-height:1.6;">
+      Karpathy 开源了 LLM Wiki 思路，我们把它做成了<strong>完整商业产品</strong>。他提供想法，我们提供交付。
+    </p>
+  </div>
+</div>
+
+</div>
 
 <!-- 场景分割线：给 Agent 用 -->
 <div class="scene-bar">
