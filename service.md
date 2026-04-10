@@ -1,11 +1,12 @@
-﻿---
+---
 layout: page
-title: 鐭ヨ瘑鍩虹璁炬柦 路 鏈嶅姟浜у搧
-subtitle: 璁╃煡璇嗙湡姝ｆ垚涓鸿祫浜?---
+title: 知识基础设施 · 服务产品
+subtitle: 让知识真正成为资产
+---
 
 <style>
 /* ================================================
-   鏈嶅姟浜у搧椤?鈥?涓夊眰鏋舵瀯椋庢牸
+   服务产品页 — 三层架构风格
    ================================================ */
 
 :root {
@@ -56,7 +57,7 @@ subtitle: 璁╃煡璇嗙湡姝ｆ垚涓鸿祫浜?---
   color: var(--ink);
 }
 
-/* 宸紓鍖栨爣绛?*/
+/* 差异化标签 */
 .hero-tags {
   display: flex;
   gap: 10px;
@@ -79,7 +80,7 @@ subtitle: 璁╃煡璇嗙湡姝ｆ垚涓鸿祫浜?---
   border-color: var(--ink);
 }
 
-/* 鍦烘櫙鍒嗗壊绾?*/
+/* 场景分割线 */
 .scene-bar {
   background: var(--ink);
   color: var(--cream);
@@ -98,7 +99,7 @@ subtitle: 璁╃煡璇嗙湡姝ｆ垚涓鸿祫浜?---
   font-style: normal;
 }
 
-/* 涓夊眰鏋舵瀯姒傝 */
+/* 三层架构概览 */
 .architecture-section {
   padding: 80px 24px;
   max-width: 960px;
@@ -185,7 +186,7 @@ subtitle: 璁╃煡璇嗙湡姝ｆ垚涓鸿祫浜?---
   color: var(--ink);
 }
 
-/* 鐥涚偣 */
+/* 痛点 */
 .pain-section {
   padding: 60px 24px;
   max-width: 800px;
@@ -219,7 +220,7 @@ subtitle: 璁╃煡璇嗙湡姝ｆ垚涓鸿祫浜?---
   margin: 0;
 }
 
-/* 瀹氫环 */
+/* 定价 */
 .pricing-section {
   padding: 80px 24px;
   max-width: 1040px;
@@ -368,7 +369,7 @@ subtitle: 璁╃煡璇嗙湡姝ｆ垚涓鸿祫浜?---
   color: var(--gold);
 }
 
-/* Agent 浜у搧绾?*/
+/* Agent 产品线 */
 .agent-section {
   padding: 60px 24px;
   max-width: 800px;
@@ -451,7 +452,7 @@ subtitle: 璁╃煡璇嗙湡姝ｆ垚涓鸿祫浜?---
   color: var(--gold);
 }
 
-/* 宸ヤ綔娴佺▼ */
+/* 工作流程 */
 .flow-section {
   padding: 80px 24px;
   max-width: 700px;
@@ -561,7 +562,7 @@ subtitle: 璁╃煡璇嗙湡姝ｆ垚涓鸿祫浜?---
   color: var(--amber);
 }
 
-/* AGENTS.md 璇存槑鍧?*/
+/* AGENTS.md 说明块 */
 .agentsmd-block {
   padding: 60px 24px;
   max-width: 720px;
@@ -601,7 +602,7 @@ subtitle: 璁╃煡璇嗙湡姝ｆ垚涓鸿祫浜?---
 .code-preview .key { color: var(--gold); }
 .code-preview .val { color: #98C379; }
 
-/* 鍝嶅簲寮?*/
+/* 响应式 */
 @media (max-width: 768px) {
   .arch-grid, .pain-grid, .pricing-grid { grid-template-columns: 1fr; }
   .agent-grid { grid-template-columns: 1fr; }
@@ -616,60 +617,61 @@ subtitle: 璁╃煡璇嗙湡姝ｆ垚涓鸿祫浜?---
 
 <!-- HERO -->
 <div class="service-hero">
-  <div class="hero-eyebrow">鐭ヨ瘑鍩虹璁炬柦 路 鏈嶅姟浜у搧</div>
-  <h1>璁?AI 鎴愪负浣犵殑<em>澶栬剳</em></h1>
+  <div class="hero-eyebrow">知识基础设施 · 服务产品</div>
+  <h1>让 AI 成为你的<em>外脑</em></h1>
   <p class="hero-sub">
-    涓嶅彧鏄瑪璁版暣鐞嗏€斺€斿府浣犳惌寤轰竴濂?strong>AI鍙洿鎺ヨ皟鐢ㄧ殑鐭ヨ瘑璧勪骇绯荤粺</strong>銆?br>
-    浣犲彧绠＄Н绱紝AI缂栬瘧鎴愮粨鏋勫寲缃戠粶锛孉gent瓒婄敤瓒婃噦浣犮€?  </p>
+    不只是笔记整理——帮你搭建一套<strong>AI可直接调用的知识资产系统</strong>。<br>
+    你只管积累，AI编译成结构化网络，Agent越用越懂你。
+  </p>
   <div class="hero-tags">
-    <span class="hero-tag">Obsidian 鏈湴閮ㄧ讲</span>
-    <span class="hero-tag">AI 澧為噺缂栬瘧</span>
-    <span class="hero-tag highlight">鈽?Agent 鐩磋繛璋冪敤</span>
+    <span class="hero-tag">Obsidian 本地部署</span>
+    <span class="hero-tag">AI 增量编译</span>
+    <span class="hero-tag highlight">★ Agent 直连调用</span>
     <span class="hero-tag">MCP Server</span>
-    <span class="hero-tag">MEMORY.md 鍗忚</span>
+    <span class="hero-tag">MEMORY.md 协议</span>
   </div>
 </div>
 
-<!-- 鍦烘櫙鍒嗗壊绾匡細缁?Agent 鐢?-->
+<!-- 场景分割线：给 Agent 用 -->
 <div class="scene-bar">
-  <p>涓嶅彧鏄粰浜虹湅鐨勭煡璇嗗簱鈥斺€?strong>浣犵殑 Agent 涔熷彲浠ヨ皟鐢ㄥ畠</strong></p>
+  <p>不只是给人看的知识库——<strong>你的 Agent 也可以调用它</strong></p>
 </div>
 
-<!-- 涓夊眰鏋舵瀯姒傝 -->
+<!-- 三层架构概览 -->
 <div class="architecture-section">
-  <div class="section-label">浜у搧鏋舵瀯</div>
-  <h2 class="section-title">涓夊眰浣撶郴锛屼粠绉疮鍒版櫤鑳?/h2>
+  <div class="section-label">产品架构</div>
+  <h2 class="section-title">三层体系，从积累到智能</h2>
   <div class="arch-grid">
     <div class="arch-card">
       <div class="arch-num">Layer 1</div>
-      <div class="arch-icon">馃摜</div>
-      <h3>鐭ヨ瘑娌夌Н</h3>
+      <div class="arch-icon">📥</div>
+      <h3>知识沉积</h3>
       <div class="arch-en">Vault Design</div>
-      <p>Obsidian Vault 瑙勫垝銆佺洰褰曠粨鏋勩€佸師濮嬬礌鏉愬綊妗?/p>
+      <p>Obsidian Vault 规划、目录结构、原始素材归档</p>
       <div class="arch-tags">
         <span class="arch-tag">Obsidian</span>
-        <span class="arch-tag">鐩綍璁捐</span>
-        <span class="arch-tag">鏍煎紡瀵煎叆</span>
+        <span class="arch-tag">目录设计</span>
+        <span class="arch-tag">格式导入</span>
       </div>
     </div>
     <div class="arch-card">
-      <div class="arch-num">Layer 2 路 鏍稿績</div>
-      <div class="arch-icon">鈿欙笍</div>
-      <h3>缂栬瘧鍔犲伐</h3>
+      <div class="arch-num">Layer 2 · 核心</div>
+      <div class="arch-icon">⚙️</div>
+      <h3>编译加工</h3>
       <div class="arch-en">LLM Compilation</div>
-      <p>AI澧為噺缂栬瘧銆佸弻閾剧敓鎴愩€佺煕鐩炬娴嬨€佺煡璇嗙綉缁滆嚜鍔ㄦ瀯寤?/p>
+      <p>AI增量编译、双链生成、矛盾检测、知识网络自动构建</p>
       <div class="arch-tags">
-        <span class="arch-tag">OpenClaw 缂栬瘧</span>
-        <span class="arch-tag">鍙岄摼鐢熸垚</span>
-        <span class="arch-tag">鐭涚浘妫€娴?/span>
+        <span class="arch-tag">OpenClaw 编译</span>
+        <span class="arch-tag">双链生成</span>
+        <span class="arch-tag">矛盾检测</span>
       </div>
     </div>
     <div class="arch-card">
-      <div class="arch-num">Layer 3 路 澹佸瀿</div>
-      <div class="arch-icon">馃攲</div>
-      <h3>杩炴帴浣跨敤</h3>
+      <div class="arch-num">Layer 3 · 壁垒</div>
+      <div class="arch-icon">🔌</div>
+      <h3>连接使用</h3>
       <div class="arch-en">Agent Interface</div>
-      <p>MCP Server銆丷AG API銆丱penClaw 鐩磋繛鈥斺€擜gent鍙富鍔ㄨ鍐?/p>
+      <p>MCP Server、RAG API、OpenClaw 直连——Agent可主动读写</p>
       <div class="arch-tags">
         <span class="arch-tag">MCP Server</span>
         <span class="arch-tag">RAG API</span>
@@ -679,200 +681,204 @@ subtitle: 璁╃煡璇嗙湡姝ｆ垚涓鸿祫浜?---
   </div>
 </div>
 
-<!-- 鐥涚偣 -->
+<!-- 痛点 -->
 <div class="pain-section">
-  <div class="section-label">鐥涚偣</div>
-  <h2 class="section-title">鐭ヨ瘑绠＄悊鐨勪笁澶у洶澧?/h2>
+  <div class="section-label">痛点</div>
+  <h2 class="section-title">知识管理的三大困境</h2>
   <div class="pain-grid">
     <div class="pain-card">
-      <h4>绉疮浜嗭紝鎵句笉鍒?/h4>
-      <p>鍑犵櫨绡囨枃绔犮€佷笂鍗冩潯绗旇<br>鐪熸瑕佺敤鐨勬椂鍊欐棤浠庝笅鎵?/p>
+      <h4>积累了，找不到</h4>
+      <p>几百篇文章、上千条笔记<br>真正要用的时候无从下手</p>
     </div>
     <div class="pain-card">
-      <h4>鏁寸悊浜嗭紝鏃犱綋绯?/h4>
-      <p>鏀惰棌浜嗕竴鍫嗭紝娌℃湁缁撴瀯<br>鐭ヨ瘑鏃犳硶澶嶅埄澧為暱</p>
+      <h4>整理了，无体系</h4>
+      <p>收藏了一堆，没有结构<br>知识无法复利增长</p>
     </div>
     <div class="pain-card">
-      <h4>鎯虫暣鐞嗭紝瀚岄夯鐑?/h4>
-      <p>鐭ラ亾鐭ヨ瘑绠＄悊閲嶈<br>浣嗘病鏈夋椂闂寸簿鍔涘幓鍋?/p>
+      <h4>想整理，嫌麻烦</h4>
+      <p>知道知识管理重要<br>但没有时间精力去做</p>
     </div>
   </div>
 </div>
 
-<!-- AGENTS.md 璇存槑鍧?-->
+<!-- AGENTS.md 说明块 -->
 <div class="agentsmd-block">
   <div class="agentsmd-inner">
-    <h3>馃搵 AGENTS.md 鈥?Agent 鐨勮涓鸿鏄庝功</h3>
-    <p>杩欐槸浣犵煡璇嗗簱鐨?Agent鎺ュ叆灞?鏍囧噯鏂囦欢銆傚畠鍛婅瘔Agent锛氬摢浜涚洰褰曞彲璇汇€佸摢浜涘彲鍐欍€佸浣曟洿鏂癕EMORY.md銆佸浣曞缓绔嬪弻閾俱€?/p>
-    <p>Karpathy 鍦?026骞?鏈堝垎浜簡瀹屽叏鐩稿悓鐨勬柟娉曡锛屽苟鎸囧嚭锛?em>"涓洪潪寮€鍙戜汉鍛樻惌寤烘绫荤郴缁熺殑浜у搧鍖栨柟妗堬紝钑村惈鐫€宸ㄥぇ鏈洪亣銆?</em></p>
+    <h3>📋 AGENTS.md — Agent 的行为说明书</h3>
+    <p>这是你知识库的"Agent接入层"标准文件。它告诉Agent：哪些目录可读、哪些可写、如何更新MEMORY.md、如何建立双链。</p>
+    <p>Karpathy 在2026年4月分享了完全相同的方法论，并指出：<em>"为非开发人员搭建此类系统的产品化方案，蕴含着巨大机遇。"</em></p>
     <div class="code-preview">
-<span class="comment"># AGENTS.md 鈥?鐭ヨ瘑搴撴搷浣滆鑼?/span>
-<span class="key">## 鐩綍鏉冮檺</span>
-<span class="key">00-Inbox/</span>    <span class="val">鍙鍙啓</span>  <span class="comment">// 鏂板唴瀹规姇閫掑尯</span>
-<span class="key">01-Raw/</span>     <span class="val">鍙</span>       <span class="comment">// 鍘熷妗ｆ锛岀姝慨鏀?/span>
-<span class="key">02-Wiki/</span>     <span class="val">鍙鍙啓</span>  <span class="comment">// LLM 缂栬瘧鍖?/span>
-<span class="key">05-Agent-Space/</span> <span class="val">鍙鍙啓</span>  <span class="comment">// Agent 涓撳睘闅旂鍖?/span>
-<span class="key">MEMORY.md</span>   <span class="val">杩藉姞鍐欏叆</span>  <span class="comment">// Agent 鎸佷箙璁板繂</span>
+<span class="comment"># AGENTS.md — 知识库操作规范</span>
+<span class="key">## 目录权限</span>
+<span class="key">00-Inbox/</span>    <span class="val">可读可写</span>  <span class="comment">// 新内容投递区</span>
+<span class="key">01-Raw/</span>     <span class="val">只读</span>       <span class="comment">// 原始档案，禁止修改</span>
+<span class="key">02-Wiki/</span>     <span class="val">可读可写</span>  <span class="comment">// LLM 编译区</span>
+<span class="key">05-Agent-Space/</span> <span class="val">可读可写</span>  <span class="comment">// Agent 专属隔离区</span>
+<span class="key">MEMORY.md</span>   <span class="val">追加写入</span>  <span class="comment">// Agent 持久记忆</span>
     </div>
   </div>
 </div>
 
-<!-- Human 浜у搧绾垮畾浠?-->
+<!-- Human 产品线定价 -->
 <div class="pricing-section">
-  <div class="section-label">鏈嶅姟鏂规</div>
-  <h2 class="section-title">涓汉 / 鍥㈤槦绾?/h2>
+  <div class="section-label">服务方案</div>
+  <h2 class="section-title">个人 / 团队线</h2>
   <p style="font-size:13px;color:#999;text-align:center;margin-top:-32px;margin-bottom:0;font-family:var(--font-sans);">
-    涓夊眰鍙嫭绔嬭喘涔帮紝涔熷彲鎵撳寘浜彈鍏ㄩ摼璺紭鎯犱环
+    三层可独立购买，也可打包享受全链路优惠价
   </p>
   <div class="pricing-grid">
     <div class="pricing-card">
-      <div class="pricing-level">L1 路 DIY</div>
-      <h3>妯℃澘 + 鎸囧崡</h3>
-      <div class="pricing-price">楼299<span> / 娆?/span></div>
-      <p class="pricing-desc">閫傚悎鏈変竴瀹氭妧鏈兘鍔涳紝鎯宠嚜宸卞姩鎵嬬殑鐢ㄦ埛</p>
+      <div class="pricing-level">L1 · DIY</div>
+      <h3>模板 + 指南</h3>
+      <div class="pricing-price">¥299<span> / 次</span></div>
+      <p class="pricing-desc">适合有一定技术能力，想自己动手的用户</p>
       <ul class="pricing-features">
-        <li><span class="check">鉁?/span> Obsidian Vault 妯℃澘搴?/li>
-        <li><span class="check">鉁?/span> 鐩綍缁撴瀯璁捐瑙勮寖</li>
-        <li><span class="check">鉁?/span> 鍩虹瀵煎叆浣跨敤鎸囧崡</li>
-        <li><span class="check">鉁?/span> AGENTS.md 妯℃澘</li>
-        <li><span class="check">鉁?/span> Agent 鎺ュ彛閰嶇疆璇存槑</li>
+        <li><span class="check">✓</span> Obsidian Vault 模板库</li>
+        <li><span class="check">✓</span> 目录结构设计规范</li>
+        <li><span class="check">✓</span> 基础导入使用指南</li>
+        <li><span class="check">✓</span> AGENTS.md 模板</li>
+        <li><span class="check">✓</span> Agent 接口配置说明</li>
       </ul>
     </div>
 
     <div class="pricing-card featured">
-      <div class="pricing-level">L2 路 鎺ㄨ崘 鈽?/div>
-      <h3>蹇€熸惌寤?+ AI缂栬瘧</h3>
-      <div class="pricing-price">楼999<span> / 娆?/span></div>
-      <div class="pricing-tag">鍚?Layer 1 + Layer 2</div>
-      <p class="pricing-desc">閫傚悎鎯冲揩閫熻鏁堬紝涓嶆効鑷繁鏁寸悊鐨勭敤鎴?/p>
+      <div class="pricing-level">L2 · 推荐 ★</div>
+      <h3>快速搭建 + AI编译</h3>
+      <div class="pricing-price">¥999<span> / 次</span></div>
+      <div class="pricing-tag">含 Layer 1 + Layer 2</div>
+      <p class="pricing-desc">适合想快速见效，不愿自己整理的用户</p>
       <ul class="pricing-features">
-        <li><span class="check">鉁?/span> L1 鍏ㄩ儴鍐呭</li>
-        <li><span class="check">鉁?/span> 棣栨 AI 澧為噺缂栬瘧</li>
-        <li><span class="check">鉁?/span> 鍙岄摼鍏崇郴缃戠粶鐢熸垚</li>
-        <li><span class="check">鉁?/span> MEMORY.md 鍒濆鍖?/li>
-        <li><span class="check">鉁?/span> MCP Server 鍩虹閰嶇疆</li>
-        <li><span class="check">鉁?/span> 3涓湀鍐呭閲忕紪璇戯紙浜哄伐瑙﹀彂锛屾垜鏉ュ仛锛?/li>
+        <li><span class="check">✓</span> L1 全部内容</li>
+        <li><span class="check">✓</span> 首次 AI 增量编译</li>
+        <li><span class="check">✓</span> 双链关系网络生成</li>
+        <li><span class="check">✓</span> MEMORY.md 初始化</li>
+        <li><span class="check">✓</span> MCP Server 基础配置</li>
+        <li><span class="check">✓</span> 3个月内增量编译（人工触发，我来做）</li>
       </ul>
     </div>
 
     <div class="pricing-card">
-      <div class="pricing-level">L3 路 瀹氬埗</div>
-      <h3>鍏ㄦ祦绋嬫墭绠?/h3>
-      <div class="pricing-price">楼2999<span> 璧?/span></div>
-      <div class="pricing-tag">鍚?Layer 1 + Layer 2 + Layer 3</div>
-      <p class="pricing-desc">閫傚悎鍐呭閲忓ぇ锛岄渶瑕佹繁搴﹀畾鍒剁殑鐢ㄦ埛</p>
+      <div class="pricing-level">L3 · 定制</div>
+      <h3>全流程托管</h3>
+      <div class="pricing-price">¥2999<span> 起</span></div>
+      <div class="pricing-tag">含 Layer 1 + Layer 2 + Layer 3</div>
+      <p class="pricing-desc">适合内容量大，需要深度定制的用户</p>
       <ul class="pricing-features">
-        <li><span class="check">鉁?/span> L2 鍏ㄩ儴鍐呭</li>
-        <li><span class="check">鉁?/span> 鍐呭鏁寸悊鍜ㄨ锛堜笉闄愭鏁帮級</li>
-        <li><span class="check">鉁?/span> 姣忓懆澧為噺缂栬瘧锛堟垜鏉ュ仛锛?/li>
-        <li><span class="check">鉁?/span> 鐭涚浘妫€娴嬫湇鍔?/li>
-        <li><span class="check">鉁?/span> 鍋ュ悍妫€鏌ユ姤鍛?/li>
-        <li><span class="check">鉁?/span> RAG API 鎼缓 + MCP Server</li>
+        <li><span class="check">✓</span> L2 全部内容</li>
+        <li><span class="check">✓</span> 内容整理咨询（不限次数）</li>
+        <li><span class="check">✓</span> 每周增量编译（我来做）</li>
+        <li><span class="check">✓</span> 矛盾检测服务</li>
+        <li><span class="check">✓</span> 健康检查报告</li>
+        <li><span class="check">✓</span> RAG API 搭建 + MCP Server</li>
       </ul>
     </div>
   </div>
 
-  <!-- 缂栬瘧璇存槑 -->
+  <!-- 编译说明 -->
   <div style="text-align:center;margin-top:28px;font-size:13px;color:#999;font-family:var(--font-sans);">
-    <strong style="color:var(--ink)">鈽?缂栬瘧娴佺▼璇存槑</strong><br>
-    澧為噺缂栬瘧 = 鍗婅嚜鍔細宸ュ叿鍏ㄨ嚜鍔ㄨ窇锛屼綘楠屾敹纭銆傚井淇?閭欢鍙戞垜 鈫?鎴戣Е鍙戠紪璇?鈫?浜や粯缁欎綘銆?  </div>
-</div>
-
-<!-- 鍏ㄩ摼璺墦鍖呭椁?-->
-<div style="padding:0 24px 60px;max-width:1040px;margin:0 auto;">
-  <div style="padding:48px 40px;border-radius:20px;background:var(--ink);color:var(--cream);text-align:center;max-width:640px;margin:0 auto;">
-    <div style="font-family:var(--font-sans);font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:12px;">涓€绔欏紡瑙ｅ喅鏂规</div>
-    <h2 style="font-family:var(--font-serif);font-size:28px;font-weight:600;color:var(--cream);margin-bottom:8px;">鐭ヨ瘑璧勪骇鍖栧叏閾捐矾濂楅</h2>
-    <p style="font-size:14px;color:rgba(250,250,248,0.7);line-height:1.7;margin-bottom:24px;">Layer 1 + Layer 2 + Layer 3 鍏ㄩ儴鍖呭惈锛屼竴姝ュ埌浣?br>姣斿崟涔扮渷 <strong style="color:var(--gold)">楼1298</strong></p>
-    <div style="font-family:var(--font-sans);font-size:36px;font-weight:700;color:var(--gold);margin-bottom:24px;">楼4999 <span style="font-size:14px;font-weight:400;color:rgba(250,250,248,0.5);">/ 鍏ㄥ</span></div>
-    <ul style="list-style:none;padding:0;margin:0 0 28px;text-align:left;display:inline-block;">
-      <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
-        <span style="color:var(--gold);">鉁?/span> Obsidian Vault 瀹屾暣鎼缓 + 鐩綍瑙勮寖
-      </li>
-      <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
-        <span style="color:var(--gold);">鉁?/span> 鍏ㄩ噺鍐呭棣栨 AI 缂栬瘧
-      </li>
-      <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
-        <span style="color:var(--gold);">鉁?/span> 姣忔湀澧為噺缂栬瘧锛堟寔缁?涓湀锛?      </li>
-      <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
-        <span style="color:var(--gold);">鉁?/span> 鐭涚浘妫€娴?+ 鍋ュ悍妫€鏌?      </li>
-      <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
-        <span style="color:var(--gold);">鉁?/span> MCP Server + RAG API 閰嶇疆
-      </li>
-      <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
-        <span style="color:var(--gold);">鉁?/span> OpenClaw 鐩磋繛娴嬭瘯
-      </li>
-    </ul>
-    <a href="https://www.zaihang.com/expert/detail?eid=2bhjbfp3t2q" class="btn-primary" style="background:var(--gold);color:var(--ink);">棰勭害鍏ㄩ摼璺挩璇?鈫?/a>
+    <strong style="color:var(--ink)">★ 编译流程说明</strong><br>
+    增量编译 = 半自动：工具全自动跑，你验收确认。微信/邮件发我 → 我触发编译 → 交付给你。
   </div>
 </div>
 
-<!-- Agent 鍩虹璁炬柦绾?-->
+<!-- 全链路打包套餐 -->
+<div style="padding:0 24px 60px;max-width:1040px;margin:0 auto;">
+  <div style="padding:48px 40px;border-radius:20px;background:var(--ink);color:var(--cream);text-align:center;max-width:640px;margin:0 auto;">
+    <div style="font-family:var(--font-sans);font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:12px;">一站式解决方案</div>
+    <h2 style="font-family:var(--font-serif);font-size:28px;font-weight:600;color:var(--cream);margin-bottom:8px;">知识资产化全链路套餐</h2>
+    <p style="font-size:14px;color:rgba(250,250,248,0.7);line-height:1.7;margin-bottom:24px;">Layer 1 + Layer 2 + Layer 3 全部包含，一步到位<br>比单买省 <strong style="color:var(--gold)">¥1298</strong></p>
+    <div style="font-family:var(--font-sans);font-size:36px;font-weight:700;color:var(--gold);margin-bottom:24px;">¥4999 <span style="font-size:14px;font-weight:400;color:rgba(250,250,248,0.5);">/ 全套</span></div>
+    <ul style="list-style:none;padding:0;margin:0 0 28px;text-align:left;display:inline-block;">
+      <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
+        <span style="color:var(--gold);">✓</span> Obsidian Vault 完整搭建 + 目录规范
+      </li>
+      <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
+        <span style="color:var(--gold);">✓</span> 全量内容首次 AI 编译
+      </li>
+      <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
+        <span style="color:var(--gold);">✓</span> 每月增量编译（持续6个月）
+      </li>
+      <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
+        <span style="color:var(--gold);">✓</span> 矛盾检测 + 健康检查
+      </li>
+      <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
+        <span style="color:var(--gold);">✓</span> MCP Server + RAG API 配置
+      </li>
+      <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
+        <span style="color:var(--gold);">✓</span> OpenClaw 直连测试
+      </li>
+    </ul>
+    <a href="https://www.zaih.com/falcon/mentors/2bhjbfp3t2q" class="btn-primary" style="background:var(--gold);color:var(--ink);">预约全链路咨询 →</a>
+  </div>
+</div>
+
+<!-- Agent 基础设施线 -->
 <div class="agent-section">
-  <div class="agent-badge">鈽?宸紓鍖栧鍨?/div>
-  <h2 class="section-title">Agent 鍩虹璁炬柦绾?/h2>
+  <div class="agent-badge">★ 差异化壁垒</div>
+  <h2 class="section-title">Agent 基础设施线</h2>
   <p style="font-size:14px;color:#888;max-width:520px;margin:0 auto 0;line-height:1.7;">
-    浣犵殑鐭ヨ瘑搴撲笉鍙槸缁欎汉鐪嬧€斺€?strong style="color:var(--ink)">Agent 涔熷彲浠ヤ富鍔ㄨ皟鐢ㄥ畠</strong>銆傝繖鏄湡姝ｇ殑鐭ヨ瘑璧勪骇鍖栵細AI绯荤粺鎷ユ湁鎸佺画瀛︿範鐨?浼佷笟澶栬剳"銆?  </p>
+    你的知识库不只是给人看——<strong style="color:var(--ink)">Agent 也可以主动调用它</strong>。这是真正的知识资产化：AI系统拥有持续学习的"企业外脑"。
+  </p>
   <div class="agent-grid">
     <div class="agent-card">
       <div class="arch-num">Agent Starter</div>
-      <h3>缁?Agent 閰嶄竴涓鑴?/h3>
-      <div class="price">楼1999<span> / 娆?/span></div>
-      <p>閫傚悎 AI 寮€鍙戣€呫€佷釜浜?Agent 鐢ㄦ埛锛氱粰 Agent 涓€涓彲璇诲啓鐨勭煡璇嗗簱锛岃瀹冭秺鐢ㄨ秺鎳備綘鐨勪笟鍔°€?/p>
+      <h3>给 Agent 配一个外脑</h3>
+      <div class="price">¥1999<span> / 次</span></div>
+      <p>适合 AI 开发者、个人 Agent 用户：给 Agent 一个可读写的知识库，让它越用越懂你的业务。</p>
       <ul class="agent-features">
-        <li><span class="check">鉁?/span> Vault 鎼缓 + MCP Server 閰嶇疆</li>
-        <li><span class="check">鉁?/span> MEMORY.md 鍗忚鍒濆鍖?/li>
-        <li><span class="check">鉁?/span> OpenClaw / Claude 鎺ュ叆娴嬭瘯</li>
-        <li><span class="check">鉁?/span> AGENTS.md 瀹氬埗缂栧啓</li>
+        <li><span class="check">✓</span> Vault 搭建 + MCP Server 配置</li>
+        <li><span class="check">✓</span> MEMORY.md 协议初始化</li>
+        <li><span class="check">✓</span> OpenClaw / Claude 接入测试</li>
+        <li><span class="check">✓</span> AGENTS.md 定制编写</li>
       </ul>
     </div>
     <div class="agent-card">
       <div class="arch-num">Agent Business</div>
-      <h3>浼佷笟 Agent 鐭ヨ瘑涓彴</h3>
-      <div class="price">楼4999<span> 璧?/span></div>
-      <p>閫傚悎浼佷笟 AI 閮ㄧ讲鍥㈤槦锛氬 Agent 鍏变韩鐭ヨ瘑搴擄紝鏉冮檺鍒嗙骇锛岃嚜鍔ㄧ紪璇戯紝鎸佺画瀛︿範銆?/p>
+      <h3>企业 Agent 知识中台</h3>
+      <div class="price">¥4999<span> 起</span></div>
+      <p>适合企业 AI 部署团队：多 Agent 共享知识库，权限分级，自动编译，持续学习。</p>
       <ul class="agent-features">
-        <li><span class="check">鉁?/span> Agent Starter 鍏ㄩ儴鍐呭</li>
-        <li><span class="check">鉁?/span> 澶?Agent 鍏变韩鐭ヨ瘑搴撴灦鏋?/li>
-        <li><span class="check">鉁?/span> 姣忓懆鑷姩缂栬瘧 + 鍋ュ悍妫€鏌?/li>
-        <li><span class="check">鉁?/span> 鐭ヨ瘑瀹¤鏃ュ織</li>
-        <li><span class="check">鉁?/span> MCP 鍗忚骞村害閫傞厤</li>
+        <li><span class="check">✓</span> Agent Starter 全部内容</li>
+        <li><span class="check">✓</span> 多 Agent 共享知识库架构</li>
+        <li><span class="check">✓</span> 每周自动编译 + 健康检查</li>
+        <li><span class="check">✓</span> 知识审计日志</li>
+        <li><span class="check">✓</span> MCP 协议年度适配</li>
       </ul>
     </div>
   </div>
 </div>
 
-<!-- 宸ヤ綔娴佺▼ -->
+<!-- 工作流程 -->
 <div class="flow-section">
-  <div class="section-label">浜や粯娴佺▼</div>
-  <h2 class="section-title">鍥涙瀹屾垚鎼缓</h2>
+  <div class="section-label">交付流程</div>
+  <h2 class="section-title">四步完成搭建</h2>
   <div class="flow-steps">
     <div class="flow-step">
       <div class="flow-num">1</div>
       <div class="flow-content">
-        <h4>鍙戦€佹ā鏉垮寘</h4>
-        <p>鏀跺埌璁㈠崟鍚庡彂閫?Obsidian Vault 妯℃澘搴撱€佸畨瑁呮寚鍗椼€丄GENTS.md 妯℃澘</p>
+        <h4>发送模板包</h4>
+        <p>收到订单后发送 Obsidian Vault 模板库、安装指南、AGENTS.md 模板</p>
       </div>
     </div>
     <div class="flow-step">
       <div class="flow-num">2</div>
       <div class="flow-content">
-        <h4>瀵煎叆浣犵殑鍐呭</h4>
-        <p>鎶婄幇鏈夋枃绔犮€佺瑪璁般€佺礌鏉愬鍒跺埌瀵瑰簲鐩綍锛屾敮鎸?URL銆丳DF銆丮arkdown銆佸井淇＄瑪璁扮瓑鏍煎紡</p>
+        <h4>导入你的内容</h4>
+        <p>把现有文章、笔记、素材复制到对应目录，支持 URL、PDF、Markdown、微信笔记等格式</p>
       </div>
     </div>
     <div class="flow-step">
       <div class="flow-num">3</div>
       <div class="flow-content">
-        <h4>AI 缂栬瘧鐭ヨ瘑搴?/h4>
-        <p>OpenClaw 璇诲彇鍐呭 鈫?澧為噺缂栬瘧 鈫?鐢熸垚鍙岄摼 鈫?鏇存柊 MEMORY.md 鈫?鏋勫缓鐭ヨ瘑缃戠粶</p>
+        <h4>AI 编译知识库</h4>
+        <p>OpenClaw 读取内容 → 增量编译 → 生成双链 → 更新 MEMORY.md → 构建知识网络</p>
       </div>
     </div>
     <div class="flow-step">
       <div class="flow-num">4</div>
       <div class="flow-content">
-        <h4>杩炴帴 Agent</h4>
-        <p>閰嶇疆 MCP Server / RAG API / OpenClaw 鐩磋繛鈥斺€斾綘鐨?Agent 浠庢鍙互涓诲姩璇诲啓鐭ヨ瘑搴?/p>
+        <h4>连接 Agent</h4>
+        <p>配置 MCP Server / RAG API / OpenClaw 直连——你的 Agent 从此可以主动读写知识库</p>
       </div>
     </div>
   </div>
@@ -880,10 +886,10 @@ subtitle: 璁╃煡璇嗙湡姝ｆ垚涓鸿祫浜?---
 
 <!-- CTA -->
 <div class="service-cta">
-  <h2>璁╃煡璇嗙湡姝ｄ负浣犲拰浣犵殑 Agent 宸ヤ綔</h2>
-  <p>涓€娆℃惌寤猴紝鎸佺画澧炲€笺€備綘鐨勭Н绱€煎緱琚縺娲烩€斺€斾笉鍙槸缁欎綘鑷繁鐢紝涔熺粰浣犵殑 AI Agent 鐢ㄣ€?/p>
+  <h2>让知识真正为你和你的 Agent 工作</h2>
+  <p>一次搭建，持续增值。你的积累值得被激活——不只是给你自己用，也给你的 AI Agent 用。</p>
   <div class="cta-buttons">
-    <a href="https://www.zaihang.com/expert/detail?eid=2bhjbfp3t2q" class="btn-primary">鍦ㄨ绾﹁鍜ㄨ 鈫?/a>
-    <a href="mailto:chenluaihr@gmail.com?subject=鐭ヨ瘑鍩虹璁炬柦鏈嶅姟鍜ㄨ" class="btn-secondary">閭欢鑱旂郴</a>
+    <a href="https://www.zaih.com/falcon/mentors/2bhjbfp3t2q" class="btn-primary">在行约见咨询 →</a>
+    <a href="mailto:chenluaihr@gmail.com?subject=知识基础设施服务咨询" class="btn-secondary">邮件联系</a>
   </div>
 </div>
