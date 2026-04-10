@@ -824,7 +824,7 @@ subtitle: 让知识真正成为资产
       <div class="arch-num">Agent Starter</div>
       <h3>给 Agent 配一个外脑</h3>
       <div class="price">¥1999<span> / 次</span></div>
-      <p>适合 AI 开发者、个人 Agent 用户：给 Agent 一个可读写的知识库，让它越用越懂你的业务。</p>
+      <p>适合 AI 开发者、个人 Agent 用户：给 Agent 一个可读写的知识库， 让它越用越懂你的业务。</p>
       <ul class="agent-features">
         <li><span class="check">✓</span> Vault 搭建 + MCP Server 配置</li>
         <li><span class="check">✓</span> MEMORY.md 协议初始化</li>
