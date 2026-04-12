@@ -630,7 +630,6 @@ subtitle: 让知识真正成为资产
     <span class="hero-tag">MCP Server</span>
     <span class="hero-tag">MEMORY.md 协议</span>
   </div>
-</div>
 <!-- Karpathy 热点背书 -->
 <div style="padding:60px 24px;max-width:800px;margin:0 auto;text-align:center;">
   <div style="padding:32px;border-radius:16px;background:rgba(232,168,56,0.08);border:1px solid rgba(232,168,56,0.15);">
@@ -647,76 +646,84 @@ subtitle: 让知识真正成为资产
   </div>
 </div>
 
-</div>
-
-<!-- 场景分割线：给 Agent 用 -->
+</div><!-- 场景分割线：给 Agent 用 -->
 <div class="scene-bar">
   <p>不只是给人看的知识库——<strong>你的 Agent 也可以调用它</strong></p>
 </div>
 
-<!-- 三层架构概览 -->
-<div class="architecture-section">
-  <div class="section-label">产品架构</div>
-  <h2 class="section-title">三层体系，从积累到智能</h2>
-  <div class="arch-grid">
-    <div class="arch-card">
-      <div class="arch-num">Layer 1</div>
-      <div class="arch-icon">📥</div>
-      <h3>知识沉积</h3>
-      <div class="arch-en">Vault Design</div>
-      <p>Obsidian Vault 规划、目录结构、原始素材归档</p>
-      <div class="arch-tags">
-        <span class="arch-tag">Obsidian</span>
-        <span class="arch-tag">目录设计</span>
-        <span class="arch-tag">格式导入</span>
-      </div>
+
+
+<!-- 效果图 — Obsidian 图谱 -->
+<div style="padding:0 24px 80px;max-width:960px;margin:0 auto;text-align:center;">
+  <div style="font-family:var(--font-sans);font-size:11px;letter-spacing:2px;color:var(--amber);text-transform:uppercase;margin-bottom:10px;">交付效果</div>
+  <h2 style="font-family:var(--font-serif);font-size:clamp(22px,3vw,30px);font-weight:600;color:var(--ink);margin-bottom:8px;">编译完成后，你的知识网络长这样</h2>
+  <p style="font-size:14px;color:#888;margin-bottom:36px;line-height:1.7;">Obsidian 图谱不只是好看的图——它是你的<strong style="color:var(--ink)">第二大脑可视化</strong>。每个节点都是一条积累的知识，连接线是 AI 发现的关系。</p>
+
+  <!-- 截图占位符：替换 src 为你的 Obsidian 图谱截图 -->
+  <div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(26,26,46,0.08);background:#f5f4f2;padding:40px 20px;">
+    <img
+      src="/assets/images/obsidian-graph-demo.png"
+      alt="Obsidian 知识图谱示例"
+      style="max-width:100%;border-radius:10px;box-shadow:0 8px 32px rgba(26,26,46,0.12);"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+    >
+    <!-- 截图加载失败占位 -->
+    <div style="display:none;align-items:center;justify-content:center;min-height:200px;flex-direction:column;gap:12px;color:#999;">
+      <div style="font-size:48px;">🔍</div>
+      <div style="font-family:var(--font-sans);font-size:14px;">📸 截图占位：/assets/images/obsidian-graph-demo.png</div>
+      <div style="font-family:var(--font-sans);font-size:12px;color:#bbb;">请上传你的 Obsidian 图谱截图 → 保存到 /assets/images/obsidian-graph-demo.png</div>
     </div>
-    <div class="arch-card">
-      <div class="arch-num">Layer 2 · 核心</div>
-      <div class="arch-icon">⚙️</div>
-      <h3>编译加工</h3>
-      <div class="arch-en">LLM Compilation</div>
-      <p>AI增量编译、双链生成、矛盾检测、知识网络自动构建</p>
-      <div class="arch-tags">
-        <span class="arch-tag">OpenClaw 编译</span>
-        <span class="arch-tag">双链生成</span>
-        <span class="arch-tag">矛盾检测</span>
-      </div>
+    <div style="position:absolute;bottom:16px;right:16px;background:rgba(26,26,46,0.75);color:var(--gold);font-size:11px;padding:4px 10px;border-radius:8px;font-family:var(--font-sans);">
+      Obsidian 本地截图 · Graph View
     </div>
-    <div class="arch-card">
-      <div class="arch-num">Layer 3 · 壁垒</div>
-      <div class="arch-icon">🔌</div>
-      <h3>连接使用</h3>
-      <div class="arch-en">Agent Interface</div>
-      <p>MCP Server、RAG API、OpenClaw 直连——Agent可主动读写</p>
-      <div class="arch-tags">
-        <span class="arch-tag">MCP Server</span>
-        <span class="arch-tag">RAG API</span>
-        <span class="arch-tag">OpenClaw</span>
-      </div>
+  </div>
+  <p style="font-size:12px;color:#bbb;margin-top:14px;font-family:var(--font-sans);">
+    ▲ 上图为陈露个人知识库截图（2026年4月），已获授权展示
+  </p>
+</div>
+
+
+<!-- 信任背书：自己的案例 -->
+<div style="padding:0 24px 60px;max-width:760px;margin:0 auto;">
+  <div style="text-align:center;margin-bottom:32px;">
+    <div style="font-family:var(--font-sans);font-size:11px;letter-spacing:2px;color:var(--amber);text-transform:uppercase;margin-bottom:10px;">真实案例</div>
+    <h2 style="font-family:var(--font-serif);font-size:clamp(22px,3vw,30px);font-weight:600;color:var(--ink);">陈露自己的知识资产系统</h2>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+    <div style="padding:32px;border-radius:16px;background:#fff;border:1px solid rgba(26,26,46,0.07);text-align:center;">
+      <div style="font-size:36px;margin-bottom:12px;">📚</div>
+      <div style="font-family:var(--font-serif);font-size:32px;font-weight:700;color:var(--ink);">2000+</div>
+      <div style="font-family:var(--font-sans);font-size:12px;color:#888;margin-top:4px;">篇文章与笔记</div>
     </div>
+    <div style="padding:32px;border-radius:16px;background:#fff;border:1px solid rgba(26,26,46,0.07);text-align:center;">
+      <div style="font-size:36px;margin-bottom:12px;">🕸️</div>
+      <div style="font-family:var(--font-serif);font-size:32px;font-weight:700;color:var(--ink);">1:7</div>
+      <div style="font-family:var(--font-sans);font-size:12px;color:#888;margin-top:4px;">引用连接比（AI生成双链）</div>
+    </div>
+    <div style="padding:32px;border-radius:16px;background:#fff;border:1px solid rgba(26,26,46,0.07);text-align:center;">
+      <div style="font-size:36px;margin-bottom:12px;">🤖</div>
+      <div style="font-family:var(--font-serif);font-size:32px;font-weight:700;color:var(--ink);">3个</div>
+      <div style="font-family:var(--font-sans);font-size:12px;color:#888;margin-top:4px;">专属 AI Agent 直连调用</div>
+    </div>
+    <div style="padding:32px;border-radius:16px;background:#fff;border:1px solid rgba(26,26,46,0.07);text-align:center;">
+      <div style="font-size:36px;margin-bottom:12px;">💡</div>
+      <div style="font-family:var(--font-serif);font-size:32px;font-weight:700;color:var(--ink);">4年</div>
+      <div style="font-family:var(--font-sans);font-size:12px;color:#888;margin-top:4px;">持续积累沉淀</div>
+    </div>
+  </div>
+
+  <div style="margin-top:28px;padding:28px 32px;border-radius:16px;background:rgba(232,168,56,0.06);border:1px solid rgba(232,168,56,0.12);border-left:3px solid var(--gold);">
+    <p style="font-family:var(--font-serif);font-size:17px;font-style:italic;color:var(--ink);line-height:1.7;margin:0 0 12px;">
+      "我做了4年知识管理，用过 Notion、印象笔记、飞书……最终选 Obsidian + AI 编译这条路，因为它解决了所有我踩过的坑。"
+    </p>
+    <p style="font-family:var(--font-sans);font-size:13px;color:#888;margin:0;">
+      — 陈露，OPClab 发起人，NPLUS Digital 联合创始人
+    </p>
   </div>
 </div>
 
-<!-- 痛点 -->
-<div class="pain-section">
-  <div class="section-label">痛点</div>
-  <h2 class="section-title">知识管理的三大困境</h2>
-  <div class="pain-grid">
-    <div class="pain-card">
-      <h4>积累了，找不到</h4>
-      <p>几百篇文章、上千条笔记<br>真正要用的时候无从下手</p>
-    </div>
-    <div class="pain-card">
-      <h4>整理了，无体系</h4>
-      <p>收藏了一堆，没有结构<br>知识无法复利增长</p>
-    </div>
-    <div class="pain-card">
-      <h4>想整理，嫌麻烦</h4>
-      <p>知道知识管理重要<br>但没有时间精力去做</p>
-    </div>
-  </div>
-</div>
+
 
 <!-- AGENTS.md 说明块 -->
 <div class="agentsmd-block">
@@ -770,7 +777,8 @@ subtitle: 让知识真正成为资产
         <li><span class="check">✓</span> 双链关系网络生成</li>
         <li><span class="check">✓</span> MEMORY.md 初始化</li>
         <li><span class="check">✓</span> MCP Server 基础配置</li>
-        <li><span class="check">✓</span> 3个月内增量编译（人工触发，我来做）</li>
+        <li><span class="check">✓</span> <strong>3次增量编译</strong>（微信/邮件发我，48小时内完成）</li>
+        <li><span class="check">✓</span> 超出次数按 ¥200/次 补价，不强制</li>
       </ul>
     </div>
 
@@ -794,7 +802,7 @@ subtitle: 让知识真正成为资产
   <!-- 编译说明 -->
   <div style="text-align:center;margin-top:28px;font-size:13px;color:#999;font-family:var(--font-sans);">
     <strong style="color:var(--ink)">★ 编译流程说明</strong><br>
-    增量编译 = 半自动：工具全自动跑，你验收确认。微信/邮件发我 → 我触发编译 → 交付给你。
+    增量编译 = 半自动：工具全自动跑，你验收确认。提交方式：微信/在行/邮件 → 我触发编译 → 48小时内交付。如需加急（24小时内），加收 ¥100。
   </div>
 </div>
 
@@ -842,6 +850,7 @@ subtitle: 让知识真正成为资产
       <h3>给 Agent 配一个外脑</h3>
       <div class="price">¥1999<span> / 次</span></div>
       <p>适合 AI 开发者、个人 Agent 用户：给 Agent 一个可读写的知识库，让它越用越懂你的业务。</p>
+      <p style="font-size:12px;color:rgba(250,250,248,0.5);margin-top:8px;">💡 人用 + Agent 用 = 双向价值最大化（联系陈露定制组合方案）</p>
       <ul class="agent-features">
         <li><span class="check">✓</span> Vault 搭建 + MCP Server 配置</li>
         <li><span class="check">✓</span> MEMORY.md 协议初始化</li>
@@ -900,6 +909,72 @@ subtitle: 让知识真正成为资产
     </div>
   </div>
 </div>
+
+
+
+<!-- FAQ -->
+<div style="padding:0 24px 60px;max-width:720px;margin:0 auto;">
+  <div style="text-align:center;margin-bottom:40px;">
+    <div style="font-family:var(--font-sans);font-size:11px;letter-spacing:2px;color:var(--amber);text-transform:uppercase;margin-bottom:10px;">常见问题</div>
+    <h2 style="font-family:var(--font-serif);font-size:clamp(22px,3vw,30px);font-weight:600;color:var(--ink);">FAQ</h2>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px;">
+
+    <details style="border-radius:14px;border:1px solid rgba(26,26,46,0.08);overflow:hidden;background:#fff;">
+      <summary style="padding:20px 24px;cursor:pointer;font-family:var(--font-serif);font-size:16px;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+        需要准备什么资料？
+        <span style="font-size:18px;color:var(--amber);transition:transform 0.2s;" id="arrow1">▾</span>
+      </summary>
+      <div style="padding:0 24px 20px;font-size:14px;color:#666;line-height:1.7;font-family:var(--font-sans);">
+        只需要你的<strong style="color:var(--ink)">原始积累</strong>：收藏的文章、微信笔记、有道云笔记、印象笔记……任何格式都可以，我们帮你统一整理进 Obsidian。不需要你自己整理。
+      </div>
+    </details>
+
+    <details style="border-radius:14px;border:1px solid rgba(26,26,46,0.08);overflow:hidden;background:#fff;">
+      <summary style="padding:20px 24px;cursor:pointer;font-family:var(--font-serif);font-size:16px;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+        增量编译是什么？我需要懂技术吗？
+        <span style="font-size:18px;color:var(--amber);">▾</span>
+      </summary>
+      <div style="padding:0 24px 20px;font-size:14px;color:#666;line-height:1.7;font-family:var(--font-sans);">
+        增量编译 = <strong style="color:var(--ink)">你把新内容发我，我自动更新你的知识网络</strong>。你不需要懂任何技术——工具全自动跑，你只需要验收最终结果。整个过程微信里完成。
+      </div>
+    </details>
+
+    <details style="border-radius:14px;border:1px solid rgba(26,26,46,0.08);overflow:hidden;background:#fff;">
+      <summary style="padding:20px 24px;cursor:pointer;font-family:var(--font-serif);font-size:16px;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+        3次编译用完了怎么办？
+        <span style="font-size:18px;color:var(--amber);">▾</span>
+      </summary>
+      <div style="padding:0 24px 20px;font-size:14px;color:#666;line-height:1.7;font-family:var(--font-sans);">
+        L2 用户可随时按 <strong style="color:var(--ink)">¥200/次</strong> 追加编译次数，不强制。也可以升级 L3 享受每月一次的定期编译。
+      </div>
+    </details>
+
+    <details style="border-radius:14px;border:1px solid rgba(26,26,46,0.08);overflow:hidden;background:#fff;">
+      <summary style="padding:20px 24px;cursor:pointer;font-family:var(--font-serif);font-size:16px;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+        Obsidian 是免费软件吗？数据存在哪？
+        <span style="font-size:18px;color:var(--amber);">▾</span>
+      </summary>
+      <div style="padding:0 24px 20px;font-size:14px;color:#666;line-height:1.7;font-family:var(--font-sans);">
+        Obsidian <strong style="color:var(--ink)">完全免费</strong>（本地版），没有订阅费。你的数据存在你自己的电脑/硬盘里，不在任何云端——这是它比 Notion、飞书笔记最大的优势：数据完全属于你。
+      </div>
+    </details>
+
+    <details style="border-radius:14px;border:1px solid rgba(26,26,46,0.08);overflow:hidden;background:#fff;">
+      <summary style="padding:20px 24px;cursor:pointer;font-family:var(--font-serif);font-size:16px;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+        Agent Starter 和 L2/L3 有什么关系？
+        <span style="font-size:18px;color:var(--amber);">▾</span>
+      </summary>
+      <div style="padding:0 24px 20px;font-size:14px;color:#666;line-height:1.7;font-family:var(--font-sans);">
+        <strong style="color:var(--ink)">L1/L2/L3 是给人用的知识库</strong>，<strong style="color:var(--ink)">Agent Starter 是给 AI Agent 用的</strong>。两者可以独立购买，也可以一起买——陈露自己的知识库就是 L3 + Agent Starter 的组合。<a href="#agent-section" style="color:var(--amber);text-decoration:none;">查看 Agent 产品线 →</a>
+      </div>
+    </details>
+
+  </div>
+</div>
+
+
 
 <!-- CTA -->
 <div class="service-cta">
