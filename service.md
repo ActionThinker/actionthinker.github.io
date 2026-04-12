@@ -715,10 +715,10 @@ subtitle: 让知识真正成为资产
 
   <div style="margin-top:28px;padding:28px 32px;border-radius:16px;background:rgba(232,168,56,0.06);border:1px solid rgba(232,168,56,0.12);border-left:3px solid var(--gold);">
     <p style="font-family:var(--font-serif);font-size:17px;font-style:italic;color:var(--ink);line-height:1.7;margin:0 0 12px;">
-      "我做了4年知识管理，用过 Notion、印象笔记、飞书……最终选 Obsidian + AI 编译这条路，因为它解决了所有我踩过的坑。"
+      "我做了15年的个人知识管理，用过 印象笔记、Notion、飞书……最终选 Obsidian + AI 编译这条路，因为它解决了所有我踩过的坑。"
     </p>
     <p style="font-family:var(--font-sans);font-size:13px;color:#888;margin:0;">
-      — 陈露，OPClab 发起人，NPLUS Digital 联合创始人
+      — 陈露，OPClab 发起人，前NPLUS Digital 首席知识官
     </p>
   </div>
 </div>
@@ -802,7 +802,7 @@ subtitle: 让知识真正成为资产
   <!-- 编译说明 -->
   <div style="text-align:center;margin-top:28px;font-size:13px;color:#999;font-family:var(--font-sans);">
     <strong style="color:var(--ink)">★ 编译流程说明</strong><br>
-    增量编译 = 半自动：工具全自动跑，你验收确认。提交方式：微信/在行/邮件 → 我触发编译 → 48小时内交付。如需加急（24小时内），加收 ¥100。
+    增量编译 = 半自动：工具全自动跑，你验收确认。提交方式：微信/邮件 → 我触发编译 → 48小时内交付。
   </div>
 </div>
 
