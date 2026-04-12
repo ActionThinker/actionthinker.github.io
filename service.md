@@ -693,7 +693,7 @@ subtitle: 让知识真正成为资产
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
     <div style="padding:32px;border-radius:16px;background:#fff;border:1px solid rgba(26,26,46,0.07);text-align:center;">
       <div style="font-size:36px;margin-bottom:12px;">📚</div>
-      <div style="font-family:var(--font-serif);font-size:32px;font-weight:700;color:var(--ink);">2000+</div>
+      <div style="font-family:var(--font-serif);font-size:32px;font-weight:700;color:var(--ink);">1500+</div>
       <div style="font-family:var(--font-sans);font-size:12px;color:#888;margin-top:4px;">篇文章与笔记</div>
     </div>
     <div style="padding:32px;border-radius:16px;background:#fff;border:1px solid rgba(26,26,46,0.07);text-align:center;">
@@ -708,7 +708,7 @@ subtitle: 让知识真正成为资产
     </div>
     <div style="padding:32px;border-radius:16px;background:#fff;border:1px solid rgba(26,26,46,0.07);text-align:center;">
       <div style="font-size:36px;margin-bottom:12px;">💡</div>
-      <div style="font-family:var(--font-serif);font-size:32px;font-weight:700;color:var(--ink);">4年</div>
+      <div style="font-family:var(--font-serif);font-size:32px;font-weight:700;color:var(--ink);">15年</div>
       <div style="font-family:var(--font-sans);font-size:12px;color:#888;margin-top:4px;">持续积累沉淀</div>
     </div>
   </div>
