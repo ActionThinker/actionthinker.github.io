@@ -3,15 +3,18 @@ layout: null
 ---
 
 @import url("pygment_highlights.css");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
 
 /* --- General --- */
 
 body {
-  font-family: 'Lora', 'Times New Roman', serif;
-  font-size: 18px;
-  color: #404040;
+  font-family: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  color: #2A2A2A;
   position: relative;
   background: #FFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   {% if site.page-col %}
   background: {{ site.page-col }};
   {% endif %}
@@ -21,27 +24,50 @@ body {
   {% endif %}
 }
 p {
-  line-height: 1.5;
-  margin: 30px 0;
+  line-height: 1.75;
+  margin: 24px 0;
 }
 p a {
-  /* text-decoration: underline */
-  color: #008AFF;
+  color: #C4882F;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(196, 136, 47, 0.35);
+  transition: border-color 0.2s ease;
 }
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+p a:hover {
+  color: #A06820;
+  border-bottom-color: #A06820;
 }
+h1,h2,h3 {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-weight: 600;
+  color: #1A1A2E;
+  line-height: 1.2;
+}
+h4,h5,h6 {
+  font-family: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #1A1A2E;
+}
+h1 { font-size: 2.6rem; letter-spacing: -0.5px; }
+h2 { font-size: 2rem;   letter-spacing: -0.3px; }
+h3 { font-size: 1.5rem; }
 a {
-  color: #008AFF;
+  color: #C4882F;
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: #A06820;
 }
 blockquote {
-  color: #808080;
-  font-style: italic;
+  border-left: 3px solid #C4882F;
+  color: #555;
+  font-style: normal;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  padding: 14px 20px;
+  margin: 28px 0;
+  background: rgba(196, 136, 47, 0.04);
+  border-radius: 0 6px 6px 0;
 }
 blockquote p:first-child {
   margin-top: 0;
@@ -52,6 +78,10 @@ hr.small {
   border-width: 4px;
   border-color: inherit;
   border-radius: 3px;
+  border-width: 2px;
+  border-color: #C4882F;
+  max-width: 60px;
+  margin: 20px auto;
 }
 
 .main-content {
@@ -63,8 +93,18 @@ hr.small {
   }
 }
 
+/* Page layout — Hero already provides brand background, reduce content padding */
+body.page .main-content {
+  padding-top: 56px;
+}
+@media (min-width: 768px) {
+  body.page .main-content {
+    padding-top: 72px;
+  }
+}
+
 .main-explain-area {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 15px inherit;
 }
 
@@ -73,14 +113,14 @@ hr.small {
 }
 
 ::-moz-selection {
-  color: white;
+  color: #1A1A2E;
   text-shadow: none;
-  background: #0085a1;
+  background: rgba(196, 136, 47, 0.25);
 }
 ::selection {
-  color: white;
+  color: #1A1A2E;
   text-shadow: none;
-  background: #0085a1;
+  background: rgba(196, 136, 47, 0.25);
 }
 img::selection {
   color: white;
@@ -105,12 +145,12 @@ img {
   }
 }
 
-/* --- Navbar --- */
+/* --- Navbar (Brand: Dark Ink Blue + Gold) --- */
 
 .navbar-custom {
-  background: #F5F5F5;
-  border-bottom: 1px solid #EAEAEA;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #1A1A2E !important;
+  border-bottom: none;
+  font-family: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   {% if site.navbar-col %}
   background: {{ site.navbar-col }};
   {% endif %}
@@ -122,21 +162,28 @@ img {
 
 .navbar-custom .nav li a {
   text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-family: 'DM Sans', sans-serif;
+  color: rgba(250, 250, 248, 0.80) !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
-  font-weight: 800;
-  color: #404040;
+  font-weight: 600;
+  color: #E8A838 !important;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.5px;
 }
 
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus ,
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-  color: #0085a1;
+  color: #C4882F !important;
 }
 
 .navbar-custom .navbar-brand-logo {
@@ -168,6 +215,7 @@ img {
 
   .navbar-custom.top-nav-short {
     padding: 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -238,14 +286,19 @@ img {
   display: block;
   padding: 10px;
   padding-left: 30px;
-  background: #f5f5f5;
+  background: #2A2A3E;
   text-decoration: none !important;
   border-width: 0 1px 1px 1px;
   font-weight: normal;
+  color: rgba(250, 250, 248, 0.80) !important;
+}
+.navbar-custom .nav .navlinks-container .navlinks-children a:hover {
+  background: #3A3A5E;
+  color: #E8A838 !important;
 }
 @media only screen and (max-width: 767px) {
   .navbar-custom .nav .navlinks-container.show-children {
-    background: #eee;
+    background: #2A2A3E;
   }
   .navbar-custom .nav .navlinks-container.show-children .navlinks-children {
     display: block;
@@ -256,7 +309,7 @@ img {
     text-align: center;
   }
   .navbar-custom .nav .navlinks-container:hover {
-    background: #eee;
+    background: rgba(255,255,255,0.05);
   }
   .navbar-custom .nav .navlinks-container:hover .navlinks-children {
     display: block;
@@ -266,17 +319,17 @@ img {
   }
   .navbar-custom .nav .navlinks-container .navlinks-children a {
     padding-left: 10px;
-    border: 1px solid #eaeaea;
+    border: 1px solid rgba(255,255,255,0.08);
     border-width: 0 1px 1px;
   }
 }
 
-/* --- Footer --- */
+/* --- Footer (Brand: Dark Ink Blue) --- */
 
 footer {
   padding: 30px 0;
-  background: #F5F5F5;
-  border-top: 1px #EAEAEA solid;
+  background: #1A1A2E !important;
+  border-top: none;
   margin-top: 50px;
   font-size: 14px;
   {% if site.footer-col %}
@@ -289,7 +342,11 @@ footer {
 }
 
 footer a {
-  color: #404040;
+  color: rgba(250, 250, 248, 0.70);
+  transition: color 0.2s ease;
+}
+footer a:hover {
+  color: #E8A838;
 }
 
 footer .list-inline {
@@ -297,13 +354,18 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(250, 250, 248, 0.45);
   text-align: center;
   margin-bottom: 0;
 }
 footer .theme-by {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: rgba(250, 250, 248, 0.30);
   text-align: center;
-  margin: 10px 0 0;
+  margin: 8px 0 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -314,7 +376,7 @@ footer .theme-by {
     font-size: 18px;
   }
   footer .copyright {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -322,7 +384,7 @@ footer .theme-by {
 
 .post-preview {
   padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(26, 26, 46, 0.08);
 }
 
 @media only screen and (min-width: 768px) {
@@ -337,33 +399,42 @@ footer .theme-by {
 
 .post-preview a {
   text-decoration: none;
-  color: #404040;
+  color: #2A2A2A;
 }
 
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: #0085a1;
+  color: #C4882F;
 }
 
 .post-preview .post-title {
-  font-size: 30px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
   margin-top: 0;
+  font-weight: 600;
+  color: #1A1A2A;
+  transition: color 0.2s ease;
+}
+.post-preview a:hover .post-title {
+  color: #C4882F;
 }
 .post-preview .post-subtitle {
   margin: 0;
   font-weight: 300;
   margin-bottom: 10px;
+  font-family: 'DM Sans', sans-serif;
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
-  color: #808080;
-  font-size: 18px;
-  font-style: italic;
+  color: #C4882F;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-style: normal;
   margin: 0 0 10px;
 }
 .post-preview .post-entry {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 .post-entry-container {
   display: inline-block;
@@ -388,34 +459,40 @@ footer .theme-by {
   width: 192px;
 }
 .post-preview .post-read-more {
-  font-weight: 800;
+  font-weight: 600;
+  color: #C4882F;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.5px;
 }
 
 @media only screen and (min-width: 768px) {
   .post-preview .post-title {
-    font-size: 36px;
+    font-size: 34px;
   }
 }
 
 /* --- Tags --- */
 
 .blog-tags {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #999;
-  font-size: 15px;
+  font-family: 'DM Sans', sans-serif;
+  color: #888;
+  font-size: 12px;
   margin-bottom: 30px;
 }
 
 .blog-tags a {
-  color: #008AFF;
+  color: #C4882F;
   text-decoration: none;
   padding: 0px 5px;
+  border-bottom: 1px solid rgba(196, 136, 47, 0.3);
+  transition: all 0.2s ease;
 }
 
 .blog-tags a:hover {
   border-radius: 2px;
-  color: #008AFF;
-  background-color: #CCC;
+  color: #A06820;
+  background-color: rgba(196, 136, 47, 0.08);
 }
 
 .post-preview .blog-tags {
@@ -483,17 +560,19 @@ footer .theme-by {
 .intro-header .page-heading h1 {
   margin-top: 0;
   font-size: 50px;
+  font-family: 'Cormorant Garamond', serif;
 }
 .intro-header .post-heading h1 {
   margin-top: 0;
   font-size: 35px;
+  font-family: 'Cormorant Garamond', serif;
 }
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading {
   font-size: 27px;
   line-height: 1.1;
   display: block;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   margin: 10px 0 0;
 }
@@ -518,11 +597,88 @@ footer .theme-by {
   padding: 5px 10px;
   font-size: 11px;
   color: #EEE;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   right: 0;
   bottom: 0;
   display: none;
 }
+
+/* ─────────────────────────────────────────────────
+   品牌 Hero（Brand Hero — 深墨蓝背景）
+   覆盖 Beautiful Jekyll 默认的白底 no-img Hero
+   用于 about / opclab / service 等导航页面
+   ───────────────────────────────────────────────── */
+
+.intro-header.brand-hero {
+  background: #1A1A2E;
+  padding: 88px 0 64px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .intro-header.brand-hero {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+}
+
+/* 金色 overline 标签 */
+.brand-overline {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C4882F;
+  margin-bottom: 18px;
+}
+
+/* Hero 标题：纯白 Cormorant Garamond */
+.intro-header.brand-hero .page-heading h1 {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: clamp(38px, 5.5vw, 58px);
+  font-weight: 600;
+  color: #FAFAF8;
+  margin: 0 0 16px;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+/* Hero 副标题：半透明白色 DM Sans */
+.intro-header.brand-hero .page-heading .page-subheading {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(250, 250, 248, 0.65);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* 隐藏默认分隔线（overline 已替代） */
+.intro-header.brand-hero hr.small {
+  display: none;
+}
+
+/* Hero 内的 post-meta（金色） */
+.intro-header.brand-hero .post-meta {
+  color: #C4882F;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-style: normal;
+}
+
+/* 主内容区顶部留白（Hero 已提供空间） */
+body.page .main-content {
+  padding-top: 56px;
+}
+@media (min-width: 768px) {
+  body.page .main-content {
+    padding-top: 72px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .intro-header {
     margin-top: 130px;
@@ -602,26 +758,28 @@ footer .theme-by {
 /* --- Pager --- */
 
 .pager li a {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 13px;
+  font-weight: 600;
   letter-spacing: 1px;
   padding: 10px 5px;
   background: #FFF;
   border-radius: 0;
-  color: #404040;
+  color: #1A1A2E;
+  border: 1.5px solid rgba(26, 26, 46, 0.15);
+  transition: all 0.25s ease;
 }
 @media only screen and (min-width: 768px) {
   .pager li a {
-    padding: 15px 25px;
+    padding: 13px 28px;
   }
 }
 .pager li a:hover,
 .pager li a:focus {
-  color: #FFF;
-  background: #0085a1;
-  border: 1px solid #0085a1;
+  color: #FAFAF8;
+  background: #1A1A2E;
+  border: 1.5px solid #1A1A2E;
 }
 
 .pager {
@@ -638,32 +796,39 @@ footer .theme-by {
   }
 }
 
-/* --- Tables --- */
+/* --- Tables (Brand) --- */
 
 table {
   padding: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
 }
 table tr {
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid rgba(26, 26, 46, 0.10);
   background-color: #ffffff;
   margin: 0;
   padding: 0;
 }
 table tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: rgba(196, 136, 47, 0.04);
 }
 table tr th {
-  font-weight: bold;
-  border: 1px solid #cccccc;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  border: 1px solid rgba(26, 26, 46, 0.10);
   text-align: left;
   margin: 0;
-  padding: 6px 13px;
+  padding: 10px 14px;
+  background: #1A1A2E;
+  color: #E8A838;
+  letter-spacing: 0.5px;
 }
 table tr td {
-  border: 1px solid #cccccc;
+  border: 1px solid rgba(26, 26, 46, 0.08);
   text-align: left;
   margin: 0;
-  padding: 6px 13px;
+  padding: 8px 14px;
+  color: #2A2A2A;
 }
 table tr th :first-child,
 table tr td :first-child {
@@ -674,22 +839,25 @@ table tr td :last-child {
   margin-bottom: 0;
 }
 
-/* --- Code blocks --- */
+/* --- Code blocks (Brand) --- */
 
 pre {
-  font-size: 16px;
-  line-height: 1.5em;
+  font-size: 14px;
+  line-height: 1.65;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
 }
 pre code {
   white-space: pre;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
 }
 pre.highlight, .highlight > pre, td.code pre {
-  background: #FAFAFA;
-  background-image: linear-gradient(#F9F9F9 50%, #FDFDFD 50%);
+  background: #FAFAF8;
+  background-image: linear-gradient(#F5F5F3 50%, #FAFAF8 50%);
   background-repeat: repeat;
   background-size: 3em 3em;
   background-position: 0px 10px;
-  border-left: 7px solid #444;
+  border-left: 4px solid #C4882F;
+  border-radius: 0 6px 6px 0;
 }
 code table, code table td, code table th, code table tbody, code table tr,
 td.gutter pre {
@@ -701,9 +869,9 @@ td.gutter pre {
   padding: 0;
 }
 td.code pre {
-  border-width: 0 0 0 2px;
+  border-width: 0 0 0 3px;
   border-style: solid;
-  border-color: #444;
+  border-color: #C4882F;
   border-radius: 0;
 }
 td.gutter {
@@ -726,8 +894,8 @@ td.gutter {
 }
 
 .box-note {
-  background-color: #eee;
-  border-left-color: #2980b9;
+  background-color: rgba(196, 136, 47, 0.06);
+  border-left-color: #C4882F;
 }
 
 .box-warning {
@@ -740,12 +908,41 @@ td.gutter {
   border-left-color: #c0392b;
 }
 
+/* --- Main content Typography (Brand) --- */
+
+.main-content h2 {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #1A1A2E;
+  margin: 48px 0 20px;
+  border-bottom: 1px solid rgba(26, 26, 46, 0.08);
+  padding-bottom: 12px;
+}
+
+.main-content h3 {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1A1A2E;
+  margin: 32px 0 14px;
+}
+
+.main-content h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1A1A2E;
+  margin: 24px 0 10px;
+  letter-spacing: 0.3px;
+}
+
 /* Fix table border github gist snippets */
 
 .gist, .gist-file table tr {
   border: unset;
 }
- 
+
 .gist, .gist-file table tr td {
   border: unset;
 }

@@ -1,4 +1,8 @@
-<!-- TODO this file has become a mess, refactor it -->
+<!-- =============================================
+  header.html — 品牌 Hero + Overline 补丁 v2
+  应用位置：D:\GitHub\actionthinker.github.io\_includes\header.html
+  兼容：page.header-include: false（跳过 Hero 输出）
+  ============================================= -->
 
 {% if page.bigimg or page.title %}
 
@@ -34,7 +38,6 @@
 			<h2 class="{{ include.type }}-subheading">{{ page.subtitle }}</h2>
 			{% endif %}
 		  {% endif %}
-		  
 		  {% if include.type == "post" %}
 		  <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
 		  {% endif %}
@@ -44,22 +47,28 @@
   </div>
   <span class='img-desc'></span>
 </div>
-{% endif %}
-<div class="intro-header no-img">
+
+{% elsif page.header-include != false %}
+<!-- =============================================
+  品牌 Hero（Brand Hero — 深墨蓝背景）
+  当 page.header-include: false 时跳过此区块
+  ============================================= -->
+<div class="intro-header no-img brand-hero">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="{{ include.type }}-heading">
+          {% if page.overline %}
+          <span class="brand-overline">{{ page.overline }}</span>
+          {% endif %}
           <h1>{% if page.title %}{{ page.title }}{% else %}<br/>{% endif %}</h1>
 		  {% if page.subtitle %}
 		    {% if include.type == "page" %}
-            <hr class="small">
             <span class="{{ include.type }}-subheading">{{ page.subtitle }}</span>
 			{% else %}
 			<h2 class="{{ include.type }}-subheading">{{ page.subtitle }}</h2>
 			{% endif %}
 		  {% endif %}
-		  
 		  {% if include.type == "post" %}
 		  <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
 		  {% endif %}
@@ -68,8 +77,8 @@
     </div>
   </div>
 </div>
+{% endif %}
 </header>
-
 
 {% else %}
 <div class="intro-header"></div>
