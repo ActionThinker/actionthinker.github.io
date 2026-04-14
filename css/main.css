@@ -1,7 +1,3 @@
----
-layout: null
----
-
 @import url("pygment_highlights.css");
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
 
@@ -15,13 +11,10 @@ body {
   background: #FFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  {% if site.page-col %}
-  background: {{ site.page-col }};
-  {% endif %}
-  {% if site.page-img %}
-  background-image: url({{ site.page-img }});
-  background-attachment: fixed;
-  {% endif %}
+  
+  background: #FAFAF8;
+  
+  
 }
 p {
   line-height: 1.75;
@@ -151,13 +144,10 @@ img {
   background: #1A1A2E !important;
   border-bottom: none;
   font-family: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  {% if site.navbar-col %}
-  background: {{ site.navbar-col }};
-  {% endif %}
-  {% if site.navbar-img %}
-  background-image: url({{ site.navbar-img }});
-  background-attachment: fixed;
-  {% endif %}
+  
+  background: #1A1A2E;
+  
+  
 }
 
 .navbar-custom .nav li a {
@@ -332,13 +322,10 @@ footer {
   border-top: none;
   margin-top: 50px;
   font-size: 14px;
-  {% if site.footer-col %}
-  background: {{ site.footer-col }};
-  {% endif %}
-  {% if site.footer-img %}
-  background-image: url({{ site.footer-img }});
-  background-attachment: fixed;
-  {% endif %}
+  
+  background: #1A1A2E;
+  
+  
 }
 
 footer a {
@@ -955,21 +942,6 @@ td.gutter {
 .navbar-custom .navbar-brand:focus {
   color: #C4882F !important;
 }
-/ ========== 品牌 Hero 标题白色修复 ========== /
-.intro-header.brand-hero .page-heading h1,
-.intro-header.brand-hero .post-heading h1 {
-  color: #FAFAF8 !important;
-}
-.intro-header.brand-hero .page-heading .page-subheading,
-.intro-header.brand-hero .post-heading .post-subheading {
-  color: rgba(250,250,248,0.75) !important;
-}
-.intro-header.brand-hero .post-heading .post-meta {
-  color: rgba(250,250,248,0.55) !important;
-}
-.intro-header.brand-hero .brand-overline {
-  color: #C4882F !important;
-}
 /* ========== 品牌 Hero 标题白色修复（文章详情页 + 所有页面） ========== */
 .intro-header.brand-hero .page-heading h1,
 .intro-header.brand-hero .post-heading h1 {
@@ -986,7 +958,7 @@ td.gutter {
   color: #C4882F !important;
 }
 
-/* ── 全局标题白色兜底 ── */
+/* ── 全局标题白色兜底（覆盖所有非 brand-hero 的页面） ── */
 .intro-header .page-heading h1,
 .intro-header .post-heading h1 {
   color: #FAFAF8 !important;
