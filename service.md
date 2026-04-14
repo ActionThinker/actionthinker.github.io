@@ -630,6 +630,8 @@ subtitle: 让知识真正成为资产
     <span class="hero-tag">MCP Server</span>
     <span class="hero-tag">MEMORY.md 协议</span>
   </div>
+</div>
+
 <!-- Karpathy 热点背书 -->
 <div style="padding:60px 24px;max-width:800px;margin:0 auto;text-align:center;">
   <div style="padding:32px;border-radius:16px;background:rgba(232,168,56,0.08);border:1px solid rgba(232,168,56,0.15);">
@@ -654,7 +656,7 @@ subtitle: 让知识真正成为资产
 
 
 <!-- 效果图 — Obsidian 图谱 -->
-<div style="padding:0 24px 80px;max-width:960px;margin:0 auto;text-align:center;">
+<div style="padding:60px 24px 80px;max-width:960px;margin:0 auto;text-align:center;">
   <div style="font-family:var(--font-sans);font-size:11px;letter-spacing:2px;color:var(--amber);text-transform:uppercase;margin-bottom:10px;">交付效果</div>
   <h2 style="font-family:var(--font-serif);font-size:clamp(22px,3vw,30px);font-weight:600;color:var(--ink);margin-bottom:8px;">编译完成后，你的知识网络长这样</h2>
   <p style="font-size:14px;color:#888;margin-bottom:36px;line-height:1.7;">Obsidian 图谱不只是好看的图——它是你的<strong style="color:var(--ink)">第二大脑可视化</strong>。每个节点都是一条积累的知识，连接线是 AI 发现的关系。</p>
@@ -807,7 +809,7 @@ subtitle: 让知识真正成为资产
 </div>
 
 <!-- 全链路打包套餐 -->
-<div style="padding:0 24px 60px;max-width:1040px;margin:0 auto;">
+<div style="padding:40px 24px 60px;max-width:1040px;margin:0 auto;">
   <div style="padding:48px 40px;border-radius:20px;background:var(--ink);color:var(--cream);text-align:center;max-width:640px;margin:0 auto;">
     <div style="font-family:var(--font-sans);font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:12px;">一站式解决方案</div>
     <h2 style="font-family:var(--font-serif);font-size:28px;font-weight:600;color:var(--cream);margin-bottom:8px;">知识资产化全链路套餐</h2>
@@ -821,7 +823,7 @@ subtitle: 让知识真正成为资产
         <span style="color:var(--gold);">✓</span> 全量内容首次 AI 编译
       </li>
       <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
-        <span style="color:var(--gold);">✓</span> 每月增量编译（持续6个月）
+        <span style="color:var(--gold);">✓</span> 每月增量编译（持续3个月）
       </li>
       <li style="font-size:13px;padding:6px 0;color:rgba(250,250,248,0.8);display:flex;align-items:center;gap:10px;">
         <span style="color:var(--gold);">✓</span> 矛盾检测 + 健康检查
@@ -913,7 +915,7 @@ subtitle: 让知识真正成为资产
 
 
 <!-- FAQ -->
-<div style="padding:0 24px 60px;max-width:720px;margin:0 auto;">
+<div style="padding:60px 24px 60px;max-width:720px;margin:0 auto;">
   <div style="text-align:center;margin-bottom:40px;">
     <div style="font-family:var(--font-sans);font-size:11px;letter-spacing:2px;color:var(--amber);text-transform:uppercase;margin-bottom:10px;">常见问题</div>
     <h2 style="font-family:var(--font-serif);font-size:clamp(22px,3vw,30px);font-weight:600;color:var(--ink);">FAQ</h2>
@@ -982,6 +984,7 @@ subtitle: 让知识真正成为资产
   <p>一次搭建，持续增值。你的积累值得被激活——不只是给你自己用，也给你的 AI Agent 用。</p>
   <div class="cta-buttons">
     <a href="https://www.zaih.com/falcon/mentors/2bhjbfp3t2q" class="btn-primary">在行约见咨询 →</a>
-    <a href="mailto:chenluaihr@gmail.com?subject=知识基础设施服务咨询" class="btn-secondary">邮件联系</a>
+    <a href="mailto:chenlu@opclab.cn?subject=知识基础设施服务咨询" class="btn-secondary">邮件联系</a>
   </div>
 </div>
+
