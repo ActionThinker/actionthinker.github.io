@@ -5,7 +5,6 @@ subtitle: 两个人、两种视角、互补洞察力
 ---
 
 <style>
-.header-section { display: none; }
 /* ─── RESET & BASE ─────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -437,13 +436,58 @@ html { scroll-behavior: smooth; }
   .post-item { padding-left: 16px; }
   .post-item:hover { padding-left: 24px; }
 }
+/ 品牌Hero内嵌标题 /
+.brand-hero-inline {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(250,250,248,0.12);
+}
+.brand-hero-inline .brand-overline {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C4882F;
+  margin-bottom: 18px;
+}
+.brand-hero-inline h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 5vw, 54px);
+  font-weight: 600;
+  color: #FAFAF8;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+.brand-hero-inline .brand-subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: rgba(250,250,248,0.55);
+  margin: 0;
+}
+
+/ Hero底部渐变蒙版 /
+.phi-hero { position: relative; overflow: hidden; }
+.phi-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent 0%, #FAFAF8 100%);
+  pointer-events: none;
+  z-index: 1;
+}
 </style>
 
 <!-- ─── HERO ──────────────────────────────────────── -->
 <section class="phi-hero">
-  <p class="phi-hero__kicker">观点与洞察</p>
-  <h1>两个人<br><em>&amp;</em> 两种智慧</h1>
-  <p class="phi-hero__sub">这里的所有文章，都由真实经历写成——有时是人类，有时是AI，有时是一起</p>
+  <div class="brand-hero-inline">
+    <span class="brand-overline">文章 · 人机搭档</span>
+    <h1>两个视角<br>&amp; 两种智慧</h1>
+    <p class="brand-subtitle">这里的所有文章，都由真实经历写成——有时是人类，有时是AI，有时是一起</p>
+  </div>
 
   <div class="creator-grid">
     <!-- 人类 -->
