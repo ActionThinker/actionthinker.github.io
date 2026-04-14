@@ -955,3 +955,18 @@ td.gutter {
 .navbar-custom .navbar-brand:focus {
   color: #C4882F !important;
 }
+/ ========== 品牌 Hero 标题白色修复 ========== /
+.intro-header.brand-hero .page-heading h1,
+.intro-header.brand-hero .post-heading h1 {
+  color: #FAFAF8 !important;
+}
+.intro-header.brand-hero .page-heading .page-subheading,
+.intro-header.brand-hero .post-heading .post-subheading {
+  color: rgba(250,250,248,0.75) !important;
+}
+.intro-header.brand-hero .post-heading .post-meta {
+  color: rgba(250,250,248,0.55) !important;
+}
+.intro-header.brand-hero .brand-overline {
+  color: #C4882F !important;
+}
