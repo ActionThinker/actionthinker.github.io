@@ -745,6 +745,7 @@ subtitle: 让知识真正成为资产
   </div>
 </div>
 
+
 <!-- Human 产品线定价 -->
 <div class="pricing-section">
   <div class="section-label">服务方案</div>
@@ -752,6 +753,7 @@ subtitle: 让知识真正成为资产
   <p style="font-size:13px;color:#999;text-align:center;margin-top:-32px;margin-bottom:0;font-family:var(--font-sans);">
     三层可独立购买，也可打包享受全链路优惠价
   </p>
+
   <div class="pricing-grid">
     <div class="pricing-card">
       <div class="pricing-level">L1 · DIY</div>
@@ -801,13 +803,13 @@ subtitle: 让知识真正成为资产
     </div>
   </div>
 
+
   <!-- 编译说明 -->
   <div style="text-align:center;margin-top:28px;font-size:13px;color:#999;font-family:var(--font-sans);">
     <strong style="color:var(--ink)">★ 编译流程说明</strong><br>
     增量编译 = 半自动：工具全自动跑，你验收确认。提交方式：微信/邮件 → 我触发编译 → 48小时内交付。
   </div>
 </div>
-
 <!-- 全链路打包套餐 -->
 <div style="padding:40px 24px 60px;max-width:1040px;margin:0 auto;">
   <div style="padding:48px 40px;border-radius:20px;background:var(--ink);color:var(--cream);text-align:center;max-width:640px;margin:0 auto;">
@@ -837,7 +839,6 @@ subtitle: 让知识真正成为资产
     </ul>
     <a href="https://www.zaih.com/falcon/mentors/2bhjbfp3t2q" class="btn-primary" style="background:var(--gold);color:var(--ink);">预约全链路咨询 →</a>
   </div>
-</div>
 
 <!-- Agent 基础设施线 -->
 <div class="agent-section">
