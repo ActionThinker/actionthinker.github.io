@@ -970,24 +970,36 @@ td.gutter {
 .intro-header.brand-hero .brand-overline {
   color: #C4882F !important;
 }
-/ ── 全局标题白色强制修复 ── /
-/ 覆盖所有页面的 brand-hero 标题颜色（main.css 里已有规则但可能被覆盖） /
-.intro-header .page-heading h1,
-.intro-header .post-heading h1 {
+/ ========== 品牌 Hero 标题白色修复 ========== /
+.intro-header.brand-hero .page-heading h1,
+.intro-header.brand-hero .post-heading h1 {
   color: #FAFAF8 !important;
 }
-
-/ 首页 /posts/ 等所有页面导航标题白色 /
+.intro-header.brand-hero .page-heading .page-subheading,
+.intro-header.brand-hero .post-subheading {
+  color: rgba(250,250,248,0.75) !important;
+}
+.intro-header.brand-hero .post-meta {
+  color: rgba(250,250,248,0.55) !important;
+}
+.intro-header.brand-hero .brand-overline {
+  color: #C4882F !important;
+}
+/ ── 全局标题白色强制修复 ── /
+.intro-header .page-heading h1,
+.intro-header .post-heading h1 {
+  color:
+#FAFAF8 !important;
+}
 .navbar-brand,
 .navbar-custom .navbar-brand {
   color: #FAFAF8 !important;
 }
-
-/ brand-hero 副标题也白色 /
 .intro-header .page-heading .page-subheading,
-.intro-header .post-heading .post-subheading {
+.intro-header .post-heading .page-subheading {
   color: rgba(250,250,248,0.75) !important;
 }
+
 / ── Brand Hero 标题颜色修复（文章详情页 + 所有 page 布局页） ── /
 .intro-header.brand-hero .post-heading h1,
 .intro-header.brand-hero .page-heading h1 {
