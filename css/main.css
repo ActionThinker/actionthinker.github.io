@@ -946,3 +946,12 @@ td.gutter {
 .gist, .gist-file table tr td {
   border: unset;
 }
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus {
+  color: #E8A838 !important;
+}
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+  color: #C4882F !important;
+}
