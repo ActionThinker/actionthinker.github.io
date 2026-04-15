@@ -668,7 +668,9 @@ subtitle: 让知识真正成为资产
       style="max-width:100%;border-radius:10px;box-shadow:0 8px 32px rgba(26,26,46,0.12);"
       onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
     >
-    
+    <!-- 截图加载失败占位 -->
+    <div style="display:none;align-items:center;justify-content:center;min-height:200px;flex-direction:column;gap:12px;color:#999;">
+      <div style="font-size:48px;">🔍</div>
       <div style="font-family:var(--font-sans);font-size:14px;">📸 截图占位：/assets/images/0a7201b8.jpg</div>
       <div style="font-family:var(--font-sans);font-size:12px;color:#bbb;">请上传你的 Obsidian 图谱截图 → 保存到 /assets/images/0a7201b8.jpg</div>
     </div>
@@ -981,7 +983,7 @@ subtitle: 让知识真正成为资产
   <p>一次搭建，持续增值。你的积累值得被激活——不只是给你自己用，也给你的 AI Agent 用。</p>
   <div class="cta-buttons">
     <a href="https://www.zaih.com/falcon/mentors/2bhjbfp3t2q" class="btn-primary">在行约见咨询 →</a>
-    <a href="mailto:chenluaihr@gmail.com?subject=知识基础设施服务咨询" class="btn-secondary">邮件联系</a>
+    <a href="mailto:chenlu@opclab.cn?subject=知识基础设施服务咨询" class="btn-secondary">邮件联系</a>
   </div>
 </div>
 
