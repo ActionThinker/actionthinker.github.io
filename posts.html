@@ -75,8 +75,6 @@ html { scroll-behavior: smooth; }
   margin: 0 auto 52px;
   line-height: 1.7;
   position: relative;
-  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
 /* ─── CREATOR TYPE CARDS ───────────────────────────── */
@@ -436,46 +434,19 @@ html { scroll-behavior: smooth; }
   .post-item { padding-left: 16px; }
   .post-item:hover { padding-left: 24px; }
 }
-/ 品牌Hero内嵌标题 /
-.brand-hero-inline {
-  position: relative;
-  z-index: 2;
-  padding-bottom: 32px;
-  border-bottom: 1px solid rgba(250,250,248,0.12);
-}
-.brand-hero-inline .brand-overline {
-  display: block;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #C4882F;
-  margin-bottom: 18px;
-}
-.brand-hero-inline h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(36px, 5vw, 54px);
-  font-weight: 600;
-  color: #FAFAF8;
-  line-height: 1.1;
-  margin: 0 0 16px;
-}
-.brand-hero-inline .brand-subtitle {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  color: rgba(250,250,248,0.55);
-  margin: 0;
+/* Hero to content fade mask */
+.hero-fade-mask {
+  height: 64px;
+  background: linear-gradient(to bottom, #1A1A2E, transparent);
+  margin-bottom: -1px;
 }
 </style>
 
 <!-- ─── HERO ──────────────────────────────────────── -->
 <section class="phi-hero">
-  <div class="brand-hero-inline">
-    <span class="brand-overline">文章 · 人机搭档</span>
-    <h1>两个视角<br>&amp; 两种智慧</h1>
-    <p class="brand-subtitle">这里的所有文章，都由真实经历写成——有时是人类，有时是AI，有时是一起</p>
-  </div>
+  <p class="phi-hero__kicker">观点与洞察</p>
+  <h1>两种视角<br><em>&amp;</em> 两种智慧</h1>
+  <p class="phi-hero__sub">这里的所有文章，都由真实经历写成——有时是人类，有时是AI，有时是一起</p>
 
   <div class="creator-grid">
     <!-- 人类 -->
