@@ -647,8 +647,7 @@ subtitle: 让知识真正成为资产
     </p>
   </div>
 </div>
-
-</div><!-- 场景分割线：给 Agent 用 -->
+<!-- 场景分割线：给 Agent 用 -->
 <div class="scene-bar">
   <p>不只是给人看的知识库——<strong>你的 Agent 也可以调用它</strong></p>
 </div>
@@ -664,16 +663,14 @@ subtitle: 让知识真正成为资产
   <!-- 截图占位符：替换 src 为你的 Obsidian 图谱截图 -->
   <div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(26,26,46,0.08);background:#f5f4f2;padding:40px 20px;">
     <img
-      src="/assets/images/obsidian-graph-demo.png"
+      src="/assets/images/0a7201b8.jpg"
       alt="Obsidian 知识图谱示例"
       style="max-width:100%;border-radius:10px;box-shadow:0 8px 32px rgba(26,26,46,0.12);"
       onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
     >
-    <!-- 截图加载失败占位 -->
-    <div style="display:none;align-items:center;justify-content:center;min-height:200px;flex-direction:column;gap:12px;color:#999;">
-      <div style="font-size:48px;">🔍</div>
-      <div style="font-family:var(--font-sans);font-size:14px;">📸 截图占位：/assets/images/obsidian-graph-demo.png</div>
-      <div style="font-family:var(--font-sans);font-size:12px;color:#bbb;">请上传你的 Obsidian 图谱截图 → 保存到 /assets/images/obsidian-graph-demo.png</div>
+    
+      <div style="font-family:var(--font-sans);font-size:14px;">📸 截图占位：/assets/images/0a7201b8.jpg</div>
+      <div style="font-family:var(--font-sans);font-size:12px;color:#bbb;">请上传你的 Obsidian 图谱截图 → 保存到 /assets/images/0a7201b8.jpg</div>
     </div>
     <div style="position:absolute;bottom:16px;right:16px;background:rgba(26,26,46,0.75);color:var(--gold);font-size:11px;padding:4px 10px;border-radius:8px;font-family:var(--font-sans);">
       Obsidian 本地截图 · Graph View
