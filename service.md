@@ -232,15 +232,15 @@ permalink: /service/
   <div class="cta-buttons">
     <a href="https://www.zaih.com/falcon/mentors/2bhjbfp3t2q" class="btn-primary">在行约见咨询 →</a>
     <a href="mailto:chenlu@opclab.cn?subject=知识基础设施服务咨询" class="btn-secondary">邮件联系</a>
-    <button class="btn-wechat" onclick="document.getElementById('wechat-modal').style.display='flex'">加我微信</button>
+    <button class="btn-wechat" onclick="document.getElementById('wechat-modal').style.display='flex'" style="background:#07C160;color:#fff;border:none;padding:10px 20px;border-radius:8px;font-size:15px;cursor:pointer;font-family:inherit;transition:background 0.2s;" onmouseover="this.style.background='#06ad56'" onmouseout="this.style.background='#07C160'">加我微信</button>
   </div>
 
 <!-- WeChat QR Modal -->
-<div id="wechat-modal" class="modal-overlay" onclick="this.style.display='none'">
-  <div class="modal-content">
-    <button class="modal-close" onclick="document.getElementById('wechat-modal').style.display='none'">×</button>
-    <h3>扫码加我微信</h3>
-    <img src="/assets/images/wechat-qr.jpg" alt="微信二维码" style="width:220px;border-radius:8px;">
+<div id="wechat-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);justify-content:center;align-items:center;z-index:9999;" onclick="this.style.display='none'">
+  <div style="background:#fff;border-radius:16px;padding:32px;text-align:center;position:relative;max-width:320px;width:90%;box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+    <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:28px;cursor:pointer;color:#999;line-height:1;">×</button>
+    <h3 style="font-family:serif;font-size:1.3rem;margin-bottom:20px;color:#1A1A2E;">扫码加我微信</h3>
+    <img src="/assets/images/wechat-qr.jpg" alt="微信二维码" style="width:220px;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,0.15);">
     <p style="margin-top:12px;color:#666;font-size:14px;">长按识别或保存图片到相册添加</p>
   </div>
 </div>
