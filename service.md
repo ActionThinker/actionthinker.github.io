@@ -393,7 +393,7 @@ subtitle: 让知识真正成为资产
         <li><span class="check">✓</span> 自己导入内容</li>
       </ul>
     </div>
-    
+
     <div class="pricing-card featured">
       <div class="pricing-level">L2 标准版 · 推荐</div>
       <h3>模板 + 编译服务</h3>
@@ -402,7 +402,7 @@ subtitle: 让知识真正成为资产
       <ul class="pricing-features">
         <li><span class="check">✓</span> L1 全部内容</li>
         <li><span class="check">✓</span> 首次AI编译服务</li>
-        <li><span class="check">✓</span> 每月1次持续编译</li>
+        <li><span class="check">✓</span> 提供1次编译指导</li>
         <li><span class="check">✓</span> 使用答疑支持</li>
       </ul>
     </div>
@@ -414,8 +414,8 @@ subtitle: 让知识真正成为资产
       <p class="pricing-desc">适合内容量大，需要深度定制的用户</p>
       <ul class="pricing-features">
         <li><span class="check">✓</span> L2 全部内容</li>
-        <li><span class="check">✓</span> 内容整理咨询</li>
-        <li><span class="check">✓</span> 每周1次持续编译</li>
+        <li><span class="check">✓</span> 知识需求轻咨询</li>
+        <li><span class="check">✓</span> 提供3次持续编译</li>
         <li><span class="check">✓</span> 专属技术支持</li>
       </ul>
     </div>
