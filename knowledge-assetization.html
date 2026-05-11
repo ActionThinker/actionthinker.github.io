@@ -1,0 +1,726 @@
+---
+layout: page
+title: AI知识资产化服务
+subtitle: 把你10年的项目经验，变成活的知识资产库
+use-site-title: false
+---
+
+<style>
+/* ================================================
+   KNOWLEDGE ASSETIZATION SERVICE v1.0
+   品牌色: Navy + Gold
+   ================================================ */
+:root {
+  --ink: #1A1A2E;
+  --gold: #C4882F;
+  --gold-light: #FEFBF5;
+  --gold-dark: #A06820;
+  --muted: #78716c;
+  --faint: #E8E5E0;
+  --surface: #ffffff;
+  --bg: #FAFAF8;
+  --radius: 14px;
+  --radius-lg: 20px;
+}
+
+body { background: var(--bg); }
+
+.ka-container { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+/* HERO */
+.ka-hero {
+  text-align: center;
+  padding: 120px 0 80px;
+}
+.ka-hero-badge {
+  display: inline-block;
+  background: var(--gold-light);
+  color: var(--gold-dark);
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.ka-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 5.2vw, 50px);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+.ka-hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.ka-hero-sub {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+.ka-hero-ctas {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--gold);
+}
+.btn-primary:hover {
+  background: var(--gold);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(196,136,47,0.25);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--faint);
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* SECTIONS */
+.ka-section {
+  padding: 80px 0;
+}
+.ka-section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.ka-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.ka-section-desc {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 600px;
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+
+/* PAIN CHAIN */
+.pain-chain {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pain-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius);
+  font-size: 16px;
+  color: var(--ink);
+}
+.pain-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: #FEF2F2;
+  color: #DC2626;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+.pain-arrow {
+  text-align: center;
+  color: var(--faint);
+  font-size: 18px;
+}
+
+/* PARADOX */
+.paradox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--faint);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 48px;
+}
+.paradox-col {
+  background: var(--surface);
+  padding: 28px 24px;
+}
+.paradox-col h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+.paradox-col ul { list-style: none; padding: 0; }
+.paradox-col li {
+  padding: 6px 0 6px 20px;
+  font-size: 15px;
+  color: var(--muted);
+  position: relative;
+  line-height: 1.6;
+}
+.paradox-col li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+.paradox-have li::before { background: #059669; }
+.paradox-lack li::before { background: var(--gold); }
+
+/* VALUE BOX */
+.value-box {
+  background: var(--ink);
+  color: #FAFAF8;
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.value-box h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.value-box h3 em { color: var(--gold); font-style: italic; }
+.value-box p {
+  font-size: 15px;
+  color: rgba(250,250,248,0.7);
+  line-height: 1.9;
+}
+.value-box strong { color: var(--gold); }
+
+/* 3-STEP */
+.flow-steps {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+}
+.flow-step {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.flow-step:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+.flow-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 auto 16px;
+}
+.flow-step h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.flow-step .flow-price {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.flow-step p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* 3 DELIVERY MODELS */
+.delivery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+.delivery-card {
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.delivery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(26,26,46,0.07);
+  border-color: transparent;
+}
+.delivery-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.delivery-card .delivery-price {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.delivery-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* FOUNDER VAULT */
+.vault-showcase {
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.vault-showcase h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.vault-showcase p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* CTA */
+.ka-cta {
+  text-align: center;
+  padding: 60px 0 100px;
+}
+.ka-cta h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.ka-cta p {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+  .flow-steps, .delivery-grid { flex-direction: column; grid-template-columns: 1fr; }
+  .paradox { grid-template-columns: 1fr; }
+  .ka-hero { padding: 60px 0 50px; }
+  .ka-section { padding: 50px 0; }
+  .testimonial-card { width: 280px; }
+}
+
+/* TESTIMONIALS CAROUSEL */
+.ka-testimonials-section {
+  padding: 80px 0 40px;
+  overflow: hidden;
+}
+.ka-testimonials-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll-ka-testimonials 40s linear infinite;
+  width: max-content;
+}
+.ka-testimonials-track:hover {
+  animation-play-state: paused;
+}
+@keyframes scroll-ka-testimonials {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.testimonial-card {
+  flex-shrink: 0;
+  width: 340px;
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  transition: all 0.3s;
+}
+.testimonial-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(26,26,46,0.06);
+}
+.testimonial-stars {
+  color: var(--gold);
+  font-size: 13px;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+.testimonial-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.testimonial-role {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 12px;
+  font-family: 'DM Sans', sans-serif;
+}
+.testimonial-text {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+</style>
+
+<!-- HERO -->
+<div class="ka-container">
+<div class="ka-hero">
+  <div class="ka-hero-badge">AI × 知识管理 · 落地服务</div>
+  <h1>把你10年的项目经验<br>变成一个<em>活的</em>知识资产库</h1>
+  <p class="ka-hero-sub">换公司带得走 · 做方案有得抄 · 面试有得讲</p>
+  <div class="ka-hero-ctas">
+    <a href="#cta" class="btn btn-primary">免费自测 → 看看你的资产状态</a>
+    <a href="#pain" class="btn btn-outline">你是不是也有这种痛</a>
+  </div>
+</div>
+</div>
+
+<!-- PAIN CHAIN -->
+<div class="ka-container">
+<div class="ka-section" id="pain">
+  <div class="ka-section-label">痛点诊断</div>
+  <h2 class="ka-section-title">你是不是也这样</h2>
+  <div class="pain-chain">
+    <div class="pain-step">
+      <div class="pain-num">1</div>
+      做过几十个项目，写了上百份方案——都在硬盘和微信聊天记录里
+    </div>
+    <div class="pain-arrow">↓</div>
+    <div class="pain-step">
+      <div class="pain-num">2</div>
+      想做新方案，明明记得以前做过类似的——就是找不到参考
+    </div>
+    <div class="pain-arrow">↓</div>
+    <div class="pain-step">
+      <div class="pain-num">3</div>
+      换工作、换公司——项目经验留不下，一切从头开始
+    </div>
+    <div class="pain-arrow">↓</div>
+    <div class="pain-step">
+      <div class="pain-num">4</div>
+      面试或述职时，说不出自己做过的东西到底有什么价值
+    </div>
+  </div>
+
+  <!-- PARADOX -->
+  <div class="paradox">
+    <div class="paradox-col paradox-have">
+      <h4>你有的</h4>
+      <ul>
+        <li>多年跨公司项目经验</li>
+        <li>做方案的直觉和判断力</li>
+        <li>在脑子里但没写下来的方法论</li>
+        <li>同事/客户对你能力的认可</li>
+      </ul>
+    </div>
+    <div class="paradox-col paradox-lack">
+      <h4>你缺的</h4>
+      <ul>
+        <li>能随时调用的案例库</li>
+        <li>让AI帮你搜的索引系统</li>
+        <li>复用的模板和方法卡片</li>
+        <li>能展示给别人的职业作品集</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- VALUE PROPOSITION -->
+<div class="ka-container">
+<div class="ka-section">
+  <div class="value-box">
+    <h3>让知识真正成为<em>资产</em></h3>
+    <p>我们帮你把散落在各个地方的项目文件、方案、总结，<br>
+    变成一套<strong>AI可搜索、能复用、能展示的知识资产库</strong>。<br><br>
+    下次做方案，不是从零开始写，而是<strong>从你过去的经验里调用</strong>。<br>
+    下次换工作，不是"什么都没留下"，而是<strong>带着一个知识库走</strong>。</p>
+  </div>
+</div>
+</div>
+
+<!-- FOUNDER VAULT -->
+<div class="ka-container">
+<div class="ka-section">
+  <div class="ka-section-label">活样板间</div>
+  <h2 class="ka-section-title">我自己就是这么做的</h2>
+  <p class="ka-section-desc">这不是理论——我个人维护着一个45+文件的AI知识资产库，它是我写文章、做咨询、做决策的"外置大脑"。</p>
+  <div class="vault-showcase">
+    <h3>🖥️ 创始人Vault · 实时运行中</h3>
+    <p>三层知识资产模型：输入层 → 知识层 → 输出层<br>
+    卡片方法论：案例卡、方法论卡、灵感卡<br>
+    AI检索配置：像搜自己大脑一样搜你的知识<br><br>
+    <strong style="color:var(--gold);">我自己用它，所以我知道它哪里好用、哪里会卡——</strong><br>
+    <span style="color:var(--muted);">我的服务不是"教你一个系统"，是"把我用的系统给你，带你跑通"。</span></p>
+  </div>
+</div>
+</div>
+
+<!-- 3-STEP FLOW -->
+<div class="ka-container">
+<div class="ka-section">
+  <div class="ka-section-label">服务路径</div>
+  <h2 class="ka-section-title">三步：从诊断到交付</h2>
+  <p class="ka-section-desc">每一步独立有价值，每一步为下一步自然过渡。和品牌诊断共享同一个三步逻辑。</p>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-num">1</div>
+      <h4>免费自测</h4>
+      <div class="flow-price">0元 · 15分钟</div>
+      <p>诊断问卷帮你第一次看清你的知识资产散落在哪里、最该从哪开始。</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">2</div>
+      <h4>付费诊断咨询</h4>
+      <div class="flow-price">¥1,999起 · 90分钟</div>
+      <p>报告解读 + 项目盘点 + 1页行动方案。确定你的案例库从哪几个项目开始。</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">3</div>
+      <h4>系统服务</h4>
+      <div class="flow-price">¥5,000-30,000</div>
+      <p>三种模式可选：陪跑/顾问/对赌。你选适合你的交付方式。</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 3 DELIVERY MODELS -->
+<div class="ka-container">
+<div class="ka-section">
+  <div class="ka-section-label">第三步详解</div>
+  <h2 class="ka-section-title">三种交付模式</h2>
+  <div class="delivery-grid">
+    <div class="delivery-card">
+      <h4>🏃 私教陪跑</h4>
+      <div class="delivery-price">¥5,000-15,000</div>
+      <p>4-8周，每周1v1 + AI辅助<br>适合：想自己做但需要人带</p>
+    </div>
+    <div class="delivery-card">
+      <h4>🧭 长期顾问</h4>
+      <div class="delivery-price">¥15,000-30,000/年</div>
+      <p>季度深度复盘 + 随时微信<br>适合：能执行但需要战略方向</p>
+    </div>
+    <div class="delivery-card">
+      <h4>🎯 按结果对赌</h4>
+      <div class="delivery-price">¥10,000-30,000</div>
+      <p>你定交付清单，我做，你验收<br>适合：没时间但必须出结果</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- DIFFERENTIATION -->
+<div class="ka-container">
+<div class="ka-section">
+  <div class="ka-section-label">为什么不是别的方案</div>
+  <h2 class="ka-section-title">与常见方法的区别</h2>
+  <div class="delivery-grid">
+    <div class="delivery-card">
+      <h4>vs 印象笔记/Notion</h4>
+      <p>数据在本地，完全自主<br>不依赖特定平台的AI功能</p>
+    </div>
+    <div class="delivery-card">
+      <h4>vs 知识管理课程</h4>
+      <p>不是方法论讲解<br>是你自己的项目经验直接落地</p>
+    </div>
+    <div class="delivery-card">
+      <h4>vs 自己摸索</h4>
+      <p>2次咨询 + 模板即用<br>不用花半年试错搭结构</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- TESTIMONIALS CAROUSEL -->
+<div class="ka-testimonials-section">
+  <div class="ka-container">
+    <div class="ka-section-label">学员口碑</div>
+    <h2 class="ka-section-title">120+ 知识管理学员的真实反馈</h2>
+    <p class="ka-section-desc">来自高分行家、创业者、设计师、终身学习者的评价。</p>
+  </div>
+  <div class="ka-testimonials-track">
+    <!-- Card 1: 唐海程 -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Tang</div>
+      <div class="testimonial-role">在行9.9分高分行家 · 战略话题</div>
+      <div class="testimonial-text">"陈露是我今年见过准备最为充分的行家，在约见前针对我的问题给到极为细致的反馈。结果是超出自己预期的：不仅仅构想了一个能落地的知识库，还知道了「首席知识官」这个新工种的存在。"</div>
+    </div>
+    <!-- Card 2: 在行用户 -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">User 842809</div>
+      <div class="testimonial-role">终身学习者</div>
+      <div class="testimonial-text">"绝对是物超所值！陈老师给了很多醍醐灌顶金句：'不二次打开的记录都是垃圾'、'不要用战术上的勤奋掩饰战略上的懒惰'——庆幸找到了自己职业路上的一盏导航明灯！"</div>
+    </div>
+    <!-- Card 3: 张何辛 -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Jose</div>
+      <div class="testimonial-role">知识管理实践者</div>
+      <div class="testimonial-text">"我时常为知识管理而困扰，用遍各种知识库工具但没有建立完整的工作流。陈老师分享的系统化方法论以及工作流，让我对照自己发现了不少盲点和可以提升之处。除了方法，还有很多思维方式上的启发。"</div>
+    </div>
+    <!-- Card 4: LuCky -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">LuCky</div>
+      <div class="testimonial-role">央企精进学习者 · 10分满分</div>
+      <div class="testimonial-text">"感恩遇到陈老师，必须给10分好评！陈老师教的一套完整知识管理体系就如同一根绳子，把我这十几年来零零散散学的东西都串起来了，而且这个体系形成了一个闭环，能够彻底解决盲目学、学了不会用的问题。"</div>
+    </div>
+    <!-- Card 5: 褚运七 -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Chu</div>
+      <div class="testimonial-role">社群运营创业者 · 首次在行</div>
+      <div class="testimonial-text">"这是我第一次使用在行约见行家，幸运遇见了陈老师。老师提前准备好手绘图和PPT，逻辑条理非常清晰，结合我的实际情况给了实用指导，帮我补全了很多之前零散的信息，有种豁然开朗的感觉。"</div>
+    </div>
+    <!-- Card 6: 苏醒 -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Su</div>
+      <div class="testimonial-role">自我探索实践者</div>
+      <div class="testimonial-text">"陈老师给了方法论，更重要的是现在立刻就去做。如果终身学习者是一个人不断迭代的底色，那么行业观察者是拓展认知边界的撞色，而成为KOL则是作品流通的成色。两个字，超值。"</div>
+    </div>
+    <!-- Duplicate for seamless loop -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Tang</div>
+      <div class="testimonial-role">在行9.9分高分行家</div>
+      <div class="testimonial-text">"陈露是我今年见过准备最为充分的行家，结果是超出自己预期的：不仅仅构想了一个能落地的知识库，还知道了「首席知识官」这个新工种的存在。"</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">User 842809</div>
+      <div class="testimonial-role">终身学习者</div>
+      <div class="testimonial-text">"绝对是物超所值！'不二次打开的记录都是垃圾'、'不要用战术上的勤奋掩饰战略上的懒惰'——庆幸找到了自己职业路上的一盏导航明灯！"</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Jose</div>
+      <div class="testimonial-role">知识管理实践者</div>
+      <div class="testimonial-text">"陈老师分享的系统化方法论以及工作流，让我对照自己发现了不少盲点和可以提升之处。除了方法，还有很多思维方式上的启发。"</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">LuCky</div>
+      <div class="testimonial-role">10分满分学员</div>
+      <div class="testimonial-text">"陈老师教的一套完整知识管理体系就如同一根绳子，把我这十几年来零零散散学的东西都串起来了，形成了一个闭环。"</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Chu</div>
+      <div class="testimonial-role">社群运营创业者</div>
+      <div class="testimonial-text">"老师提前准备好手绘图和PPT，结合实际情况给了实用指导，帮我补全了零散信息，豁然开朗。"</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Su</div>
+      <div class="testimonial-role">自我探索实践者</div>
+      <div class="testimonial-text">"终身学习者、行业观察者、KOL是作品流通的成色——方法论给了，现在立刻就去做。两个字，超值。"</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="ka-cta" id="cta">
+  <div class="ka-container">
+    <h2>先花15分钟，看看你的知识资产什么状态</h2>
+    <p>免费的。你填了问卷，就已经在帮自己盘点了。</p>
+    <a href="#wechat" class="btn btn-primary" style="font-size:16px;padding:16px 40px;">获取自测问卷 →</a>
+    <p style="margin-top:20px;font-size:13px;color:#aaa;">添加微信获取问卷，我会根据你的情况发最适合的版本</p>
+  </div>
+</div>
+
+<!-- WeChat -->
+<div id="wechat" style="text-align:center;padding:60px 0 100px;display:none;">
+  <div class="ka-container">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:26px;color:#1A1A2E;margin-bottom:14px;">添加微信</h2>
+    <p style="font-size:15px;color:#888;margin-bottom:20px;">我会根据你的背景，发最适合的诊断问卷版本</p>
+    <div style="background:#1A1A2E;color:#FAFAF8;padding:24px 32px;border-radius:14px;display:inline-block;">
+      <p style="font-size:14px;color:rgba(250,250,248,0.6);margin-bottom:4px;">微信</p>
+      <p style="font-size:20px;font-weight:600;color:#E8A838;font-family:'DM Sans',sans-serif;">ActionThinker</p>
+    </div>
+    <p style="margin-top:20px;font-size:13px;color:#aaa;">或邮件：<a href="mailto:chenlu@opclab.cn" style="color:#C4882F;">chenlu@opclab.cn</a></p>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('a[href="#wechat"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const wechat = document.getElementById('wechat');
+    wechat.style.display = wechat.style.display === 'none' ? 'block' : 'none';
+    wechat.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>

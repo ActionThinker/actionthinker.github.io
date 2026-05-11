@@ -1,201 +1,187 @@
 ---
-overline: 关于陈露 · About Me
 layout: page
 title: 关于陈露
-subtitle: AI知识资产化的实践者
+subtitle: 一个人一生，做好一件事：让知识成为资产
 ---
 
-## 嗨，欢迎来了解我
+<style>
+.about-kicker {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  font-size: 17px;
+  color: #888;
+  line-height: 1.9;
+  text-align: center;
+}
+.about-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: #C4882F;
+  text-align: center;
+  padding: 32px 0;
+  line-height: 1.5;
+}
+.about-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 40px 0;
+}
+.about-dual-card {
+  padding: 28px 24px;
+  border-radius: 14px;
+  border: 1px solid rgba(26,26,46,0.08);
+  background: #fff;
+}
+.about-dual-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: #1A1A2E;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.about-dual-card h3 em { color: #C4882F; font-style: italic; }
+.about-dual-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.about-dual-card .cta-link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #C4882F;
+  text-decoration: none;
+}
+.about-dual-card .cta-link:hover { text-decoration: underline; }
 
-> **"分享越多，价值越大。"**
-> — 陈露，2009年至今
+.proof-bar {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 32px 0;
+}
+.proof-tag {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid #E8E5E0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 0.5px;
+}
+.proof-tag strong { color: #1A1A2E; }
+
+@media (max-width: 768px) {
+  .about-dual { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="about-quote">"分享越多，价值越大。" — 陈露，2009年至今</div>
 
 ---
 
-## 知识即资产
+## 我做的事
 
-大多数人谈论"学习"、"输入"、"成长"。
+大多数人谈论"学习"、"输入"、"成长"。<br>
 我谈论的是**资产**。
 
-这不是书里学来的理论。
+你的经验不应该在换公司时清零。<br>
+你的价值不应该被错误的标签掩盖。<br>
+你的知识不应该散落在硬盘和聊天记录里。
+
+> **两条路径，同一个内核：让个人经验变成可积累、可增值、可传承的核心资产。**
+
+<div class="about-dual">
+  <div class="about-dual-card">
+    <h3>🎯 个人品牌<em>资产</em>诊断</h3>
+    <p>6维模型扫描你的品牌资产状态，一次深度咨询帮你从"不知道自己值什么"到"清晰说出自己的独特定位"。</p>
+    <a href="/personal-brand/" class="cta-link">了解品牌诊断 →</a>
+  </div>
+  <div class="about-dual-card">
+    <h3>🧠 知识<em>资产化</em>服务</h3>
+    <p>三步链路帮你把散落的项目经验变成AI可搜索、能复用的知识资产库。换公司带得走，做方案有得抄。</p>
+    <a href="/knowledge-assetization/" class="cta-link">了解知识资产化 →</a>
+  </div>
+</div>
+
+---
+
+## 15年，三次媒介革命
+
+这不是书里学来的理论。<br>
 这是我从自己的人生经历里，一步一步活出来的。
-
-而且，这条路，正好踩中了知识媒介的三次革命——
-
----
-
-## 知识媒介的三次革命
-
-**博客时代（2009）**
-知识的载体是文章。博客是我的名片，我的简历，我的学习方法。CEO看了我的博客，说"比简历好使"。
-
-**社交媒体时代（2011-2023）**
-知识的载体是网络，是社群，是人与人之间的连接。我发起CAPE，做Airbnb房东，在在行做咨询——身体力行每一种分享形态。
-
-**AI时代（2023-至今）**
-知识的载体是智能体。AI极大降低了知识管理的门槛——不需要编程，不需要团队，一个人就能建立自己的"第二大脑"。
-
-> 知识不变，但承载知识的媒介在变。每一次媒介革命，都让知识的价值被重新放大一次。
-
----
-
-## 我的故事
 
 ### 2009 · 博客改变命运
 
 一切的起点，是一篇博客。
 
-2009年，我在互联网上读完了Issac Mao的《分享主义：一场思维革命》。"分享不只是美德，更是一种高效的学习方法。"这句话击中了我。
-
-于是我开始写博客，记录我的学习过程、实践反思。读博客，向行业从业者学习；写博客，把自己学到的东西整理出来。
-
-有一天，一位素未谋面的CEO看了我的博客，说了一句话：
+一位素未谋面的CEO看了我的博客，说了一句话：
 **"你的博客，比简历好使。"**
 
 他邀请我加入他的团队。后来他成为我的创业合伙人，我们一起创立了NPLUS。
 
 > 博客，比简历好使。
-这是我对"知识即资产"最原始的直觉认知。
-
----
+> 这是我对"知识即资产"最原始的直觉认知。
 
 ### 2011 · 发起CAPE
 
 同一年，我与海外留学生共同发起了 **CAPE全球青年实践网络**。
 
-起因很简单：我在国内，却想了解世界。怎么办？
+花一周自学建站，邀请美国、日本、巴西、以色列的留学生来分享观察。三年间推动全球30+国家、60+城市、上百场青年主题沙龙。孵化了中南对话、DFC中国、微学英语等项目。
 
-花一周自学建站，搭了一个简陋的网站，然后邀请美国、日本、巴西、以色列的留学生来分享他们的观察。一个接一个，慢慢连成了网络。
-
-> "如果有100个国家，每个国家有5个中国年轻人参与，会怎么样？"
-
-三年间，推动了全球30多个国家，60多个城市，上百场青年主题沙龙。孵化了中南对话、DFC中国、微学英语等项目。
-
-TEDxNanjing 2013：《分享传递价值，行动创造未来》
-TEDxNingbo 2014：《让"青年发展"成为社会议题》
+TEDxNanjing 2013、TEDxNingbo 2014 演讲者。
 
 > 分享不仅是个人学习的方法，更是推动社会连接的力量。
-这是我的第二个认知跃迁。
-
----
 
 ### 2011-2023 · 首席知识官
 
-NPLUS创业期间，我担任了**首席知识官（CKO）**。
+NPLUS创业期间，我担任**首席知识官（CKO）**。
 
-从草根创业团队到行业领先，我见证了数字营销的风口变迁：微信公众号 → 朋友圈H5 → 小程序 → 抖音小红书。这个过程也是知识传播媒介的革命——从博客到社交媒体，知识的流动速度呈指数级增长。
+从草根创业团队到行业领先，见证了数字营销的风口变迁。我的工作是把公司的实践和方法论沉淀为可复用的知识资产——内容沉淀、文化营造、知识输出。
 
-我做的事情是把数字营销公司的内部实践和方法论，沉淀为可复用的知识资产：
+服务美的、华住、Airbnb、腾讯公益等头部品牌。入选数英网TOP5，获金投赏、金鼠标、虎啸奖等行业荣誉。
 
-- **内容沉淀** — 全流程项目管理文档，项目经理责任制
-- **文化营造** — 线上线下分享活动，公众号策展，季刊杂志
-- **知识输出** — 以案例作品为核心，让每个项目价值最大化曝光
-
-服务美的、华住、Airbnb、腾讯公益等头部品牌。入选数英网代理商指数TOP5，获得金鼠标、金投赏、虎啸奖等行业荣誉。
-
-> 知识管理，是企业最重要的竞争壁垒。这是我从个人实践走向组织实践的第三个认知。
-
----
-
-### 分享主义的社会实践
-
-除了组织和企业的实践，我也把"分享"延伸到生活的不同维度：
-
-**Airbnb房东**
-做早期房东，闲置空间分享经济的实践者。向来自世界各地的房客分享真实的在地生活与文化，身体力行共享经济的理念。
-
-**在行平台咨询**
-通过1对1咨询，把个人知识管理与数字营销经验产品化，帮助更多个体找到自己的学习路径与成长方向。
-
-> 这两件事都是"盈余"的分享——盈余空间、盈余时间、盈余经验。分享的本质，是把闲置的价值激活。
-
----
+> 知识管理，是企业最重要的竞争壁垒。这是从个人实践走向组织实践的认知跃迁。
 
 ### 2023-至今 · AI知识资产化
 
-AI时代到来，我发现了一个更大的机会：
-
 AI极大降低了知识管理的门槛——不需要编程，不需要团队，一个人就能建立自己的"第二大脑"。
 
-于是发起 **OPClab一人公司实验室**，把15年的知识管理经验，转化为AI时代的个人杠杆工具。
+发起 **OPClab一人公司实验室**，把15年的知识管理经验转化为AI时代的个人杠杆工具。同时构建了**6维品牌诊断模型**——因为AI时代，知识可以被AI组织，但"你是谁"这件事，只有人才能回答。
 
-> AI时代，每个人都可以借助知识与AI杠杆，放大自己的价值。这是我现在的使命。
-
----
-
-## O+P+C 框架
-
-这是15年经验的结晶：
-
-**O — 开口表达**
-不表达的知识，不属于你。博客比简历好使，这件事我亲身验证了。
-
-**P — 亲身实践**
-不躬身入局，永远只是观众。实践是知识的唯一验证方式。
-
-**C — 一人公司**
-一个人就是一支队伍。用AI杠杆，放大你的知识资产。
-
----
-
-## 我能为你做什么
-
-**个人用户**
-- 构建你的"第二大脑"
-- 让知识实现复利增长
-- 用AI管理知识、放大能力
-
-**企业用户**
-- 沉淀组织知识资产
-- 构建竞争壁垒
-- 提升团队协作效率
-
-**咨询合作**
-- AI知识管理战略顾问
-- 企业知识体系搭建
-- 个人品牌内容策划
+> 两条服务路径：帮助AI时代的知识工作者，既看清自己是谁，也让自己的知识真正变成资产。
 
 ---
 
 ## 社会证明
 
-**社会演讲：** TEDxNanjing 2013、TEDxNingbo 2014、TEDxSuzou 2013、UCCA，云栖2050、Microsoft NPO IT Day
+<div class="proof-bar">
+  <span class="proof-tag"><strong>TEDx</strong> 演讲者</span>
+  <span class="proof-tag"><strong>CAPE</strong> 联合创始人</span>
+  <span class="proof-tag"><strong>NPLUS</strong> CKO</span>
+  <span class="proof-tag"><strong>金投赏</strong> 评委</span>
+  <span class="proof-tag"><strong>金鼠标</strong> 评委</span>
+  <span class="proof-tag"><strong>数英奖</strong> 评委</span>
+  <span class="proof-tag"><strong>虎啸奖</strong> 评委</span>
+  <span class="proof-tag"><strong>15年</strong> 知识管理</span>
+</div>
 
-**服务品牌：** 美的、小天鹅、COLMO、华住、SMILEY、Airbnb、腾讯公益、泸州老窖、长江商学院、OPPO等
 
-**行业荣誉：** 金投赏、金鼠标、数英奖TOP5、金匠奖、金旗奖、虎啸奖
+**服务品牌：** 美的、小天鹅、COLMO、华住、SMILEY、Airbnb、腾讯公益、泸州老窖、长江商学院、OPPO 等
 
-**媒体荣誉：** 《城市画报》85后青年精英榜、《New Younger》中国青年新锐百人
+**媒体报道：** 《城市画报》85后青年精英榜、《New Younger》中国青年新锐百人
 
 ---
 
 ## 联系我
 
-📧 **chenlu@opclab.cn
+📧 **chenlu@opclab.cn**
 🌐 **actionthinker.com**
-
----
-
-### About Me
-
-> "The more you share, the more value you create."
-
-I am Chen Lu — an AI Knowledge Strategist.
-
-**My journey, in four chapters:**
-
-**2009** — Started blogging. A CEO I'd never met read my blog and said: "This is better than a resume." He invited me to co-found NPLUS.
-
-**2011** — Co-founded [CAPE Global Youth Practice Network](https://capechina.org). 60+ cities, 100+ youth salons. Also co-founded [NPLUS Digital](https://www.nplusgroup.com) as CKO.
-
-**2011-2023** — Built organizational knowledge management systems at NPLUS. Served Midea, Huazhu, Airbnb, Tencent,SMILEY，Freitag and others. Top 50 in industry agency index.
-
-**2023-present** — Launched [OPClab](https://www.actionthinker.com) to explore AI-driven personal knowledge capitalization.
-
-**My O+P+C Framework:** Open Expression + Practice + Company of One.
-
-TEDx speaker: TEDxNanjing 2013, TEDxNingbo 2014.
-Awards: Golden Mouse, Tiger Roar, Golden Investment Award.
+💬 微信：**ActionThinker**
 
 ---
 
@@ -206,13 +192,13 @@ Awards: Golden Mouse, Tiger Roar, Golden Investment Award.
   "@type": "Person",
   "name": "陈露",
   "alternateName": ["Chen Lu", "ActionThinker"],
-  "jobTitle": "AI知识资产化引领者",
+  "jobTitle": "AI知识资产化引领者 · 个人品牌资产顾问",
   "worksFor": {
     "@type": "Organization",
     "name": "OPClab"
   },
-  "description": "陈露，AI知识资产化引领者。CAPE联合创始人，NPLUS Digital首席知识官，TEDx演讲者。2009年博客获工作机会，坚信「分享越多，价值越大」。",
-  "knowsAbout": ["AI知识管理","个人品牌","一人公司","知识资产化","O+P+C框架","分享主义"],
+  "description": "陈露，AI知识资产化引领者，个人品牌资产顾问。CAPE联合创始人，NPLUS Digital首席知识官，TEDx演讲者。2009年博客获工作机会，坚信「分享越多，价值越大」。提供AI个人品牌资产诊断和AI知识资产化两项服务。",
+  "knowsAbout": ["AI知识管理","个人品牌资产","一人公司","知识资产化","O+P+C框架","分享主义","6维品牌诊断模型","定位象限"],
   "sameAs": [
     "https://github.com/actionthinker",
     "https://www.actionthinker.com",

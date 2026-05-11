@@ -17,7 +17,7 @@ baseurl: ""
 title: 陈露 · ActionThinker
 
 # Short description of your site
-description: AI知识资产化引领者 · OPClab发起人 · 一人公司实践实验室
+description: AI知识资产化引领者 · 个人品牌资产顾问 — 让经验成为可积累、可增值、可传承的核心资产
 
 # Google Fonts (P0 视觉升级：品牌字体系统)
 googlefonts:
@@ -29,10 +29,10 @@ googlefonts:
 # List of links in the navigation bar
 navbar-links:
   首页: "http://actionthinker.com"
-  文章: "posts"
-  关于我: "about"
-  实践: "opclab"
   服务: "service"
+  关于我: "about"
+  OPClab: "opclab"
+  文章: "posts"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -57,7 +57,7 @@ page-col: "#FAFAF8"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: ActionThinker
-  email: "chenluaihr@gmail.com"
+  email: "chenlu@opclab.cn"
   facebook: chenluaihr  # eg. daattali
   github: ActionThinker    # eg. daattali
   twitter: Action_Thinker   # eg. daattali

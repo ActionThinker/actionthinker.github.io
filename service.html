@@ -1,0 +1,250 @@
+---
+layout: page
+title: 服务
+subtitle: 两条路径，一个方法论内核
+use-site-title: false
+---
+
+<style>
+/* ================================================
+   SERVICE HUB v1.0 — 双业务线选择器
+   ================================================ */
+
+.svc-hub-hero {
+  text-align: center;
+  padding: 100px 24px 40px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.svc-hub-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 600;
+  color: #1A1A2E;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.svc-hub-hero p {
+  font-size: 16px;
+  color: #888;
+  line-height: 1.8;
+}
+
+.svc-hub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 960px;
+  margin: 60px auto;
+  padding: 0 24px;
+}
+.svc-hub-card {
+  display: block;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 48px 36px;
+  transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card A: 个人品牌 — clean white */
+.svc-card-brand {
+  background: #fff;
+  border: 1px solid rgba(26,26,46,0.08);
+}
+.svc-card-brand:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(26,26,46,0.1);
+  border-color: transparent;
+}
+
+/* Card B: 知识资产化 — dark accent */
+.svc-card-knowledge {
+  background: #1A1A2E;
+  border: 1px solid rgba(250,250,248,0.06);
+}
+.svc-card-knowledge:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(26,26,46,0.25);
+}
+
+.svc-card-icon {
+  font-size: 40px;
+  margin-bottom: 24px;
+  display: block;
+}
+.svc-card-number {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.svc-card-brand .svc-card-number { color: #C4882F; }
+.svc-card-knowledge .svc-card-number { color: #E8A838; }
+
+.svc-card h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+.svc-card-brand h2 { color: #1A1A2E; }
+.svc-card-knowledge h2 { color: #FAFAF8; }
+
+.svc-card .tagline {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.svc-card-brand .tagline { color: #555; }
+.svc-card-knowledge .tagline { color: rgba(250,250,248,0.75); }
+
+.svc-card .features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+.svc-card .features li {
+  font-size: 14px;
+  padding: 6px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+.svc-card-brand .features li { color: #666; }
+.svc-card-knowledge .features li { color: rgba(250,250,248,0.6); }
+
+.svc-card .features .check {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.svc-card-brand .features .check { color: #C4882F; }
+.svc-card-knowledge .features .check { color: #E8A838; }
+
+.svc-card-arrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.3s;
+}
+.svc-card-brand .svc-card-arrow { color: #C4882F; }
+.svc-card-knowledge .svc-card-arrow { color: #E8A838; }
+.svc-card:hover .svc-card-arrow { gap: 14px; }
+
+/* Question bar */
+.svc-question-bar {
+  text-align: center;
+  padding: 60px 24px 80px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.svc-question-bar h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1A1A2E;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.svc-question-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.svc-question-option {
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid rgba(26,26,46,0.06);
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  transition: all 0.3s;
+}
+.svc-question-option strong {
+  color: #1A1A2E;
+  display: block;
+  margin-bottom: 2px;
+  font-size: 15px;
+}
+.svc-question-option:hover {
+  border-color: #C4882F;
+  background: #FEFBF5;
+}
+
+@media (max-width: 768px) {
+  .svc-hub-grid { grid-template-columns: 1fr; gap: 24px; }
+  .svc-hub-card { padding: 36px 28px; }
+  .svc-hub-hero { padding: 60px 20px 30px; }
+}
+</style>
+
+<!-- HERO -->
+<div class="svc-hub-hero">
+  <h1>你的入口</h1>
+  <p>两个问题，两个方向。<br>同一个方法论内核：让你的经验，成为可积累、可增值、可传承的资产。</p>
+</div>
+
+<!-- DUAL CARDS -->
+<div class="svc-hub-grid">
+
+  <!-- 个人品牌 -->
+  <a href="/personal-brand/" class="svc-hub-card svc-card-brand">
+    <span class="svc-card-icon">🎯</span>
+    <div class="svc-card-number">服务一</div>
+    <h2>AI个人品牌<br>资产管理</h2>
+    <p class="tagline">你不是没有价值<br>你是没看清自己的价值</p>
+    <ul class="features">
+      <li><span class="check">◆</span> 6维诊断模型：看清你的品牌资产全貌</li>
+      <li><span class="check">◆</span> 一次深度咨询：明确你的独特定位</li>
+      <li><span class="check">◆</span> 定位象限：帮你在多个选项中做战略选择</li>
+    </ul>
+    <span class="svc-card-arrow">了解详情 →</span>
+  </a>
+
+  <!-- 知识资产化 -->
+  <a href="/knowledge-assetization/" class="svc-hub-card svc-card-knowledge">
+    <span class="svc-card-icon">🧠</span>
+    <div class="svc-card-number">服务二</div>
+    <h2>AI知识<br>资产化服务</h2>
+    <p class="tagline">换公司带得走<br>做方案有得抄，面试有得讲</p>
+    <ul class="features">
+      <li><span class="check">◆</span> 历史项目盘活：把散落的经验变成案例库</li>
+      <li><span class="check">◆</span> AI检索配置：像搜自己大脑一样搜你的知识</li>
+      <li><span class="check">◆</span> 三步服务链路：自测→诊断→系统服务</li>
+    </ul>
+    <span class="svc-card-arrow">了解详情 →</span>
+  </a>
+
+</div>
+
+<!-- QUESTION BAR -->
+<div class="svc-question-bar">
+  <h3>不确定哪个适合你？</h3>
+  <div class="svc-question-options">
+    <div class="svc-question-option">
+      <strong>"我不知道我的定位/品牌该往哪个方向走"</strong>
+      先看左侧：<a href="/personal-brand/" style="color:#C4882F;font-weight:500;">AI个人品牌资产管理 →</a>
+    </div>
+    <div class="svc-question-option">
+      <strong>"我做了很多项目，但换了公司什么都没留下"</strong>
+      先看右侧：<a href="/knowledge-assetization/" style="color:#C4882F;font-weight:500;">AI知识资产化服务 →</a>
+    </div>
+    <div class="svc-question-option">
+      <strong>"两个都需要，不确定优先级"</strong>
+      <a href="mailto:chenlu@opclab.cn?subject=服务咨询-不确定方向" style="color:#C4882F;font-weight:500;">直接联系我 →</a> 5分钟帮你判断
+    </div>
+  </div>
+</div>

@@ -1,0 +1,711 @@
+---
+layout: page
+title: AI个人品牌资产管理
+subtitle: 看清你的价值，说清你是谁
+use-site-title: false
+---
+
+<style>
+/* ================================================
+   PERSONAL BRAND SERVICE v1.0
+   品牌色: Navy + Gold（与主站统一）
+   ================================================ */
+:root {
+  --ink: #1A1A2E;
+  --gold: #C4882F;
+  --gold-light: #FEFBF5;
+  --gold-dark: #A06820;
+  --muted: #78716c;
+  --faint: #E8E5E0;
+  --surface: #ffffff;
+  --bg: #FAFAF8;
+  --radius: 14px;
+  --radius-lg: 20px;
+}
+
+body { background: var(--bg); }
+
+.pb-container { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+/* HERO */
+.pb-hero {
+  text-align: center;
+  padding: 120px 0 80px;
+}
+.pb-hero-badge {
+  display: inline-block;
+  background: var(--gold-light);
+  color: var(--gold-dark);
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+.pb-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 5.5vw, 52px);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+.pb-hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.pb-hero-sub {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+.pb-hero-ctas {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--gold);
+}
+.btn-primary:hover {
+  background: var(--gold);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(196,136,47,0.25);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--faint);
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* SECTIONS */
+.pb-section {
+  padding: 80px 0;
+}
+.pb-section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.pb-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.pb-section-desc {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 600px;
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+
+/* 6 DIMENSIONS */
+.dims-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.dim-card {
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.dim-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(26,26,46,0.06);
+}
+.dim-icon { font-size: 28px; margin-bottom: 10px; }
+.dim-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.dim-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* 3 CLIENT TYPES */
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.type-card {
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius-lg);
+  padding: 34px 24px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.type-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(26,26,46,0.07);
+  border-color: transparent;
+}
+.type-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: var(--ink);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.type-tag {
+  display: inline-block;
+  padding: 3px 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+.type-tag.awakening { background: #DBEAFE; color: #1D4ED8; }
+.type-tag.choosing { background: var(--gold-light); color: var(--gold-dark); }
+.type-tag.scaling { background: #D1FAE5; color: #065F46; }
+.type-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* POSITIONING QUADRANT */
+.quadrant-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.quad-cell {
+  border: 1px solid var(--faint);
+  border-radius: var(--radius);
+  padding: 24px 18px;
+  text-align: center;
+  background: var(--surface);
+  transition: all 0.3s;
+}
+.quad-cell:hover { border-color: var(--gold); }
+.quad-cell h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.quad-cell p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* CASE GRID — 3类典型案例 */
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.case-card {
+  background: var(--ink);
+  color: #FAFAF8;
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  transition: all 0.3s;
+}
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(26,26,46,0.2);
+}
+.case-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #FAFAF8;
+}
+.case-card h3 em { color: var(--gold); font-style: italic; }
+.case-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.case-card p {
+  font-size: 13.5px;
+  color: rgba(250,250,248,0.7);
+  line-height: 1.75;
+}
+.case-card .case-insight {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(250,250,248,0.1);
+  font-size: 12.5px;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* 3-STEP FLOW */
+.flow-steps {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+}
+.flow-step {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.flow-step:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+.flow-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 auto 16px;
+}
+.flow-step h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.flow-step .flow-price {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.flow-step p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* CTA SECTION */
+.pb-cta {
+  text-align: center;
+  padding: 60px 0 100px;
+}
+.pb-cta h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.pb-cta p {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+/* TESTIMONIALS CAROUSEL */
+.testimonials-section {
+  padding: 80px 0 40px;
+  overflow: hidden;
+}
+.testimonials-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll-testimonials 40s linear infinite;
+  width: max-content;
+}
+.testimonials-track:hover {
+  animation-play-state: paused;
+}
+@keyframes scroll-testimonials {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.testimonial-card {
+  flex-shrink: 0;
+  width: 340px;
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  transition: all 0.3s;
+}
+.testimonial-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(26,26,46,0.06);
+}
+.testimonial-stars {
+  color: var(--gold);
+  font-size: 13px;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+.testimonial-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.testimonial-role {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 12px;
+  font-family: 'DM Sans', sans-serif;
+}
+.testimonial-text {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .cases-grid { grid-template-columns: 1fr; }
+  .testimonial-card { width: 280px; }
+}
+</style>
+
+<!-- HERO -->
+<div class="pb-container">
+<div class="pb-hero">
+  <div class="pb-hero-badge">AI × 个人品牌 · 诊断服务</div>
+  <h1>你不是没有价值<br>你是<em>没看清</em>自己的价值</h1>
+  <p class="pb-hero-sub">一次深度诊断咨询，帮你把多年积累的经验和标签，变成清晰、一致、可行动的个人品牌资产。</p>
+  <div class="pb-hero-ctas">
+    <a href="#cta" class="btn btn-primary">免费自测 → 看清现在</a>
+    <a href="#method" class="btn btn-outline">了解诊断方法</a>
+  </div>
+</div>
+</div>
+
+<!-- 6 DIMENSIONS -->
+<div class="pb-container">
+<div class="pb-section" id="method">
+  <div class="pb-section-label">诊断方法论</div>
+  <h2 class="pb-section-title">6维品牌资产诊断模型</h2>
+  <p class="pb-section-desc">不只告诉你"你是谁"——而是用6个维度，系统扫描你的品牌资产状态，找到当前最该发力的点。</p>
+  <div class="dims-grid">
+    <div class="dim-card">
+      <div class="dim-icon">🔍</div>
+      <h4>身份一致性</h4>
+      <p>你的身份标签清晰吗？<br>不同场合的自我介绍一致吗？</p>
+    </div>
+    <div class="dim-card">
+      <div class="dim-icon">💎</div>
+      <h4>差异化</h4>
+      <p>和同行比，你的独特角度是什么？<br>有没有让人记住的"一句话"？</p>
+    </div>
+    <div class="dim-card">
+      <div class="dim-icon">🎯</div>
+      <h4>受众匹配度</h4>
+      <p>你在对谁说话？<br>你的内容是不是他想看的？</p>
+    </div>
+    <div class="dim-card">
+      <div class="dim-icon">📡</div>
+      <h4>表达能力</h4>
+      <p>你的内容和渠道覆盖够吗？<br>输出频率和质量如何？</p>
+    </div>
+    <div class="dim-card">
+      <div class="dim-icon">🌊</div>
+      <h4>机会识别</h4>
+      <p>你所在的领域有多少空白？<br>有哪些低估的机会你可以占据？</p>
+    </div>
+    <div class="dim-card">
+      <div class="dim-icon">🛡️</div>
+      <h4>风险预警</h4>
+      <p>你的定位有矛盾吗？<br>平台依赖、认知盲区在哪里？</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 3 CLIENT TYPES -->
+<div class="pb-container">
+<div class="pb-section">
+  <div class="pb-section-label">客户画像</div>
+  <h2 class="pb-section-title">无论你在哪个阶段</h2>
+  <div class="types-grid">
+    <div class="type-card">
+      <h3>启蒙型</h3>
+      <div class="type-tag awakening">我在迷茫</div>
+      <p>"我做了很多事，但不知道自己的价值到底是什么。"<br><br>帮你从零看清：你的经验里藏着什么独特定位。</p>
+    </div>
+    <div class="type-card">
+      <h3>选择型</h3>
+      <div class="type-tag choosing">我在犹豫</div>
+      <p>"我知道自己有几条路，但选哪条？"<br><br>帮你用定位象限看清选项，做出战略级决策。</p>
+    </div>
+    <div class="type-card">
+      <h3>升级型</h3>
+      <div class="type-tag scaling">我在增长</div>
+      <p>"我有内容有流量，但转化不够，品牌不统一。"<br><br>帮你系统优化品牌表达，让流量变成资产。</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- POSITIONING QUADRANT -->
+<div class="pb-container">
+<div class="pb-section">
+  <div class="pb-section-label">战略工具</div>
+  <h2 class="pb-section-title">定位象限</h2>
+  <p class="pb-section-desc">尤其适合"选择型"客户：当你面对多个战略方向，不是对错问题，而是先后问题。</p>
+  <div class="quadrant-grid">
+    <div class="quad-cell">
+      <h4>🏭 行业KOL</h4>
+      <p>行业代表，高势能输出<br>行业分析、趋势洞察</p>
+    </div>
+    <div class="quad-cell">
+      <h4>🔗 行业连接者</h4>
+      <p>资源桥梁，网络运营者<br>生态地图、资源对接</p>
+    </div>
+    <div class="quad-cell">
+      <h4>👨‍🏫 专业导师</h4>
+      <p>方法论输出，教育者<br>课程、框架、how-to</p>
+    </div>
+    <div class="quad-cell">
+      <h4>💼 专家顾问</h4>
+      <p>结果交付，咨询服务<br>案例、ROI、方法论深度</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 3 CASES: 启蒙 / 选择 / 升级 -->
+<div class="pb-container">
+<div class="pb-section">
+  <div class="pb-section-label">典型案例</div>
+  <h2 class="pb-section-title">三个故事，三种阶段</h2>
+  <p class="pb-section-desc">每个客户都带着不同的困惑来，每次诊断都找到属于他们的那条路。</p>
+  <div class="cases-grid">
+    <!-- 启蒙型: A-Miao -->
+    <div class="case-card">
+      <div class="case-tag">启蒙型 · 2026</div>
+      <h3>A-Miao<br><em>软件工程师</em></h3>
+      <p>一直觉得自己"只是个程序员"。诊断后发现：她做的事远不止写代码——她在翻译、布道、降低技术认知门槛。</p>
+      <div class="case-insight">✦ 核心突破：从"执行者"到"技术传播者"的身份重构</div>
+    </div>
+    <!-- 选择型: BOBO -->
+    <div class="case-card">
+      <div class="case-tag">选择型 · 2025</div>
+      <h3>BOBO<br><em>服装品牌创始人</em></h3>
+      <p>见面的成本太高，品牌影响力没法高效传播。一次深度诊断帮她理清未来五年品牌策略，当场定下次约见。</p>
+      <div class="case-insight">✦ 核心突破：从"人传人"到"品牌系统性建设"的路径设计</div>
+    </div>
+    <!-- 升级型: Kang -->
+    <div class="case-card">
+      <div class="case-tag">升级型 · 2025</div>
+      <h3>Kang<br><em>人力资源专家</em></h3>
+      <p>有专业有口碑但品牌表达散乱。系统梳理了品牌建设的内涵、路径、关键点，主动向同行推荐服务。</p>
+      <div class="case-insight">✦ 核心突破：从"散点输出"到"系统性品牌资产搭建"</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 3-STEP FLOW -->
+<div class="pb-container">
+<div class="pb-section">
+  <div class="pb-section-label">服务路径</div>
+  <h2 class="pb-section-title">三步链路</h2>
+  <p class="pb-section-desc">每一步都独立有价值，每一步都为下一步自然过渡。</p>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-num">1</div>
+      <h4>免费自测</h4>
+      <div class="flow-price">0元 · 15分钟</div>
+      <p>填写诊断问卷，看清你的品牌资产现状。这面"镜子"本身就是价值。</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">2</div>
+      <h4>深度诊断咨询</h4>
+      <div class="flow-price">¥1,999 · 60-90分钟</div>
+      <p>诊断报告解读 + 定位方案 + 1页行动方案。明确你是谁、往哪走。</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">3</div>
+      <h4>系统服务</h4>
+      <div class="flow-price">¥5,000-30,000</div>
+      <p>私教陪跑 / 长期顾问 / 按结果对赌——三种模式，选最适合你的。</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- TESTIMONIALS CAROUSEL -->
+<div class="testimonials-section">
+  <div class="pb-container">
+    <div class="pb-section-label">学员口碑</div>
+    <h2 class="pb-section-title">120+ 学员的真实反馈</h2>
+    <p class="pb-section-desc">来自创业者、高管、专家、知识工作者的真实评价。</p>
+  </div>
+  <div class="testimonials-track">
+    <!-- Card 1 -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">BOBO</div>
+      <div class="testimonial-role">服装品牌创始人 · CEO</div>
+      <div class="testimonial-text">"老师基本上很快拿到痛点，非常洗练给出方法论与系统工具。今天因为收益太多，在睡前念念不忘。我不得不贪心地期待下一次约见，甚至当场定了见面主题。"</div>
+    </div>
+    <!-- Card 2 -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Chen Yu</div>
+      <div class="testimonial-role">连续创业者</div>
+      <div class="testimonial-text">"陈露老师拥有自己独到的定位方法论，将整个沟通过程中的内容拆解成一个个小模型，独到有趣并容易记住，后续可以根据这一个个小模型结合自身情况来做定位梳理，相当实用。"</div>
+    </div>
+    <!-- Card 3 -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Kang</div>
+      <div class="testimonial-role">人力资源专家</div>
+      <div class="testimonial-text">"非常赞的一次沟通！陈老师非常专业，帮我系统梳理了个人品牌建设的内涵、路径、关键点，针对个性化问题给了实操性意见。推荐给所有想要打造个人品牌的朋友！"</div>
+    </div>
+    <!-- Card 4 -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Darren</div>
+      <div class="testimonial-role">品牌营销从业者</div>
+      <div class="testimonial-text">"主要收获四点：观察过往经历找到定位、模仿榜样后迭代创新、投入市场看反馈、创造价值是商业本质。陈老师的思维开阔、发散，能为他人带来很多启迪。"</div>
+    </div>
+    <!-- Card 5 -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">KK &amp; Partner</div>
+      <div class="testimonial-role">夫妻档连续创业者</div>
+      <div class="testimonial-text">"将近4小时的烧脑碰撞，让我在儿童摄影领域的定位和价值得到了清晰的认知，也帮助老婆在生活美容领域如何品牌占位提供了超有价值的见解，收获巨大！"</div>
+    </div>
+    <!-- Card 6 -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Zixiao</div>
+      <div class="testimonial-role">旅游产业从业者</div>
+      <div class="testimonial-text">"专业：聊前发来表格，填的过程中更清晰自己的问题。干货：从定位到知识管理，系统输出深度满满。态度：善于倾听，根据我的情况提出剖析，有一种被大师把脉的感觉。"</div>
+    </div>
+    <!-- Duplicate for seamless loop -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">BOBO</div>
+      <div class="testimonial-role">服装品牌创始人 · CEO</div>
+      <div class="testimonial-text">"老师基本上很快拿到痛点，非常洗练给出方法论与系统工具。今天因为收益太多，在睡前念念不忘。我不得不贪心地期待下一次约见，甚至当场定了见面主题。"</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Chen Yu</div>
+      <div class="testimonial-role">连续创业者</div>
+      <div class="testimonial-text">"陈露老师拥有自己独到的定位方法论，将整个沟通过程中的内容拆解成一个个小模型，独到有趣并容易记住，后续可以根据这一个个小模型结合自身情况来做定位梳理，相当实用。"</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Kang</div>
+      <div class="testimonial-role">人力资源专家</div>
+      <div class="testimonial-text">"非常赞的一次沟通！陈老师非常专业，帮我系统梳理了个人品牌建设的内涵、路径、关键点，针对个性化问题给了实操性意见。推荐给所有想要打造个人品牌的朋友！"</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Darren</div>
+      <div class="testimonial-role">品牌营销从业者</div>
+      <div class="testimonial-text">"主要收获四点：观察过往经历找到定位、模仿榜样后迭代创新、投入市场看反馈、创造价值是商业本质。陈老师的思维开阔、发散，能为他人带来很多启迪。"</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">KK &amp; Partner</div>
+      <div class="testimonial-role">夫妻档连续创业者</div>
+      <div class="testimonial-text">"将近4小时的烧脑碰撞，让我在儿童摄影领域的定位和价值得到了清晰的认知，也帮助老婆在生活美容领域如何品牌占位提供了超有价值的见解，收获巨大！"</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Zixiao</div>
+      <div class="testimonial-role">旅游产业从业者</div>
+      <div class="testimonial-text">"专业：聊前发来表格，填的过程中更清晰自己的问题。干货：从定位到知识管理，系统输出深度满满。态度：善于倾听，根据我的情况提出剖析，有一种被大师把脉的感觉。"</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="pb-cta" id="cta">
+  <div class="pb-container">
+    <h2>先花15分钟，看清你的品牌现状</h2>
+    <p>联系我获取免费诊断问卷，第一次看清你积累多年的经验到底是什么资产状态。</p>
+    <a href="#wechat" class="btn btn-primary" style="font-size:16px;padding:16px 40px;">获取免费自测问卷 →</a>
+    <p style="margin-top:20px;font-size:13px;color:#aaa;">添加微信获取，我会根据你的情况发最适合的版本</p>
+  </div>
+</div>
+
+<!-- WeChat popup placeholder -->
+<div id="wechat" style="text-align:center;padding:60px 0 100px;display:none;">
+  <div class="pb-container">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:26px;color:#1A1A2E;margin-bottom:14px;">添加微信</h2>
+    <p style="font-size:15px;color:#888;margin-bottom:20px;">我会根据你的情况，发送最适合的自测问卷版本</p>
+    <div style="background:#1A1A2E;color:#FAFAF8;padding:24px 32px;border-radius:14px;display:inline-block;">
+      <p style="font-size:14px;color:rgba(250,250,248,0.6);margin-bottom:4px;">微信</p>
+      <p style="font-size:20px;font-weight:600;color:#E8A838;font-family:'DM Sans',sans-serif;">ActionThinker</p>
+    </div>
+    <p style="margin-top:20px;font-size:13px;color:#aaa;">或邮件：<a href="mailto:chenlu@opclab.cn" style="color:#C4882F;">chenlu@opclab.cn</a></p>
+  </div>
+</div>
+
+<script>
+// Simple toggle for wechat display
+document.querySelectorAll('a[href="#wechat"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const wechat = document.getElementById('wechat');
+    wechat.style.display = wechat.style.display === 'none' ? 'block' : 'none';
+    wechat.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
