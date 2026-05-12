@@ -127,7 +127,56 @@ body { background: var(--bg); }
   line-height: 1.7;
 }
 
-/* PAIN CHAIN */
+/* PERSONA CARDS — 1+N 自检分流 */
+.persona-section {
+  padding: 40px 0 60px;
+}
+.persona-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+.persona-card {
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: default;
+}
+.persona-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(26,26,46,0.06);
+  border-color: rgba(196,136,47,0.2);
+}
+.persona-avatar {
+  font-size: 32px;
+  margin-bottom: 10px;
+  display: block;
+}
+.persona-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.persona-role {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.persona-pain {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
 .pain-chain {
   max-width: 640px;
   margin: 0 auto;
@@ -221,6 +270,7 @@ body { background: var(--bg); }
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 20px;
+  color: var(--gold);
 }
 .value-box h3 em { color: var(--gold); font-style: italic; }
 .value-box p {
@@ -362,7 +412,7 @@ body { background: var(--bg); }
 }
 
 @media (max-width: 768px) {
-  .flow-steps, .delivery-grid { flex-direction: column; grid-template-columns: 1fr; }
+  .flow-steps, .delivery-grid, .persona-grid { flex-direction: column; grid-template-columns: 1fr; }
   .paradox { grid-template-columns: 1fr; }
   .ka-hero { padding: 60px 0 50px; }
   .ka-section { padding: 50px 0; }
@@ -436,10 +486,39 @@ body { background: var(--bg); }
 <div class="ka-hero">
   <div class="ka-hero-badge">AI × 知识管理 · 落地服务</div>
   <h1>把你10年的项目经验<br>变成一个<em>活的</em>知识资产库</h1>
-  <p class="ka-hero-sub">换公司带得走 · 做方案有得抄 · 面试有得讲</p>
+  <p class="ka-hero-sub">把你的经验变成可搜索、可调用、可增值的知识资产</p>
   <div class="ka-hero-ctas">
     <a href="#cta" class="btn btn-primary">免费自测 → 看看你的资产状态</a>
     <a href="#pain" class="btn btn-outline">你是不是也有这种痛</a>
+  </div>
+</div>
+</div>
+
+<!-- 1+N PERSONA SELF-SORT -->
+<div class="ka-container">
+<div class="persona-section">
+  <div class="ka-section-label">你在哪个阶段</div>
+  <h2 class="ka-section-title">不同的人，同一种解法</h2>
+  <p class="ka-section-desc">不管你的身份是什么，知识资产化的底层逻辑一样——把散落的经验变成可调用的资产。但每个人的起点不同。</p>
+  <div class="persona-grid">
+    <div class="persona-card">
+      <span class="persona-avatar">🏢</span>
+      <h4>企业创始人</h4>
+      <div class="persona-role">Founder · CEO · Partner</div>
+      <p class="persona-pain">团队越做越大，知识越散落在不同人脑子里。核心员工离职带走know-how，新人上手慢，组织知识债越欠越多。你的经验被困在"人传人"的低效模式里。</p>
+    </div>
+    <div class="persona-card">
+      <span class="persona-avatar">💼</span>
+      <h4>知识工作者</h4>
+      <div class="persona-role">Professional · Manager · Expert</div>
+      <p class="persona-pain">做过的项目、写过的方案散落在硬盘和聊天记录里。想复用找不到，换公司清零。多年积累无法持续增值——你的经验没有变成你的资产。</p>
+    </div>
+    <div class="persona-card">
+      <span class="persona-avatar">✨</span>
+      <h4>创作者</h4>
+      <div class="persona-role">Creator · Writer · Builder</div>
+      <p class="persona-pain">灵感散落各处，内容持续输出但不成体系。你生产了大量知识，但它们没有形成可搜索、可迭代的知识库——每次创作都像从零开始。</p>
+    </div>
   </div>
 </div>
 </div>
