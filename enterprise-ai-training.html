@@ -1,0 +1,378 @@
+---
+layout: base
+title: 企业AI化转型培训
+subtitle: 实战工作坊 · 以训带练 · 从"会用"到"用好"
+use-site-title: false
+---
+
+<style>
+:root {
+  --ink: #1A1A2E;
+  --gold: #C4882F;
+  --gold-light: #FEFBF5;
+  --gold-dark: #A06820;
+  --muted: #78716c;
+  --faint: #E8E5E0;
+  --surface: #ffffff;
+  --bg: #FAFAF8;
+  --radius: 14px;
+  --radius-lg: 20px;
+}
+body { background: var(--bg); }
+.et-container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.et-hero { text-align: center; padding: 120px 0 80px; }
+.et-hero-badge { display: inline-block; background: var(--gold-light); color: var(--gold-dark); padding: 5px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 24px; }
+.et-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px,5.2vw,50px); font-weight: 600; color: var(--ink); line-height: 1.15; margin-bottom: 18px; }
+.et-hero h1 em { font-style: italic; color: var(--gold); }
+.et-hero-sub { font-size: 18px; color: var(--muted); max-width: 600px; margin: 0 auto 32px; line-height: 1.7; }
+.et-hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 14px 34px; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.25s; cursor: pointer; }
+.btn-primary { background: var(--ink); color: var(--gold); }
+.btn-primary:hover { background: var(--gold); color: #fff; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196,136,47,0.25); }
+.btn-outline { background: transparent; color: var(--ink); border: 2px solid var(--faint); }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.et-section { padding: 80px 0; }
+.et-section-label { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; font-weight: 600; }
+.et-section-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: var(--ink); margin-bottom: 14px; line-height: 1.2; }
+.et-section-desc { font-size: 16px; color: var(--muted); max-width: 600px; margin-bottom: 48px; line-height: 1.7; }
+.pain-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; max-width: 760px; }
+.pain-card { background: var(--surface); border: 1px solid var(--faint); border-radius: var(--radius); padding: 22px 20px; display: flex; gap: 14px; align-items: flex-start; }
+.pain-icon { flex-shrink: 0; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.pain-icon.red { background: #FEF2F2; } .pain-icon.amber { background: #FEF3C7; } .pain-icon.purple { background: #EDE9FE; } .pain-icon.blue { background: #EFF6FF; }
+.pain-card p { font-size: 14px; color: #555; line-height: 1.6; }
+.approach-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 36px; }
+.approach-card { background: var(--surface); border: 1px solid var(--faint); border-radius: var(--radius); padding: 32px 22px; text-align: center; transition: all 0.3s; }
+.approach-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(26,26,46,0.06); }
+.approach-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+.approach-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--ink); margin-bottom: 6px; }
+.approach-card .vs { font-size: 12px; color: var(--muted); margin-bottom: 8px; font-style: italic; }
+.approach-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.product-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--faint); margin-bottom: 32px; }
+.product-tab { flex: 1; text-align: center; padding: 14px 12px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; color: var(--muted); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.25s; background: none; border-top: none; border-left: none; border-right: none; }
+.product-tab:hover { color: var(--ink); }
+.product-tab.active { color: var(--gold-dark); border-bottom-color: var(--gold); }
+.product-panel { display: none; }
+.product-panel.active { display: block; }
+.product-detail { background: var(--surface); border: 1px solid var(--faint); border-radius: var(--radius-lg); padding: 40px 36px; }
+.product-header { text-align: center; margin-bottom: 32px; }
+.product-header .product-badge { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+.product-header h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; color: var(--ink); margin: 8px 0; }
+.product-meta { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; font-size: 13px; color: var(--muted); margin-top: 8px; }
+.product-meta span { display: flex; align-items: center; gap: 4px; }
+.product-meta .meta-dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+.meta-dot.people { background: #3B82F6; } .meta-dot.time { background: #059669; } .meta-dot.format { background: #F59E0B; }
+.module-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin-top: 24px; }
+.module-card { background: var(--bg); border-radius: var(--radius); padding: 18px 16px; }
+.module-card h5 { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.module-card p { font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 6px; }
+.module-card .module-output { font-size: 11px; color: var(--gold-dark); font-weight: 600; }
+.case-spotlight { margin-top: 28px; padding: 20px 22px; background: var(--gold-light); border-radius: var(--radius); font-size: 13px; color: var(--gold-dark); line-height: 1.7; }
+.case-spotlight strong { color: var(--gold-dark); }
+.case-spotlight .case-label { font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; margin-bottom: 6px; }
+.process-flow { display: flex; gap: 0; margin-top: 40px; align-items: flex-start; }
+.process-step { flex: 1; text-align: center; position: relative; padding: 0 8px; }
+.process-step::after { content: '→'; position: absolute; right: -8px; top: 28px; font-size: 18px; color: var(--faint); }
+.process-step:last-child::after { content: ''; }
+.process-num { width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; margin: 0 auto 12px; }
+.process-step h4 { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: var(--ink); margin-bottom: 4px; }
+.process-step p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.industry-bar { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 32px; }
+.industry-tag { padding: 12px 24px; background: var(--surface); border: 1px solid var(--faint); border-radius: var(--radius); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; color: var(--ink); transition: all 0.3s; }
+.industry-tag:hover { border-color: var(--gold); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(26,26,46,0.05); }
+.industry-tag .icon { margin-right: 4px; }
+.stats-row { display: flex; gap: 24px; justify-content: center; margin-top: 24px; }
+.stat-item { text-align: center; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 700; color: var(--gold); }
+.stat-label { font-size: 13px; color: var(--muted); }
+.trainer-card { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--faint); border-radius: var(--radius-lg); padding: 36px 32px; display: flex; gap: 28px; align-items: flex-start; }
+.trainer-avatar { flex-shrink: 0; width: 80px; height: 80px; border-radius: 50%; background: var(--ink); color: var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; }
+.trainer-info h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--ink); margin-bottom: 4px; }
+.trainer-role { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 12px; }
+.trainer-info p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+.bridge-box { max-width: 700px; margin: 0 auto; background: var(--ink); color: #FAFAF8; border-radius: var(--radius-lg); padding: 44px 40px; text-align: center; }
+.bridge-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; margin-bottom: 16px; color: var(--gold); }
+.bridge-box p { font-size: 14px; color: rgba(250,250,248,0.7); line-height: 1.8; margin-bottom: 20px; }
+.bridge-box .bridge-perk { display: inline-block; padding: 8px 20px; border: 1px solid rgba(196,136,47,0.3); border-radius: 8px; font-size: 13px; color: var(--gold); font-family: 'DM Sans', sans-serif; font-weight: 600; }
+.et-cta { text-align: center; padding: 60px 0 100px; }
+.et-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--ink); margin-bottom: 14px; }
+.et-cta p { font-size: 15px; color: var(--muted); margin-bottom: 28px; }
+@media (max-width: 768px) {
+  .pain-grid, .approach-grid, .module-grid { grid-template-columns: 1fr; }
+  .process-flow { flex-direction: column; gap: 24px; }
+  .process-step::after { content: '↓'; right: 50%; top: auto; bottom: -18px; transform: translateX(50%); }
+  .trainer-card { flex-direction: column; align-items: center; text-align: center; }
+  .et-hero { padding: 60px 0 50px; } .et-section { padding: 50px 0; }
+}
+</style>
+
+<div class="et-container">
+<div class="et-hero">
+  <div class="et-hero-badge">企业AI化转型 · 实战工作坊</div>
+  <h1>你的企业买了AI工具<br>但90%的人<em>只用它聊天</em></h1>
+  <p class="et-hero-sub">不是再上一堂AI科普课。是带着你企业的真实业务问题，现场练、现场出成果、训后落地。</p>
+  <div class="et-hero-ctas">
+    <a href="#cta" class="btn btn-primary">获取定制化培训方案 →</a>
+    <a href="#pain" class="btn btn-outline">企业为什么需要AI培训</a>
+  </div>
+</div>
+</div>
+
+<div class="et-container" id="pain">
+<div class="et-section">
+  <div class="et-section-label">企业的真实困境</div>
+  <h2 class="et-section-title">AI引进了，但业务没变</h2>
+  <p class="et-section-desc">这不是某一个部门的问题——从基层到管理层，AI落地的阻力不在技术，在人。</p>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <div class="pain-icon red">📉</div>
+      <p><strong>全员普及困境</strong><br>公司花钱买了AI工具，员工只会"聊天式使用"——写个邮件、问个问题。真正能嵌入工作流的不到10%。</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon amber">🏗️</div>
+      <p><strong>业务融合断层</strong><br>IT部门搭了平台、接了大模型，但业务部门不会用、不想用、不知道用在哪。AI成了技术部门的"自嗨"。</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon purple">🧠</div>
+      <p><strong>核心知识流失</strong><br>销冠怎么跟客户谈的？总工怎么判断图纸风险的？这些隐性经验在人脑子里——人一走，知识就没了。</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon blue">🔄</div>
+      <p><strong>培训效果断层</strong><br>AI培训上过不少——听完觉得"很有启发"，回到工位还是不知道怎么做。因为听的是一般知识，练的不是自己的工作。</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="et-container">
+<div class="et-section">
+  <div class="et-section-label">我们的方法</div>
+  <h2 class="et-section-title">不是IT培训，是业务实战</h2>
+  <p class="et-section-desc">企业AI培训最大的问题是"和我的工作没关系"。我们的每一堂课都从你企业的真实业务场景出发。</p>
+  <div class="approach-grid">
+    <div class="approach-card">
+      <span class="approach-icon">🛠️</span>
+      <h4>实战工作坊</h4>
+      <div class="vs">vs 听课式培训</div>
+      <p>70%时间动手练。带着你部门的真实数据、真实文档、真实场景来——产出的是你下周一就能用的东西。</p>
+    </div>
+    <div class="approach-card">
+      <span class="approach-icon">🏢</span>
+      <h4>业务场景驱动</h4>
+      <div class="vs">vs 工具功能讲解</div>
+      <p>不讲"AI能干什么"，只讲"你的业务能用AI干什么"。课前诊断了解你的行业和岗位，课程内容全定制。</p>
+    </div>
+    <div class="approach-card">
+      <span class="approach-icon">🔁</span>
+      <h4>训后陪跑落地</h4>
+      <div class="vs">vs 上完课就走了</div>
+      <p>可选的4-8周陪跑辅导。学员在实际工作中遇到的问题直接问——确保培训不只是"听过"，而是"做到了"。</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="et-container">
+<div class="et-section">
+  <div class="et-section-label">培训产品</div>
+  <h2 class="et-section-title">三条产品线，按需定制</h2>
+  <p class="et-section-desc">不是标准课表照搬。课前诊断你的企业现状和需求，定制内容和实训案例。点击切换查看每条线详情。</p>
+  <div class="product-tabs" id="productTabs">
+    <button class="product-tab active" data-panel="panel-office">🖥️ AI办公实战</button>
+    <button class="product-tab" data-panel="panel-agent">🤖 AI智能体搭建</button>
+    <button class="product-tab" data-panel="panel-expert">🧠 专家经验萃取</button>
+  </div>
+
+  <div class="product-panel active" id="panel-office">
+    <div class="product-detail">
+      <div class="product-header">
+        <div class="product-badge">产品线一</div>
+        <h3>AI办公实战工作坊</h3>
+        <div class="product-meta">
+          <span><span class="meta-dot people"></span> 20-50人/场 · 全员/部门级</span>
+          <span><span class="meta-dot time"></span> 1天（6小时）</span>
+          <span><span class="meta-dot format"></span> 线下到企 · 实战工作坊</span>
+        </div>
+      </div>
+      <h4 style="font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--ink);margin-bottom:14px;">目标</h4>
+      <p class="et-section-desc" style="margin-bottom:24px;">让不同岗位的员工把AI嵌入日常工作流——不是"会用ChatGPT聊天"，而是"用AI完成自己岗位的核心任务"。</p>
+      <h4 style="font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--ink);margin-bottom:14px;">课程模块（按需组合）</h4>
+      <div class="module-grid">
+        <div class="module-card"><h5>AI认知升级</h5><p>AI能做什么、不能做什么——破除企业内对AI的神化和恐惧。建立"AI是工具不是替代者"的集体认知。</p><div class="module-output">产出：企业AI能力地图</div></div>
+        <div class="module-card"><h5>AI写作与沟通</h5><p>用AI写方案、邮件、报告、会议纪要、竞品分析——带着你部门的真实文档来练，不是通用模板。</p><div class="module-output">产出：每人1份AI辅助产出的工作文档</div></div>
+        <div class="module-card"><h5>AI数据分析</h5><p>非技术人员用AI做数据分析。上传你部门的Excel，AI帮你找问题、做洞察、出图表——不需要写公式。</p><div class="module-output">产出：部门真实数据的AI分析报告</div></div>
+        <div class="module-card"><h5>AI知识管理</h5><p>把部门散落的文件、SOP、经验变成AI能搜索的知识库。以后找资料不是翻文件夹，是一句话调出来。</p><div class="module-output">产出：部门AI可检索知识库</div></div>
+      </div>
+      <div class="case-spotlight">
+        <div class="case-label">📌 典型案例</div>
+        <strong>500强消费电子品牌 · 多部门AI办公工作坊</strong><br>
+        市场部、销售部、供应链三个部门联合培训。市场部用AI完成竞品分析报告从4小时→40分钟；销售部用AI整理客户拜访记录并自动生成follow-up邮件；供应链用AI分析历史库存数据预测下季度需求波动。课程结束后3个月回访：<strong>70%学员仍在工作中使用课程中学到的AI工作流</strong>。
+      </div>
+    </div>
+  </div>
+
+  <div class="product-panel" id="panel-agent">
+    <div class="product-detail">
+      <div class="product-header">
+        <div class="product-badge">产品线二</div>
+        <h3>AI智能体搭建工作坊</h3>
+        <div class="product-meta">
+          <span><span class="meta-dot people"></span> 15-30人/场 · 技术团队/业务骨干</span>
+          <span><span class="meta-dot time"></span> 1-2天（6-12小时）</span>
+          <span><span class="meta-dot format"></span> 线下到企 · 带电脑现场搭建</span>
+        </div>
+      </div>
+      <h4 style="font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--ink);margin-bottom:14px;">目标</h4>
+      <p class="et-section-desc" style="margin-bottom:24px;">把AI从"聊天工具"升级为"业务Agent"——学员带着自己部门的业务场景来，现场搭建1-2个可运行的原型。</p>
+      <h4 style="font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--ink);margin-bottom:14px;">课程模块</h4>
+      <div class="module-grid">
+        <div class="module-card"><h5>Agent设计思维</h5><p>什么业务场景适合做Agent？如何定义Agent的能力边界？从"AI能做什么"到"我的业务需要AI做什么"。</p><div class="module-output">产出：企业Agent机会地图</div></div>
+        <div class="module-card"><h5>提示词工程实战</h5><p>从简单提问到Agent system prompt——结构化提示词方法论。把业务规则和判断逻辑"翻译"成AI能理解的指令。</p><div class="module-output">产出：每人3个业务场景提示词模板</div></div>
+        <div class="module-card"><h5>知识库搭建</h5><p>把企业的文档、SOP、案例、政策文件变成Agent的知识底座。不是"导入文件"，是"让AI理解业务"。</p><div class="module-output">产出：部门Agent-ready知识库</div></div>
+        <div class="module-card"><h5>Agent搭建实战</h5><p>现场搭建1-2个可用的业务Agent。从"需求定义→知识库→提示词→测试→迭代"完整走一遍。</p><div class="module-output">产出：可运行的Agent原型</div></div>
+      </div>
+      <div class="case-spotlight">
+        <div class="case-label">📌 典型案例</div>
+        <strong>大型建筑国企 · 多部门智能体搭建工作坊</strong><br>
+        工程部搭建了"施工方案合规审核Agent"——输入施工方案自动检查是否符合安全规范和行业标准；安全部搭建了"安全隐患识别Agent"——上传现场照片自动识别潜在风险点；招投标部搭建了"标书初稿生成Agent"——输入项目参数自动生成标书框架。2天工作坊产出<strong>3个可运行的Agent原型</strong>，训后陆续进入正式使用。
+      </div>
+    </div>
+  </div>
+
+  <div class="product-panel" id="panel-expert">
+    <div class="product-detail">
+      <div class="product-header">
+        <div class="product-badge">产品线三</div>
+        <h3>专家经验萃取工作坊</h3>
+        <div class="product-meta">
+          <span><span class="meta-dot people"></span> 10-20人/场 · 核心专家/知识管理者</span>
+          <span><span class="meta-dot time"></span> 1-2天（6-12小时）</span>
+          <span><span class="meta-dot format"></span> 线下到企 · 深度工作坊（精品小班）</span>
+        </div>
+      </div>
+      <h4 style="font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--ink);margin-bottom:14px;">目标</h4>
+      <p class="et-section-desc" style="margin-bottom:24px;">把核心专家的隐性判断逻辑变成AI可调用的显性知识资产。销冠为什么知道这个客户会签单？总工凭什么一眼看出图纸问题？</p>
+      <h4 style="font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--ink);margin-bottom:14px;">课程模块</h4>
+      <div class="module-grid">
+        <div class="module-card"><h5>知识资产化认知</h5><p>什么知识值得萃取？隐性知识vs显性知识——如何识别组织里"最有价值的经验"。</p><div class="module-output">产出：企业知识资产盘点清单</div></div>
+        <div class="module-card"><h5>专家访谈技巧</h5><p>如何从专家嘴里"挖"出他们自己都没意识到的判断逻辑——不是问"你怎么做的"，是问"你当时看到了什么让你决定这么做"。</p><div class="module-output">产出：专家访谈指南 + 实操练习</div></div>
+        <div class="module-card"><h5>5卡知识结构化</h5><p>案例卡/方法论卡/决策卡/风险卡/偏好卡——五类卡片把隐性经验编码为结构化知识。</p><div class="module-output">产出：每位专家3-5张知识卡片</div></div>
+        <div class="module-card"><h5>AI知识助手配置</h5><p>让AI能调用专家的知识来回答问题。"这个情况的方案怎么选？"——AI基于专家的经验库给出建议。</p><div class="module-output">产出：专家know-how Agent原型</div></div>
+      </div>
+      <div class="case-spotlight">
+        <div class="case-label">📌 典型案例</div>
+        <strong>金融银行 · 销冠经验萃取工作坊</strong><br>
+        3位年度销冠参加1天深度萃取。通过结构化访谈+5卡编码，将销冠的"客户需求判断逻辑""价格谈判策略""风险客户识别信号"转化为30+张知识卡片，搭建了"销冠知识库"。训后新入职客户经理培训周期从<strong>3个月缩短至6周</strong>——因为他们不需要"跟着师傅慢慢学"，知识库里就有销冠的全部经验。
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script>
+document.querySelectorAll('#productTabs .product-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('#productTabs .product-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.product-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.panel).classList.add('active');
+  });
+});
+</script>
+
+<div class="et-container">
+<div class="et-section">
+  <div class="et-section-label">培训流程</div>
+  <h2 class="et-section-title">从诊断到落地，不是上一次课</h2>
+  <p class="et-section-desc">每次企业培训都是定制化的。课前诊断了解你的需求，课后陪跑确保落地。</p>
+  <div class="process-flow">
+    <div class="process-step"><div class="process-num">1</div><h4>课前诊断</h4><p>与HR和业务负责人沟通<br>了解AI现状、痛点、学员水平<br>定制课程内容和实训案例</p></div>
+    <div class="process-step"><div class="process-num">2</div><h4>实战工作坊</h4><p>30%方法论+70%实战练习<br>带着本部门真实业务场景来<br>每人产出可交付的成果</p></div>
+    <div class="process-step"><div class="process-num">3</div><h4>课后陪跑</h4><p>可选4-8周辅导<br>学员在工作中遇到问题直接问<br>确保培训真正落地</p></div>
+    <div class="process-step"><div class="process-num">4</div><h4>成果验收</h4><p>学员产出物评审<br>培训效果量化报告<br>后续深度合作建议</p></div>
+  </div>
+</div>
+</div>
+
+<div class="et-container">
+<div class="et-section">
+  <div class="et-section-label">已服务行业</div>
+  <h2 class="et-section-title">不同行业，同一套方法论</h2>
+  <p class="et-section-desc">AI化的底层逻辑通用，但每个行业的业务场景完全不同。我们懂这个区别。</p>
+  <div class="industry-bar">
+    <div class="industry-tag"><span class="icon">📱</span> 500强消费电子</div>
+    <div class="industry-tag"><span class="icon">🏗️</span> 大型建筑国企</div>
+    <div class="industry-tag"><span class="icon">🏦</span> 金融银行</div>
+    <div class="industry-tag"><span class="icon">🤝</span> 全国性行业协会</div>
+    <div class="industry-tag"><span class="icon">🏭</span> 先进制造</div>
+  </div>
+  <div class="stats-row">
+    <div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">服务企业</div></div>
+    <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">覆盖学员</div></div>
+    <div class="stat-item"><div class="stat-num">70%+</div><div class="stat-label">训后持续使用率</div></div>
+  </div>
+</div>
+</div>
+
+<div class="et-container">
+<div class="et-section">
+  <div class="et-section-label">谁来讲</div>
+  <h2 class="et-section-title">讲师简介</h2>
+  <div class="trainer-card">
+    <div class="trainer-avatar">陈</div>
+    <div class="trainer-info">
+      <h4>陈露</h4>
+      <div class="trainer-role">AI知识资产化引领者 · 企业AI化转型顾问</div>
+      <p>专注AI时代的个人与组织知识资产化。为500强企业、大型国企、金融机构提供AI化培训与咨询服务。不讲脱离业务的通用AI课——每一次培训都从企业的真实业务场景出发，学员带着自己的数据、文档、工作场景来，带着下周就能用的成果走。</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="et-container">
+<div class="et-section">
+  <div class="et-section-label">不止于培训</div>
+  <h2 class="et-section-title">培训只是开始</h2>
+  <p class="et-section-desc">当你的企业完成AI认知和技能培训后，更深层的问题会自然浮现。我们已经准备好了。</p>
+  <div class="bridge-box">
+    <h3>从"会用AI"到"用AI重构业务"</h3>
+    <p>培训解决了"人会不会用"的问题。但接下来你会发现：<br><br>
+    怎么让AI融入业务流程，而不是一个独立工具？<br>
+    怎么搭建企业级的AI知识管理体系？<br>
+    怎么让核心专家的经验变成组织的AI能力，不再依赖某个人？</p>
+    <div class="bridge-perk">培训客户专属 · AI智能体项目咨询优先通道</div>
+  </div>
+</div>
+</div>
+
+<div class="et-cta" id="cta">
+  <div class="et-container">
+    <h2>你的企业AI化，从第一次沟通开始</h2>
+    <p>告诉我们你的行业、团队规模、AI现状和核心诉求。<br>我们出定制化培训方案——不需要你现在做任何决定。</p>
+    <a href="#wechat" class="btn btn-primary" style="font-size:16px;padding:16px 40px;">添加微信 → 获取定制方案</a>
+    <p style="margin-top:20px;font-size:13px;color:#aaa;">添加微信，我会了解你的企业情况后发送定制化培训方案</p>
+  </div>
+</div>
+
+<div id="wechat" style="text-align:center;padding:40px 0 100px;display:none;">
+  <div class="et-container">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:26px;color:#1A1A2E;margin-bottom:14px;">添加微信</h2>
+    <p style="font-size:15px;color:#888;margin-bottom:20px;">告诉我你的企业类型和培训需求，我会在24小时内回复定制方案</p>
+    <div style="background:#1A1A2E;color:#FAFAF8;padding:24px 32px;border-radius:14px;display:inline-block;">
+      <p style="font-size:14px;color:rgba(250,250,248,0.6);margin-bottom:4px;">微信</p>
+      <p style="font-size:20px;font-weight:600;color:#E8A838;font-family:'DM Sans',sans-serif;">ActionThinker</p>
+    </div>
+    <p style="margin-top:20px;font-size:13px;color:#aaa;">或邮件：<a href="mailto:chenlu@opclab.cn" style="color:#C4882F;">chenlu@opclab.cn</a></p>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('a[href="#wechat"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const wechat = document.getElementById('wechat');
+    wechat.style.display = wechat.style.display === 'none' ? 'block' : 'none';
+    wechat.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
