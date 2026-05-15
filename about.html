@@ -1,0 +1,354 @@
+---
+layout: base
+title: 关于陈露 — AI知识资产化引领者
+subtitle: 一个人一生，做好一件事：让知识成为资产
+use-site-title: false
+---
+
+<style>
+:root {
+  --ink: #1A1A2E;
+  --gold: #C4882F;
+  --gold-light: #FEFBF5;
+  --gold-dark: #A06820;
+  --muted: #78716c;
+  --faint: #E8E5E0;
+  --surface: #ffffff;
+  --bg: #FAFAF8;
+  --radius: 14px;
+  --radius-lg: 20px;
+}
+body { background: var(--bg); }
+.ab-container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+.ab-hero {
+  text-align: center;
+  padding: 120px 0 60px;
+}
+.ab-hero-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(26px, 4vw, 36px);
+  font-style: italic;
+  color: var(--gold);
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.ab-hero-byline {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.ab-section { padding: 48px 0; }
+.ab-section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.ab-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.ab-lead {
+  font-size: 17px;
+  color: var(--ink);
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+.ab-lead strong { color: var(--ink); font-weight: 700; }
+.ab-body {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.ab-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+.ab-dual-card {
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: all 0.3s;
+}
+.ab-dual-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(26,26,46,0.05);
+  border-color: rgba(196,136,47,0.15);
+}
+.ab-dual-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.ab-dual-card h3 em { font-style: italic; color: var(--gold); }
+.ab-dual-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.ab-cta-link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+  text-decoration: none;
+}
+.ab-cta-link:hover { text-decoration: underline; }
+
+.ab-divider {
+  border: none;
+  border-top: 1px solid var(--faint);
+  margin: 48px 0;
+}
+
+.ab-timeline { margin: 32px 0; }
+.ab-era {
+  margin-bottom: 40px;
+}
+.ab-era-header {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.ab-era h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.ab-era p { font-size: 15px; color: var(--muted); line-height: 1.9; margin-bottom: 12px; }
+.ab-era p strong { color: var(--ink); }
+
+.ab-insight {
+  margin: 16px 0;
+  padding: 16px 20px;
+  border-left: 3px solid var(--gold);
+  background: var(--gold-light);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--gold-dark);
+  line-height: 1.6;
+}
+
+.ab-proof-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.ab-proof-tag {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--faint);
+  background: var(--surface);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+}
+.ab-proof-tag strong { color: var(--ink); }
+
+.ab-clients {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-top: 8px;
+}
+.ab-clients strong { color: var(--ink); }
+
+.ab-contact {
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  text-align: center;
+  margin-top: 32px;
+}
+.ab-contact p { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+.ab-contact a { color: var(--gold); text-decoration: none; font-weight: 600; }
+.ab-contact a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .ab-dual { grid-template-columns: 1fr; }
+  .ab-hero { padding: 60px 0 40px; }
+  .ab-section { padding: 36px 0; }
+  .ab-section-title { font-size: 24px; }
+}
+</style>
+
+<!-- HERO -->
+<div class="ab-container">
+<div class="ab-hero">
+  <div class="ab-hero-quote">"分享越多，价值越大。"</div>
+  <div class="ab-hero-byline">陈露 · 2009年至今</div>
+</div>
+</div>
+
+<!-- WHAT I DO -->
+<div class="ab-container">
+<div class="ab-section">
+  <div class="ab-section-label">我做的事</div>
+  <h2 class="ab-section-title">把经验变成资产</h2>
+
+  <p class="ab-lead">大多数人谈论"学习"、"输入"、"成长"。<br>我谈论的是<strong>资产</strong>。</p>
+
+  <p class="ab-body">你的经验不应该在换公司时清零。<br>你的价值不应该被错误的标签掩盖。<br>你的知识不应该散落在硬盘和聊天记录里。</p>
+
+  <div class="ab-insight">
+    两条路径，同一个内核：让个人经验变成可积累、可增值、可传承的核心资产。
+  </div>
+
+  <div class="ab-dual">
+    <div class="ab-dual-card">
+      <h3>🎯 个人品牌<em>资产</em>诊断</h3>
+      <p>6维模型扫描你的品牌资产状态，一次深度咨询帮你从"不知道自己值什么"到"清晰说出自己的独特定位"。</p>
+      <a href="/personal-brand/" class="ab-cta-link">了解品牌诊断 →</a>
+    </div>
+    <div class="ab-dual-card">
+      <h3>🧠 知识<em>资产化</em>服务</h3>
+      <p>三步链路帮你把散落的项目经验变成AI可搜索、能复用的知识资产库。换公司带得走，做方案有得抄。</p>
+      <a href="/knowledge-assetization/" class="ab-cta-link">了解知识资产化 →</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<hr class="ab-divider">
+
+<!-- 15 YEARS -->
+<div class="ab-container">
+<div class="ab-section">
+  <div class="ab-section-label">我的路径</div>
+  <h2 class="ab-section-title">15年，三次媒介革命</h2>
+  <p class="ab-body">这不是书里学来的理论。这是我从自己的人生经历里，一步一步活出来的。</p>
+
+  <div class="ab-timeline">
+
+    <div class="ab-era">
+      <div class="ab-era-header">2009 · 媒介1.0</div>
+      <h3>博客改变命运</h3>
+      <p>一切的起点，是一篇博客。一位素未谋面的新媒体营销专家看了我的博客，说了一句话：<strong>"你的博客，比简历好使。"</strong>他邀请我加入他的团队。后来他成为我的创业合伙人，我们一起创立了NPLUS。</p>
+      <div class="ab-insight">博客，比简历好使。这是我对"知识即资产"最原始的直觉认知。</div>
+    </div>
+
+    <div class="ab-era">
+      <div class="ab-era-header">2011 · 媒介2.0</div>
+      <h3>发起CAPE全球青年实践网络</h3>
+      <p>同一年，我与海外留学生共同发起了 <strong>CAPE全球青年实践网络</strong>。花一周自学了开源建站工具WordPress，做了一个很丑的beta版网站，就开始邀请美国、日本、巴西、以色列的留学生来分享观察。三年间推动全球30+国家、60+城市、上百场青年主题沙龙。孵化了中南对话、DFC中国、微学英语等项目。TEDxNanjing 2013、TEDxNingbo 2014 演讲者。</p>
+      <div class="ab-insight">分享不仅是个人学习的方法，更是推动社会连接的力量。</div>
+    </div>
+
+    <div class="ab-era">
+      <div class="ab-era-header">2011-2023 · NPLUS Digital</div>
+      <h3>首席知识官（CKO）</h3>
+      <p>NPLUS创业期间，我担任<strong>首席知识官（CKO）</strong>。从草根创业团队到行业领先，见证了数字营销的风口变迁。我的工作是把公司的实践和方法论沉淀为可复用的知识资产——内容沉淀、文化营造、知识输出。从个人知识管理迈向企业知识管理探索实践，以知识管理助力人才裂变与组织扩张，以知识管理创新驱动业务增长。</p>
+      <p>服务美的、华住、爱彼迎、腾讯、尼尔森、惠氏营养品等行业头部品牌。推动公司入选数英网/广告门代理商指数Top100，帮助团队获得金投赏、4A创意奖、数英奖、金鼠标、虎啸奖等行业荣誉。</p>
+      <div class="ab-insight">知识管理，是企业最重要的竞争壁垒。这是从个人实践走向组织实践的认知跃迁。</div>
+    </div>
+
+    <div class="ab-era">
+      <div class="ab-era-header">2023-至今 · 媒介3.0</div>
+      <h3>AI知识资产化</h3>
+      <p>AI极大降低了知识管理的门槛——不需要编程，不需要团队，一个人就能建立自己的"第二大脑"。发起 <strong>OPClab一人公司实验室</strong>，把15年的知识管理经验转化为AI时代的个人杠杆工具。同时构建了<strong>6维品牌诊断模型</strong>——因为AI时代，知识可以被AI组织，但"你是谁"这件事，只有人才能回答。</p>
+      <div class="ab-insight">两条服务路径：帮助AI时代的知识工作者，既看清自己是谁，也让自己的知识真正变成资产。</div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<hr class="ab-divider">
+
+<!-- SOCIAL PROOF -->
+<div class="ab-container">
+<div class="ab-section">
+  <div class="ab-section-label">社会证明</div>
+  <h2 class="ab-section-title">被谁认可</h2>
+
+  <div class="ab-proof-bar">
+    <span class="ab-proof-tag"><strong>TEDx</strong> 演讲者</span>
+    <span class="ab-proof-tag"><strong>CAPE</strong> 联合创始人</span>
+    <span class="ab-proof-tag"><strong>NPLUS</strong> CKO</span>
+    <span class="ab-proof-tag"><strong>4A创意奖</strong> 评委</span>
+    <span class="ab-proof-tag"><strong>金鼠标</strong> 评委</span>
+    <span class="ab-proof-tag"><strong>数英奖</strong> 评委</span>
+    <span class="ab-proof-tag"><strong>虎啸奖</strong> 评委</span>
+    <span class="ab-proof-tag"><strong>15年</strong> 知识管理</span>
+  </div>
+
+  <p class="ab-clients"><strong>服务品牌：</strong>美的、小天鹅、COLMO、华住、SMILEY、Airbnb、腾讯、泸州老窖、长江商学院、OPPO 等</p>
+  <p class="ab-clients"><strong>媒体报道：</strong>《城市画报》85后青年精英榜、《New Younger》中国青年新锐百人</p>
+</div>
+</div>
+
+<hr class="ab-divider">
+
+<!-- CONTACT -->
+<div class="ab-container">
+<div class="ab-section">
+  <div class="ab-section-label">联系我</div>
+  <h2 class="ab-section-title">找到陈露</h2>
+  <div class="ab-contact">
+    <p>📧 <a href="mailto:chenlu@opclab.cn">chenlu@opclab.cn</a></p>
+    <p>🌐 <a href="https://actionthinker.com">actionthinker.com</a></p>
+    <p>💬 微信：<strong style="color:var(--ink);">ActionThinker</strong></p>
+  </div>
+</div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "陈露",
+  "alternateName": ["Chen Lu", "ActionThinker"],
+  "url": "https://actionthinker.com",
+  "jobTitle": "AI知识资产化引领者 · 个人品牌资产顾问",
+  "description": "陈露，AI知识资产化引领者，个人品牌资产顾问。CAPE联合创始人，NPLUS Digital首席知识官，TEDx演讲者。2009年博客获工作机会，坚信「分享越多，价值越大」。提供AI个人品牌资产诊断和AI知识资产化两项服务。",
+  "knowsAbout": [
+    "AI知识管理",
+    "个人品牌资产",
+    "一人公司",
+    "知识资产化",
+    "分享主义",
+    "6维品牌诊断模型",
+    "企业AI化转型",
+    "专家经验萃取"
+  ],
+  "sameAs": [
+    "https://github.com/actionthinker",
+    "https://www.actionthinker.com"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "OPClab"
+  }
+}
+</script>
