@@ -29,11 +29,11 @@ googlefonts:
 # List of links in the navigation bar
 navbar-links:
   首页: "http://actionthinker.com"
-  服务: "service"
-  企业培训: "enterprise-ai-training"
+  个人服务: "service"
+  企业服务: "enterprise-ai-training"
   关于我: "about"
   OPClab: "opclab"
-  文章: "posts"
+  观点: "posts"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
