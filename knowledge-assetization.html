@@ -177,44 +177,100 @@ body { background: var(--bg); }
   color: var(--muted);
   line-height: 1.65;
 }
-.pain-chain {
-  max-width: 640px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.pain-step {
-  display: flex;
-  align-items: flex-start;
+
+/* PAIN COLUMNS — Three Persona Pain Journeys */
+.pain-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  padding: 18px 20px;
+  margin-top: 36px;
+}
+.pain-col {
   background: var(--surface);
   border: 1px solid var(--faint);
   border-radius: var(--radius);
+  padding: 24px 18px;
+  transition: all 0.3s;
+}
+.pain-col:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(26,26,46,0.05);
+}
+.pain-col-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.pain-col-avatar {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 4px;
+}
+.pain-col-header h4 {
+  font-family: 'Cormorant Garamond', serif;
   font-size: 16px;
   color: var(--ink);
+  font-weight: 600;
 }
-.pain-num {
+.pain-col-role {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+.pain-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--faint);
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.pain-item:last-child { border-bottom: none; }
+.pain-step-num {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 22px;
+  height: 22px;
   background: #FEF2F2;
   color: #DC2626;
-  border-radius: 8px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 11px;
+  margin-top: 1px;
 }
-.pain-arrow {
-  text-align: center;
-  color: var(--faint);
-  font-size: 18px;
-}
+.pain-step-num.founders { background: #FEF3C7; color: #B45309; }
+.pain-step-num.creators { background: #EDE9FE; color: #7C3AED; }
 
-/* PARADOX */
+.pain-converge {
+  text-align: center;
+  margin-top: 32px;
+}
+.pain-converge-line {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.pain-converge-arrow {
+  font-size: 24px;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.pain-converge p {
+  font-size: 14px;
+  color: var(--ink);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.pain-converge strong { color: var(--gold); }
+
+/* PARADOX — expanded */
 .paradox {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -414,6 +470,7 @@ body { background: var(--bg); }
 @media (max-width: 768px) {
   .flow-steps, .delivery-grid, .persona-grid { flex-direction: column; grid-template-columns: 1fr; }
   .paradox { grid-template-columns: 1fr; }
+  .pain-columns { grid-template-columns: 1fr; }
   .ka-hero { padding: 60px 0 50px; }
   .ka-section { padding: 50px 0; }
   .testimonial-card { width: 280px; }
@@ -479,6 +536,196 @@ body { background: var(--bg); }
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* ========== 知枢集成板块 v1.0 ========== */
+
+/* AI Credibility Badge */
+.ai-badge-section {
+  padding: 40px 0 60px;
+}
+.ai-badge {
+  max-width: 660px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(26,26,46,0.03), rgba(196,136,47,0.05));
+  border: 1px solid rgba(196,136,47,0.15);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+  text-align: center;
+}
+.ai-badge-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.ai-badge h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.ai-badge h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.ai-badge p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Deliverable Cards */
+.deliverable-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.deliverable-card {
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  transition: all 0.3s;
+}
+.deliverable-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(26,26,46,0.06);
+  border-color: rgba(196,136,47,0.15);
+}
+.deliverable-step {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.deliverable-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.deliverable-list {
+  list-style: none;
+  padding: 0;
+}
+.deliverable-list li {
+  padding: 6px 0 6px 20px;
+  font-size: 13px;
+  color: var(--muted);
+  position: relative;
+  line-height: 1.6;
+}
+.deliverable-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #059669;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+/* Case Study */
+.case-study {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+}
+.case-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.case-header .case-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+}
+.case-header h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: var(--ink);
+  margin: 6px 0 4px;
+}
+.case-header .case-meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+.case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.case-col {
+  padding: 20px;
+  border-radius: var(--radius);
+}
+.case-before {
+  background: #FEF2F2;
+}
+.case-after {
+  background: #ECFDF5;
+}
+.case-col h5 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.case-before h5 { color: #DC2626; }
+.case-after h5 { color: #059669; }
+.case-col ul {
+  list-style: none;
+  padding: 0;
+}
+.case-col li {
+  font-size: 13px;
+  color: #555;
+  padding: 4px 0 4px 16px;
+  position: relative;
+  line-height: 1.6;
+}
+.case-before li::before { content: '✕'; position: absolute; left: 0; color: #DC2626; font-size: 10px; }
+.case-after li::before { content: '✓'; position: absolute; left: 0; color: #059669; font-weight: 700; font-size: 10px; }
+.case-score {
+  margin-top: 16px;
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+}
+.case-score .big-num {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.case-score .label {
+  font-size: 12px;
+  color: var(--muted);
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .deliverable-grid, .case-grid { grid-template-columns: 1fr; }
+  .ai-badge { padding: 24px 20px; }
+}
+
+/* ========== END 知枢集成板块 ========== */
 </style>
 
 <!-- HERO -->
@@ -523,51 +770,112 @@ body { background: var(--bg); }
 </div>
 </div>
 
-<!-- PAIN CHAIN -->
+<!-- PAIN COLUMNS — 三人三线 -->
 <div class="ka-container">
 <div class="ka-section" id="pain">
   <div class="ka-section-label">痛点诊断</div>
-  <h2 class="ka-section-title">你是不是也这样</h2>
-  <div class="pain-chain">
-    <div class="pain-step">
-      <div class="pain-num">1</div>
-      做过几十个项目，写了上百份方案——都在硬盘和微信聊天记录里
+  <h2 class="ka-section-title">你的角色不同，痛法不同——但解法一样</h2>
+  <p class="ka-section-desc">往下看，看你属于哪一类。每一类都有一条从"痛"到"解法"的路径。</p>
+  <div class="pain-columns">
+    <!-- FOUNDER -->
+    <div class="pain-col">
+      <div class="pain-col-header">
+        <span class="pain-col-avatar">🏢</span>
+        <h4>企业创始人</h4>
+        <div class="pain-col-role">Founder · CEO · Partner</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-step-num founders">1</div>
+        团队越做越大，核心知识散落在不同人的脑子里
+      </div>
+      <div class="pain-item">
+        <div class="pain-step-num founders">2</div>
+        核心员工离职，带走的不只是人——是know-how
+      </div>
+      <div class="pain-item">
+        <div class="pain-step-num founders">3</div>
+        新人上手慢，老人重复教——组织知识债越欠越多
+      </div>
+      <div class="pain-item">
+        <div class="pain-step-num founders">4</div>
+        你的经验被困在"人传人"的低效模式里，无法规模化
+      </div>
     </div>
-    <div class="pain-arrow">↓</div>
-    <div class="pain-step">
-      <div class="pain-num">2</div>
-      想做新方案，明明记得以前做过类似的——就是找不到参考
+    <!-- PROFESSIONAL -->
+    <div class="pain-col">
+      <div class="pain-col-header">
+        <span class="pain-col-avatar">💼</span>
+        <h4>知识工作者</h4>
+        <div class="pain-col-role">Professional · Manager · Expert</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-step-num">1</div>
+        做过几十个项目——资料散落在硬盘、网盘、聊天记录里
+      </div>
+      <div class="pain-item">
+        <div class="pain-step-num">2</div>
+        想做新方案，明明记得做过类似的——翻两小时找不到
+      </div>
+      <div class="pain-item">
+        <div class="pain-step-num">3</div>
+        换公司就归零——多年积累无法持续增值
+      </div>
+      <div class="pain-item">
+        <div class="pain-step-num">4</div>
+        面试述职时说不出自己到底积累了什么——缺案例，缺证据
+      </div>
     </div>
-    <div class="pain-arrow">↓</div>
-    <div class="pain-step">
-      <div class="pain-num">3</div>
-      换工作、换公司——项目经验留不下，一切从头开始
+    <!-- CREATOR -->
+    <div class="pain-col">
+      <div class="pain-col-header">
+        <span class="pain-col-avatar">✨</span>
+        <h4>创作者</h4>
+        <div class="pain-col-role">Creator · Writer · Builder</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-step-num creators">1</div>
+        灵感来了记在备忘录/微信/AI对话——散落各处
+      </div>
+      <div class="pain-item">
+        <div class="pain-step-num creators">2</div>
+        内容持续输出，但没有形成体系——每次创作像从零开始
+      </div>
+      <div class="pain-item">
+        <div class="pain-step-num creators">3</div>
+        大量知识产出，却没有形成可搜索、可迭代的知识库
+      </div>
+      <div class="pain-item">
+        <div class="pain-step-num creators">4</div>
+        你生产了很多东西，但说不清你的核心知识资产是什么
+      </div>
     </div>
-    <div class="pain-arrow">↓</div>
-    <div class="pain-step">
-      <div class="pain-num">4</div>
-      面试或述职时，说不出自己做过的东西到底有什么价值
-    </div>
+  </div>
+
+  <!-- CONVERGENCE -->
+  <div class="pain-converge">
+    <div class="pain-converge-line">不同的身份，同一个核心问题——</div>
+    <div class="pain-converge-arrow">↓</div>
+    <p>你的经验散落在各处，<strong>没有变成一个能搜索、能复用、能增值的系统</strong>。<br>不管你是创始人、职场人还是创作者——你需要的是同一件事：<strong>把隐性经验变成显性资产。</strong></p>
   </div>
 
   <!-- PARADOX -->
   <div class="paradox">
     <div class="paradox-col paradox-have">
-      <h4>你有的</h4>
+      <h4>你拥有的</h4>
       <ul>
-        <li>多年跨公司项目经验</li>
-        <li>做方案的直觉和判断力</li>
-        <li>在脑子里但没写下来的方法论</li>
-        <li>同事/客户对你能力的认可</li>
+        <li>多年实战经验（跨公司/跨项目/跨领域）</li>
+        <li>做决策的直觉和判断力</li>
+        <li>在脑子里但没系统化的方法论</li>
+        <li>同行/客户/团队对你的认可</li>
       </ul>
     </div>
     <div class="paradox-col paradox-lack">
       <h4>你缺的</h4>
       <ul>
-        <li>能随时调用的案例库</li>
-        <li>让AI帮你搜的索引系统</li>
-        <li>复用的模板和方法卡片</li>
-        <li>能展示给别人的职业作品集</li>
+        <li>一个能随时调用的知识库（不是文件夹）</li>
+        <li>让AI帮你搜、帮你总结的智能索引</li>
+        <li>可复用的方法论卡片和模板</li>
+        <li>"我到底积累了什么的"清晰证据链</li>
       </ul>
     </div>
   </div>
@@ -579,10 +887,23 @@ body { background: var(--bg); }
 <div class="ka-section">
   <div class="value-box">
     <h3>让知识真正成为<em>资产</em></h3>
-    <p>我们帮你把散落在各个地方的项目文件、方案、总结，<br>
-    变成一套<strong>AI可搜索、能复用、能展示的知识资产库</strong>。<br><br>
-    下次做方案，不是从零开始写，而是<strong>从你过去的经验里调用</strong>。<br>
-    下次换工作，不是"什么都没留下"，而是<strong>带着一个知识库走</strong>。</p>
+    <p>我们帮你把散落在各处的经验、项目、方案、洞察，<br>
+    变成一套<strong>AI可搜索、可调用、可持续增值的知识资产系统</strong>。<br><br>
+    不管你是创始人、职场人还是创作者——<br>
+    你要的不是另一个"整理好的文件夹"。<br>
+    你要的是一个<strong>让你每次调用经验都比上一次更快的系统</strong>。</p>
+  </div>
+</div>
+</div>
+
+<!-- 知枢 AI CREDIBILITY -->
+<div class="ka-container">
+<div class="ai-badge-section">
+  <div class="ai-badge">
+    <div class="ai-badge-icon">⚙️</div>
+    <h4>知枢 AI 智能体系统</h4>
+    <h3>这套服务，由AI多智能体系统驱动</h3>
+    <p>诊断、构建、教练、验收、运维——五个专业化AI智能体在背后协同工作。你感受到的是<strong>一个"比你自己更懂你的知识"的顾问</strong>，而不是一个聊天机器人。</p>
   </div>
 </div>
 </div>
@@ -627,7 +948,7 @@ body { background: var(--bg); }
       <div class="flow-num">3</div>
       <h4>系统服务</h4>
       <div class="flow-price">¥5,000-30,000</div>
-      <p>三种模式可选：陪跑/顾问/对赌。你选适合你的交付方式。</p>
+      <p>三种模式可选：陪跑/顾问/交付。你选适合你的交付方式。</p>
     </div>
   </div>
 </div>
@@ -650,9 +971,50 @@ body { background: var(--bg); }
       <p>季度深度复盘 + 随时微信<br>适合：能执行但需要战略方向</p>
     </div>
     <div class="delivery-card">
-      <h4>🎯 按结果对赌</h4>
+      <h4>🎯 按结果交付</h4>
       <div class="delivery-price">¥10,000-30,000</div>
       <p>你定交付清单，我做，你验收<br>适合：没时间但必须出结果</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 知枢 DELIVERABLE VISIBILITY -->
+<div class="ka-container">
+<div class="ka-section">
+  <div class="ka-section-label">每步交付什么</div>
+  <h2 class="ka-section-title">你花的每一分钱，都能看见具体产出</h2>
+  <p class="ka-section-desc">不是"咨询一下"——每一步都有看得见、拿得走、用得上的交付物。</p>
+  <div class="deliverable-grid">
+    <div class="deliverable-card">
+      <div class="deliverable-step">Step 1 · 免费</div>
+      <h4>知识资产诊断报告</h4>
+      <ul class="deliverable-list">
+        <li>6维度量化评分（你的强项和盲区一目了然）</li>
+        <li>客户类型判定（启蒙/选择/升级——精准路径）</li>
+        <li>"你的知识资产到底什么状态"的一页总结</li>
+        <li>3个最值得先做的行动建议</li>
+      </ul>
+    </div>
+    <div class="deliverable-card">
+      <div class="deliverable-step">Step 2 · ¥1,999起</div>
+      <h4>深度诊断 + 行动方案</h4>
+      <ul class="deliverable-list">
+        <li>完整的6维深度诊断报告（每维评分+依据+改善路径）</li>
+        <li>1页行动方案（你的本周第一步行动清单）</li>
+        <li>项目资产盘点——哪些项目最值得"案例化"</li>
+        <li>推荐服务路径（告诉你最适合哪种交付模式）</li>
+      </ul>
+    </div>
+    <div class="deliverable-card">
+      <div class="deliverable-step">Step 3 · ¥5,000起</div>
+      <h4>知识资产库 + AI系统</h4>
+      <ul class="deliverable-list">
+        <li>个人知识资产Vault（统一的知识库，可搜索可调用）</li>
+        <li>案例库（6-10个结构化项目案例，面试/述职即用）</li>
+        <li>方法论体系（你的个人工作框架，可复用的模板库）</li>
+        <li>AI检索配置（说一句话调出你所有历史经验）</li>
+      </ul>
     </div>
   </div>
 </div>
@@ -675,6 +1037,46 @@ body { background: var(--bg); }
     <div class="delivery-card">
       <h4>vs 自己摸索</h4>
       <p>2次咨询 + 模板即用<br>不用花半年试错搭结构</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 知枢 CASE STUDY -->
+<div class="ka-container">
+<div class="ka-section">
+  <div class="ka-section-label">真实诊断案例</div>
+  <h2 class="ka-section-title">一次诊断，看清8年积累</h2>
+  <p class="ka-section-desc">下面是匿名化的真实诊断结果。一个8年品牌营销人，经历3家公司——她的知识资产诊断帮她说清楚了"我到底积累了什么"。</p>
+  <div class="case-study">
+    <div class="case-header">
+      <div class="case-tag">选择型客户 · 跨公司知识流失模式</div>
+      <h4>8年品牌营销人 · 知识资产诊断</h4>
+      <div class="case-meta">3家公司 · 50-100个项目 · 诊断耗时5分钟</div>
+    </div>
+    <div class="case-grid">
+      <div class="case-col case-before">
+        <h5>诊断前</h5>
+        <ul>
+          <li>资料散落在5个地方：百度网盘、旧硬盘、邮箱、微信、记不清在哪</li>
+          <li>翻旧方案"经常翻两小时找不到"</li>
+          <li>"每次跳槽都像失忆——明明做过很多厉害的项目，但换个公司就归零了"</li>
+          <li>AI自评可检索度：3/10</li>
+        </ul>
+      </div>
+      <div class="case-col case-after">
+        <h5>6-8周后</h5>
+        <ul>
+          <li>统一知识库——所有资料在一个地方，搜索即得</li>
+          <li>6-8个"黄金案例"——面试/述职/提案直接调用</li>
+          <li>个人品牌方法论框架 + 可复用模板库</li>
+          <li>AI接入——说"护肤品新品方案"，调出3个相关历史案例</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-score">
+      <span class="big-num">4.45 → 8+</span>
+      <span class="label">知识资产综合评分（10分制）· 预估提升</span>
     </div>
   </div>
 </div>
