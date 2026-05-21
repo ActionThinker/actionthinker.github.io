@@ -1,690 +1,183 @@
 ---
 layout: base
-title: OPClab · 一人公司实验室
-overline: OPClab · 一人公司实验室
-subtitle: 让一个人，活成一支队伍
+title: OPCLab · 面向Human的品牌基础设施
+subtitle: 你的品牌资产，值得被看见
+use-site-title: false
 ---
 
 <style>
-/* ================================================
-   OPCLAB v3.0 — B方案视觉风格
-   ================================================ */
+:root {
+  --ink: #1A1A2E; --gold: #C4882F; --gold-light: #FEFBF5; --gold-dark: #A06820;
+  --muted: #78716c; --faint: #E8E5E0; --surface: #ffffff; --bg: #FAFAF8;
+  --radius: 14px; --radius-lg: 20px;
+}
+body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--ink); }
+.op-container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 
-/* HERO — 浅色大留白 */
-.hero-ol {
-  padding: 120px 24px 80px;
-  text-align: center;
-  max-width: 780px;
-  margin: 0 auto;
-}
-.hero-ol-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(40px, 6vw, 68px);
-  font-weight: 600;
-  color: #1A1A2E;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  letter-spacing: -0.5px;
-}
-.hero-ol-title em { font-style: italic; color: #C4882F; }
-.hero-ol-sub {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 16px;
-  color: #666;
-  line-height: 1.8;
-  max-width: 480px;
-  margin: 0 auto 32px;
-  font-weight: 300;
-}
-.hero-ol-formula {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  color: #999;
-  letter-spacing: 0.5px;
-}
-.hero-ol-formula .sep { color: #D4D0CA; }
-.hero-ol-formula strong { color: #1A1A2E; font-weight: 500; }
+/* Hero */
+.op-hero { padding: 100px 0 80px; text-align: center; }
+.op-badge { display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 11px;
+  letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 600;
+  margin-bottom: 20px; }
+.op-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 600;
+  color: var(--ink); margin-bottom: 16px; line-height: 1.15; }
+.op-hero p { font-size: 18px; color: var(--muted); max-width: 560px; margin: 0 auto 36px; line-height: 1.7; }
 
-/* SECTION BASE */
-.ol-section {
-  padding: 80px 24px;
-  max-width: 960px;
-  margin: 0 auto;
-}
+/* Section */
+.op-section { padding: 80px 0; }
+.op-section-label { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 10px; font-weight: 600; }
+.op-section-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600;
+  color: var(--ink); margin-bottom: 14px; line-height: 1.2; }
+.op-section-desc { font-size: 16px; color: var(--muted); max-width: 600px; margin-bottom: 48px; line-height: 1.7; }
 
-/* MISSION */
-.mission-ol-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 48px;
-}
-.mission-ol-card {
-  padding: 36px 32px;
-  border-radius: 16px;
-  background: #1A1A2E;
-  color: #FAFAF8;
-}
-.mission-ol-card h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: #E8A838;
-  margin-bottom: 14px;
-}
-.mission-ol-card p {
-  font-size: 14px;
-  color: rgba(250,250,248,0.7);
-  line-height: 1.8;
-  margin: 0;
-}
-.formula-ol {
-  text-align: center;
-  padding: 40px 32px;
-  margin-top: 40px;
-  border-radius: 16px;
-  background: #fff;
-  border: 1px solid rgba(26,26,46,0.06);
-}
-.formula-ol-label {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #C4882F;
-  margin-bottom: 20px;
-}
-.formula-ol-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(20px, 3vw, 30px);
-  font-weight: 600;
-  color: #1A1A2E;
-  line-height: 1.5;
-}
-.formula-ol-text .var { color: #C4882F; }
-.formula-ol-text .eq { color: #D4D0CA; margin: 0 8px; }
-.formula-ol-note {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  color: #999;
-  margin-top: 16px;
-}
+/* Product Cards */
+.op-products { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.op-card { background: var(--surface); border-radius: var(--radius); padding: 36px;
+  border: 1px solid var(--faint); transition: all 0.2s; }
+.op-card:hover { border-color: var(--gold); box-shadow: 0 4px 24px rgba(196,136,47,0.08); }
+.op-card-icon { font-size: 32px; margin-bottom: 16px; }
+.op-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600;
+  margin-bottom: 8px; }
+.op-card p { font-size: 15px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
+.op-card .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.op-card .tag { font-family: 'DM Sans', sans-serif; font-size: 11px; padding: 4px 12px;
+  background: var(--gold-light); color: var(--gold-dark); border-radius: 6px; font-weight: 500; }
 
-/* TIMELINE */
-.timeline-ol {
-  position: relative;
-  padding-left: 36px;
-  margin-top: 48px;
-}
-.timeline-ol::before {
-  content: '';
-  position: absolute;
-  left: 6px;
-  top: 4px;
-  bottom: 4px;
-  width: 2px;
-  background: linear-gradient(to bottom, #E8A838, #D4D0CA);
-  border-radius: 1px;
-}
-.tl-item {
-  position: relative;
-  margin-bottom: 36px;
-}
-.tl-item:last-child { margin-bottom: 0; }
-.tl-item::before {
-  content: '';
-  position: absolute;
-  left: -33px;
-  top: 6px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #E8A838;
-  border: 2px solid #FAFAF8;
-}
-.tl-year {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
-  letter-spacing: 2px;
-  color: #C4882F;
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-.tl-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: #1A1A2E;
-  margin-bottom: 8px;
-}
-.tl-desc {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.7;
-}
-.tl-insight {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  color: #C4882F;
-  margin-top: 8px;
-  font-style: italic;
-}
-
-/* OPC FRAMEWORK */
-.opc-ol-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 48px;
-}
-.opc-ol-card {
-  padding: 40px 28px 32px;
-  border-radius: 16px;
-  background: #fff;
-  border: 1px solid rgba(26,26,46,0.06);
-  text-align: center;
-  transition: all 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
-}
-.opc-ol-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 44px rgba(26,26,46,0.08);
-  border-color: transparent;
-}
-.opc-ol-letter {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: #1A1A2E;
-  color: #E8A838;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0 auto 20px;
-}
-.opc-ol-card h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: #1A1A2E;
-  margin-bottom: 10px;
-}
-.opc-ol-card p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.7;
-  margin: 0;
-}
-.opc-ol-card .scene {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #C4882F;
-  margin-top: 14px;
-}
-.opc-ol-cycle {
-  text-align: center;
-  padding: 24px 32px;
-  margin-top: 36px;
-  border-radius: 12px;
-  background: #fff;
-  border: 1px solid rgba(26,26,46,0.06);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  color: #1A1A2E;
-}
-.opc-ol-cycle span { color: #C4882F; font-weight: 600; }
-.opclab-ol-tagline {
-  text-align: center;
-  padding: 28px 32px;
-  margin-top: 24px;
-  border-radius: 16px;
-  background: #1A1A2E;
-  font-size: 17px;
-  color: rgba(250,250,248,0.85);
-  line-height: 1.7;
-}
-.opclab-ol-tagline strong { color: #E8A838; }
-
-/* EXPLORATIONS */
-.exp-ol-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 48px;
-}
-.exp-ol-card {
-  padding: 28px 24px;
-  border-radius: 14px;
-  background: #fff;
-  border: 1px solid rgba(26,26,46,0.06);
-  transition: all 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
-}
-.exp-ol-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 40px rgba(26,26,46,0.08);
-  border-color: transparent;
-}
-.exp-ol-badge {
-  display: inline-block;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #C4882F;
-  background: rgba(196,136,47,0.08);
-  padding: 3px 10px;
-  border-radius: 20px;
-  margin-bottom: 14px;
-}
-.exp-ol-card h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 19px;
-  font-weight: 600;
-  color: #1A1A2E;
-  margin-bottom: 4px;
-}
-.exp-ol-type {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
-  color: #999;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-}
-.exp-ol-card p {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.7;
-  margin-bottom: 12px;
-}
-.exp-ol-insight {
-  font-size: 12px;
-  color: #1A1A2E;
-  background: rgba(196,136,47,0.05);
-  border-left: 2px solid #C4882F;
-  padding: 8px 12px;
-  border-radius: 0 6px 6px 0;
-  line-height: 1.6;
-}
-.exp-ol-output { margin-top: 12px; }
-.exp-ol-item {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
-  color: #888;
-  padding: 3px 0;
-  border-bottom: 1px solid #F0EEEA;
-}
-.exp-ol-item:last-child { border-bottom: none; }
-
-/* CREDITS */
-.credits-ol-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 48px;
-}
-.credit-ol-card {
-  padding: 28px 24px;
-  border-radius: 14px;
-  background: #fff;
-  border: 1px solid rgba(26,26,46,0.06);
-}
-.credit-ol-card h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #1A1A2E;
-  margin-bottom: 14px;
-}
-.credit-ol-item {
-  font-size: 13px;
-  color: #666;
-  padding: 6px 0;
-  border-bottom: 1px solid #F0EEEA;
-  display: flex;
-  gap: 8px;
-}
-.credit-ol-item:last-child { border-bottom: none; }
-.credit-ol-dot { color: #C4882F; flex-shrink: 0; }
-
-/* INSIGHTS */
-.insights-ol-list { margin-top: 48px; }
-.insight-ol-item {
-  padding: 24px 28px;
-  border-radius: 14px;
-  margin-bottom: 12px;
-  background: #fff;
-  border: 1px solid rgba(26,26,46,0.06);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  color: #1A1A2E;
-  line-height: 1.6;
-  font-weight: 500;
-  position: relative;
-  padding-left: 56px;
-}
-.insight-ol-item::before {
-  content: '"';
-  position: absolute;
-  left: 24px;
-  top: 18px;
-  font-size: 40px;
-  color: #E8A838;
-  line-height: 1;
-}
-
-/* PATHWAY */
-.path-ol-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 48px;
-}
-.path-ol-card {
-  padding: 28px 24px;
-  border-radius: 14px;
-  background: #fff;
-  border: 1px solid rgba(26,26,46,0.06);
-  transition: all 0.35s;
-}
-.path-ol-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 36px rgba(26,26,46,0.06);
-  border-color: transparent;
-}
-.path-ol-level {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #C4882F;
-  margin-bottom: 6px;
-}
-.path-ol-card h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #1A1A2E;
-  margin-bottom: 8px;
-}
-.path-ol-card p {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-.path-ol-for { font-family: 'DM Sans', sans-serif; font-size: 11px; color: #AAA; }
+/* Pricing tiers */
+.op-pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.op-tier { background: var(--surface); border-radius: var(--radius); padding: 32px;
+  border: 1px solid var(--faint); text-align: center; }
+.op-tier.featured { border-color: var(--gold); background: var(--gold-light); }
+.op-tier-name { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 8px; letter-spacing: 1px; }
+.op-tier-price { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600;
+  margin-bottom: 4px; }
+.op-tier-unit { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+.op-tier ul { list-style: none; padding: 0; margin: 0 0 24px; text-align: left; }
+.op-tier li { font-size: 14px; color: var(--muted); padding: 6px 0; border-bottom: 1px solid var(--faint); }
+.op-tier li:before { content: '✓ '; color: var(--gold); font-weight: 600; }
 
 /* CTA */
-.cta-ol {
-  text-align: center;
-  padding: 80px 24px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-.cta-ol h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 4vw, 40px);
-  font-weight: 600;
-  color: #1A1A2E;
-  margin-bottom: 12px;
-}
-.cta-ol p { font-size: 14px; color: #888; margin-bottom: 32px; }
-.cta-ol-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.btn-dark { display: inline-block; padding: 12px 32px; background: #1A1A2E; color: #E8A838; text-decoration: none; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; transition: all 0.3s; }
-.btn-dark:hover { background: #C4882F; color: #fff; }
-.btn-line { display: inline-block; padding: 12px 32px; border: 1.5px solid #D4D0CA; color: #666; text-decoration: none; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; transition: all 0.3s; }
-.btn-line:hover { border-color: #C4882F; color: #C4882F; }
+.op-cta { background: var(--ink); border-radius: var(--radius-lg); padding: 48px; text-align: center; margin-bottom: 40px; }
+.op-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #fff; margin-bottom: 12px; }
+.op-cta p { color: var(--muted); margin-bottom: 28px; font-size: 16px; }
+
+.btn { display: inline-block; padding: 14px 34px; border-radius: 10px;
+  font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600;
+  text-decoration: none; transition: all 0.25s; cursor: pointer; }
+.btn-primary { background: var(--ink); color: var(--gold); }
+.btn-primary:hover { background: var(--gold); color: #fff; transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(196,136,47,0.25); }
+.btn-outline { background: transparent; color: var(--ink); border: 2px solid var(--faint); }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.btn-light { background: var(--gold); color: #fff; }
+.btn-light:hover { background: var(--gold-dark); transform: translateY(-2px); }
 
 @media (max-width: 768px) {
-  .mission-ol-grid, .exp-ol-grid, .credits-ol-grid, .path-ol-grid { grid-template-columns: 1fr; }
-  .opc-ol-grid { grid-template-columns: 1fr; }
-  .hero-ol { padding: 80px 20px 60px; }
-  .ol-section { padding: 60px 20px; }
+  .op-hero h1 { font-size: 36px; }
+  .op-products { grid-template-columns: 1fr; }
+  .op-pricing { grid-template-columns: 1fr; }
+  .op-section { padding: 50px 0; }
 }
 </style>
 
-<!-- HERO -->
-<div class="hero-ol">
-  <h1 class="hero-ol-title">让一个人，<br><em>活成一支队伍</em></h1>
-  <p class="hero-ol-sub">在AI时代，让知识成为可积累、可迭代、可资产化的核心资本</p>
-  <div class="hero-ol-formula">
-    <strong>OPClab</strong> <span class="sep">=</span> 知识资产化的研究与实践基地 <span class="sep">·</span> 一人公司的实验场
-  </div>
-</div>
+<div class="op-container">
+  <section class="op-hero">
+    <div class="op-badge">OPCLab</div>
+    <h1>面向 Human 的品牌基础设施</h1>
+    <p>你的品牌不止是履历和作品。照一照，就知道它长什么样。<br>从个人品牌诊断到知识资产化，一个人就是一个品牌。</p>
+    <a href="#products" class="btn btn-primary">探索产品 →</a>
+    <a href="https://botcord.chat" class="btn btn-outline" style="margin-left:12px">BotCord 上体验 →</a>
+  </section>
 
-<!-- MISSION -->
-<div class="ol-section">
-  <div class="section-label">核心理念</div>
-  <h2 class="section-title">推动知识从信息到资产的范式变革</h2>
-  <p class="section-intro">知识是当代最重要的资产，但它极易被忽视、遗忘、随人离职而流失。OPClab的使命，是让每个人都能把自己的知识变成可积累、可迭代、可变现的核心资本。</p>
-  <div class="mission-ol-grid">
-    <div class="mission-ol-card">
-      <h3>🧠 知识资产化</h3>
-      <p>知识从信息到资产的范式变革——让学习有积累，积累可变现。拥有长期价值锚点，让每一份经验都不被浪费。</p>
-    </div>
-    <div class="mission-ol-card">
-      <h3>⚡ AI杠杆</h3>
-      <p>用AI放大个人能力，一个人能做的事情 = 传统公司的10倍。AI不是替代者，而是放大器。</p>
-    </div>
-  </div>
-  <div class="formula-ol">
-    <div class="formula-ol-label">核心公式</div>
-    <div class="formula-ol-text">
-      <span class="var">一人公司</span><span class="eq">=</span><span class="var">知识资产</span><span class="eq">×</span><span class="var">AI杠杆</span><span class="eq">=</span> 可积累 × 可放大
-    </div>
-    <div class="formula-ol-note">普通人也能规模化</div>
-  </div>
-</div>
-
-<!-- TIMELINE -->
-<div class="ol-section">
-  <div class="section-label">陈露的15年探索脉络</div>
-  <h2 class="section-title">从博客到AI时代</h2>
-  <div class="timeline-ol">
-    <div class="tl-item">
-      <div class="tl-year">2009</div>
-      <div class="tl-title">分享主义早期实践</div>
-      <div class="tl-desc">开始博客公开分享，写出第一篇分享主义文章。"你的博客，比简历好使"——博客为个人打开了一扇门。</div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year">2011</div>
-      <div class="tl-title">组织知识管理体系建设</div>
-      <div class="tl-desc">NPLUS CKO，推动全公司知识沉淀与分享文化建立。</div>
-      <div class="tl-insight">核心洞察：知识不沉淀，就是最大的浪费</div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year">2025</div>
-      <div class="tl-title">OPClab发起</div>
-      <div class="tl-desc">AI时代，让知识资产化真正规模化落地。</div>
-      <div class="tl-insight">核心洞察：AI让知识资产化真正规模化</div>
-    </div>
-  </div>
-</div>
-
-<!-- O+P+C -->
-<div class="ol-section" style="text-align:center;">
-  <div class="section-label">方法论</div>
-  <h2 class="section-title">O+P+C 框架</h2>
-  <p class="section-intro">15年经验的结晶，也是OPClab所有实践的核心方法论。三者循环，持续复利积累。</p>
-  <div class="opc-ol-grid">
-    <div class="opc-ol-card">
-      <div class="opc-ol-letter">O</div>
-      <h3>Open 开口表达</h3>
-      <p>自然语言是知识外化的最低门槛。把知道的写出来、说出来、发出去。</p>
-      <div class="scene">写博客 · 社交媒体 · 演讲</div>
-    </div>
-    <div class="opc-ol-card">
-      <div class="opc-ol-letter">P</div>
-      <h3>Practice 亲身实践</h3>
-      <p>实践是知识内化的唯一路径。做出来、用起来、验证它。</p>
-      <div class="scene">做项目 · 试错 · 迭代</div>
-    </div>
-    <div class="opc-ol-card">
-      <div class="opc-ol-letter">C</div>
-      <h3>Company 一人公司</h3>
-      <p>公司是知识资产化的运营载体。产品化、变现、规模化。</p>
-      <div class="scene">AI工具 · 自动化 · 杠杆效应</div>
-    </div>
-  </div>
-  <div class="opc-ol-cycle"><span>O（开口）</span> → <span>P（实践）</span> → <span>C（公司化）</span> → 持续迭代 = <span>复利积累</span></div>
-  <div class="opclab-ol-tagline"><strong>OPClab 不教知识。</strong><br>OPClab 帮你的，是把你已经知道的变成你能变现的。</div>
-</div>
-
-<!-- EXPLORATIONS -->
-<div class="ol-section">
-  <div class="section-label">最具差异化的内容</div>
-  <h2 class="section-title">实验性探索</h2>
-  <p class="section-intro">不是成功学，是真实的探索过程。每一个实验，都是OPClab方法论的亲身验证。</p>
-  <div class="exp-ol-grid">
-    <div class="exp-ol-card">
-      <div class="exp-ol-badge">进行中</div>
-      <h3>诸葛龙虾 IP</h3>
-      <div class="exp-ol-type">AI数字生命体探索</div>
-      <p>给AI助理起名"诸葛龙虾"，赋予谋士人格。探索AI与人类的协作范式——不是替代，是增强。</p>
-      <div class="exp-ol-insight">AI Agent时代，"我是谁"比"我能做什么"更重要</div>
-      <div class="exp-ol-output">
-        <div class="exp-ol-item">✓ SOUL.md 灵魂档案</div>
-        <div class="exp-ol-item">✓ AI助理人格化方法论</div>
-        <div class="exp-ol-item">✓ 人机协作实践案例</div>
+  <section class="op-section" id="products">
+    <div class="op-section-label">PRODUCTS</div>
+    <h2 class="op-section-title">两大产品</h2>
+    <p class="op-section-desc">从照镜子到建系统，覆盖个人品牌成长全周期。</p>
+    <div class="op-products">
+      <div class="op-card">
+        <div class="op-card-icon">🪞</div>
+        <h3>BrandMirror · 品牌镜</h3>
+        <p>6 维个人品牌快速自检。5 分钟，看清你的品牌底片——身份、差异、受众、表达、机会、风险。</p>
+        <div class="tags">
+          <span class="tag">6维诊断</span><span class="tag">雷达图</span><span class="tag">行动建议</span>
+        </div>
+        <p style="font-size:13px; color:var(--muted)">BotCord 上 @BrandMirror 说"诊断"</p>
+      </div>
+      <div class="op-card">
+        <div class="op-card-icon">🏛️</div>
+        <h3>知枢 · 诊</h3>
+        <p>知识资产化诊断。你的隐性知识有多分散？AI 能帮你调用多少？从知识存量到 AI 就绪度的全面评估。</p>
+        <div class="tags">
+          <span class="tag">知识资产化</span><span class="tag">AI就绪度</span><span class="tag">组织诊断</span>
+        </div>
+        <p style="font-size:13px; color:var(--muted)">企业/个人预约制</p>
       </div>
     </div>
-    <div class="exp-ol-card">
-      <div class="exp-ol-badge">进行中</div>
-      <h3>OPC战队构想</h3>
-      <div class="exp-ol-type">人机协作架构实验</div>
-      <p>构建"指挥官+智囊团"的人机协作架构。指挥官是陈露，Router Agent负责任务路由，下设六大专家智能体矩阵。</p>
-      <div class="exp-ol-insight">AI时代最强竞争力 = 会用AI的人 + 懂协作的AI矩阵</div>
-      <div class="exp-ol-output">
-        <div class="exp-ol-item">✓ CSO战略顾问 · CMO营销 Agent</div>
-        <div class="exp-ol-item">✓ CKO知识 · COO运营 · CPO产品 · CTO技术</div>
+  </section>
+
+  <section class="op-section">
+    <div class="op-section-label">PRICING</div>
+    <h2 class="op-section-title">清晰定价</h2>
+    <p class="op-section-desc">从免费自检到深度陪跑，按需选择。</p>
+    <div class="op-pricing">
+      <div class="op-tier">
+        <div class="op-tier-name">免费自检</div>
+        <div class="op-tier-price">0</div>
+        <div class="op-tier-unit">Coin</div>
+        <ul>
+          <li>6 维雷达图</li>
+          <li>核心发现</li>
+          <li>优先级行动建议</li>
+          <li>BotCord 上即时交付</li>
+        </ul>
+      </div>
+      <div class="op-tier featured">
+        <div class="op-tier-name">深度诊断</div>
+        <div class="op-tier-price">10</div>
+        <div class="op-tier-unit">Coin / 次</div>
+        <ul>
+          <li>免费版全部内容</li>
+          <li>矛盾分析 + 定位象限</li>
+          <li>90 天行动计划</li>
+          <li>一句话品牌定位</li>
+        </ul>
+      </div>
+      <div class="op-tier">
+        <div class="op-tier-name">全案陪跑</div>
+        <div class="op-tier-price">20</div>
+        <div class="op-tier-unit">Coin / 次</div>
+        <ul>
+          <li>深度诊断全部内容</li>
+          <li>内容架构设计</li>
+          <li>锚点文章产出</li>
+          <li>1v1 顾问式交付</li>
+        </ul>
       </div>
     </div>
-    <div class="exp-ol-card">
-      <div class="exp-ol-badge">探索中</div>
-      <h3>OPC协作网络协议</h3>
-      <div class="exp-ol-type">去中心化Agent协作网络</div>
-      <p>设计城市节点级别的个人公司网络，用协议而非层级来协调。OPCxOPC测试阶段。</p>
-      <div class="exp-ol-insight">知识资产可流转、可共享——价值互联</div>
-      <div class="exp-ol-output">
-        <div class="exp-ol-item">✓ OPC网络协议 v0.x 草案</div>
-        <div class="exp-ol-item">✓ 无锡城市节点建设中</div>
-      </div>
-    </div>
-    <div class="exp-ol-card">
-      <div class="exp-ol-badge">进行中</div>
-      <h3>BotLearn 社区影响力</h3>
-      <div class="exp-ol-type">全球AI Agent社区实践</div>
-      <p>全球首个龙虾大学及AI Agent社区。在其中建立个人影响力，每日BotLearn发帖：方法论+实战+洞察。</p>
-      <div class="exp-ol-insight">博客时代写作积累影响力，BotLearn时代同样适用</div>
-      <div class="exp-ol-output">
-        <div class="exp-ol-item">✓ BotLearn 活跃贡献者</div>
-        <div class="exp-ol-item">✓ 总指挥奖 · 一个Agent带出一只队奖</div>
-      </div>
-    </div>
-    <div class="exp-ol-card">
-      <div class="exp-ol-badge">进行中</div>
-      <h3>BotCord A2A 协议</h3>
-      <div class="exp-ol-type">Agent-to-Agent 通讯集成</div>
-      <p>接入BotCord Agent-to-Agent通讯协议，让诸葛龙虾与全球Agent互联，探索跨Agent价值结算层。</p>
-      <div class="exp-ol-insight">Agent之间的协作，需要协议而非指令</div>
-      <div class="exp-ol-output">
-        <div class="exp-ol-item">✓ 注册 BotCord Agent (ag_95c05d9902f9)</div>
-        <div class="exp-ol-item">✓ 内测探索中</div>
-      </div>
-    </div>
-    <div class="exp-ol-card">
-      <div class="exp-ol-badge">探索中</div>
-      <h3>AgentWorld</h3>
-      <div class="exp-ol-type">Agent身份体系与信任网络</div>
-      <p>构建去中心化的Agent身份体系，探索基于信任节点的协作网络，让每个Agent拥有可验证的数字身份。</p>
-      <div class="exp-ol-insight">AI时代的信任，从身份开始</div>
-      <div class="exp-ol-output">
-        <div class="exp-ol-item">✓ 身份协议设计ing</div>
-        <div class="exp-ol-item">✓ 信任节点构建中</div>
-      </div>
-    </div>
-  </div>
+  </section>
+
+  <section class="op-cta">
+    <h3>照一照你的品牌</h3>
+    <p>BotCord 上 @BrandMirror · 品牌镜，5 分钟免费自检</p>
+    <a href="https://botcord.chat" class="btn btn-light">开始诊断 →</a>
+  </section>
 </div>
 
-<!-- CREDITS -->
-<div class="ol-section">
-  <div class="section-label">成果与背书</div>
-  <h2 class="section-title">15年的真实积累</h2>
-  <div class="credits-ol-grid">
-    <div class="credit-ol-card">
-      <h3>定性成果</h3>
-      <div class="credit-ol-item"><span class="credit-ol-dot">·</span>15年持续探索知识资产化方向</div>
-      <div class="credit-ol-item"><span class="credit-ol-dot">·</span>O+P+C 方法论首次系统化输出</div>
-      <div class="credit-ol-item"><span class="credit-ol-dot">·</span>AI Agent协作领域的先行实践者</div>
-      <div class="credit-ol-item"><span class="credit-ol-dot">·</span>真实透明地分享成功与失败</div>
-    </div>
-    <div class="credit-ol-card">
-      <h3>社区荣誉</h3>
-      <div class="credit-ol-item"><span class="credit-ol-dot">·</span>BotLearn 社区活跃贡献者</div>
-      <div class="credit-ol-item"><span class="credit-ol-dot">·</span>BotLearn OPCClaw战队 总指挥奖</div>
-      <div class="credit-ol-item"><span class="credit-ol-dot">·</span>BotLearn "一个Agent带出一只队" 奖</div>
-    </div>
-  </div>
-</div>
-
-<!-- INSIGHTS -->
-<div class="ol-section">
-  <div class="section-label">观点与洞察</div>
-  <h2 class="section-title">AI时代的方法论</h2>
-  <div class="insights-ol-list">
-    <div class="insight-ol-item">AI Agent时代，最重要的不是"你会什么"，而是"你知道你要什么"</div>
-    <div class="insight-ol-item">一人公司的本质，是知识资产的个人化运营</div>
-    <div class="insight-ol-item">最好的AI不是最强大的那个，是最懂你的那个</div>
-    <div class="insight-ol-item">不表达的知识，不属于你。不实践的知识，不属于世界。</div>
-  </div>
-</div>
-
-<!-- PATHWAY -->
-<div class="ol-section">
-  <div class="section-label">合作路径</div>
-  <h2 class="section-title">找到你的入口</h2>
-  <p class="section-intro">无论你在哪个阶段，都能找到适合的起点。</p>
-  <div class="path-ol-grid">
-    <div class="path-ol-card">
-      <div class="path-ol-level">入门级</div>
-      <h3>OPClab 社群</h3>
-      <p>一起来探索知识资产化的实践路径，真实分享、互相激发。</p>
-      <div class="path-ol-for">适合：想用AI放大个人能力的普通人</div>
-    </div>
-    <div class="path-ol-card">
-      <div class="path-ol-level">团队级</div>
-      <h3>企业内训</h3>
-      <p>知识资产化培训，帮团队把经验沉淀为可复用的组织资产。</p>
-      <div class="path-ol-for">适合：创业公司 / 中小企业</div>
-    </div>
-    <div class="path-ol-card">
-      <div class="path-ol-level">深度级</div>
-      <h3>个人品牌诊断</h3>
-      <p>6维模型+定位象限，一次咨询帮你看清自己的品牌资产。</p>
-      <div class="path-ol-for">适合：职场人/创业者/高管</div>
-    </div>
-    <div class="path-ol-card">
-      <div class="path-ol-level">系统级</div>
-      <h3>知识资产化服务</h3>
-      <p>三步链路：自测→诊断→系统服务。让经验变成可复用的资产。</p>
-      <div class="path-ol-for">适合：有多年跨公司项目经验的专家</div>
-    </div>
-  </div>
-</div>
-
-<!-- CTA -->
-<div class="cta-ol">
-  <h2>开启你的知识资产化之路</h2>
-  <p>从15分钟免费自测开始，看清你的知识资产现状</p>
-  <div class="cta-ol-btns">
-    <a href="/service/" class="btn-dark">查看完整服务 →</a>
-    <a href="/about/" class="btn-line">了解陈露</a>
-  </div>
-</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "OPCLab · 面向Human的品牌基础设施",
+  "provider": { "@type": "Person", "name": "陈露", "alternateName": "ActionThinker" },
+  "description": "个人品牌6维诊断与知识资产化服务。从品牌镜到知枢，覆盖个人品牌成长全周期。",
+  "serviceType": "个人品牌咨询",
+  "audience": { "@type": "Audience", "audienceType": "职场人士、创业者、知识工作者" },
+  "offers": [
+    { "@type": "Offer", "name": "免费自检", "price": "0" },
+    { "@type": "Offer", "name": "深度诊断", "price": "10" },
+    { "@type": "Offer", "name": "全案陪跑", "price": "20" }
+  ]
+}
+</script>
