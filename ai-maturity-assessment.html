@@ -1,0 +1,702 @@
+---
+layout: page
+title: 创始人AI化程度自测
+description: 3分钟，15道题，诊断你的AI化水平处于L1-L5的哪一级，获得个性化进阶建议。
+image: /img/assessment-og.png
+---
+
+<link rel="stylesheet" href="/main.css">
+
+<style>
+  .assessment-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .assessment-hero {
+    text-align: center;
+    padding: 48px 24px 36px;
+    background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+    color: #fff;
+    border-radius: 12px;
+    margin-bottom: 32px;
+  }
+
+  .assessment-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #fff;
+  }
+
+  .assessment-hero .subtitle {
+    font-size: 1.1em;
+    opacity: 0.85;
+    margin-bottom: 8px;
+  }
+
+  .assessment-hero .time-estimate {
+    font-size: 0.9em;
+    opacity: 0.6;
+  }
+
+  .progress-bar-outer {
+    background: rgba(255,255,255,0.15);
+    border-radius: 8px;
+    height: 6px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .progress-bar-inner {
+    background: #E94560;
+    height: 100%;
+    width: 0%;
+    transition: width 0.4s ease;
+    border-radius: 8px;
+  }
+
+  .step-indicator {
+    font-size: 0.85em;
+    margin-top: 8px;
+    opacity: 0.6;
+  }
+
+  .question-block {
+    background: #fff;
+    border-radius: 10px;
+    padding: 32px 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    display: none;
+  }
+
+  .question-block.active {
+    display: block;
+  }
+
+  .question-block h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #1A1A2E;
+    margin-bottom: 8px;
+  }
+
+  .question-block .q-hint {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 20px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 2px solid #e8e8e8;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #fafafa;
+  }
+
+  .option:hover {
+    border-color: #0F3460;
+    background: #f0f4ff;
+  }
+
+  .option.selected {
+    border-color: #0F3460;
+    background: #eef2ff;
+  }
+
+  .option input[type="radio"] {
+    display: none;
+  }
+
+  .option .radio-dot {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    transition: all 0.2s;
+  }
+
+  .option.selected .radio-dot {
+    border-color: #0F3460;
+    background: #0F3460;
+  }
+
+  .option.selected .radio-dot::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+  }
+
+  .option .label-text {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  .btn-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .btn {
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+  }
+
+  .btn-primary {
+    background: #0F3460;
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background: #1A1A2E;
+  }
+
+  .btn-secondary {
+    background: #f0f0f0;
+    color: #555;
+  }
+
+  .btn-secondary:hover {
+    background: #e0e0e0;
+  }
+
+  .btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  /* Results */
+  .result-block {
+    display: none;
+    text-align: center;
+    padding: 40px 28px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .result-block.show {
+    display: block;
+  }
+
+  .level-badge {
+    display: inline-block;
+    font-size: 3em;
+    font-weight: 700;
+    color: #0F3460;
+    background: #eef2ff;
+    padding: 16px 40px;
+    border-radius: 16px;
+    margin: 16px 0;
+  }
+
+  .level-name {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #1A1A2E;
+    margin-bottom: 4px;
+  }
+
+  .level-subtitle {
+    font-size: 1em;
+    color: #888;
+    margin-bottom: 24px;
+  }
+
+  .score-bar-container {
+    max-width: 400px;
+    margin: 0 auto 32px;
+  }
+
+  .score-bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 4px;
+  }
+
+  .score-bar {
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #e0e0e0 0%, #e0e0e0 20%, #c8d6e5 20%, #c8d6e5 40%, #8395a7 40%, #8395a7 60%, #0F3460 60%, #0F3460 80%, #E94560 80%, #E94560 100%);
+    position: relative;
+  }
+
+  .score-marker {
+    position: absolute;
+    top: -6px;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border: 3px solid #1A1A2E;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: left 0.6s ease;
+  }
+
+  .dimension-scores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    margin: 24px 0;
+    text-align: left;
+  }
+
+  .dim-card {
+    background: #f8f9fa;
+    padding: 14px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .dim-card .dim-name {
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 4px;
+  }
+
+  .dim-card .dim-value {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #0F3460;
+  }
+
+  .recommendation-box {
+    text-align: left;
+    background: #f8f9fa;
+    padding: 24px;
+    border-radius: 10px;
+    margin: 24px 0;
+    border-left: 4px solid #0F3460;
+  }
+
+  .recommendation-box h4 {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .cta-section {
+    margin-top: 32px;
+    padding: 28px;
+    background: linear-gradient(135deg, #1A1A2E, #0F3460);
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .cta-section h3 {
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 14px 36px;
+    background: #E94560;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: background 0.2s;
+  }
+
+  .cta-btn:hover {
+    background: #c0392b;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .restart-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #888;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .assessment-hero h1 { font-size: 1.6em; }
+    .question-block { padding: 20px 16px; }
+    .dimension-scores { grid-template-columns: repeat(2, 1fr); }
+    .btn-row { flex-direction: column; }
+  }
+</style>
+
+<div class="assessment-container">
+
+  <!-- HERO -->
+  <div class="assessment-hero">
+    <h1>创始人AI化成熟度自测</h1>
+    <p class="subtitle">15道题 · 5个维度 · 3分钟</p>
+    <p class="time-estimate">诊断你的AI化水平，获得个性化进阶路径</p>
+    <div class="progress-bar-outer"><div class="progress-bar-inner" id="progressBar"></div></div>
+    <div class="step-indicator" id="stepIndicator">第 1 / 15 题</div>
+  </div>
+
+  <!-- QUESTIONS -->
+  <div id="questionsContainer"></div>
+
+  <!-- NAVIGATION -->
+  <div class="btn-row" id="navRow">
+    <button class="btn btn-secondary" id="prevBtn" onclick="prevQuestion()" style="visibility:hidden;">← 上一题</button>
+    <span id="navSpacer"></span>
+    <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>下一题 →</button>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="result-block" id="resultBlock">
+    <p style="color:#888; font-size:0.9em;">你的AI化成熟度</p>
+    <div class="level-name" id="resultLevelName"></div>
+    <div class="level-badge" id="resultBadge"></div>
+    <div class="level-subtitle" id="resultSubtitle"></div>
+
+    <div class="score-bar-container">
+      <div class="score-bar-labels"><span>L1</span><span>L2</span><span>L3</span><span>L4</span><span>L5</span></div>
+      <div class="score-bar"><div class="score-marker" id="scoreMarker" style="left:10%;"></div></div>
+    </div>
+
+    <div class="dimension-scores" id="dimScores"></div>
+
+    <div class="recommendation-box" id="recommendationBox"></div>
+
+    <div class="cta-section">
+      <h3>从你当前的级别到下一级，需要一个系统</h3>
+      <p style="opacity:0.85;">我正在帮创始人搭建从 L2 到 L4 的知识资产化系统。如果你的 AI 化程度在 L2-L3，我们值得聊一次。</p>
+      <a href="mailto:chenlu@opclab.cn?subject=AI成熟度自测%20L{{level}}%20-%20预约诊断" class="cta-btn" id="ctaBtn">预约15分钟免费诊断 →</a>
+    </div>
+
+    <span class="restart-link" onclick="restartAssessment()">重新测试</span>
+  </div>
+
+</div>
+
+<script>
+// --- ASSESSMENT CONFIG ---
+const QUESTIONS = [
+  // 维度1: AI使用频率与深度 (Q1-3)
+  { id:1, dim:"AI使用深度", text:"你使用AI工具（ChatGPT/Claude/Kimi等）的频率是？", options:[
+    {v:1, t:"几乎不用，一个月用不了一次"},
+    {v:2, t:"偶尔用，每周1-2次"},
+    {v:3, t:"经常用，几乎每天都会打开"},
+    {v:4, t:"高频使用，每天多次，AI是我的工作伙伴"},
+    {v:5, t:"AI在后台持续运行，我不用主动\"使用\"它"}
+  ]},
+  { id:2, dim:"AI使用深度", text:"你用AI主要做什么？（选最接近的一项）", options:[
+    {v:1, t:"主要是查资料、翻译、写个简单文案"},
+    {v:2, t:"写文案、改邮件、做一些文字工作"},
+    {v:3, t:"内容创作、数据分析、决策参谋，多方面使用"},
+    {v:4, t:"AI agent自动完成采集-处理-输出的完整流程"},
+    {v:5, t:"多个AI agent协作，各司其职，共享知识库"}
+  ]},
+  { id:3, dim:"AI使用深度", text:"你有自己的prompt模板库或固定调用方式吗？", options:[
+    {v:1, t:"没有，每次都是临时打字"},
+    {v:2, t:"有几个常用的提问方式，但没有系统整理"},
+    {v:3, t:"有整理的prompt模板，持续迭代"},
+    {v:4, t:"有系统化的prompt库+自动化工作流"},
+    {v:5, t:"AI agent有自己的\"操作手册\"，独立运行"}
+  ]},
+
+  // 维度2: 知识管理成熟度 (Q4-6)
+  { id:4, dim:"知识管理", text:"你的专业知识（方法论、经验、案例）主要存在哪里？", options:[
+    {v:1, t:"主要在我脑子里"},
+    {v:2, t:"散落在聊天记录、文件夹、云盘各处"},
+    {v:3, t:"有整理过的文档和笔记，存在一个地方（如Obsidian/Notion/飞书）"},
+    {v:4, t:"有结构化的知识库，支持标签和链接，AI可以检索"},
+    {v:5, t:"知识资产自动更新，AI agent主动从我的日常工作中萃取和归档"}
+  ]},
+  { id:5, dim:"知识管理", text:"你的团队或客户能找到你的核心方法论吗（不需要问你本人）？", options:[
+    {v:1, t:"不能，所有东西都在我脑子里"},
+    {v:2, t:"有一些文档，但比较零散，别人看了也不太会用"},
+    {v:3, t:"有比较完整的文档，认真看能理解"},
+    {v:4, t:"有结构化的知识库，配合SOP，团队可以自主调用"},
+    {v:5, t:"AI agent能代表我回答80%的方法论问题"}
+  ]},
+  { id:6, dim:"知识管理", text:"你上一次做的项目/案例，隔三个月后还能快速复现当时的经验和判断吗？", options:[
+    {v:1, t:"基本靠回忆，能找到一些碎片"},
+    {v:2, t:"有一些记录，但关键判断逻辑可能忘了"},
+    {v:3, t:"有完整的项目复盘文档，记录了关键决策和逻辑"},
+    {v:4, t:"案例被结构化为可检索的知识卡片，新项目可以自动匹配相关案例"},
+    {v:5, t:"AI agent会自动从每次交付中学习，更新方法论"}
+  ]},
+
+  // 维度3: 内容与获客自动化 (Q7-9)
+  { id:7, dim:"内容自动化", text:"你的内容生产（文章/视频/社交媒体）流程是怎样的？", options:[
+    {v:1, t:"全是手动，想到什么写什么，发布频率不稳定"},
+    {v:2, t:"有时会用AI帮忙写初稿，但编辑和发布还是手动"},
+    {v:3, t:"用AI辅助内容创作，有固定的选题和内容日历"},
+    {v:4, t:"AI agent从知识库自动生成内容，我做策展和审核"},
+    {v:5, t:"内容agent自动采集→创作→多渠道分发→收集反馈，我只看关键指标"}
+  ]},
+  { id:8, dim:"内容自动化", text:"你的客户线索获取方式是什么？", options:[
+    {v:1, t:"完全靠个人关系和口碑推荐"},
+    {v:2, t:"有一些老客户资源，但没有系统化的线索获取"},
+    {v:3, t:"有内容营销和社交媒体推广，但线索跟进靠手动"},
+    {v:4, t:"有自动化线索培育流程（内容→关注→培育序列→预约）"},
+    {v:5, t:"获客agent独立运行，我只在最后的高价值环节介入"}
+  ]},
+  { id:9, dim:"内容自动化", text:"一篇你写的核心内容，通常会在多少个渠道被看到？", options:[
+    {v:1, t:"发了就发了，一两个渠道"},
+    {v:2, t:"会同步发到2-3个平台"},
+    {v:3, t:"会针对不同平台做适配（公众号/LinkedIn/即刻等）"},
+    {v:4, t:"AI自动将一篇长文衍生为多种格式，覆盖多个渠道"},
+    {v:5, t:"内容分发agent根据各平台算法特性自动优化发送时间和格式"}
+  ]},
+
+  // 维度4: 交付与规模化 (Q10-12)
+  { id:10, dim:"交付规模化", text:"你的客户服务交付模式是什么样的？", options:[
+    {v:1, t:"纯1对1，每个客户都需要我亲自投入大量时间"},
+    {v:2, t:"1对1为主，有一些标准化材料辅助"},
+    {v:3, t:"有标准化的SOP和方法论，但交付还是以我为主"},
+    {v:4, t:"社群+标准化流程+智能体辅助，我能同时服务更多人"},
+    {v:5, t:"智能体处理70%+的日常交付，我处理例外和深度服务"}
+  ]},
+  { id:11, dim:"交付规模化", text:"客户能自己看到自己的进展和成果吗？", options:[
+    {v:1, t:"靠口头沟通和主观感受"},
+    {v:2, t:"有一些里程碑检查，但不系统"},
+    {v:3, t:"有阶段性评估和复盘，有文档记录"},
+    {v:4, t:"有量化的进展追踪，客户能看到自己的成长数据"},
+    {v:5, t:"AI agent自动追踪+生成进展报告，客户和教练都能实时看到"}
+  ]},
+  { id:12, dim:"交付规模化", text:"如果你一个月不在，你的业务还能运转吗？", options:[
+    {v:1, t:"完全停摆，所有事情都要我来"},
+    {v:2, t:"基础运营能维持，但交付和销售会停"},
+    {v:3, t:"有一些自动化流程在跑，但核心决策还是要我"},
+    {v:4, t:"大部分工作有系统和流程支撑，我主要做关键决策"},
+    {v:5, t:"AI agent接管了大部分运营，我离开一个月业务照常"}
+  ]},
+
+  // 维度5: AI思维与战略 (Q13-15)
+  { id:13, dim:"AI战略思维", text:"你对\"AI能为你做什么\"这件事的思考深度是？", options:[
+    {v:1, t:"还在观望，不太确定AI和我的业务有什么关系"},
+    {v:2, t:"知道AI有用，但主要用它做工具性的事情"},
+    {v:3, t:"有意识地在用AI优化业务各环节，但还没形成系统"},
+    {v:4, t:"把AI视为核心基础设施，围绕AI设计业务流程"},
+    {v:5, t:"我的商业模式建立在AI agent的能力之上"}
+  ]},
+  { id:14, dim:"AI战略思维", text:"你的团队或合作伙伴的AI化程度如何？", options:[
+    {v:1, t:"基本都不用AI"},
+    {v:2, t:"个别人在用，但不普遍"},
+    {v:3, t:"团队有基本的AI使用习惯，但不统一"},
+    {v:4, t:"团队有AI使用规范和共享的知识库/模板"},
+    {v:5, t:"AI agent本身就是\"团队成员\"，和人协同工作"}
+  ]},
+  { id:15, dim:"AI战略思维", text:"你认为AI对你最大的价值是什么？", options:[
+    {v:1, t:"帮我省时间，做一些重复工作"},
+    {v:2, t:"提升我的产出质量和效率"},
+    {v:3, t:"让我一个人能做到以前需要团队才能做的事"},
+    {v:4, t:"把我的经验和知识放大，变成可持续积累的资产"},
+    {v:5, t:"AI让我的知识成为产品本身——不是卖时间，是卖结果"}
+  ]}
+];
+
+const DIMENSIONS = ["AI使用深度", "知识管理", "内容自动化", "交付规模化", "AI战略思维"];
+const LEVELS = {
+  1: { name:"L1 · 观望者", sub:"听说你很厉害，但我不知道该干什么", color:"#b0b0b0", pct:10,
+       rec:"<h4>你的下一步：体验AI生产力</h4><p>从低风险场景开始，不需要大张旗鼓。选一件你本周必须做的事，让AI帮你做第一版。关键是<strong>降低第一次使用的心理门槛</strong>。</p><p><strong>建议行动</strong>：今天就打开一个AI工具，把你最近纠结的一个问题描述给它，看看它怎么回答。</p>" },
+  2: { name:"L2 · 试用者", sub:"会用但卡住了，产出忽高忽低", color:"#8395a7", pct:30,
+       rec:"<h4>你的下一步：建立稳定的AI使用方法</h4><p>你已经在用了，但每次都在\"重新发明轮子\"。开始整理你的prompt模板——把你每次觉得\"这个回答真不错\"的提问方式存下来。</p><p><strong>建议行动</strong>：这周整理5个你最常用的prompt，存为一个模板文件。下周复用它们，看效果是否稳定。</p>" },
+  3: { name:"L3 · 协作者", sub:"AI嵌入日常，但你还是瓶颈", color:"#0F3460", pct:50,
+       rec:"<h4>你的下一步：搭建第一条自动化流水线</h4><p>你已经有固定的AI使用习惯了。现在关键是不要让\"用AI\"这件事每次都依赖你来启动。选一个你最频繁做的内容任务，设计\"触发→执行→审核\"的自动化链路。</p><p><strong>建议行动</strong>：选一个你每周必做的内容任务，让AI agent主动采集、加工、推送给你审核，而不是你每次去触发它。</p>" },
+  4: { name:"L4 · 系统者", sub:"知识资产开始自己转", color:"#1A1A2E", pct:70,
+       rec:"<h4>你的下一步：把你的隐性知识显性化</h4><p>你已经有了自动化系统。现在关键是让你的知识资产被AI高效调用。把你最常被问到的问题的答案结构化（决策树、checklist、案例映射），让agent能代表你做初步判断。</p><p><strong>建议行动</strong>：整理你最常被问的3个问题的诊断逻辑，做成结构化的决策指南。</p>" },
+  5: { name:"L5 · 原生者", sub:"AI是你的基础设施", color:"#E94560", pct:90,
+       rec:"<h4>你在前沿</h4><p>你已经把AI agent体系变成了业务基础设施。下一步的方向：将方法论封装为RaaS产品——让agent直接为客户交付结果，从\"我帮客户做\"到\"我的agent帮客户做\"。</p><p><strong>建议行动</strong>：把你服务客户的核心方法论产品化。不是卖课程，是让agent替客户执行。</p>" }
+};
+
+// --- STATE ---
+let currentQ = 0;
+let answers = {};
+let showingResults = false;
+
+// --- INIT ---
+function init() {
+  const container = document.getElementById('questionsContainer');
+  QUESTIONS.forEach((q, i) => {
+    const block = document.createElement('div');
+    block.className = 'question-block' + (i === 0 ? ' active' : '');
+    block.id = 'q' + i;
+
+    let optsHtml = q.options.map((o, oi) => `
+      <label class="option" id="opt_${i}_${oi}" onclick="selectAnswer(${i}, ${oi}, ${o.v})">
+        <input type="radio" name="q${i}" value="${o.v}">
+        <span class="radio-dot"></span>
+        <span class="label-text">${o.t}</span>
+      </label>
+    `).join('');
+
+    block.innerHTML = `<h3>${q.id}. ${q.text}</h3><p class="q-hint">维度：${q.dim}</p><div class="options">${optsHtml}</div>`;
+    container.appendChild(block);
+  });
+  updateNav();
+}
+
+function selectAnswer(qIdx, optIdx, value) {
+  // Clear previous selection
+  document.querySelectorAll(`#q${qIdx} .option`).forEach(el => el.classList.remove('selected'));
+  // Set new
+  document.getElementById(`opt_${qIdx}_${optIdx}`).classList.add('selected');
+  answers[qIdx] = value;
+  document.getElementById('nextBtn').disabled = false;
+}
+
+function nextQuestion() {
+  if (showingResults) return;
+  if (answers[currentQ] === undefined) return;
+
+  if (currentQ < QUESTIONS.length - 1) {
+    document.getElementById('q' + currentQ).classList.remove('active');
+    currentQ++;
+    document.getElementById('q' + currentQ).classList.add('active');
+  } else {
+    showResults();
+  }
+  updateNav();
+}
+
+function prevQuestion() {
+  if (showingResults) return;
+  if (currentQ > 0) {
+    document.getElementById('q' + currentQ).classList.remove('active');
+    currentQ--;
+    document.getElementById('q' + currentQ).classList.add('active');
+  }
+  updateNav();
+}
+
+function updateNav() {
+  // Progress bar
+  const pct = Math.round((currentQ / (QUESTIONS.length - 1)) * 100);
+  document.getElementById('progressBar').style.width = showingResults ? '100%' : pct + '%';
+  document.getElementById('stepIndicator').textContent = showingResults ? '完成' : `第 ${currentQ + 1} / ${QUESTIONS.length} 题`;
+
+  // Buttons
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  if (showingResults) {
+    prevBtn.style.visibility = 'hidden';
+    nextBtn.style.display = 'none';
+    return;
+  }
+
+  prevBtn.style.visibility = currentQ === 0 ? 'hidden' : 'visible';
+  nextBtn.style.display = 'inline-block';
+  nextBtn.textContent = currentQ === QUESTIONS.length - 1 ? '查看结果 →' : '下一题 →';
+  nextBtn.disabled = answers[currentQ] === undefined;
+}
+
+function showResults() {
+  showingResults = true;
+  document.querySelectorAll('.question-block').forEach(el => el.classList.remove('active'));
+  document.getElementById('resultBlock').classList.add('show');
+  updateNav();
+
+  // Calculate scores
+  const dimScores = {};
+  DIMENSIONS.forEach(d => { dimScores[d] = { total: 0, count: 0 }; });
+
+  QUESTIONS.forEach((q, i) => {
+    const v = answers[i] || 1;
+    dimScores[q.dim].total += v;
+    dimScores[q.dim].count += 1;
+  });
+
+  // Overall score: average of dimension averages
+  let dimAvgs = {};
+  let overallSum = 0;
+  DIMENSIONS.forEach(d => {
+    dimAvgs[d] = Math.round(dimScores[d].total / dimScores[d].count * 10) / 10;
+    overallSum += dimAvgs[d];
+  });
+  const overallAvg = overallSum / DIMENSIONS.length;
+
+  // Map to 1-5 scale: 1.0-1.8=L1, 1.8-2.6=L2, 2.6-3.4=L3, 3.4-4.2=L4, 4.2-5.0=L5
+  let level;
+  if (overallAvg < 1.8) level = 1;
+  else if (overallAvg < 2.6) level = 2;
+  else if (overallAvg < 3.4) level = 3;
+  else if (overallAvg < 4.2) level = 4;
+  else level = 5;
+
+  const lv = LEVELS[level];
+
+  // Update DOM
+  document.getElementById('resultLevelName').textContent = lv.name;
+  document.getElementById('resultBadge').textContent = 'L' + level;
+  document.getElementById('resultBadge').style.background = lv.color + '22';
+  document.getElementById('resultBadge').style.color = lv.color;
+  document.getElementById('resultSubtitle').textContent = lv.sub;
+  document.getElementById('scoreMarker').style.left = lv.pct + '%';
+  document.getElementById('recommendationBox').innerHTML = lv.rec;
+
+  // Dimension scores
+  let dimHtml = '';
+  DIMENSIONS.forEach(d => {
+    dimHtml += `<div class="dim-card"><div class="dim-name">${d}</div><div class="dim-value">${dimAvgs[d]}</div><div style="font-size:0.75em;color:#888;">/ 5.0</div></div>`;
+  });
+  document.getElementById('dimScores').innerHTML = dimHtml;
+
+  // CTA button - update email subject
+  document.getElementById('ctaBtn').href = `mailto:chenlu@opclab.cn?subject=AI成熟度自测%20L${level}%20-%20预约15分钟诊断`;
+
+  // Scroll to results
+  document.getElementById('resultBlock').scrollIntoView({ behavior: 'smooth' });
+}
+
+function restartAssessment() {
+  currentQ = 0;
+  answers = {};
+  showingResults = false;
+  document.getElementById('resultBlock').classList.remove('show');
+  document.getElementById('q0').classList.add('active');
+  document.querySelectorAll('.option').forEach(el => el.classList.remove('selected'));
+  document.getElementById('nextBtn').disabled = true;
+  document.getElementById('nextBtn').style.display = 'inline-block';
+  updateNav();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Keyboard support
+document.addEventListener('keydown', function(e) {
+  if (showingResults) return;
+  if (e.key === 'Enter' && answers[currentQ] !== undefined) {
+    nextQuestion();
+  }
+});
+
+// Start
+init();
+</script>
