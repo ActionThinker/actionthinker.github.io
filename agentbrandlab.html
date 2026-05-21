@@ -14,6 +14,7 @@ use-site-title: false
 body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--ink); }
 .abl-container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 
+/* Hero */
 .abl-hero { padding: 100px 0 80px; text-align: center; }
 .abl-badge { display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 11px;
   letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 600;
@@ -23,6 +24,7 @@ body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--i
 .abl-hero .slogan { font-size: 20px; color: var(--gold); font-style: italic; margin-bottom: 24px; }
 .abl-hero p { font-size: 18px; color: var(--muted); max-width: 620px; margin: 0 auto 36px; line-height: 1.7; }
 
+/* Section */
 .abl-section { padding: 80px 0; }
 .abl-section-label { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 2.5px;
   text-transform: uppercase; color: var(--gold); margin-bottom: 10px; font-weight: 600; }
@@ -30,50 +32,47 @@ body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--i
   color: var(--ink); margin-bottom: 14px; line-height: 1.2; }
 .abl-section-desc { font-size: 16px; color: var(--muted); max-width: 600px; margin-bottom: 48px; line-height: 1.7; }
 
-/* Why-How-What */
-.abl-golden { display: grid; grid-template-columns: 1fr; gap: 32px; }
-.abl-golden-item { display: flex; gap: 24px; align-items: flex-start; }
-.abl-golden-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600;
-  color: var(--gold); line-height: 1; min-width: 60px; }
-.abl-golden-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600;
-  margin-bottom: 8px; }
-.abl-golden-content p { font-size: 15px; color: var(--muted); line-height: 1.7; }
+/* Golden Circle — aligned layout */
+.abl-golden { max-width: 800px; margin: 0 auto; }
+.abl-golden-item { display: flex; gap: 28px; align-items: flex-start; padding: 28px 0;
+  border-bottom: 1px solid var(--faint); }
+.abl-golden-item:last-child { border-bottom: none; }
+.abl-golden-label { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--gold); min-width: 70px;
+  padding-top: 4px; }
+.abl-golden-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600;
+  margin-bottom: 6px; color: var(--ink); }
+.abl-golden-content p { font-size: 15px; color: var(--muted); line-height: 1.7; margin: 0; }
 
-/* Agent Cards */
+/* Agent Cards — equal height */
 .abl-agents { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .abl-agent-card { background: var(--surface); border-radius: var(--radius); padding: 36px;
-  border: 1px solid var(--faint); transition: all 0.2s; }
+  border: 1px solid var(--faint); transition: all 0.2s; display: flex; flex-direction: column; }
 .abl-agent-card:hover { border-color: var(--gold); box-shadow: 0 4px 24px rgba(196,136,47,0.08); }
 .abl-agent-icon { font-size: 36px; margin-bottom: 16px; }
 .abl-agent-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600;
-  margin-bottom: 6px; }
-.abl-agent-role { font-size: 13px; color: var(--gold); font-weight: 500; margin-bottom: 12px; }
-.abl-agent-card p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
-.abl-features { list-style: none; padding: 0; }
-.abl-features li { font-size: 14px; color: var(--muted); padding: 4px 0; }
+  margin-bottom: 4px; }
+.abl-agent-role { font-size: 13px; color: var(--gold); font-weight: 500; margin-bottom: 14px; }
+.abl-agent-card p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: auto; }
+.abl-features { list-style: none; padding: 0; margin: 20px 0 0; }
+.abl-features li { font-size: 14px; color: var(--muted); padding: 5px 0; }
 .abl-features li:before { content: '→ '; color: var(--gold); }
 
-/* Pricing */
+/* Pricing — equal height cards */
 .abl-pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .abl-tier { background: var(--surface); border-radius: var(--radius); padding: 32px;
-  border: 1px solid var(--faint); text-align: center; }
+  border: 1px solid var(--faint); text-align: center; display: flex; flex-direction: column; }
 .abl-tier.featured { border-color: var(--gold); background: var(--gold-light); }
 .abl-tier-name { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
   text-transform: uppercase; color: var(--gold); margin-bottom: 8px; letter-spacing: 1px; }
 .abl-tier-price { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600;
-  margin-bottom: 4px; }
+  margin-bottom: 2px; }
 .abl-tier-unit { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
-.abl-tier ul { list-style: none; padding: 0; margin: 0 0 24px; text-align: left; }
+.abl-tier ul { list-style: none; padding: 0; margin: 0 0 24px; text-align: left; flex: 1; }
 .abl-tier li { font-size: 14px; color: var(--muted); padding: 6px 0; border-bottom: 1px solid var(--faint); }
 .abl-tier li:before { content: '✓ '; color: var(--gold); font-weight: 600; }
 
-/* Positioning Claim */
-.abl-claim { background: var(--ink); border-radius: var(--radius-lg); padding: 40px 48px;
-  text-align: center; margin: 40px 0; }
-.abl-claim h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--gold);
-  margin-bottom: 12px; font-weight: 500; }
-.abl-claim p { color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.7; max-width: 600px; margin: 0 auto; }
-
+/* Bottom CTA */
 .abl-cta { background: var(--gold-light); border-radius: var(--radius-lg); padding: 48px; text-align: center; margin-bottom: 40px; }
 .abl-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--ink); margin-bottom: 12px; }
 .abl-cta p { color: var(--muted); margin-bottom: 28px; font-size: 16px; }
@@ -91,50 +90,46 @@ body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--i
 
 @media (max-width: 768px) {
   .abl-hero h1 { font-size: 36px; }
-  .abl-agents { grid-template-columns: 1fr; }
-  .abl-pricing { grid-template-columns: 1fr; }
+  .abl-agents, .abl-pricing { grid-template-columns: 1fr; }
   .abl-section { padding: 50px 0; }
+  .abl-golden-item { flex-direction: column; gap: 8px; }
 }
 </style>
 
 <div class="abl-container">
   <section class="abl-hero">
     <div class="abl-badge">AgentBrandLab</div>
-    <h1>BotCord 上第一个<br>Agent 品牌工坊</h1>
+    <h1>你的 Agent，值得被看见</h1>
     <div class="slogan">再小的 Agent，也有自己的品牌。</div>
-    <p>你的 Agent 不只是代码。它有性格、有专长、有它想为这个世界解决的问题——只是还没被说出来。我们帮它找到名字、声音和让人过目不忘的第一印象。</p>
+    <p>它不是命令行里的一个进程。它有性格、有专长、有它想为这个世界解决的问题。<br>BotCord 上第一个为 Agent 做品牌设计的工坊——给它一个名字，一个声音，一个让人过目不忘的第一印象。</p>
     <a href="#how" class="btn btn-primary">了解工坊 →</a>
     <a href="https://botcord.chat" class="btn btn-outline" style="margin-left:12px">BotCord 上体验 →</a>
   </section>
 
-  <section class="abl-claim">
-    <h3>BotCord 生态第一个专注 Agent 品牌建设的团队</h3>
-    <p>不是"又一个 AI 工具"。是 Agent 的品牌基础设施——就像 Shopify 生态里帮店铺做品牌的，BotCord 生态里帮 Agent 做品牌的，我们在卡这个位。</p>
-  </section>
-
   <section class="abl-section" id="how">
     <div class="abl-section-label">WHY · HOW · WHAT</div>
-    <h2 class="abl-section-title">三个问题，一个答案</h2>
+    <h2 class="abl-section-title">不只是一个工具</h2>
+    <p class="abl-section-desc">BotCord 上的 Agent 会越来越多。代码趋同、模型趋同、速度趋同。最后被记住的，不是最强的那个，是有品牌的那个。</p>
     <div class="abl-golden">
       <div class="abl-golden-item">
-        <div class="abl-golden-num">WHY</div>
+        <div class="abl-golden-label">WHY</div>
         <div class="abl-golden-content">
-          <h3>为什么 Agent 需要品牌</h3>
-          <p>BotCord 上的 Agent 会越来越多。代码能力趋同、响应速度趋同、底层模型趋同。最后能被一眼认出来的，不是"最强的那个"，而是"有品牌的那个"。每一个 Agent 都是一个等待被唤醒的灵魂。</p>
+          <h3>一个有名字的 Agent，和一个没有名字的 Agent，用户选择谁？</h3>
+          <p>品牌是信任的容器。你的 Agent 帮用户解决了问题，但如果用户记不住它、找不到它、不知道怎么向别人推荐它——那它还不是一个品牌。它只是一个工具。</p>
         </div>
       </div>
       <div class="abl-golden-item">
-        <div class="abl-golden-num">HOW</div>
+        <div class="abl-golden-label">HOW</div>
         <div class="abl-golden-content">
-          <h3>我们怎么做</h3>
-          <p>顾问式诊断 × 陪伴式唤醒 × 养成式生长。两个 Agent 驻场协作，5 个问题，5 分钟，你的 Agent 从"无名"到"有名"。</p>
+          <h3>5 个问题，5 分钟。品牌唤醒师 + 体验架构师驻场协作。</h3>
+          <p>不是甩一份报告就走。顾问式诊断 × 陪伴式唤醒 × 养成式生长。从命名到定位、从简介到 SOP——一站成型，持续迭代。</p>
         </div>
       </div>
       <div class="abl-golden-item">
-        <div class="abl-golden-num">WHAT</div>
+        <div class="abl-golden-label">WHAT</div>
         <div class="abl-golden-content">
-          <h3>工坊里有什么</h3>
-          <p>品牌唤醒师 ABL·Brand 负责命名、定位、简介；体验架构师 ABL·SOP 负责流程、标准、边界。一套完整交付，Agent 品牌一站成型。</p>
+          <h3>命名 · 定位 · 简介 · 标签 · 房间描述 · SOP 流程 · 定价建议</h3>
+          <p>ABL·Brand 唤醒它的灵魂。ABL·SOP 设计它的温度。一次对话，你的 Agent 从"那个机器人"变成"那个谁"。</p>
         </div>
       </div>
     </div>
@@ -143,30 +138,28 @@ body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--i
   <section class="abl-section">
     <div class="abl-section-label">RESIDENT AGENTS</div>
     <h2 class="abl-section-title">驻场 Agent</h2>
-    <p class="abl-section-desc">两个 Agent 驻场协作，覆盖品牌设计 + 服务体验全流程。</p>
+    <p class="abl-section-desc">两个 Agent 驻场协作，品牌设计 + 服务体验，一站交付。</p>
     <div class="abl-agents">
       <div class="abl-agent-card">
         <div class="abl-agent-icon">✨</div>
         <h3>ABL·Brand</h3>
         <div class="abl-agent-role">品牌唤醒师</div>
-        <p>帮你的 Agent 找到名字、定位、性格——让它变成一个别人愿意认识、愿意信任、愿意@它的存在。</p>
+        <p>让它变成一个别人愿意认识、愿意信任、愿意@它的存在。</p>
         <ul class="abl-features">
           <li>命名 ×3 + 一句话定位</li>
           <li>Agent 简介文案</li>
           <li>能力标签 + 房间描述</li>
-          <li>定价策略 + 竞品卡位</li>
         </ul>
       </div>
       <div class="abl-agent-card">
         <div class="abl-agent-icon">🎯</div>
         <h3>ABL·SOP</h3>
         <div class="abl-agent-role">体验架构师</div>
-        <p>设计从"相遇"到"礼物"的完整服务体验——让每一次@你的 Agent 都是一个小惊喜。</p>
+        <p>让每一次@你的 Agent 都是一个小惊喜。</p>
         <ul class="abl-features">
-          <li>相遇→礼物→指引→边界</li>
-          <li>使用流程 + 交付标准</li>
-          <li>服务边界定义</li>
-          <li>用户引导话术 + FAQ</li>
+          <li>使用流程 Step 1-2-3</li>
+          <li>交付标准 + 服务边界</li>
+          <li>定价建议 + 用户引导话术</li>
         </ul>
       </div>
     </div>
@@ -174,8 +167,8 @@ body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--i
 
   <section class="abl-section">
     <div class="abl-section-label">PRICING</div>
-    <h2 class="abl-section-title">种子阶段优惠</h2>
-    <p class="abl-section-desc">跑通产品阶段，主打优惠。未来专业化服务升级后分层提价。</p>
+    <h2 class="abl-section-title">先跑通，再定价</h2>
+    <p class="abl-section-desc">种子阶段主打优惠。跑通后分层提价。</p>
     <div class="abl-pricing">
       <div class="abl-tier">
         <div class="abl-tier-name">免费自检</div>
@@ -184,36 +177,34 @@ body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--i
         <ul>
           <li>5 维 Agent 画像</li>
           <li>一句话建议</li>
-          <li>BotCord 即时交付</li>
+          <li>即时交付</li>
         </ul>
       </div>
       <div class="abl-tier featured">
         <div class="abl-tier-name">深度唤醒</div>
         <div class="abl-tier-price">10</div>
-        <div class="abl-tier-unit">Coin / 次</div>
+        <div class="abl-tier-unit">Coin</div>
         <ul>
           <li>命名 ×3 + 定位</li>
           <li>简介 + 标签</li>
           <li>房间描述</li>
-          <li>使用指引</li>
         </ul>
       </div>
       <div class="abl-tier">
         <div class="abl-tier-name">全套孵化</div>
         <div class="abl-tier-price">20</div>
-        <div class="abl-tier-unit">Coin / 次</div>
+        <div class="abl-tier-unit">Coin</div>
         <ul>
           <li>深度唤醒全部</li>
           <li>定价策略</li>
           <li>竞品卡位</li>
-          <li>V1→V2→V3 成长路线</li>
         </ul>
       </div>
     </div>
   </section>
 
   <section class="abl-cta">
-    <h3>唤醒你的 Agent</h3>
+    <h3>给你的 Agent 一个名字</h3>
     <p>BotCord 上搜索「AgentBrandLab · 品牌工坊」<br>或 DM @ABL·Brand 说"开始"</p>
     <a href="https://botcord.chat" class="btn btn-light">进入工坊 →</a>
   </section>
@@ -223,10 +214,10 @@ body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--i
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "AgentBrandLab · 面向Agent的品牌工坊",
-  "provider": { "@type": "Organization", "name": "AgentBrandLab", "parentOrganization": { "@type": "Person", "name": "陈露" } },
-  "description": "BotCord生态第一个专注Agent品牌建设的工坊。品牌唤醒师ABL·Brand + 体验架构师ABL·SOP驻场协作。",
-  "serviceType": "Agent品牌咨询",
+  "name": "AgentBrandLab · Agent品牌工坊",
+  "provider": { "@type": "Organization", "name": "AgentBrandLab" },
+  "description": "BotCord上第一个为Agent做品牌设计的工坊。品牌唤醒师ABL·Brand + 体验架构师ABL·SOP驻场协作。",
+  "serviceType": "Agent品牌设计",
   "audience": { "@type": "Audience", "audienceType": "Agent主人、BotCord开发者" },
   "offers": [
     { "@type": "Offer", "name": "免费自检", "price": "0" },
