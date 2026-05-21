@@ -1,0 +1,332 @@
+<!-- ActionThinker WeChat Magazine Template v1.0 -->
+<style>
+  /* ===== ACTION THINKER 微信排版系统 ===== */
+  .at-article {
+    max-width: 100%;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: #2c2c2c;
+    line-height: 1.0;
+  }
+
+  /* --- 顶部品牌标识 --- */
+  .at-masthead {
+    text-align: center;
+    padding: 32px 0 8px;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 40px;
+  }
+  .at-masthead .at-brand {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #1A1A2E;
+    text-transform: uppercase;
+  }
+  .at-masthead .at-brand-line {
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: #E94560;
+    margin: 10px auto 0;
+  }
+
+  /* --- 标题区 --- */
+  .at-hed {
+    padding: 0 0 36px;
+  }
+  .at-hed .at-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #1A1A2E;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+  }
+  .at-hed .at-dek {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #777;
+    font-weight: 400;
+  }
+
+  /* --- 分割线 --- */
+  .at-rule {
+    text-align: center;
+    margin: 40px 0;
+    color: #ccc;
+    font-size: 12px;
+    letter-spacing: 6px;
+  }
+  .at-rule-line {
+    width: 48px;
+    height: 1px;
+    background: #d0d0d0;
+    margin: 0 auto;
+  }
+
+  /* --- 段落 --- */
+  .at-article p {
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0 0 16px;
+    color: #2c2c2c;
+    letter-spacing: 0.3px;
+  }
+
+  /* --- 二级标题 --- */
+  .at-h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A1A2E;
+    margin: 40px 0 16px;
+    padding-left: 14px;
+    border-left: 3px solid #E94560;
+    line-height: 1.4;
+  }
+
+  /* --- 三级标题 --- */
+  .at-h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0F3460;
+    margin: 32px 0 12px;
+    line-height: 1.4;
+  }
+
+  /* --- 粗体强调 --- */
+  .at-article strong {
+    font-weight: 700;
+    color: #1A1A2E;
+  }
+
+  /* --- 引言/金句 --- */
+  .at-pullquote {
+    margin: 36px 0;
+    padding: 24px 20px 24px 24px;
+    background: #F8F8F6;
+    border-left: 4px solid #0F3460;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #444;
+    font-style: italic;
+    letter-spacing: 0.5px;
+  }
+
+  /* --- 列表 --- */
+  .at-list {
+    margin: 16px 0 24px;
+    padding-left: 0;
+    list-style: none;
+  }
+  .at-list li {
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 6px 0 6px 20px;
+    position: relative;
+    color: #2c2c2c;
+  }
+  .at-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 6px;
+    height: 6px;
+    background: #E94560;
+    border-radius: 50%;
+  }
+
+  /* --- 数字标注 --- */
+  .at-num {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #E94560;
+    min-width: 24px;
+  }
+
+  /* --- 行动号召 --- */
+  .at-cta {
+    margin: 40px 0 24px;
+    padding: 28px 24px;
+    background: linear-gradient(135deg, #1A1A2E, #0F3460);
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+  }
+  .at-cta .at-cta-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .at-cta .at-cta-body {
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .at-cta .at-cta-btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background: #E94560;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  /* --- 尾注 --- */
+  .at-footer-note {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #e8e8e8;
+    font-size: 13px;
+    color: #aaa;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  /* --- 图片 --- */
+  .at-article img {
+    max-width: 100%;
+    height: auto;
+    margin: 24px 0;
+    display: block;
+  }
+
+  /* --- 响应式 --- */
+  @media (max-width: 480px) {
+    .at-hed .at-title { font-size: 21px; }
+    .at-h2 { font-size: 18px; }
+    .at-article p { font-size: 14px; line-height: 1.85; }
+    .at-pullquote { font-size: 15px; padding: 20px 16px 20px 20px; }
+  }
+</style>
+
+<div class="at-article">
+
+  <!-- 顶部标识 -->
+  <div class="at-masthead">
+    <div class="at-brand">ACTION THINKER</div>
+    <span class="at-brand-line"></span>
+  </div>
+
+  <!-- 标题 -->
+  <div class="at-hed">
+    <h1 class="at-title">你的AI化程度在哪一级？<br>创始人L1-L5进阶指南</h1>
+    <p class="at-dek">过去半年和几十位创始人聊AI。发现分水岭不是技术能力，是认知阶段。这篇文章拆解五个阶段，供你自检。</p>
+  </div>
+
+  <!-- 正文开始 -->
+  <p>一位做了12年制造业的老板对我说：<strong>"陈露，我知道AI很重要。但我打开ChatGPT后，不知道该问什么。"</strong></p>
+
+  <p>这句话让我突然意识到：创始人AI化的核心障碍，不是技术，是<strong>场景盲区</strong>。</p>
+
+  <p>我把过去几个月的思考整理成一篇文章——<strong>创始人AI化 L1-L5进阶框架</strong>。每一级的核心障碍不同，突破方法也不同。</p>
+
+  <div class="at-rule"><div class="at-rule-line"></div></div>
+
+  <div class="at-h2">五级框架总览</div>
+
+  <p style="text-align:center;font-size:14px;line-height:2.0;color:#555;padding:16px 0;font-family:monospace;">
+    L1 观望者 → L2 试用者 → L3 协作者 → L4 系统者 → L5 原生者<br>
+    <span style="font-size:12px;color:#999;">恐惧&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;混乱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;杠杆&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进化</span>
+  </p>
+
+  <div class="at-h3">L1 · 观望者 — "听说你很厉害，但我不知道该干什么"</div>
+
+  <p>典型画像：听说过ChatGPT，可能注册了但没用几次。觉得AI很厉害，但和自己的业务隔着一层。<strong>"我不知道该问什么"</strong>是L1的核心症状。</p>
+
+  <div class="at-pullquote">
+    核心障碍：场景盲区。不是不想用，是真的不知道AI能在自己的业务里具体做什么。
+  </div>
+
+  <p><strong>突破L1的方法：</strong>从低风险场景开始。三个入口选一个：让AI帮你读一份报告做摘要；把最近纠结的决策问题描述给它；让你团队里AI用得最多的人带你用一次。</p>
+
+  <p>关键心态转变：从"AI能做什么"到<strong>"我今天有什么事可以扔给AI试试"</strong>。</p>
+
+  <div class="at-rule"><div class="at-rule-line"></div></div>
+
+  <div class="at-h3">L2 · 试用者 — "会用但卡住了，产出忽高忽低"</div>
+
+  <p>典型画像：日常使用AI，但体验不稳定。有时觉得"这也太厉害了"，有时觉得"也就那样"。没有把AI纳入日常工作流。</p>
+
+  <div class="at-pullquote">
+    核心障碍：方法不稳定。没有prompt习惯，提问质量忽高忽低，依赖临场发挥。
+  </div>
+
+  <p><strong>突破L2的方法：</strong>建立自己的prompt模板库。把你每次觉得"这个回答真不错"的提问方式存下来，下次复用。关键是让好结果可以复现。</p>
+
+  <div class="at-rule"><div class="at-rule-line"></div></div>
+
+  <div class="at-h3">L3 · 协作者 — "AI嵌入日常，但你还是瓶颈"</div>
+
+  <p>典型画像：AI已经是日常核心部分。有固定prompt模板。在一些任务上，AI产出已超过自己初稿水平。但<strong>所有启动和把关都还需要你来</strong>。</p>
+
+  <div class="at-pullquote">
+    核心障碍：自动化断裂。AI在单点任务上很强，但没有串成"输入→处理→输出→反馈"的闭环。
+  </div>
+
+  <p><strong>突破L3的方法：</strong>搭建第一条自动化流水线。选你最常做的一类内容任务，设计"AI主动采集→自动加工→推送给你审核"的流程，而不是每次手动触发。</p>
+
+  <p>关键心态转变：从"我用AI做事"到<strong>"我设计系统，AI自己去跑"</strong>。大多数创始人可以在一周到一个月内达到L3。</p>
+
+  <div class="at-rule"><div class="at-rule-line"></div></div>
+
+  <div class="at-h3">L4 · 系统者 — "知识资产开始自己转"</div>
+
+  <p>典型画像：AI不再是一个对话窗口，而是一套自动化的幕后系统。知识采集、内容生产、客户跟进都有agent在处理。你的角色从<strong>"执行者"变成了"策展人"</strong>。</p>
+
+  <div class="at-pullquote">
+    核心障碍：知识底座不够结构化。Agent需要"食材"——你的方法论、案例、SOP。如果这些散落在聊天记录和记忆里，agent就调用不了。
+  </div>
+
+  <p><strong>突破L4的方法：</strong>把隐性知识显性化。不是写完美的知识库，而是从最常被问到的问题开始，把诊断逻辑结构化。比如"我的行业适不适合AI化"，整理成决策树，agent就能帮你做初步判断。</p>
+
+  <div class="at-rule"><div class="at-rule-line"></div></div>
+
+  <div class="at-h3">L5 · 原生者 — "AI是你的基础设施"</div>
+
+  <p>典型画像：AI不是工具，是公司的基础设施。客户获取、交付、服务全流程都有agent参与。核心竞争力不再是你的时间，而是<strong>你的知识资产 + agent系统</strong>。</p>
+
+  <div class="at-pullquote">
+    核心障碍：方法论成熟度和客户验证。L5的前提是通过L1-L4的实践，打磨出被市场验证过的方法论。没有这个过程，agent系统就是空中楼阁。
+  </div>
+
+  <p><strong>突破L5的方法：</strong>从服务到产品。把方法论封装为<strong>Result as a Service</strong>——不是给客户一个工具让他自己用，而是agent直接交付结果。</p>
+
+  <div class="at-rule"><div class="at-rule-line"></div></div>
+
+  <div class="at-h2">测测你在哪一级</div>
+
+  <p>我和AI协作设计了一个自测工具：<strong>15道题 × 5个维度，3分钟</strong>。系统自动判断你的AI化级别，给出个性化进阶建议。</p>
+
+  <!-- CTA -->
+  <div class="at-cta">
+    <div class="at-cta-title">从当前级别到下一级，需要一个系统</div>
+    <div class="at-cta-body">我正在帮创始人搭建从L2到L4的知识资产化系统。<br>如果你的AI化程度在L2-L3，我们值得聊一次。</div>
+    <a href="https://actionthinker.com/ai-maturity-assessment" class="at-cta-btn">免费自测 →</a>
+  </div>
+
+  <div class="at-h2">大多数创始人在L2-L3之间</div>
+
+  <p>和几十位创始人聊下来，绝大多数人卡在L2到L3之间。AI在用，但还没形成系统。效率有提升，但还没产生质变。</p>
+
+  <p>这不是能力问题，是<strong>意识盲区</strong>——还没意识到从"手动使用AI"到"AI自动化系统"之间的那一步是什么。</p>
+
+  <div class="at-pullquote">
+    那一步是：<strong>把你的做事方法写下来。</strong>每次觉得"AI真厉害"的瞬间，背后一定有一个可以被复制的方法。把它记录、结构化、变成可被agent调用的资源。这就是"知识资产化"。
+  </div>
+
+  <!-- 底部 -->
+  <div class="at-footer-note">
+    <p style="color:#aaa;">ActionThinker · 创始人AI化与知识资产化</p>
+    <p style="color:#bbb;">下一篇：我在Obsidian里搭的知识体系——三种卡片 + 四层链接 + 一个飞轮</p>
+    <p style="color:#bbb;">公众号：ActionThinker</p>
+  </div>
+
+</div>
