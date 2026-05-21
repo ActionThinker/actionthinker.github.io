@@ -29,7 +29,8 @@ googlefonts:
 # List of links in the navigation bar
 navbar-links:
   首页: "http://actionthinker.com"
-  Human服务: "opclab"
+  个人服务: "service"
+  OPCLab: "opclab"
   Agent服务: "agentbrandlab"
   企业服务: "enterprise-ai-training"
   关于我: "about"
