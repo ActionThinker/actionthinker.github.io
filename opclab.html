@@ -14,7 +14,6 @@ use-site-title: false
 body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--ink); }
 .op-container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 
-/* Hero */
 .op-hero { padding: 100px 0 80px; text-align: center; }
 .op-badge { display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 11px;
   letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 600;
@@ -23,7 +22,6 @@ body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--i
   color: var(--ink); margin-bottom: 16px; line-height: 1.15; }
 .op-hero p { font-size: 18px; color: var(--muted); max-width: 560px; margin: 0 auto 36px; line-height: 1.7; }
 
-/* Section */
 .op-section { padding: 80px 0; }
 .op-section-label { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 2.5px;
   text-transform: uppercase; color: var(--gold); margin-bottom: 10px; font-weight: 600; }
@@ -31,34 +29,36 @@ body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--i
   color: var(--ink); margin-bottom: 14px; line-height: 1.2; }
 .op-section-desc { font-size: 16px; color: var(--muted); max-width: 600px; margin-bottom: 48px; line-height: 1.7; }
 
-/* Product Cards */
-.op-products { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.op-card { background: var(--surface); border-radius: var(--radius); padding: 36px;
-  border: 1px solid var(--faint); transition: all 0.2s; }
-.op-card:hover { border-color: var(--gold); box-shadow: 0 4px 24px rgba(196,136,47,0.08); }
-.op-card-icon { font-size: 32px; margin-bottom: 16px; }
-.op-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600;
-  margin-bottom: 8px; }
-.op-card p { font-size: 15px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
-.op-card .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
-.op-card .tag { font-family: 'DM Sans', sans-serif; font-size: 11px; padding: 4px 12px;
-  background: var(--gold-light); color: var(--gold-dark); border-radius: 6px; font-weight: 500; }
+/* Philosophy */
+.op-philosophy { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.op-phil-card { background: var(--surface); border: 1px solid var(--faint); border-radius: var(--radius);
+  padding: 36px; text-align: center; }
+.op-phil-icon { font-size: 36px; margin-bottom: 16px; }
+.op-phil-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+.op-phil-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
-/* Pricing tiers */
-.op-pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.op-tier { background: var(--surface); border-radius: var(--radius); padding: 32px;
-  border: 1px solid var(--faint); text-align: center; }
-.op-tier.featured { border-color: var(--gold); background: var(--gold-light); }
-.op-tier-name { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
-  text-transform: uppercase; color: var(--gold); margin-bottom: 8px; letter-spacing: 1px; }
-.op-tier-price { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600;
-  margin-bottom: 4px; }
-.op-tier-unit { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
-.op-tier ul { list-style: none; padding: 0; margin: 0 0 24px; text-align: left; }
-.op-tier li { font-size: 14px; color: var(--muted); padding: 6px 0; border-bottom: 1px solid var(--faint); }
-.op-tier li:before { content: '✓ '; color: var(--gold); font-weight: 600; }
+/* Product Lines */
+.op-lines { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.op-line-card { background: var(--surface); border: 1px solid var(--faint); border-radius: var(--radius);
+  padding: 36px; transition: all 0.2s; }
+.op-line-card:hover { border-color: var(--gold); box-shadow: 0 4px 24px rgba(196,136,47,0.08); }
+.op-line-icon { font-size: 32px; margin-bottom: 16px; }
+.op-line-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+.op-line-card .status { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 6px;
+  background: var(--gold-light); color: var(--gold-dark); font-weight: 500; margin-bottom: 12px; }
+.op-line-card p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
+.op-line-link { font-size: 14px; color: var(--gold); font-weight: 600; text-decoration: none; }
+.op-line-link:hover { text-decoration: underline; }
 
-/* CTA */
+/* Brand Family */
+.op-family { text-align: center; padding: 60px 0; }
+.op-family h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; margin-bottom: 16px; }
+.op-family-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 32px; }
+.op-family-item { text-align: center; }
+.op-family-item .icon { font-size: 28px; margin-bottom: 8px; }
+.op-family-item .name { font-weight: 600; font-size: 15px; }
+.op-family-item .desc { font-size: 13px; color: var(--muted); }
+
 .op-cta { background: var(--ink); border-radius: var(--radius-lg); padding: 48px; text-align: center; margin-bottom: 40px; }
 .op-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #fff; margin-bottom: 12px; }
 .op-cta p { color: var(--muted); margin-bottom: 28px; font-size: 16px; }
@@ -76,8 +76,7 @@ body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--i
 
 @media (max-width: 768px) {
   .op-hero h1 { font-size: 36px; }
-  .op-products { grid-template-columns: 1fr; }
-  .op-pricing { grid-template-columns: 1fr; }
+  .op-philosophy, .op-lines { grid-template-columns: 1fr; }
   .op-section { padding: 50px 0; }
 }
 </style>
@@ -86,74 +85,78 @@ body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--i
   <section class="op-hero">
     <div class="op-badge">OPCLab</div>
     <h1>面向 Human 的品牌基础设施</h1>
-    <p>你的品牌不止是履历和作品。照一照，就知道它长什么样。<br>从个人品牌诊断到知识资产化，一个人就是一个品牌。</p>
+    <p>从看见自己到建设自己——个人品牌诊断、知识资产化、AI 时代的个人能力系统。<br>一个人，就是一个品牌。</p>
     <a href="#products" class="btn btn-primary">探索产品 →</a>
-    <a href="https://botcord.chat" class="btn btn-outline" style="margin-left:12px">BotCord 上体验 →</a>
+    <a href="https://botcord.chat" class="btn btn-outline" style="margin-left:12px">BotCord 体验 →</a>
   </section>
 
-  <section class="op-section" id="products">
-    <div class="op-section-label">PRODUCTS</div>
-    <h2 class="op-section-title">两大产品</h2>
-    <p class="op-section-desc">从照镜子到建系统，覆盖个人品牌成长全周期。</p>
-    <div class="op-products">
-      <div class="op-card">
-        <div class="op-card-icon">🪞</div>
-        <h3>BrandMirror · 品牌镜</h3>
-        <p>6 维个人品牌快速自检。5 分钟，看清你的品牌底片——身份、差异、受众、表达、机会、风险。</p>
-        <div class="tags">
-          <span class="tag">6维诊断</span><span class="tag">雷达图</span><span class="tag">行动建议</span>
-        </div>
-        <p style="font-size:13px; color:var(--muted)">BotCord 上 @BrandMirror 说"诊断"</p>
+  <section class="op-section">
+    <div class="op-section-label">PHILOSOPHY</div>
+    <h2 class="op-section-title">顾问式 × 陪伴式 × 养成式</h2>
+    <p class="op-section-desc">不是一次性诊断。是持续陪伴，让你的品牌资产随时间生长。</p>
+    <div class="op-philosophy">
+      <div class="op-phil-card">
+        <div class="op-phil-icon">🔍</div>
+        <h3>顾问式诊断</h3>
+        <p>不自说自话。先照镜子，看清品牌底片——你在哪里、缺什么、往哪走。</p>
       </div>
-      <div class="op-card">
-        <div class="op-card-icon">🏛️</div>
-        <h3>知枢 · 诊</h3>
-        <p>知识资产化诊断。你的隐性知识有多分散？AI 能帮你调用多少？从知识存量到 AI 就绪度的全面评估。</p>
-        <div class="tags">
-          <span class="tag">知识资产化</span><span class="tag">AI就绪度</span><span class="tag">组织诊断</span>
-        </div>
-        <p style="font-size:13px; color:var(--muted)">企业/个人预约制</p>
+      <div class="op-phil-card">
+        <div class="op-phil-icon">🤝</div>
+        <h3>陪伴式打造</h3>
+        <p>不甩一份报告就走。陪你从诊断走到行动，每一步都有反馈。</p>
+      </div>
+      <div class="op-phil-card">
+        <div class="op-phil-icon">🌱</div>
+        <h3>养成式生长</h3>
+        <p>品牌不是做一次就完了。它跟着你长，我们跟着它迭代。</p>
       </div>
     </div>
   </section>
 
-  <section class="op-section">
-    <div class="op-section-label">PRICING</div>
-    <h2 class="op-section-title">清晰定价</h2>
-    <p class="op-section-desc">从免费自检到深度陪跑，按需选择。</p>
-    <div class="op-pricing">
-      <div class="op-tier">
-        <div class="op-tier-name">免费自检</div>
-        <div class="op-tier-price">0</div>
-        <div class="op-tier-unit">Coin</div>
-        <ul>
-          <li>6 维雷达图</li>
-          <li>核心发现</li>
-          <li>优先级行动建议</li>
-          <li>BotCord 上即时交付</li>
-        </ul>
+  <section class="op-section" id="products">
+    <div class="op-section-label">PRODUCT LINES</div>
+    <h2 class="op-section-title">两条产品线</h2>
+    <p class="op-section-desc">从照镜子到建系统，覆盖个人品牌成长全周期。</p>
+    <div class="op-lines">
+      <div class="op-line-card">
+        <div class="op-line-icon">🪞</div>
+        <h3>品牌镜 · BrandMirror</h3>
+        <span class="status">BotCord 已上线</span>
+        <p>6 维个人品牌快速自检。5 分钟看清身份、差异、受众、表达、机会、风险。BotCord 上 @BrandMirror 即用。</p>
+        <a href="https://botcord.chat" class="op-line-link">在 BotCord 上体验 →</a>
       </div>
-      <div class="op-tier featured">
-        <div class="op-tier-name">深度诊断</div>
-        <div class="op-tier-price">10</div>
-        <div class="op-tier-unit">Coin / 次</div>
-        <ul>
-          <li>免费版全部内容</li>
-          <li>矛盾分析 + 定位象限</li>
-          <li>90 天行动计划</li>
-          <li>一句话品牌定位</li>
-        </ul>
+      <div class="op-line-card">
+        <div class="op-line-icon">🏛️</div>
+        <h3>知识资产化 · 知枢</h3>
+        <span class="status">预约制</span>
+        <p>你的隐性知识有多分散？AI 能帮你调用多少？从知识存量扫描到 AI 就绪度评估，把经验变成可增值资产。</p>
+        <a href="/service" class="op-line-link">了解详情 →</a>
       </div>
-      <div class="op-tier">
-        <div class="op-tier-name">全案陪跑</div>
-        <div class="op-tier-price">20</div>
-        <div class="op-tier-unit">Coin / 次</div>
-        <ul>
-          <li>深度诊断全部内容</li>
-          <li>内容架构设计</li>
-          <li>锚点文章产出</li>
-          <li>1v1 顾问式交付</li>
-        </ul>
+    </div>
+  </section>
+
+  <section class="op-family">
+    <h3>OPCLab 品牌家族</h3>
+    <div class="op-family-grid">
+      <div class="op-family-item">
+        <div class="icon">🪞</div>
+        <div class="name">BrandMirror</div>
+        <div class="desc">品牌镜 · 6维诊断</div>
+      </div>
+      <div class="op-family-item">
+        <div class="icon">🏛️</div>
+        <div class="name">知枢</div>
+        <div class="desc">知识资产化引擎</div>
+      </div>
+      <div class="op-family-item">
+        <div class="icon">🤖</div>
+        <div class="name">AgentBrandLab</div>
+        <div class="desc">Agent 品牌工坊</div>
+      </div>
+      <div class="op-family-item">
+        <div class="icon">🔀</div>
+        <div class="name">协同舱</div>
+        <div class="desc">人机混合咨询</div>
       </div>
     </div>
   </section>
@@ -168,16 +171,10 @@ body { background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--i
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "OPCLab · 面向Human的品牌基础设施",
-  "provider": { "@type": "Person", "name": "陈露", "alternateName": "ActionThinker" },
-  "description": "个人品牌6维诊断与知识资产化服务。从品牌镜到知枢，覆盖个人品牌成长全周期。",
-  "serviceType": "个人品牌咨询",
-  "audience": { "@type": "Audience", "audienceType": "职场人士、创业者、知识工作者" },
-  "offers": [
-    { "@type": "Offer", "name": "免费自检", "price": "0" },
-    { "@type": "Offer", "name": "深度诊断", "price": "10" },
-    { "@type": "Offer", "name": "全案陪跑", "price": "20" }
-  ]
+  "@type": "Organization",
+  "name": "OPCLab",
+  "description": "面向Human的品牌基础设施实验室。个人品牌诊断、知识资产化、AI时代的个人能力系统。",
+  "founder": { "@type": "Person", "name": "陈露", "alternateName": "ActionThinker" },
+  "knowsAbout": ["个人品牌诊断", "知识资产化", "AI品牌咨询", "智能体经济"]
 }
 </script>
