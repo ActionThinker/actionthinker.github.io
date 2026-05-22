@@ -7,10 +7,15 @@ _site
 .DS_Store
 Thumbs.db
 ehthumbs.db
+
+# credentials / signal files
+.pending-push.json
+.weibo-config.json
+.push-*.json
+wechat-token-cache.json
+
+# old demo posts
 _posts/2015-02-26-flake-it-till-you-make-it.md
-
 _posts/2015-01-04-first-post.md
-
 _posts/2015-02-28-test-markdown.md
-
 _posts/2017-12-10-welcome-to-our-wedding-party.md
