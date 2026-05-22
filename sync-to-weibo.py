@@ -20,6 +20,10 @@ from pathlib import Path
 from typing import Optional
 import yaml
 
+# Windows 终端 UTF-8 兼容
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # type: ignore
+
 # ─── 路径配置 ───
 REPO_ROOT = Path(__file__).resolve().parent
 INSIGHTS_DIR = REPO_ROOT.parent / "AI知识资产化" / "wiki-知识库" / "insights-洞察卡"
@@ -39,13 +43,21 @@ PERSONA = {
             "不卖课，不引流，先输出价值",
             "适当自曝其短——说自己还在探索的领域",
         ],
-        "opening_templates": [
-            "最近在实践{话题}，有几点体感：",
-            "看到一个有意思的信号：{核心观点}。我的判断是：",
-            "很多人问我对{话题}怎么看。直接说结论：",
-            "今天跟Hermes agent讨论{话题}，达成一个共识：",
-            "在帮客户做{话题}时发现一个反直觉的事：",
-            "不是标题党，{话题}这件事真的在发生：",
+        "openings_generic": [
+            "看到一个有意思的信号：{core}",
+            "说一个最近感触比较深的观察：{core}",
+            "分享一个最近的思考：",
+            "跟Hermes agent讨论这个话题，达成一个共识：",
+        ],
+        "openings_trend": [
+            "最近AI领域有一个很值得关注的信号：",
+            "今天读到一条消息，值得展开说说：",
+            "这不是巧合，是趋势在加速：",
+        ],
+        "openings_practice": [
+            "在帮客户做{core}时发现一个反直觉的事：",
+            "最近在实践{core}，有几点体感：",
+            "很多人问我对这个怎么看。直接说结论：",
         ],
     },
     "hashtags": ["AI知识资产化", "智能体", "AI认知", "知识管理"],
@@ -126,13 +138,24 @@ def parse_insight_card(filepath: Path) -> Optional[dict]:
         except yaml.YAMLError:
             pass
 
-    # 提取核心洞察（h1或引用块后的第一段）
+    # 提取核心洞察
     core_insight = ""
+    # 格式1: 核心洞察 + 引用块
     insight_match = re.search(r"核心洞察[：:]\s*\n>\s*(.+?)(?:\n|$)", text)
     if insight_match:
         core_insight = insight_match.group(1).strip()
-    else:
-        # fallback: 取h1后的第一段
+    # 格式2: ## 核心观点 + 正文
+    if not core_insight:
+        insight_match = re.search(r"##\s*核心观点[：:]\s*\n(.+?)(?:\n\n|\n#|\n---)", text)
+        if insight_match:
+            core_insight = insight_match.group(1).strip()
+    # 格式3: 核心观点在同一行
+    if not core_insight:
+        insight_match = re.search(r"核心观点[：:](.+?)(?:\n\n|\n#|\n---)", text)
+        if insight_match:
+            core_insight = insight_match.group(1).strip()
+    # fallback: 取h1后的第一段
+    if not core_insight:
         h1_match = re.search(r"^#\s+(.+?)$", text, re.MULTILINE)
         if h1_match:
             after_h1 = text[h1_match.end():].strip()
@@ -175,64 +198,71 @@ def generate_weibo_post(card: dict) -> str:
 
     # 确定话题分类
     all_tags = card.get("tags", []) + card.get("business_line", [])
-    topic = "AI趋势"
-    for tag_str in all_tags:
-        for topic_key, topic_tags in TOPIC_TAGS.items():
-            for t in topic_tags:
-                if t in str(tag_str):
-                    topic = topic_key
-                    break
+    all_tags_str = " ".join(str(t) for t in all_tags)
+    if any(k in all_tags_str for k in ["知识", "知识管理", "知识资产"]):
+        topic_type = "practice"
+    elif any(k in all_tags_str for k in ["趋势", "AI开发", "技术", "Agent"]):
+        topic_type = "trend"
+    else:
+        topic_type = "generic"
 
-    # 选择开场白模板
-    templates = PERSONA["voice"]["opening_templates"]
-    opening = random.choice(templates).format(
-        话题=topic,
-        核心观点=core[:30] + "…" if len(core) > 30 else core,
-    )
+    # 选择开场白
+    pool = PERSONA["voice"].get(f"openings_{topic_type}", PERSONA["voice"]["openings_generic"])
+    opening = random.choice(pool)
+    # 如果模板中有 {core} 占位符则填充
+    core_clean_open = re.sub(r"[#*>`【\]】]", "", core).strip()
+    core_clean_open = re.sub(r"^#{1,3}\s*(核心观点|核心洞察|观察|背景)[：:]\s*", "", core_clean_open)
+    core_preview = core_clean_open[:40] + "…" if len(core_clean_open) > 40 else core_clean_open
+    opening = opening.replace("{core}", core_preview)
+
+    # 清理核心洞察：去掉 markdown 标记、仅保留正文行
+    lines = core.split("\n")
+    clean_lines = []
+    for line in lines:
+        line = line.strip()
+        # 跳过 markdown 标题行和标题关键词独立行
+        if re.match(r"^#{1,6}\s", line):
+            continue
+        if line.strip() in ["核心观点", "核心洞察", "核心观点：", "核心洞察："]:
+            continue
+        if line:
+            clean_lines.append(line)
+    core_clean = " ".join(clean_lines)
+    core_clean = re.sub(r"[#*>`【\]】]", "", core_clean).strip()
+    # 精简到 120 字以内
+    core_short = core_clean[:120] if len(core_clean) > 120 else core_clean
 
     # 构建正文
-    paragraphs = []
+    lines = [opening, "", core_short]
 
-    # 开场
-    paragraphs.append(opening)
-
-    # 核心洞察（精简到100字以内）
-    core_short = core[:120] if len(core) > 120 else core
-    if core_short:
-        paragraphs.append(core_short)
-
-    # 个人判断（如果分析内容存在）
+    # 个人判断
     if analysis:
-        paragraphs.append(analysis[:150])
+        analysis_clean = re.sub(r"[#*>`【\]】]", "", analysis).strip()
+        analysis_clean = re.sub(r"^(启示|分析|背后的逻辑|我的推断)[：:]\s*", "", analysis_clean)[:150]
+        lines.extend(["", analysis_clean])
 
-    # 结尾引导互动
+    # 结尾
     endings = [
-        "\n你怎么看？",
-        "\n这条你认同吗？",
-        "\n有没有类似的体感？",
-        "\n这是我最近的观察，欢迎讨论。",
-        "\n持续观察中，有新的判断再分享。",
-        "\n你在实践中有遇到过类似情况吗？",
+        "",
+        "你怎么看？欢迎讨论。",
+        "有没有类似的体感？",
+        "持续观察中。",
+        "这是我最近的判断，不一定对，欢迎指正。",
     ]
-    paragraphs.append(random.choice(endings))
+    lines.append(random.choice(endings))
 
-    # 话题标签（随机选2个）
-    selected_tags = random.sample(
-        PERSONA["hashtags"],
-        min(2, len(PERSONA["hashtags"]))
-    )
-    # 加1个关联标签
+    # 话题标签（2-3个）
+    selected_tags = random.sample(PERSONA["hashtags"], min(2, len(PERSONA["hashtags"])))
     if card.get("tags"):
-        extra_tag = random.choice(card["tags"])
-        if isinstance(extra_tag, str) and len(extra_tag) < 20:
-            selected_tags.append(extra_tag.replace("_", "").replace("-", ""))
+        extra_tags = [t for t in card["tags"] if isinstance(t, str) and len(t) < 20]
+        if extra_tags:
+            selected_tags.append(random.choice(extra_tags))
 
     tag_line = " " + " ".join(f"#{t}#" for t in selected_tags if t)
+    lines.append(tag_line)
+    lines.append(PERSONA["signature"])
 
-    # 签名
-    full = "\n\n".join(paragraphs) + "\n" + tag_line + PERSONA["signature"]
-
-    return full
+    return "\n".join(lines)
 
 
 def post_to_weibo(text: str, config: dict) -> bool:
