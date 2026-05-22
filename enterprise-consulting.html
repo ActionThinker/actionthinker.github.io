@@ -65,16 +65,18 @@ use-site-title: false
   font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600;
   text-decoration: none; transition: all 0.25s; cursor: pointer; border: none;
 }
-.ec-btn-primary { background: var(--ink); color: var(--gold); }
-.ec-btn-primary:hover {
+a.ec-btn-primary { background: var(--ink); color: var(--gold); }
+a.ec-btn-primary:visited { color: var(--gold); }
+a.ec-btn-primary:hover {
   background: var(--gold); color: #fff;
   transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196,136,47,0.25);
 }
-.ec-btn-outline {
+a.ec-btn-outline {
   background: transparent; color: var(--ink);
   border: 2px solid var(--faint);
 }
-.ec-btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+a.ec-btn-outline:visited { color: var(--ink); }
+a.ec-btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
 
 /* ═══ Hero ═══ */
 .ec-hero {
