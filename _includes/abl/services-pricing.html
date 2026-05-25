@@ -1,0 +1,12 @@
+{% assign content_profile = "" %}{% for agent in site.data.abl.agents %}{% if agent.id == "abl-content" and agent.links.profile %}{% assign content_profile = agent.links.profile %}{% endif %}{% endfor %}
+{% if site.data.abl.services %}
+<div class="abl-pricing">
+{% for svc in site.data.abl.services %}
+  <div class="abl-price-card{% if svc.status == 'coming-soon' %} soon{% elsif svc.featured %} featured{% endif %}">
+    <div class="abl-price-tier">{{ svc.name }}</div>
+    <div class="abl-price-amount">{{ svc.price }}</div>
+    {% if svc.items %}<ul>{% for item in svc.items %}<li>{{ item }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+{% endfor %}
+</div>
+{% endif %}

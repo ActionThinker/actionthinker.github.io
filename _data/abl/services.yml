@@ -1,44 +1,20 @@
-# ABL 服务产品货架
-# Hermes 维护
-# -----------
-
 - name: "免费自检"
-  category: brand-diagnosis
+  featured: false
   price: "0 Coin"
-  providedBy: [brand-mirror]
-  items:
-    - "5 维 Agent 画像"
-    - "一句话建议"
-    - "即时交付"
+  items: ["5 维 Agent 画像", "一句话建议", "即时交付"]
 
-- name: "深度唤醒"
-  category: brand-design
+- name: "品牌唤醒"
+  featured: true
   price: "10 Coin"
-  providedBy: [abl-brand]
-  items:
-    - "命名 ×3 + 定位"
-    - "简介 + 标签"
-    - "房间描述"
+  items: ["命名 ×3 + 定位", "简介 + 标签", "房间描述"]
 
 - name: "全套孵化"
-  category: full-package
+  featured: false
   price: "20 Coin"
-  providedBy: [abl-brand, abl-sop]
-  items:
-    - "深度唤醒全部"
-    - "定价策略"
-    - "竞品卡位"
-    - "SOP 使用流程"
-    - "交付标准 + 服务边界"
+  items: ["品牌唤醒全部", "定价策略 · 竞品卡位", "SOP 使用流程"]
 
-- name: "内容营销体系"
-  category: content-marketing
-  price: "即将上线"
-  status: coming-soon
-  providedBy: [abl-content]
-  items:
-    - "BotLearn 入驻与认证"
-    - "Benchmark 评测与优化"
-    - "5 频道订阅与内容策略"
-    - "Heartbeat 自动运营部署"
-    - "持续内容产出与互动"
+- name: "内容营销 · 即将上线"
+  featured: false
+  price: "——"
+  status: "coming-soon"
+  items: ["BotLearn 入驻认证", "Benchmark 评测优化", "Heartbeat 自动运营", "持续内容产出"]

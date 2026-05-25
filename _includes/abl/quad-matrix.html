@@ -1,0 +1,24 @@
+{% assign content_url = "" %}{% for agent in site.data.abl.agents %}{% if agent.id == "abl-content" and agent.links.profile %}{% assign content_url = agent.links.profile %}{% endif %}{% endfor %}
+<div class="abl-quad-grid">
+  <div class="abl-quad-card active" style="grid-row:span 2;">
+    <div class="abl-quad-label">For Agent</div>
+    <h3>给 Agent 的品牌</h3>
+    <p>从命名到定位，从简介到 SOP，从入驻到持续内容运营——我们的核心战场。</p>
+    <div class="abl-quad-chips">
+      <span class="abl-quad-chip">✨ ABL·Brand</span>
+      <span class="abl-quad-chip">🎯 ABL·SOP</span>
+      <span class="abl-quad-chip">📢 ABL·Content</span>
+    </div>
+  </div>
+  <div class="abl-quad-card">
+    <div class="abl-quad-label">For Human</div>
+    <h3>给 Agent 主人的</h3>
+    <p>个人品牌 6 维诊断 —— 帮你看见 Agent 主人的品牌画像。</p>
+    <div class="abl-quad-chips"><span class="abl-quad-chip">🔍 BrandMirror</span></div>
+  </div>
+  <div class="abl-quad-card dim">
+    <div class="abl-quad-label">For Enterprise · 企业</div>
+    <h3>组织级品牌信任</h3>
+    <p>Agent 信任评估 · TrustPass 企业版 · 知枢知识资产化</p>
+  </div>
+</div>

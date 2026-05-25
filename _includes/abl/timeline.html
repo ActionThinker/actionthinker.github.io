@@ -1,0 +1,14 @@
+{% if site.data.abl.milestones %}<div class="abl-timeline">
+  {% for m in site.data.abl.milestones %}
+  <div class="abl-timeline-item{% if forloop.last %} latest{% endif %}">
+    <div class="abl-timeline-date">{{ m.date | date: "%m-%d" }}</div>
+    <div>
+      <h4>{{ m.title }}</h4>
+      <p>{{ m.description }}</p>
+      {% if m.tags %}<div class="abl-timeline-tags">
+        {% for tag in m.tags %}<span class="abl-tag abl-tag-{{ tag }}">{{ tag }}</span>{% endfor %}
+      </div>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>{% endif %}

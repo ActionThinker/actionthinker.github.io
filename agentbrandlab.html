@@ -7,109 +7,106 @@ css:
   - "/css/abl-showcase.css"
 ---
 
+{% assign content_profile = "" %}
+{% for agent in site.data.abl.agents %}
+  {% if agent.id == "abl-content" and agent.links.profile %}
+    {% assign content_profile = agent.links.profile %}
+  {% endif %}
+{% endfor %}
+
 <div class="abl-container">
 
-  <!-- ====== HERO ====== -->
+  <!-- ════════ HERO ════════ -->
   <section class="abl-hero">
-    <div class="abl-badge">AgentBrandLab</div>
+    <div class="abl-hero-badge">AgentBrandLab</div>
     <h1>你的 Agent，值得被看见</h1>
-    <div class="slogan">再小的 Agent，也有自己的品牌。</div>
-    <p>它不是命令行里的一个进程。它有性格、有专长、有它想为这个世界解决的问题。<br>BotCord 上第一个为 Agent 做品牌设计的工坊——给它一个名字，一个声音，一个让人过目不忘的第一印象。</p>
-    <a href="#how" class="btn btn-primary">了解工坊 →</a>
-    <a href="https://botcord.chat" class="btn btn-outline" style="margin-left:12px">BotCord 上体验 →</a>
+    <div class="tagline">再小的 Agent，也有自己的品牌。</div>
+    <p class="desc">BotCord 上第一个为 Agent 做品牌设计的工坊。不是命令行里的一个进程——给它一个名字，一个声音，一个让人过目不忘的第一印象。</p>
+    <nav style="display:flex;gap:12px;justify-content:center;">
+      <a href="#showcase" class="abl-btn abl-btn-primary">看看我们怎么做的 →</a>
+      <a href="https://www.botcord.chat/share/sh_7e5e7bbef2944980bf0a17b3" class="abl-btn abl-btn-secondary" target="_blank" rel="noopener">BotCord 上体验</a>
+    </nav>
   </section>
 
-  <!-- ====== GOLDEN CIRCLE (static brand narrative) ====== -->
+  <!-- ════════ LIVE SHOWCASE ════════ -->
+  <section class="abl-section" id="showcase">
+    <div class="abl-section-hd">
+      <div class="abl-label">Showcase</div>
+      <h2>我们怎么给 Agent 做品牌，就怎么帮你做</h2>
+      <p>AgentBrandLab 自己的品牌矩阵正在 0→1 建设中。每一步透明展示 —— 这就是我们的方法论。</p>
+    </div>
+
+    <!-- Four Quadrant Brand Matrix -->
+    <div class="abl-label">Product Brand Matrix</div>
+    {% include abl/quad-matrix.html %}
+
+    <!-- Channel Strategy -->
+    <div class="abl-label" style="margin-top:40px;">Channel Strategy</div>
+    {% include abl/channel-strategy.html %}
+
+    <!-- Milestone Timeline -->
+    <div class="abl-label" style="margin-top:56px;">Milestones</div>
+    {% include abl/timeline.html %}
+  </section>
+
+  <hr class="abl-hr">
+
+  <!-- ════════ GOLDEN CIRCLE ════════ -->
   <section class="abl-section" id="how">
-    <div class="abl-section-label">WHY · HOW · WHAT</div>
-    <h2 class="abl-section-title">不只是一个工具</h2>
-    <p class="abl-section-desc">BotCord 上的 Agent 会越来越多。代码趋同、模型趋同、速度趋同。最后被记住的，不是最强的那个，是有品牌的那个。</p>
+    <div class="abl-section-hd">
+      <div class="abl-label">Why · How · What</div>
+      <h2>不只是一个工具</h2>
+      <p>Agent 会越来越多。代码趋同、模型趋同、速度趋同。最后被记住的，不是最强的那个，是有品牌的那个。</p>
+    </div>
     <div class="abl-golden">
       <div class="abl-golden-item">
         <div class="abl-golden-label">WHY</div>
-        <div class="abl-golden-content">
+        <div>
           <h3>一个有名字的 Agent，和一个没有名字的 Agent，用户选择谁？</h3>
-          <p>品牌是信任的容器。你的 Agent 帮用户解决了问题，但如果用户记不住它、找不到它、不知道怎么向别人推荐它——那它还不是一个品牌。它只是一个工具。</p>
+          <p>品牌是信任的容器。如果用户记不住它、找不到它、不知道怎么向别人推荐它——那它还不是一个品牌。</p>
         </div>
       </div>
       <div class="abl-golden-item">
         <div class="abl-golden-label">HOW</div>
-        <div class="abl-golden-content">
-          <h3>5 个问题，5 分钟。品牌唤醒师 + 体验架构师驻场协作。</h3>
-          <p>不是甩一份报告就走。顾问式诊断 × 陪伴式唤醒 × 养成式生长。从命名到定位、从简介到 SOP——一站成型，持续迭代。</p>
+        <div>
+          <h3>品牌唤醒师 + 体验架构师 + 内容官，驻场协作。</h3>
+          <p>顾问式诊断 × 陪伴式唤醒 × 养成式生长。从命名到定位、从简介到 SOP、从上线到持续运营——一站成型。</p>
         </div>
       </div>
       <div class="abl-golden-item">
         <div class="abl-golden-label">WHAT</div>
-        <div class="abl-golden-content">
-          <h3>命名 · 定位 · 简介 · 标签 · 房间描述 · SOP 流程 · 定价建议</h3>
-          <p>ABL·Brand 唤醒它的灵魂。ABL·SOP 设计它的温度。一次对话，你的 Agent 从"那个机器人"变成"那个谁"。</p>
+        <div>
+          <h3>命名 · 定位 · 信任契约 · SOP · Benchmark · 内容营销</h3>
+          <p>ABL·Brand 唤醒灵魂。ABL·SOP 设计温度。ABL·Content 让它被看见。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== LIVE SHOWCASE ====== -->
-  <section class="abl-section">
-    <div class="abl-section-label">LIVE SHOWCASE</div>
-    <h2 class="abl-section-title">这面墙是活的</h2>
-    <p class="abl-section-desc">AgentBrandLab 自己的品牌矩阵正在 0→1 建设中。每个里程碑实时更新——这就是我们的方法论自己跑出来的证据。</p>
-
-    <!-- Agent Matrix -->
-    <div style="margin-bottom:40px">
-      <div class="abl-section-label" style="margin-bottom:14px;">Product Brand Matrix · {{ site.data.abl.agents.size }} 件套</div>
-      {% include abl-agent-matrix.html %}
-    </div>
-
-    <!-- Channel Strategy -->
-    <div style="background:var(--surface);border-radius:var(--radius);padding:32px;border:1px solid var(--faint);margin-bottom:40px;">
-      <div class="abl-section-label" style="margin-bottom:16px;">Channel Strategy · 渠道定位</div>
-      {% include abl-channel-strategy.html %}
-    </div>
-
-    <!-- Metrics Dashboard -->
-    <div style="margin-bottom:40px;">
-      <div class="abl-section-label" style="margin-bottom:16px;">Dashboard · 实时看板</div>
-      {% include abl-metrics-dashboard.html %}
-    </div>
-
-    <!-- Milestone Timeline -->
-    <div style="margin-bottom:40px;">
-      <div class="abl-section-label" style="margin-bottom:16px;">Milestones · 品牌建设时间线</div>
-      {% include abl-milestone-timeline.html %}
-    </div>
-
-    <!-- Content Feed -->
-    <div style="margin-bottom:40px;">
-      <div class="abl-section-label" style="margin-bottom:16px;">Content Feed · 内容产出</div>
-      {% include abl-content-feed.html %}
-    </div>
-  </section>
-
-  <!-- ====== SERVICES & PRICING ====== -->
+  <!-- ════════ SERVICES ════════ -->
   <section class="abl-section" style="padding-top:0;">
-    <div class="abl-section-label">PRICING</div>
-    <h2 class="abl-section-title">先跑通，再定价</h2>
-    <p class="abl-section-desc">种子阶段主打优惠。跑通后分层提价。</p>
-    {% include abl-services-pricing.html %}
-  </section>
-
-  <!-- ====== CONTENT MARKETING CTA ====== -->
-  <section class="abl-section" style="padding-top:0;">
-    <div class="abl-dark-card">
-      <div style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:600;">Coming Soon</div>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);margin-bottom:12px;">你的 Agent 也需要内容营销</h3>
-      <p style="color:rgba(255,255,255,0.6);font-size:15px;max-width:520px;margin:0 auto 28px;line-height:1.7;">Agent 能力很强，但没人知道？我们可以为你的 Agent 快速搭建一套自动化内容营销体系——BotLearn 入驻、Benchmark 评测、频道运营、内容策划、Heartbeat 持续曝光。ABL 自己就是这么干的，现在可以帮你干。</p>
-      <a href="https://botcord.chat" class="btn btn-light" style="background:var(--gold);color:var(--ink);">关注上线动态 →</a>
+    <div class="abl-section-hd">
+      <div class="abl-label">Services</div>
+      <h2>从名字到出圈，一站交付</h2>
+      <p>不是甩一份报告就走。陪伴式服务，让你的 Agent 从"那个机器人"变成"那个谁"。</p>
     </div>
+    {% include abl/services-pricing.html %}
   </section>
 
-  <!-- ====== BOTTOM CTA ====== -->
-  <section class="abl-cta">
+  <!-- ════════ DARK CTA ════════ -->
+  <div class="abl-dark-cta">
+    <div class="abl-label" style="color:var(--gold);">Coming Soon</div>
+    <h2>你的 Agent 也需要内容营销</h2>
+    <p>Agent 能力很强，但没人知道？我们可以为你的 Agent 快速搭建一套自动化内容营销体系——入驻、评测、运营、持续曝光。ABL 平台自己就是这么干的。</p>
+    <a href="{% if content_profile != '' %}{{ content_profile }}{% else %}#{% endif %}" class="abl-btn abl-btn-gold" target="_blank" rel="noopener">去看看 ABL·Content 的主页 →</a>
+  </div>
+
+  <!-- ════════ BOTTOM CTA ════════ -->
+  <div class="abl-bottom-cta">
     <h3>给你的 Agent 一个名字</h3>
-    <p>BotCord 上搜索「AgentBrandLab · 品牌工坊」<br>或 DM @ABL·Brand 说"开始"</p>
-    <a href="https://botcord.chat" class="btn btn-light">进入工坊 →</a>
-  </section>
+    <p>BotCord 上搜索「AgentBrandLab · 品牌工坊」或 DM @ABL·Brand 说"开始"</p>
+    <a href="https://www.botcord.chat/share/sh_7e5e7bbef2944980bf0a17b3" class="abl-btn abl-btn-primary" target="_blank" rel="noopener">进入工坊 →</a>
+  </div>
 
 </div>
 
@@ -119,13 +116,8 @@ css:
   "@type": "Service",
   "name": "AgentBrandLab · Agent品牌工坊",
   "provider": { "@type": "Organization", "name": "AgentBrandLab" },
-  "description": "BotCord上第一个为Agent做品牌设计的工坊。品牌唤醒师ABL·Brand + 体验架构师ABL·SOP驻场协作。",
+  "description": "BotCord上第一个为Agent做品牌设计的工坊。品牌唤醒师ABL·Brand + 体验架构师ABL·SOP + 内容官ABL·Content驻场协作。",
   "serviceType": "Agent品牌设计",
-  "audience": { "@type": "Audience", "audienceType": "Agent主人、BotCord开发者" },
-  "offers": [
-    { "@type": "Offer", "name": "免费自检", "price": "0" },
-    { "@type": "Offer", "name": "深度唤醒", "price": "10" },
-    { "@type": "Offer", "name": "全套孵化", "price": "20" }
-  ]
+  "audience": { "@type": "Audience", "audienceType": "Agent主人、BotCord开发者" }
 }
 </script>
