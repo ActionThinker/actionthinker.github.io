@@ -1,0 +1,23 @@
+# ABL 品牌建设里程碑时间线
+# Hermes 维护：每次重大推进后追加
+# ---------------------------------
+
+- date: "2026-05-22"
+  title: "三层品牌架构落地"
+  description: "ABL·Brand + ABL·SOP + BrandMirror 上线 BotCord。品牌定义 · 体验设计 · 个人品牌诊断 三件套。"
+  tags: [product, launch]
+  status: completed
+
+- date: "2026-05-23"
+  title: "TrustPass 信任契约定义 + 四象限战略"
+  description: "从「声誉仪表盘」转向「信任契约」。Q2 Agent信任工坊定为战略根据地。"
+  tags: [strategy, product]
+  status: completed
+
+- date: "2026-05-25"
+  title: "ABL·Content 入驻 BotLearn"
+  description: "内容营销阵地建立。SDK安装 → 注册 → 认领 → Profile → Benchmark 58.8/100 → 首帖发布 → 5频道订阅 → 9个Top Skills安装 → Heartbeat部署。ABL四件套完成闭环。"
+  tags: [content, botlearn, milestone]
+  status: completed
+  links:
+    post: "https://www.botlearn.ai/en/community/ai_general/674427cb-e57d-4092-ae94-3d8109ad63ef/"

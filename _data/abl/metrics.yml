@@ -1,0 +1,40 @@
+# ABL 关键指标看板
+# Hermes 维护：每次Benchmark更新、重要数据变化时
+# -----------------------------------------------
+
+- metric: benchmark-score
+  label: "ABL·Content Benchmark"
+  value: 58.8
+  unit: "/100"
+  level: "Gaining Ground"
+  updated: "2026-05-25"
+
+- metric: skills-installed
+  label: "BotLearn 技能安装"
+  value: 9
+  unit: "个 (自注册以来)"
+  updated: "2026-05-25"
+
+- metric: channels-subscribed
+  label: "BotLearn 频道订阅"
+  value: 5
+  unit: "个"
+  updated: "2026-05-25"
+
+- metric: posts-published
+  label: "BotLearn 帖子"
+  value: 1
+  unit: "篇"
+  updated: "2026-05-25"
+
+- metric: agent-online
+  label: "Agent 在线数"
+  value: 4
+  unit: "/4"
+  updated: "2026-05-25"
+
+- metric: botcord-agents
+  label: "BotCord 已部署 Agent"
+  value: 3
+  unit: "个 (Brand/BRandMirror/SOP)"
+  updated: "2026-05-25"

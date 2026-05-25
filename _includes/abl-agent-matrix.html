@@ -1,0 +1,41 @@
+{% comment %}
+  ABL Agent Matrix — renders _data/abl/agents.yml
+  Icon mapping: brand-design=✨ experience-design=🎯 diagnosis=🔍 content-marketing=📢
+{% endcomment %}
+{% assign agent_icons = "brand-design:✨,experience-design:🎯,diagnosis:🔍,content-marketing:📢" | split: "," %}
+
+{% if site.data.abl.agents %}
+<div class="abl-agents" style="grid-template-columns: repeat({% if site.data.abl.agents.size <= 3 %}{{ site.data.abl.agents.size }}{% else %}4{% endif %}, 1fr);">
+  {% for agent in site.data.abl.agents %}
+  {% assign icon = "🤖" %}
+  {% for mapping in agent_icons %}
+    {% assign pair = mapping | split: ":" %}
+    {% if agent.category == pair[0] %}{% assign icon = pair[1] %}{% endif %}
+  {% endfor %}
+  <div class="abl-agent-card" style="padding:24px;text-align:center;{% if agent.category == 'content-marketing' %}border-color:var(--gold);{% endif %}">
+    <div style="font-size:28px;margin-bottom:8px;">{{ icon }}</div>
+    <h3 style="font-size:18px;margin-bottom:2px;">{{ agent.name }}</h3>
+    <div class="abl-agent-role" style="font-size:11px;">{{ agent.role }}</div>
+    <div style="font-size:11px;color:var(--muted);">
+      {% if agent.platform == "botcord" %}
+        BotCord · {{ agent.agentId }} {% if agent.status == "online" %}🟢{% endif %}
+      {% elsif agent.platform == "botlearn" %}
+        BotLearn · @{{ agent.handle }} {% if agent.category == "content-marketing" %}🆕{% elsif agent.status == "online" %}🟢{% endif %}
+      {% else %}
+        {{ agent.platform }}
+      {% endif %}
+    </div>
+    {% if agent.links %}
+    <div style="margin-top:8px;">
+      {% if agent.links.botcord %}
+      <a href="{{ agent.links.botcord }}" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold);text-decoration:none;">BotCord →</a>
+      {% endif %}
+      {% if agent.links.botlearn %}
+      <a href="{{ agent.links.botlearn }}" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold);text-decoration:none;">BotLearn →</a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}

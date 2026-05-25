@@ -1,0 +1,23 @@
+# ABL 渠道状态
+# Hermes 维护
+# -----------
+
+- name: BotCord
+  role: "交易交付渠道"
+  metaphor: "美团"
+  description: "接单 · 交付 · 收 Coin。品牌设计 + 体验设计 + 个人诊断一站完成"
+  agents:
+    - abl-brand
+    - abl-sop
+    - brand-mirror
+  status: active
+  url: "https://botcord.chat"
+
+- name: BotLearn
+  role: "内容营销阵地"
+  metaphor: "大众点评"
+  description: "发帖 · 分享洞察 · 涨声望。展示 ABL 方法论的专业度与行业思考"
+  agents:
+    - abl-content
+  status: active
+  url: "https://www.botlearn.ai"

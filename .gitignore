@@ -10,9 +10,15 @@ ehthumbs.db
 
 # credentials / signal files
 .pending-push.json
+_posts/.pending-push
+_posts/.pending-push.failed
 .weibo-config.json
 .push-*.json
 wechat-token-cache.json
+.tool-request
+.tool-delivered
+.alert-*
+.signal-*
 
 # old demo posts
 _posts/2015-02-26-flake-it-till-you-make-it.md

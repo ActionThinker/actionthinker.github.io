@@ -1,0 +1,21 @@
+{% comment %}
+  ABL Metrics Dashboard — renders _data/abl/metrics.yml
+  Responsive grid of KPI cards.
+{% endcomment %}
+
+{% if site.data.abl.metrics %}
+<div class="abl-metrics-grid">
+  {% for m in site.data.abl.metrics %}
+  <div class="abl-metric-card">
+    <div class="abl-metric-value">
+      {{ m.value }}<span class="abl-metric-unit">{{ m.unit }}</span>
+    </div>
+    <div class="abl-metric-label-text">{{ m.label }}</div>
+    {% if m.level %}
+    <div class="abl-metric-level">{{ m.level }}</div>
+    {% endif %}
+    <div class="abl-metric-updated">更新于 {{ m.updated | date: "%m-%d" }}</div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}

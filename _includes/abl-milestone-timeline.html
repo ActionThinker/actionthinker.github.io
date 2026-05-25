@@ -1,0 +1,37 @@
+{% comment %}
+  ABL Milestone Timeline — renders _data/abl/milestones.yml
+  Highlights the most recent (last) milestone.
+{% endcomment %}
+
+{% if site.data.abl.milestones %}
+<div style="display:grid;gap:12px;">
+  {% assign sorted = site.data.abl.milestones | sort: "date" %}
+  {% assign latest_date = sorted.last.date %}
+  {% for m in sorted %}
+  {% assign is_latest = false %}{% if m.date == latest_date %}{% assign is_latest = true %}{% endif %}
+  <div style="display:flex;gap:16px;align-items:flex-start;padding:16px 20px;background:{% if is_latest %}var(--gold-light){% else %}var(--surface){% endif %};border-radius:12px;border:1px solid {% if is_latest %}rgba(196,136,47,0.3){% else %}var(--faint){% endif %};">
+    <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--gold);font-weight:600;min-width:56px;">
+      {{ m.date | date: "%m-%d" }}
+    </div>
+    <div style="flex:1;">
+      <div style="font-size:14px;font-weight:600;color:var(--ink);">
+        {{ m.title }}
+        {% if is_latest %}<span style="font-size:11px;color:var(--gold);font-weight:400;">🆕 最新</span>{% endif %}
+      </div>
+      <div style="font-size:13px;color:var(--muted);">{{ m.description }}</div>
+      {% if m.tags or m.links %}
+      <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;">
+        {% for tag in m.tags %}
+        <span class="abl-tag abl-tag-{{ tag }}">{{ tag }}</span>
+        {% endfor %}
+        {% if m.links and m.links.post %}
+        <a href="{{ m.links.post }}" target="_blank" rel="noopener" style="font-size:11px;background:var(--ink);color:var(--gold);padding:2px 10px;border-radius:20px;text-decoration:none;">查看帖子 →</a>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+    <div style="font-size:20px;">{% if is_latest %}🆕{% else %}🟢{% endif %}</div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
