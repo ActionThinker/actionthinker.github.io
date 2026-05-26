@@ -46,6 +46,15 @@
     </a>
   {% endif %}
 
+  {% if site.share-links-active.weibo %}
+  <!--- Share on Weibo -->
+    <a href="https://service.weibo.com/share/share.php?url={{ site.url }}{{ page.url }}&title={{ page.title | url_encode }}"
+      class="btn btn-social-icon btn-weibo" title="分享到微博" target="_blank">
+      <span class="fa fa-fw fa-weibo" aria-hidden="true"></span>
+      <span class="sr-only">微博</span>
+    </a>
+  {% endif %}
+
 </section>
 
 {% endif %}

@@ -76,6 +76,12 @@ author:
   steam: yourname     # eg. daattali
   twitch: yourname    # eg. daattali
   yelp: yourname      # eg. daattali
+  weibo: "actionthinker"
+
+# Weibo Open Platform
+weibo:
+  uid: "1572362721"
+  app_key: "3461323525"
 
 # Select which links to show in the footer
 footer-links-active:
@@ -97,6 +103,7 @@ footer-links-active:
   steam: false
   twitch: false
   yelp: false
+  weibo: true
 
 # Select which share links to show in posts
 share-links-active:
@@ -104,6 +111,7 @@ share-links-active:
   facebook: true
   google: true
   linkedin: true
+  weibo: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer

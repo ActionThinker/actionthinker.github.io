@@ -36,7 +36,7 @@
             </a>
           </li>
           {% endif %}
-	  {% if site.author.reddit and site.footer-links-active.reddit %}
+		  {% if site.author.reddit and site.footer-links-active.reddit %}
           <li>
             <a href="https://reddit.com/u/{{ site.author.reddit }}" title="Reddit">
               <span class="fa-stack fa-lg" aria-hidden="true">
@@ -47,7 +47,7 @@
             </a>
           </li>
           {% endif %}
-      {% if site.author.google-plus and site.footer-links-active.google-plus %}
+	      {% if site.author.google-plus and site.footer-links-active.google-plus %}
           <li>
             <a href="https://plus.google.com/{{ site.author.google-plus }}" title="Google+">
               <span class="fa-stack fa-lg" aria-hidden="true">
@@ -102,7 +102,7 @@
             </a>
           </li>
           {% endif %}
-      {% if site.author.snapchat and site.footer-links-active.snapchat %}
+	      {% if site.author.snapchat and site.footer-links-active.snapchat %}
           <li>
             <a href="https://www.snapchat.com/add/{{ site.author.snapchat }}" title="Snapchat">
               <span class="fa-stack fa-lg" aria-hidden="true">
@@ -113,7 +113,7 @@
             </a>
           </li>
           {% endif %}
-      {% if site.author.instagram and site.footer-links-active.instagram %}
+	      {% if site.author.instagram and site.footer-links-active.instagram %}
           <li>
             <a href="https://www.instagram.com/{{ site.author.instagram }}" title="Instagram">
               <span class="fa-stack fa-lg" aria-hidden="true">
@@ -124,7 +124,7 @@
             </a>
           </li>
           {% endif %}
-      {% if site.author.youtube and site.footer-links-active.youtube %}
+	      {% if site.author.youtube and site.footer-links-active.youtube %}
           <li>
             <a href="https://www.youtube.com/{{ site.author.youtube }}" title="YouTube">
               <span class="fa-stack fa-lg" aria-hidden="true">
@@ -135,7 +135,7 @@
             </a>
           </li>
           {% endif %}
-      {% if site.author.spotify and site.footer-links-active.spotify %}
+	      {% if site.author.spotify and site.footer-links-active.spotify %}
           <li>
             <a href="https://open.spotify.com/user/{{ site.author.spotify }}" title="Spotify">
               <span class="fa-stack fa-lg" aria-hidden="true">
@@ -146,7 +146,7 @@
             </a>
           </li>
        {% endif %}
-      {% if site.author.telephone and site.footer-links-active.telephone %}
+	      {% if site.author.telephone and site.footer-links-active.telephone %}
           <li>
             <a href="tel:{{ site.author.telephone }}" title="Phone">
               <span class="fa-stack fa-lg" aria-hidden="true">
@@ -168,7 +168,7 @@
             </a>
           </li>
           {% endif %}
-      {% if site.author.steam and site.footer-links-active.steam %}
+	      {% if site.author.steam and site.footer-links-active.steam %}
           <li>
             <a href="https://steamcommunity.com/id/{{ site.author.steam }}" title="Steam">
               <span class="fa-stack fa-lg" aria-hidden="true">
@@ -179,7 +179,7 @@
             </a>
           </li>
           {% endif %}
-      {% if site.author.twitch and site.footer-links-active.twitch %}
+	      {% if site.author.twitch and site.footer-links-active.twitch %}
           <li>
             <a href="https://www.twitch.tv/{{ site.author.twitch }}" title="Twitch">
               <span class="fa-stack fa-lg" aria-hidden="true">
@@ -190,7 +190,7 @@
             </a>
           </li>
           {% endif %}
-      {% if site.author.yelp and site.footer-links-active.yelp %}
+	      {% if site.author.yelp and site.footer-links-active.yelp %}
           <li>
             <a href="https://{{ site.author.yelp }}.yelp.com" title="Yelp">
               <span class="fa-stack fa-lg" aria-hidden="true">
@@ -201,7 +201,24 @@
             </a>
           </li>
           {% endif %}
+	      {% if site.weibo.uid and site.footer-links-active.weibo %}
+          <li>
+            <a href="https://weibo.com/u/{{ site.weibo.uid }}" title="微博" target="_blank" rel="me">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">微博</span>
+            </a>
+          </li>
+          {% endif %}
         </ul>
+        <!-- 微博关注按钮 — 开放平台合作组件（审核必需） -->
+        {% if site.weibo.uid and site.footer-links-active.weibo %}
+        <div style="text-align:center;margin-bottom:16px;">
+          {% include weibo-follow.html %}
+        </div>
+        {% endif %}
         <p class="copyright text-muted">
 		  {{ site.author.name }}
 		  &nbsp;&bull;&nbsp;
