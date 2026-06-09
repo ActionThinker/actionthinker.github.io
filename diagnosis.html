@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>知识资产健康度诊断</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:linear-gradient(180deg,#F5EDE0 0%,#EDE4D4 100%);color:#2D2D2D;min-height:100vh;overflow-x:hidden}
+.app{max-width:480px;margin:0 auto;padding:0 0 60px}
+
+/* Header */
+.header{text-align:center;padding:48px 24px 32px}
+.header .badge{display:inline-block;font-size:12px;color:#B8956A;letter-spacing:3px;border:1px solid rgba(184,149,106,0.3);border-radius:20px;padding:6px 18px;margin-bottom:20px}
+.header h1{font-size:30px;font-weight:700;line-height:1.35;margin-bottom:10px;color:#1A1815}
+.header h1 em{font-style:normal;color:#C8963E}
+.header .sub{font-size:16px;color:#9B8B78}
+
+/* Progress */
+.progress-wrap{display:flex;align-items:center;padding:0 24px 28px;gap:10px}
+.progress-bar-wrap{flex:1;height:5px;background:#D4C5A0;border-radius:5px;overflow:hidden}
+.progress-bar-fill{height:100%;background:linear-gradient(90deg,#C8963E,#D4A843);border-radius:5px;transition:width .35s ease}
+.progress-num{font-size:13px;color:#B8956A;font-weight:600;min-width:40px;text-align:right}
+
+/* Question Card */
+.q-card{display:none;margin:0 20px;background:#FFFEF9;border-radius:16px;padding:32px 24px;box-shadow:0 4px 20px rgba(0,0,0,0.06),0 1px 4px rgba(0,0,0,0.04);animation:fadeIn .3s ease}
+.q-card.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.q-card .q-dim{font-size:13px;color:#C8963E;letter-spacing:2px;margin-bottom:10px;font-weight:600}
+.q-card .q-title{font-size:22px;font-weight:700;line-height:1.4;margin-bottom:28px;color:#1A1815}
+.q-card .q-hint{font-size:14px;color:#B8956A;margin-bottom:20px}
+
+/* Options */
+.options{display:flex;flex-direction:column;gap:10px}
+.option{display:flex;align-items:center;padding:16px 18px;border-radius:12px;border:1.5px solid #E8E0D5;cursor:pointer;transition:all .2s;font-size:17px;line-height:1.4;color:#3D3D3D;background:#FFFEF9}
+.option:active{transform:scale(.98)}
+.option.selected{border-color:#C8963E;background:rgba(200,150,62,0.06);box-shadow:0 0 0 3px rgba(200,150,62,0.08)}
+.option .indicator{width:22px;height:22px;border:2px solid #D4C5A0;border-radius:50%;margin-right:14px;flex-shrink:0;position:relative;transition:all .2s}
+.option.selected .indicator{border-color:#C8963E;background:#C8963E}
+.option.selected .indicator::after{content:'✓';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:12px;font-weight:700}
+/* Checkbox variant */
+.option.check .indicator{border-radius:6px}
+.option.check .indicator::after{content:''}
+.option.check.selected .indicator::after{content:'✓';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:12px;font-weight:700}
+
+/* Nav buttons */
+.nav-row{display:flex;gap:12px;margin:28px 0 0}
+.nav-row .btn{flex:1;padding:16px;border-radius:12px;font-size:17px;font-weight:600;border:none;cursor:pointer;font-family:inherit;transition:all .2s;text-align:center}
+.nav-row .btn:active{transform:scale(.97)}
+.btn-prev{background:#F0EBE0;color:#8B7B6B}
+.btn-next{background:#C8963E;color:#fff;box-shadow:0 2px 8px rgba(200,150,62,0.3)}
+.btn-next:disabled{opacity:.3;pointer-events:none;box-shadow:none}
+
+/* Result */
+.result{display:none;margin:0 20px;animation:fadeIn .4s ease}
+.result.active{display:block}
+.result-header{text-align:center;padding:20px 0}
+.result-header .r-badge{font-size:13px;color:#C8963E;letter-spacing:2px;font-weight:600;margin-bottom:8px}
+.result-header h2{font-size:26px;font-weight:700;color:#1A1815;line-height:1.35}
+.score-cards{display:flex;flex-direction:column;gap:12px;margin:24px 0}
+.s-card{background:#FFFEF9;border-radius:14px;padding:20px;display:flex;align-items:center;gap:16px;box-shadow:0 2px 12px rgba(0,0,0,0.04)}
+.s-card .s-icon{font-size:28px;flex-shrink:0}
+.s-card .s-info{flex:1}
+.s-card .s-name{font-size:14px;color:#B8956A;letter-spacing:1px;margin-bottom:4px}
+.s-card .s-bar-wrap{height:6px;background:#EDE4D4;border-radius:3px;overflow:hidden}
+.s-card .s-bar-fill{height:100%;background:linear-gradient(90deg,#C8963E,#D4A843);border-radius:3px;transition:width .6s ease}
+.s-card .s-score{font-size:28px;font-weight:700;color:#C8963E;font-family:'Georgia',serif;min-width:50px;text-align:right}
+.s-card .s-score sub{font-size:14px;color:#c4b99a}
+
+.verdict{padding:28px 24px;border-radius:14px;text-align:center;margin:20px 0}
+.verdict.green{background:linear-gradient(135deg,rgba(91,160,120,0.1),rgba(91,160,120,0.04));border:1px solid rgba(91,160,120,0.2)}
+.verdict.yellow{background:linear-gradient(135deg,rgba(200,150,62,0.1),rgba(200,150,62,0.04));border:1px solid rgba(200,150,62,0.2)}
+.verdict.red{background:linear-gradient(135deg,rgba(180,100,80,0.1),rgba(180,100,80,0.04));border:1px solid rgba(180,100,80,0.2)}
+.verdict .v-icon{font-size:40px;margin-bottom:10px}
+.verdict .v-title{font-size:21px;font-weight:700;margin-bottom:8px}
+.verdict.green .v-title{color:#3B7240}.verdict.yellow .v-title{color:#B8860B}.verdict.red .v-title{color:#B55A3A}
+.verdict .v-text{font-size:15px;color:#8B7B6B;line-height:1.6}
+
+.cta-block{background:#1A1815;border-radius:16px;padding:28px 24px;text-align:center;color:#F0E8D8;margin:20px 0}
+.cta-block .cta-title{font-size:20px;font-weight:700;margin-bottom:8px}
+.cta-block .cta-sub{font-size:14px;color:#B8956A;margin-bottom:20px}
+.cta-block .cta-btn{display:block;background:#C8963E;color:#fff;padding:16px;border-radius:10px;font-size:17px;font-weight:600;text-decoration:none;transition:all .2s}
+.cta-block .cta-btn:active{opacity:.85;transform:scale(.98)}
+.cta-block .cta-hint{font-size:13px;color:#8B7B6B;margin-top:14px}
+
+.brand-footer{text-align:center;padding:24px;color:#c4b99a;font-size:13px}
+.brand-footer strong{color:#C8963E}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- Header -->
+<div class="header" id="headerBlock">
+  <div class="badge">知识资产健康度诊断</div>
+  <h1>你多年的经验积累<br><em>到底是什么状态？</em></h1>
+  <div class="sub">8题 · 3分钟 · 即时出结果</div>
+</div>
+
+<!-- Progress -->
+<div class="progress-wrap" id="progressBlock">
+  <div class="progress-bar-wrap"><div class="progress-bar-fill" id="pbar"></div></div>
+  <div class="progress-num" id="pnum">1/8</div>
+</div>
+
+<!-- Q1 -->
+<div class="q-card active" data-q="1">
+  <div class="q-dim">📦 历史资产</div>
+  <div class="q-title">你过去做的项目资料，现在主要存放在哪？</div>
+  <div class="q-hint">可多选</div>
+  <div class="options" data-name="q1" data-type="multi">
+    <div class="option check" data-val="1"><div class="indicator"></div>旧电脑/旧硬盘里</div>
+    <div class="option check" data-val="1"><div class="indicator"></div>前公司的系统（可能已无法访问）</div>
+    <div class="option check" data-val="2"><div class="indicator"></div>个人网盘（百度云/iCloud等）</div>
+    <div class="option check" data-val="2"><div class="indicator"></div>微信/钉钉聊天记录里</div>
+    <div class="option check" data-val="3"><div class="indicator"></div>有整理好的个人知识库/文档系统</div>
+    <div class="option check" data-val="0"><div class="indicator"></div>完全不记得在哪了</div>
+  </div>
+  <div class="nav-row"><div class="btn btn-next" onclick="nextQ()">下一题 →</div></div>
+</div>
+
+<!-- Q2 -->
+<div class="q-card" data-q="2">
+  <div class="q-dim">📦 历史资产</div>
+  <div class="q-title">离开上一家公司时，你带走了多少自己的"作品"？</div>
+  <div class="options" data-name="q2" data-type="single">
+    <div class="option" data-val="1"><div class="indicator"></div>什么都没带</div>
+    <div class="option" data-val="2"><div class="indicator"></div>只带了简历要用的几个</div>
+    <div class="option" data-val="3"><div class="indicator"></div>能带的都拷了，但没整理</div>
+    <div class="option" data-val="4"><div class="indicator"></div>全部带出且分类整理好了</div>
+  </div>
+  <div class="nav-row"><div class="btn btn-prev" onclick="prevQ()">← 上一题</div><div class="btn btn-next" onclick="nextQ()">下一题 →</div></div>
+</div>
+
+<!-- Q3 -->
+<div class="q-card" data-q="3">
+  <div class="q-dim">📖 案例化能力</div>
+  <div class="q-title">不讲稿，讲你最成功的3个项目——你能讲清楚吗？</div>
+  <div class="options" data-name="q3" data-type="single">
+    <div class="option" data-val="1"><div class="indicator"></div>讲不太出来，记得但不系统</div>
+    <div class="option" data-val="2"><div class="indicator"></div>能讲大概，缺关键数据</div>
+    <div class="option" data-val="3"><div class="indicator"></div>能讲清楚，但缺方法论提炼</div>
+    <div class="option" data-val="4"><div class="indicator"></div>有现成的案例库随时可调</div>
+  </div>
+  <div class="nav-row"><div class="btn btn-prev" onclick="prevQ()">← 上一题</div><div class="btn btn-next" onclick="nextQ()">下一题 →</div></div>
+</div>
+
+<!-- Q4 -->
+<div class="q-card" data-q="4">
+  <div class="q-dim">📖 案例化能力</div>
+  <div class="q-title">翻了两小时没找到以前做过的类似项目——这种情况？</div>
+  <div class="options" data-name="q4" data-type="single">
+    <div class="option" data-val="1"><div class="indicator"></div>经常发生 / 这是常态</div>
+    <div class="option" data-val="2"><div class="indicator"></div>有过一两次</div>
+    <div class="option" data-val="3"><div class="indicator"></div>很少发生</div>
+    <div class="option" data-val="4"><div class="indicator"></div>从没发生过——我有系统</div>
+  </div>
+  <div class="nav-row"><div class="btn btn-prev" onclick="prevQ()">← 上一题</div><div class="btn btn-next" onclick="nextQ()">下一题 →</div></div>
+</div>
+
+<!-- Q5 -->
+<div class="q-card" data-q="5">
+  <div class="q-dim">🔧 复用效率</div>
+  <div class="q-title">新项目来了，你做方案的起点通常是？</div>
+  <div class="options" data-name="q5" data-type="single">
+    <div class="option" data-val="1"><div class="indicator"></div>从零开始，上网查</div>
+    <div class="option" data-val="2"><div class="indicator"></div>找以前的同类方案（翻半天）</div>
+    <div class="option" data-val="3"><div class="indicator"></div>有模板库，直接改</div>
+    <div class="option" data-val="4"><div class="indicator"></div>AI从我的历史资料中提取参考</div>
+  </div>
+  <div class="nav-row"><div class="btn btn-prev" onclick="prevQ()">← 上一题</div><div class="btn btn-next" onclick="nextQ()">下一题 →</div></div>
+</div>
+
+<!-- Q6 -->
+<div class="q-card" data-q="6">
+  <div class="q-dim">🔧 复用效率</div>
+  <div class="q-title">同事问你一个专业问题，你怎么回答？</div>
+  <div class="options" data-name="q6" data-type="single">
+    <div class="option" data-val="1"><div class="indicator"></div>口头讲一遍——每次都重头讲</div>
+    <div class="option" data-val="2"><div class="indicator"></div>翻聊天记录找之前回复截图发过去</div>
+    <div class="option" data-val="3"><div class="indicator"></div>有固定的文档/模板可以直接发</div>
+    <div class="option" data-val="4"><div class="indicator"></div>我有一个AI知识库，同事自己查就行</div>
+  </div>
+  <div class="nav-row"><div class="btn btn-prev" onclick="prevQ()">← 上一题</div><div class="btn btn-next" onclick="nextQ()">下一题 →</div></div>
+</div>
+
+<!-- Q7 -->
+<div class="q-card" data-q="7">
+  <div class="q-dim">🤖 AI就绪度</div>
+  <div class="q-title">你平时有记录和复盘的习惯吗？</div>
+  <div class="options" data-name="q7" data-type="single">
+    <div class="option" data-val="1"><div class="indicator"></div>几乎没有——做完就过了</div>
+    <div class="option" data-val="2"><div class="indicator"></div>偶尔记录——想到了记一笔</div>
+    <div class="option" data-val="3"><div class="indicator"></div>有习惯——每天/每周有复盘</div>
+    <div class="option" data-val="4"><div class="indicator"></div>已经有系统了（Obsidian/Notion/飞书等）</div>
+  </div>
+  <div class="nav-row"><div class="btn btn-prev" onclick="prevQ()">← 上一题</div><div class="btn btn-next" onclick="nextQ()">下一题 →</div></div>
+</div>
+
+<!-- Q8 -->
+<div class="q-card" data-q="8">
+  <div class="q-dim">🤖 AI就绪度</div>
+  <div class="q-title">"我的资料可以让AI自由检索调用"——你给自己打几分？</div>
+  <div class="options" data-name="q8" data-type="single">
+    <div class="option" data-val="1"><div class="indicator"></div>1-3分 · 基本不行</div>
+    <div class="option" data-val="2"><div class="indicator"></div>4-5分 · 有一部分可以</div>
+    <div class="option" data-val="3"><div class="indicator"></div>6-7分 · 大部分可以</div>
+    <div class="option" data-val="4"><div class="indicator"></div>8-10分 · AI可以自由检索调用</div>
+  </div>
+  <div class="nav-row"><div class="btn btn-prev" onclick="prevQ()">← 上一题</div><div class="btn btn-next" onclick="showResult()">查看我的诊断结果 ✨</div></div>
+</div>
+
+<!-- Result -->
+<div class="result" id="resultBlock">
+  <div class="result-header">
+    <div class="r-badge">📊 你的诊断结果</div>
+    <h2>4维知识资产<br>健康度</h2>
+  </div>
+  <div class="score-cards" id="scoreCards"></div>
+  <div class="verdict" id="verdictBox"></div>
+  <div class="cta-block">
+    <div class="cta-title">想让你的分数变得更好？</div>
+    <div class="cta-sub">预约30分钟免费解读，我会帮你分析——<br>你的短板在哪里，第一步该做什么。</div>
+    <a class="cta-btn" id="bookBtn" href="#" target="_blank">📅 预约陈露 · 30分钟免费解读</a>
+    <div class="cta-hint">没有任何推销压力。就是帮你把诊断结果看懂。</div>
+  </div>
+  <div class="brand-footer">
+    关注公众号 <strong>ActionThinker</strong> · 回复「诊断」可随时重测
+  </div>
+</div>
+
+</div>
+
+<script>
+let currentQ = 1;
+const totalQ = 8;
+const answers = {};
+
+// Option selection
+document.querySelectorAll('.option').forEach(opt => {
+  opt.addEventListener('click', function(){
+    const parent = this.parentElement;
+    const type = parent.dataset.type;
+    const qName = parent.dataset.name;
+
+    if(type === 'single'){
+      parent.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+      this.classList.add('selected');
+      answers[qName] = parseInt(this.dataset.val);
+    } else {
+      this.classList.toggle('selected');
+      const selected = parent.querySelectorAll('.option.selected');
+      if(selected.length === 0){
+        delete answers[qName];
+      } else {
+        const vals = Array.from(selected).map(o => parseInt(o.dataset.val));
+        if(vals.includes(0)){ answers[qName] = 1; }
+        else{
+          const max = Math.max(...vals);
+          answers[qName] = max >= 3 ? max : Math.round(vals.reduce((a,b)=>a+b,0)/vals.length);
+        }
+      }
+    }
+    updateNav();
+  });
+});
+
+function updateNav(){
+  const card = document.querySelector(`[data-q="${currentQ}"]`);
+  const btn = card.querySelector('.btn-next');
+  const qName = card.querySelector('.options').dataset.name;
+  if(btn && !btn.textContent.includes('查看')){
+    btn.disabled = !answers[qName];
+  }
+}
+
+function showQ(n){
+  document.querySelectorAll('.q-card').forEach(c => c.classList.remove('active'));
+  const card = document.querySelector(`[data-q="${n}"]`);
+  if(card){
+    card.classList.add('active');
+    updateNav();
+  }
+  document.getElementById('pbar').style.width = (n/totalQ*100)+'%';
+  document.getElementById('pnum').textContent = n+'/'+totalQ;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function nextQ(){
+  if(currentQ < totalQ){ currentQ++; showQ(currentQ); }
+}
+function prevQ(){
+  if(currentQ > 1){ currentQ--; showQ(currentQ); }
+}
+
+function calcDim(qs){
+  const vals = qs.map(q => answers[q]).filter(v => v !== undefined);
+  if(vals.length === 0) return 0;
+  return Math.round(vals.reduce((a,b)=>a+b,0) / vals.length * 2.5);
+}
+
+function showResult(){
+  document.querySelectorAll('.q-card').forEach(c => c.classList.remove('active'));
+  document.getElementById('headerBlock').style.display = 'none';
+  document.getElementById('progressBlock').style.display = 'none';
+
+  const dims = {
+    '📦 历史资产': calcDim(['q1','q2']),
+    '📖 案例化能力': calcDim(['q3','q4']),
+    '🔧 复用效率': calcDim(['q5','q6']),
+    '🤖 AI就绪度': calcDim(['q7','q8'])
+  };
+
+  const cards = document.getElementById('scoreCards');
+  cards.innerHTML = '';
+  let total = 0;
+  Object.entries(dims).forEach(([name,score]) => {
+    total += score;
+    const div = document.createElement('div');
+    div.className = 's-card';
+    div.innerHTML = `
+      <div class="s-icon">${name.slice(0,2)}</div>
+      <div class="s-info">
+        <div class="s-name">${name.slice(2)}</div>
+        <div class="s-bar-wrap"><div class="s-bar-fill" style="width:${score*10}%"></div></div>
+      </div>
+      <div class="s-score">${score}<sub>/10</sub></div>
+    `;
+    cards.appendChild(div);
+  });
+
+  const avg = Math.round(total / 4);
+  const vb = document.getElementById('verdictBox');
+  if(avg >= 7){
+    vb.className = 'verdict green';
+    vb.innerHTML = `<div class="v-icon">🟢</div><div class="v-title">你的知识已经是资产了</div><div class="v-text">你的经验有系统、可复用、AI友好。下一步：从"个人资产"升级到"团队资产"。</div>`;
+  } else if(avg >= 4){
+    vb.className = 'verdict yellow';
+    vb.innerHTML = `<div class="v-icon">🟡</div><div class="v-title">有意识，但还没系统化</div><div class="v-text">你知道这些东西重要，开始做了一些整理——但还没形成可持续的系统。最大的风险：人走了，经验就散了。</div>`;
+  } else {
+    vb.className = 'verdict red';
+    vb.innerHTML = `<div class="v-icon">🔴</div><div class="v-title">经验在人不在系统</div><div class="v-text">项目做完就过，资料散落各处，判断力只在脑子里。不是能力问题——是缺一个把经验变成资产的方法。</div>`;
+  }
+
+  document.getElementById('resultBlock').classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// Init
+updateNav();
+</script>
+</body>
+</html>
