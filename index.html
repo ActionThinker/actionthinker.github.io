@@ -7,6 +7,22 @@ use-site-title: true
 
 <style>
 /* ═══ INDEX v5.0 — 陈露个人门户 · 知行合一 ═══ */
+
+/* ── 修复1：导航栏固定定位不压内容 ── */
+body {
+  padding-top: 50px;  /* 移动端导航栏高度 */
+  background: #ffffff;  /* 统一底色，避免 body #FAFAF8 透出 */
+}
+@media (min-width: 768px) {
+  body {
+    padding-top: 90px;  /* 桌面端导航栏（含40px padding） */
+  }
+}
+
+/* ── 修复2：抵御 Beautiful Jekyll 全局样式渗透 ── */
+.idx-page a { color: inherit; }
+.idx-page p { margin: 0; line-height: inherit; }
+
 .idx-page {
   --ink: #1A1A2E;
   --gold: #C4882F;
