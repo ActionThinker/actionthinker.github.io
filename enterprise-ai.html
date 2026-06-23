@@ -1,0 +1,482 @@
+---
+layout: base
+title: 企业AI落地服务 · 陈露 ActionThinker
+subtitle: AI方向太多，给你一条落地的路径
+use-site-title: false
+---
+
+<style>
+/* ═══ Enterprise AI Landing — Why-How-What ═══ */
+.ea-page {
+  --ink: #1A1A2E;
+  --gold: #C4882F;
+  --gold-light: #FEFBF5;
+  --gold-dark: #A06820;
+  --muted: #78716c;
+  --faint: #E8E5E0;
+  --surface: #ffffff;
+  --bg: #FAFAF8;
+  --radius: 14px;
+  --radius-lg: 20px;
+
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--ink);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+.ea-page *, .ea-page *::before, .ea-page *::after { box-sizing: border-box; }
+
+.ea-page h1, .ea-page h2, .ea-page h3, .ea-page h4 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ink);
+}
+.ea-page p { margin: 0; }
+.ea-page ul { margin: 0; padding: 0; list-style: none; }
+.ea-page a { text-decoration: none; color: inherit; }
+
+.ea-container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.ea-section { padding: 80px 0; }
+
+.ea-section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+}
+.ea-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(26px, 3.5vw, 36px); font-weight: 600;
+  color: var(--ink); margin-bottom: 14px; line-height: 1.2;
+}
+.ea-section-title em { font-style: normal; color: var(--gold); }
+.ea-section-desc {
+  font-size: 16px; color: var(--muted);
+  max-width: 600px; line-height: 1.8; margin-bottom: 48px;
+}
+
+.ea-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 34px; border-radius: 10px;
+  font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600;
+  text-decoration: none; transition: all 0.25s; cursor: pointer; border: none;
+}
+a.ea-btn-primary { background: var(--ink); color: var(--gold); }
+a.ea-btn-primary:visited { color: var(--gold); }
+a.ea-btn-primary:hover {
+  background: var(--gold); color: #fff;
+  transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196,136,47,0.25);
+}
+a.ea-btn-outline {
+  background: transparent; color: var(--ink);
+  border: 2px solid var(--faint);
+}
+a.ea-btn-outline:visited { color: var(--ink); }
+a.ea-btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+/* ═══ Hero ═══ */
+.ea-hero {
+  background: var(--bg);
+  border-bottom: 1px solid var(--faint);
+  padding: 96px 0 80px;
+}
+.ea-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+  color: var(--gold-dark); background: var(--gold-light);
+  padding: 5px 14px; border-radius: 99px; margin-bottom: 28px;
+  border: 1px solid rgba(196,136,47,0.2);
+}
+.ea-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: block; }
+.ea-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 5vw, 52px); font-weight: 600;
+  line-height: 1.2; color: var(--ink);
+  margin-bottom: 24px; max-width: 720px;
+}
+.ea-hero h1 em { font-style: normal; color: var(--gold); }
+.ea-hero-sub {
+  font-size: 17px; color: var(--muted); max-width: 580px;
+  line-height: 1.8; margin-bottom: 44px;
+}
+.ea-hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ═══ Why: 三张处境卡 ═══ */
+.ea-why-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 1px; background: var(--faint);
+  margin-top: 52px;
+  border: 1px solid var(--faint); border-radius: var(--radius-lg); overflow: hidden;
+}
+.ea-why-card {
+  background: var(--surface); padding: 32px 28px;
+  transition: background 0.2s;
+}
+.ea-why-card:hover { background: var(--gold-light); }
+.ea-why-icon { font-size: 24px; margin-bottom: 16px; }
+.ea-why-title { font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
+.ea-why-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+
+/* ═══ How: 三步走 ═══ */
+.ea-how-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px; margin-top: 52px;
+}
+.ea-how-card {
+  background: var(--surface); border: 1px solid var(--faint);
+  border-radius: var(--radius-lg); padding: 36px 28px;
+  position: relative; transition: border-color 0.2s, transform 0.15s;
+}
+.ea-how-card:hover { border-color: rgba(196,136,47,0.3); transform: translateY(-2px); }
+.ea-how-step {
+  font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700;
+  color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.ea-how-icon { font-size: 32px; margin-bottom: 8px; }
+.ea-how-title { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--ink); margin-bottom: 12px; }
+.ea-how-body { font-size: 14px; color: var(--muted); line-height: 1.8; }
+.ea-how-body strong { color: var(--ink); }
+.ea-how-arrow {
+  display: none;
+}
+@media (min-width: 769px) {
+  .ea-how-arrow {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; color: var(--faint); position: absolute;
+    right: -34px; top: 50%; transform: translateY(-50%);
+  }
+}
+.ea-how-footnote {
+  grid-column: 1 / -1;
+  background: var(--bg); border-radius: var(--radius-lg);
+  padding: 24px 28px; margin-top: 8px;
+  font-size: 14px; color: var(--muted); line-height: 1.7; text-align: center;
+}
+.ea-how-footnote strong { color: var(--gold-dark); }
+
+/* ═══ What: 你得到什么 ═══ */
+.ea-what-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 20px; margin-top: 52px;
+}
+.ea-what-card {
+  background: var(--surface); border: 1px solid var(--faint);
+  border-radius: var(--radius-lg); padding: 32px 28px;
+  transition: border-color 0.2s, transform 0.15s;
+  text-align: center;
+}
+.ea-what-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.ea-what-icon { font-size: 36px; margin-bottom: 16px; }
+.ea-what-title { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
+.ea-what-body { font-size: 13.5px; color: var(--muted); line-height: 1.8; }
+
+/* ═══ Why Me ═══ */
+.ea-me-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 20px; margin-top: 52px;
+}
+.ea-me-card {
+  background: var(--surface); border: 1px solid var(--faint);
+  border-radius: var(--radius-lg); padding: 28px;
+  transition: border-color 0.2s;
+}
+.ea-me-card:hover { border-color: rgba(196,136,47,0.3); }
+.ea-me-icon { font-size: 28px; margin-bottom: 14px; }
+.ea-me-title { font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
+.ea-me-body { font-size: 13.5px; color: var(--muted); line-height: 1.75; }
+
+/* ═══ Insight Banner ═══ */
+.ea-insight {
+  background: var(--ink); color: #fff;
+  padding: 44px 0; text-align: center;
+}
+.ea-insight p { font-size: 18px; line-height: 1.8; max-width: 680px; margin: 0 auto; }
+.ea-insight em { font-style: normal; color: var(--gold); }
+
+/* ═══ CTA ═══ */
+.ea-cta {
+  padding: 96px 0;
+  text-align: center;
+  background: var(--bg);
+}
+.ea-cta-pretitle {
+  font-family: 'DM Sans', sans-serif; font-size: 11px;
+  color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;
+}
+.ea-cta h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 600; color: var(--ink); margin-bottom: 20px; }
+.ea-cta-sub { font-size: 16px; color: var(--muted); max-width: 520px; margin: 0 auto 44px; line-height: 1.8; text-align: center; }
+.ea-cta-options { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.ea-cta-card {
+  background: var(--surface); border: 1px solid var(--faint); border-radius: var(--radius-lg);
+  padding: 28px 32px; text-align: left; max-width: 300px; width: 100%;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.ea-cta-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.ea-cta-card.primary { border-color: var(--gold); border-width: 2px; }
+.ea-cta-card-label {
+  font-family: 'DM Sans', sans-serif; font-size: 11px; color: var(--gold);
+  font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;
+}
+.ea-cta-card-title { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+.ea-cta-card-body { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+.ea-cta-card-action {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
+  color: var(--gold); text-decoration: none;
+}
+.ea-cta-card-action::after { content: '→'; }
+.ea-cta-card-action:hover { color: var(--gold-dark); }
+.ea-cta-wechat { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--muted); margin-top: 36px; }
+.ea-cta-wechat strong { color: var(--ink); }
+
+/* ═══ Animations ═══ */
+@keyframes ea-fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.ea-fade-up { animation: ea-fadeUp 0.6s ease forwards; }
+.ea-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.ea-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.ea-delay-3 { animation-delay: 0.3s; opacity: 0; }
+
+/* ═══ Responsive ═══ */
+@media (max-width: 768px) {
+  .ea-why-grid,
+  .ea-how-grid,
+  .ea-what-grid,
+  .ea-me-grid { grid-template-columns: 1fr; }
+  .ea-hero { padding: 64px 0 50px; }
+  .ea-section { padding: 50px 0; }
+}
+</style>
+
+<div class="ea-page">
+
+<!-- ═══ 1. HERO ═══ -->
+<section class="ea-hero">
+  <div class="ea-container">
+    <div class="ea-hero-badge ea-fade-up">企业AI落地服务</div>
+    <h1 class="ea-fade-up">
+      AI方向太多，方案太杂<br>给你一条<em>清晰的落地路径</em>
+    </h1>
+    <p class="ea-hero-sub ea-fade-up ea-delay-1">
+      不做通用培训，不卖标准工具，不写没人看的咨询报告。
+      我和你一起找到你业务里AI杠杆最高的场景，验证可行性，把它真正跑起来。
+    </p>
+    <div class="ea-hero-ctas ea-fade-up ea-delay-2">
+      <a href="#ea-cta" class="ea-btn ea-btn-primary">聊聊你的AI方向 →</a>
+      <a href="#ea-how" class="ea-btn ea-btn-outline">看看怎么做</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 2. WHY — 企业主的真实处境 ═══ -->
+<section class="ea-section">
+  <div class="ea-container">
+    <div class="ea-section-label">你的处境</div>
+    <h2 class="ea-section-title">AI重要是共识。<em>怎么落地</em>才是真问题。</h2>
+    <p class="ea-section-desc">这三位老板说的话，你是不是也想过——</p>
+
+    <div class="ea-why-grid">
+      <div class="ea-why-card">
+        <div class="ea-why-icon">🌊</div>
+        <div class="ea-why-title">信息太多，判断不了</div>
+        <div class="ea-why-body">
+          每天都有新工具、新模型、新方案。供应商都说自己的最好。
+          但没有一个能回答：<strong>在我这个行业、我这个生意里，AI到底能做什么？</strong>
+        </div>
+      </div>
+      <div class="ea-why-card">
+        <div class="ea-why-icon">🔧</div>
+        <div class="ea-why-title">工具买了，用不起来</div>
+        <div class="ea-why-body">
+          给团队配了AI工具，培训也做了。但回到工位还是不会用——
+          因为通用AI跟你具体的业务流程之间，<strong>差着一层没人帮你填的东西</strong>。
+        </div>
+      </div>
+      <div class="ea-why-card">
+        <div class="ea-why-icon">💰</div>
+        <div class="ea-why-title">怕选错，更怕什么都不做</div>
+        <div class="ea-why-body">
+          试过一个方向，投入了时间精力，发现跑不通。
+          想再试别的，但不确定这次值不值得赌。
+          <strong>你缺的不是AI知识——是一个能帮你判断的人。</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 3. HOW — 三步走 ═══ -->
+<section class="ea-section" id="ea-how" style="background:var(--bg)">
+  <div class="ea-container">
+    <div class="ea-section-label">怎么落地</div>
+    <h2 class="ea-section-title">三步走：<em>发现 → 验证 → 交付</em></h2>
+    <p class="ea-section-desc">不是先卖你一个方案再执行。每一步都先做出结果，你再决定要不要继续往下走。</p>
+
+    <div class="ea-how-grid">
+      <div class="ea-how-card">
+        <span class="ea-how-arrow">→</span>
+        <div class="ea-how-step">第一步</div>
+        <div class="ea-how-icon">🔍</div>
+        <div class="ea-how-title">场景发现</div>
+        <div class="ea-how-body">
+          我们一起把你的业务流程拆开来看。<strong>哪些环节最耗人？哪些判断最依赖经验？</strong>把所有可能的AI机会列出来，按价值和可行性排序。这一阶段的产出不是一份精美报告——是一张<strong>你和你的团队看得懂、能讨论的AI机会地图</strong>。
+        </div>
+      </div>
+      <div class="ea-how-card">
+        <span class="ea-how-arrow">→</span>
+        <div class="ea-how-step">第二步</div>
+        <div class="ea-how-icon">⚡</div>
+        <div class="ea-how-title">快速验证</div>
+        <div class="ea-how-body">
+          从机会地图里挑1-2个最高价值的场景，<strong>做一个可用的原型</strong>。让真实业务数据和真实用户在真实场景里测试——不是Demo，是能产生实际判断或实际输出的东西。用最小的投入验证最大的可能性。
+        </div>
+      </div>
+      <div class="ea-how-card">
+        <div class="ea-how-step">第三步</div>
+        <div class="ea-how-icon">🚀</div>
+        <div class="ea-how-title">落地迭代</div>
+        <div class="ea-how-body">
+          验证跑通之后，把它<strong>真正装进你的业务流程</strong>：打磨细节、优化效果、培训团队、建立使用规范。让那个验证过的场景，从"还行能用"变成<strong>团队日常工作的一部分</strong>。然后考虑下一个场景。
+        </div>
+      </div>
+      <div class="ea-how-footnote">
+        <strong>每一步做完再决定下一步。</strong>从场景发现你就能判断值不值得继续。如果你决定停在任何一步，你拿到的东西已经可以独立使用——不需要"全部做完才有价值"。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 4. WHAT — 你得到什么 ═══ -->
+<section class="ea-section">
+  <div class="ea-container">
+    <div class="ea-section-label">你得到什么</div>
+    <h2 class="ea-section-title">不是一个方案文档，是<em>真正跑起来的能力</em></h2>
+    <p class="ea-section-desc">做完之后，你拿到的不是一本没人翻的咨询报告。</p>
+
+    <div class="ea-what-grid">
+      <div class="ea-what-card">
+        <div class="ea-what-icon">🗺️</div>
+        <div class="ea-what-title">一张看清方向的AI机会地图</div>
+        <div class="ea-what-body">你自己的业务流程里，哪些值得用AI、哪些不着急、哪些现在做不了——一目了然。</div>
+      </div>
+      <div class="ea-what-card">
+        <div class="ea-what-icon">✅</div>
+        <div class="ea-what-title">一个验证过的AI场景</div>
+        <div class="ea-what-body">从"能不能做"变成"已经在跑"。真实数据、真实用户、真实效果。</div>
+      </div>
+      <div class="ea-what-card">
+        <div class="ea-what-icon">🧠</div>
+        <div class="ea-what-title">团队自己的AI能力</div>
+        <div class="ea-what-body">不只是结果，<br>过程中你的团队学会怎么用AI解决自己的业务问题——这个能力会长在身上。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 5. WHY ME ═══ -->
+<section class="ea-section" style="background:var(--bg)">
+  <div class="ea-container">
+    <div class="ea-section-label">为什么是我</div>
+    <h2 class="ea-section-title">懂产业、懂技术、懂落地，<em>三者同时在一个人身上</em></h2>
+    <p class="ea-section-desc">这件事市场上提供的人很少——因为需要跨三个领域的能力。</p>
+
+    <div class="ea-me-grid">
+      <div class="ea-me-card">
+        <div class="ea-me-icon">🏭</div>
+        <div class="ea-me-title">懂产业</div>
+        <div class="ea-me-body">
+          15年知识管理实践，服务过50+头部品牌。不是拿着AI锤子找钉子——我知道你的业务怎么转、决策怎么做、团队怎么管。
+        </div>
+      </div>
+      <div class="ea-me-card">
+        <div class="ea-me-icon">🤖</div>
+        <div class="ea-me-title">懂技术</div>
+        <div class="ea-me-body">
+          AI Agent实战交付，500+企业培训学员。知道AI能做什么、不能做什么、边界在哪。不会被技术厂商的话术带着走。
+        </div>
+      </div>
+      <div class="ea-me-card">
+        <div class="ea-me-icon">🔩</div>
+        <div class="ea-me-title">懂落地</div>
+        <div class="ea-me-body">
+          从PPT到真实运行，中间差的每一步我都走过。不是告诉你"应该怎么做"，是跟你一起把它做出来。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 6. INSIGHT ═══ -->
+<div class="ea-insight">
+  <div class="ea-container">
+    <p>你的同行已经在用AI了。但焦虑不需要——<em>你需要的是一张属于自己的AI落地地图</em>，和一个能陪你走通第一条路的人。</p>
+  </div>
+</div>
+
+<!-- ═══ 7. CTA ═══ -->
+<section class="ea-cta" id="ea-cta">
+  <div class="ea-container">
+    <div class="ea-cta-pretitle">开始第一步</div>
+    <h2>AI落地这件事，<br>从一次30分钟沟通开始</h2>
+    <p class="ea-cta-sub">
+      不需要做任何决定。告诉我你的行业、团队规模、目前最让你犹豫的AI方向。
+      我来判断是否适合，以及从哪一步开始最划算。
+    </p>
+
+    <div class="ea-cta-options">
+      <div class="ea-cta-card primary">
+        <div class="ea-cta-card-label">免费沟通</div>
+        <div class="ea-cta-card-title">聊聊你的AI方向</div>
+        <div class="ea-cta-card-body">30分钟微信或电话。告诉我你的生意、你的困惑——我帮你做第一轮判断：方向和优先级。</div>
+        <a href="mailto:chenlu@opclab.cn?subject=企业AI落地沟通" class="ea-cta-card-action">预约沟通</a>
+      </div>
+      <div class="ea-cta-card">
+        <div class="ea-cta-card-label">还在调研</div>
+        <div class="ea-cta-card-title">看看我们的方法</div>
+        <div class="ea-cta-card-body">企业的AI落地路径，三步走：场景发现 → 快速验证 → 落地迭代。每一阶段都有看得见的产出。</div>
+        <a href="#ea-how" class="ea-cta-card-action">再看一遍流程</a>
+      </div>
+      <div class="ea-cta-card">
+        <div class="ea-cta-card-label">问题更具体</div>
+        <div class="ea-cta-card-title">企业知识资产化</div>
+        <div class="ea-cta-card-body">如果你已经清楚问题在哪——比如核心专家的经验在流失——我们有更深度的知识资产化服务。</div>
+        <a href="/enterprise-consulting" class="ea-cta-card-action">了解知识资产化 →</a>
+      </div>
+    </div>
+
+    <div class="ea-cta-wechat">
+      或直接微信：<strong>ActionThinker</strong> · 邮件：<strong>chenlu@opclab.cn</strong>
+      <br><span style="font-size:12px;color:var(--muted)">24小时内回复。不是AI，是我本人。</span>
+    </div>
+  </div>
+</section>
+
+</div><!-- /.ea-page -->
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "企业AI落地服务",
+  "provider": {
+    "@type": "Person",
+    "name": "陈露",
+    "jobTitle": "企业AI落地顾问"
+  },
+  "description": "帮企业决策者找到AI最高价值的落地场景——从场景发现到快速验证到落地迭代，不是卖工具也不是写报告，是真正把AI跑进业务流程。",
+  "serviceType": "企业AI落地服务",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "企业创始人 · 业务决策者 · 想要AI落地但不确定从哪开始的企业管理者"
+  }
+}
+</script>
