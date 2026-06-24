@@ -21,7 +21,11 @@ use-site-title: false
 body { padding-top: 50px; background: #ffffff; }
 @media (min-width: 768px) { body { padding-top: 90px; } }
 .et-container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-.et-hero { text-align: center; padding: 100px 0 80px; }
+.et-hero {
+  background: var(--bg);
+  border-bottom: 1px solid var(--faint);
+  padding: 96px 0 80px;
+}
 .et-hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: 'DM Sans', sans-serif;
@@ -31,10 +35,15 @@ body { padding-top: 50px; background: #ffffff; }
   border: 1px solid rgba(196,136,47,0.2);
 }
 .et-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: block; }
-.et-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px,5.2vw,50px); font-weight: 600; color: var(--ink); line-height: 1.15; margin-bottom: 24px; }
-.et-hero h1 em { font-style: italic; color: var(--gold); }
-.et-hero-sub { font-size: 17px; color: var(--muted); max-width: 580px; margin: 10px auto 56px; line-height: 1.8; }
-.et-hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.et-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 5vw, 52px); font-weight: 600;
+  line-height: 1.2; color: var(--ink);
+  margin-bottom: 24px; max-width: 720px;
+}
+.et-hero h1 em { font-style: normal; color: var(--gold); }
+.et-hero-sub { font-size: 17px; color: var(--muted); max-width: 580px; line-height: 1.8; margin: 10px auto 56px; }
+.et-hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
 .btn { display: inline-block; padding: 14px 34px; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.25s; cursor: pointer; }
 .btn-primary { background: var(--ink); color: var(--gold); }
 .btn-primary:hover { background: var(--gold); color: #fff; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196,136,47,0.25); }
@@ -114,17 +123,17 @@ body { padding-top: 50px; background: #ffffff; }
 }
 </style>
 
-<div class="et-container">
-<div class="et-hero">
-  <div class="et-hero-badge">企业AI化转型 · 实战工作坊</div>
-  <h1>你的企业买了AI工具<br>但90%的人<em>只用它聊天</em></h1>
-  <p class="et-hero-sub">不是再上一堂AI科普课。是带着你企业的真实业务问题，现场练、现场出成果、训后落地。</p>
-  <div class="et-hero-ctas">
-    <a href="#cta" class="btn btn-primary">获取定制化培训方案 →</a>
-    <a href="#pain" class="btn btn-outline">企业为什么需要AI培训</a>
+<section class="et-hero">
+  <div class="et-container">
+    <div class="et-hero-badge">企业AI化转型 · 实战工作坊</div>
+    <h1>你的企业买了AI工具<br>但90%的人<em>只用它聊天</em></h1>
+    <p class="et-hero-sub">不是再上一堂AI科普课。是带着你企业的真实业务问题，现场练、现场出成果、训后落地。</p>
+    <div class="et-hero-ctas">
+      <a href="#cta" class="btn btn-primary">获取定制化培训方案 →</a>
+      <a href="#pain" class="btn btn-outline">企业为什么需要AI培训</a>
+    </div>
   </div>
-</div>
-</div>
+</section>
 
 <div class="et-container" id="pain">
 <div class="et-section">
