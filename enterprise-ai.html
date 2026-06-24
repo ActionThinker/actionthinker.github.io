@@ -7,6 +7,11 @@ use-site-title: false
 
 <style>
 /* ═══ Enterprise AI Landing — Why-How-What ═══ */
+
+/* ── 与首页一致的导航栏补偿 ── */
+body { padding-top: 50px; background: #ffffff; }
+@media (min-width: 768px) { body { padding-top: 90px; } }
+
 .ea-page {
   --ink: #1A1A2E;
   --gold: #C4882F;
@@ -102,7 +107,7 @@ a.ea-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
 .ea-hero h1 em { font-style: normal; color: var(--gold); }
 .ea-hero-sub {
   font-size: 17px; color: var(--muted); max-width: 580px;
-  line-height: 1.8; margin-bottom: 44px;
+  line-height: 1.8; margin: 10px auto 56px;
 }
 .ea-hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
 

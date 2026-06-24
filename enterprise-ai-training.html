@@ -18,13 +18,22 @@ use-site-title: false
   --radius: 14px;
   --radius-lg: 20px;
 }
-body { background: var(--bg); }
+body { padding-top: 50px; background: #ffffff; }
+@media (min-width: 768px) { body { padding-top: 90px; } }
 .et-container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-.et-hero { text-align: center; padding: 120px 0 80px; }
-.et-hero-badge { display: inline-block; background: var(--gold-light); color: var(--gold-dark); padding: 5px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 24px; }
-.et-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px,5.2vw,50px); font-weight: 600; color: var(--ink); line-height: 1.15; margin-bottom: 18px; }
+.et-hero { text-align: center; padding: 100px 0 80px; }
+.et-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+  color: var(--gold-dark); background: var(--gold-light);
+  padding: 5px 14px; border-radius: 99px; margin-bottom: 28px;
+  border: 1px solid rgba(196,136,47,0.2);
+}
+.et-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: block; }
+.et-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px,5.2vw,50px); font-weight: 600; color: var(--ink); line-height: 1.15; margin-bottom: 24px; }
 .et-hero h1 em { font-style: italic; color: var(--gold); }
-.et-hero-sub { font-size: 18px; color: var(--muted); max-width: 600px; margin: 0 auto 32px; line-height: 1.7; }
+.et-hero-sub { font-size: 17px; color: var(--muted); max-width: 580px; margin: 10px auto 56px; line-height: 1.8; }
 .et-hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .btn { display: inline-block; padding: 14px 34px; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.25s; cursor: pointer; }
 .btn-primary { background: var(--ink); color: var(--gold); }
@@ -109,7 +118,7 @@ body { background: var(--bg); }
 <div class="et-hero">
   <div class="et-hero-badge">企业AI化转型 · 实战工作坊</div>
   <h1>你的企业买了AI工具<br>但90%的人<em>只用它聊天</em></h1>
-  <p class="et-hero-sub">不是再上一堂AI科普课。是带着你企业的真实业务问题，现场练、现场出成果、训后落地。</p>
+  <p class="et-hero-sub">不做通用培训，不卖标准工具，不写没人看的咨询报告。我和你一起找到你业务里AI杠杆最高的场景，验证可行性，把它真正跑起来。</p>
   <div class="et-hero-ctas">
     <a href="#cta" class="btn btn-primary">获取定制化培训方案 →</a>
     <a href="#pain" class="btn btn-outline">企业为什么需要AI培训</a>
