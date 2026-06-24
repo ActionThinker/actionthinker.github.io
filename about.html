@@ -18,28 +18,52 @@ use-site-title: false
   --radius: 14px;
   --radius-lg: 20px;
 }
-body { background: var(--bg); }
-.ab-container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+body { padding-top: 50px; background: #ffffff; }
+@media (min-width: 768px) { body { padding-top: 90px; } }
+.ab-container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 
 .ab-hero {
-  text-align: center;
-  padding: 120px 0 60px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--faint);
+  padding: 96px 0 80px;
 }
-.ab-hero-quote {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(26px, 4vw, 36px);
-  font-style: italic;
-  color: var(--gold);
-  line-height: 1.4;
-  margin-bottom: 20px;
-}
-.ab-hero-byline {
+.ab-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--muted);
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+  color: var(--gold-dark); background: var(--gold-light);
+  padding: 5px 14px; border-radius: 99px; margin-bottom: 28px;
+  border: 1px solid rgba(196,136,47,0.2);
+}
+.ab-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: block; }
+.ab-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 5vw, 52px);
   font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 24px;
+  max-width: 720px;
+}
+.ab-hero-desc {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 580px;
+  line-height: 1.8;
+  margin: 10px 0 40px;
+}
+.ab-hero-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.ab-hero-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--gold-dark);
+  margin-top: 28px;
+  line-height: 1.5;
 }
 
 .ab-section { padding: 48px 0; }
@@ -197,32 +221,38 @@ body { background: var(--bg); }
 
 @media (max-width: 768px) {
   .ab-dual { grid-template-columns: 1fr; }
-  .ab-hero { padding: 60px 0 40px; }
+  .ab-hero { padding: 64px 0 50px; }
   .ab-section { padding: 36px 0; }
   .ab-section-title { font-size: 24px; }
 }
 </style>
 
 <!-- HERO -->
-<div class="ab-container">
-<div class="ab-hero">
-  <div class="ab-hero-quote">"分享越多，价值越大。"</div>
-  <div class="ab-hero-byline">陈露 · 2009年至今</div>
-</div>
-</div>
+<section class="ab-hero">
+  <div class="ab-container">
+    <div class="ab-hero-badge">关于陈露</div>
+    <h1>我花了一辈子，做好一件事：<br>把经验<em>变成资产</em></h1>
+    <p class="ab-hero-desc">从个人品牌到知识资产化，从企业AI落地到组织知识管理——帮企业和创始人把最有价值的经验变成可积累、可增值、可被AI调用的资产。</p>
+    <div class="ab-hero-ctas">
+      <a href="#" onclick="openWechat();return false" class="idx-btn idx-btn-primary" style="display:inline-flex;align-items:center;gap:8px;padding:14px 34px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;transition:all 0.25s;cursor:pointer;border:none;background:var(--ink);color:var(--gold);text-decoration:none">预约30分钟沟通</a>
+      <a href="#timeline" class="idx-btn idx-btn-outline" style="display:inline-flex;align-items:center;gap:8px;padding:14px 34px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;transition:all 0.25s;cursor:pointer;border:2px solid var(--faint);background:transparent;color:var(--ink);text-decoration:none">了解我的路径</a>
+    </div>
+    <p class="ab-hero-value">"分享越多，价值越大。" — 陈露，2009年至今</p>
+  </div>
+</section>
 
 <!-- WHAT I DO -->
 <div class="ab-container">
 <div class="ab-section">
-  <div class="ab-section-label">我做的事</div>
-  <h2 class="ab-section-title">把经验变成资产</h2>
+  <div class="ab-section-label">我做什么</div>
+  <h2 class="ab-section-title">帮两类人，解决同一个问题</h2>
 
-  <p class="ab-lead">大多数人谈论"学习"、"输入"、"成长"。<br>我谈论的是<strong>资产</strong>。</p>
+  <p class="ab-lead">你的经验，是你最有价值的资产。<br>但大多数人不知道怎么把它<strong>变成能持续调用、持续增值的东西</strong>。</p>
 
-  <p class="ab-body">你的经验不应该在换公司时清零。<br>你的价值不应该被错误的标签掩盖。<br>你的知识不应该散落在硬盘和聊天记录里。</p>
+  <p class="ab-body">我做的事很具体：</p>
 
   <div class="ab-insight">
-    两条路径，同一个内核：让个人经验变成可积累、可增值、可传承的核心资产。
+    把分散的、隐性的、锁在人脑里的经验，结构化、体系化，变成团队和AI能持续调用的知识资产。
   </div>
 
   <div class="ab-dual">
@@ -286,21 +316,52 @@ body { background: var(--bg); }
 
 <hr class="ab-divider">
 
+<!-- BRAND ARCHITECTURE -->
+<div class="ab-container">
+<div class="ab-section">
+  <div class="ab-section-label">品牌架构</div>
+  <h2 class="ab-section-title">ActionThinker 与 OPClab</h2>
+  <p class="ab-body">你可能在站内看到两个名字，它们不是两个品牌，而是一体两面：</p>
+
+  <div class="ab-dual">
+    <div class="ab-dual-card">
+      <h3>🧬 ActionThinker</h3>
+      <p>我个人的数字品牌标识。承载对外表达、内容输出、客户连接——你读到的一切，都是从这里发出的。知是方法论，行是动手做。</p>
+    </div>
+    <div class="ab-dual-card">
+      <h3>🔬 OPClab</h3>
+      <p>我的一人公司实验室。所有方法论在这里构建、验证、迭代——我教给客户的所有方法，都在自己的体系里持续跑着。不外包，不转述，自己先做一遍。</p>
+    </div>
+  </div>
+
+  <p class="ab-body" style="margin-top:16px"><strong>为什么这样设计？</strong>因为品牌表达和系统验证需要同时存在。ActionThinker 负责"说"和"接"，OPClab 负责"做"和"验"。你看到的是前者，但支撑它的是后者持续运转的体系。</p>
+</div>
+</div>
+
+<hr class="ab-divider">
+
 <!-- SOCIAL PROOF -->
 <div class="ab-container">
 <div class="ab-section">
-  <div class="ab-section-label">社会证明</div>
-  <h2 class="ab-section-title">被谁认可</h2>
+  <div class="ab-section-label">为什么值得你信任</div>
+  <h2 class="ab-section-title">四个维度的验证</h2>
 
+  <p class="ab-body" style="margin-bottom:24px"><strong>专业积累：</strong></p>
+  <div class="ab-proof-bar">
+    <span class="ab-proof-tag"><strong>15年</strong> 知识管理实践</span>
+    <span class="ab-proof-tag"><strong>NPLUS</strong> 前CKO</span>
+    <span class="ab-proof-tag"><strong>CAPE</strong> 联合创始人</span>
+    <span class="ab-proof-tag">自建 <strong>6维</strong> 品牌诊断模型</span>
+    <span class="ab-proof-tag">自研 <strong>五卡</strong> 知识体系</span>
+  </div>
+
+  <p class="ab-body" style="margin-bottom:24px"><strong>行业认可：</strong></p>
   <div class="ab-proof-bar">
     <span class="ab-proof-tag"><strong>TEDx</strong> 演讲者</span>
-    <span class="ab-proof-tag"><strong>CAPE</strong> 联合创始人</span>
-    <span class="ab-proof-tag"><strong>NPLUS</strong> CKO</span>
     <span class="ab-proof-tag"><strong>4A创意奖</strong> 评委</span>
     <span class="ab-proof-tag"><strong>金鼠标</strong> 评委</span>
     <span class="ab-proof-tag"><strong>数英奖</strong> 评委</span>
     <span class="ab-proof-tag"><strong>虎啸奖</strong> 评委</span>
-    <span class="ab-proof-tag"><strong>15年</strong> 知识管理</span>
   </div>
 
   <p class="ab-clients"><strong>服务品牌：</strong>美的、小天鹅、COLMO、华住、SMILEY、Airbnb、腾讯、泸州老窖、长江商学院、OPPO 等</p>
@@ -310,18 +371,46 @@ body { background: var(--bg); }
 
 <hr class="ab-divider">
 
-<!-- CONTACT -->
+<!-- NEXT STEP -->
 <div class="ab-container">
 <div class="ab-section">
-  <div class="ab-section-label">联系我</div>
-  <h2 class="ab-section-title">找到陈露</h2>
-  <div class="ab-contact">
-    <p>📧 <a href="mailto:chenlu@opclab.cn">chenlu@opclab.cn</a></p>
-    <p>🌐 <a href="https://actionthinker.com">actionthinker.com</a></p>
-    <p>💬 微信：<strong style="color:var(--ink);">ActionThinker</strong></p>
+  <div class="ab-section-label">下一步</div>
+  <h2 class="ab-section-title">了解我之后，可以从这里开始</h2>
+
+  <div class="ab-dual">
+    <div class="ab-dual-card">
+      <h3>🏢 你是企业方</h3>
+      <p>需要判断AI方向、落地执行、或把核心知识沉淀为组织资产</p>
+      <a href="/enterprise-ai" class="ab-cta-link">查看企业AI落地 →</a>
+    </div>
+    <div class="ab-dual-card">
+      <h3>🧭 你是创始人/专家</h3>
+      <p>需要看清个人定位、搭建品牌系统、或把经验化为知识资产</p>
+      <a href="/service/" class="ab-cta-link">查看个人服务 →</a>
+    </div>
+  </div>
+
+  <div class="ab-contact" style="margin-top:32px">
+    <p>不确定从哪开始？</p>
+    <p><a href="#" onclick="openWechat();return false">添加微信 ActionThinker 直接聊 →</a></p>
+    <p style="font-size:13px;color:var(--muted);margin-top:8px">或邮件：chenlu@opclab.cn · 24小时内本人回复</p>
   </div>
 </div>
 </div>
+
+<!-- WeChat Modal -->
+<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,26,46,0.5);z-index:9999;align-items:center;justify-content:center">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:20px;padding:40px 32px;text-align:center;max-width:380px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2)">
+    <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1A1A2E;margin-bottom:8px">添加微信咨询</p>
+    <img src="/assets/wechat-qr.jpg" alt="微信：ActionThinker" style="width:200px;height:200px;margin:12px auto;display:block;border-radius:12px">
+    <p style="font-size:16px;font-weight:700;color:#1A1A2E;margin-bottom:4px">ActionThinker</p>
+    <p style="font-size:12px;color:#999">扫码或搜索添加 · 24小时内本人回复</p>
+  </div>
+</div>
+<script>
+function openWechat(){var m=document.getElementById('wechat-modal');m.style.display='flex';}
+</script>
 
 <script type="application/ld+json">
 {
