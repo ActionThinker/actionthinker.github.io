@@ -116,11 +116,11 @@ body { padding-top: 50px; background: #ffffff; }
 }
 .pb-section-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 32px;
+  font-size: clamp(24px, 4.5vw, 32px);
   font-weight: 600;
   color: var(--ink);
   margin-bottom: 14px;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 .pb-section-desc {
   font-size: 16px;
@@ -416,7 +416,15 @@ body { padding-top: 50px; background: #ffffff; }
 
 @media (max-width: 768px) {
   .cases-grid { grid-template-columns: 1fr; }
+  .types-grid { grid-template-columns: 1fr; }
+  .dims-grid { grid-template-columns: 1fr 1fr; }
+  .flow-steps { flex-direction: column; }
+  .quadrant-grid { grid-template-columns: 1fr; }
   .testimonial-card { width: 280px; }
+  .pb-hero { padding: 56px 0 44px; }
+  .pb-container { padding: 0 18px; }
+  .pb-section { padding: 44px 0; }
+  .pb-hero-sub { font-size: 16px; margin: 10px 0 44px; }
 }
 </style>
 

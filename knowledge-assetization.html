@@ -115,11 +115,11 @@ body { padding-top: 50px; background: #ffffff; }
 }
 .ka-section-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 32px;
+  font-size: clamp(24px, 4.5vw, 32px);
   font-weight: 600;
   color: var(--ink);
   margin-bottom: 14px;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 .ka-section-desc {
   font-size: 16px;
@@ -416,8 +416,10 @@ body { padding-top: 50px; background: #ffffff; }
 @media (max-width: 768px) {
   .flow-steps, .delivery-grid, .persona-grid { flex-direction: column; grid-template-columns: 1fr; }
   .paradox { grid-template-columns: 1fr; }
-  .ka-hero { padding: 60px 0 50px; }
-  .ka-section { padding: 50px 0; }
+  .ka-hero { padding: 56px 0 44px; }
+  .ka-container { padding: 0 18px; }
+  .ka-section { padding: 44px 0; }
+  .ka-hero-sub { font-size: 16px; margin: 10px 0 44px; }
   .testimonial-card { width: 280px; }
 }
 

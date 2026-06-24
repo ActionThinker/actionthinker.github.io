@@ -65,8 +65,8 @@ body {
 }
 .idx-section-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(26px, 3.5vw, 36px); font-weight: 600;
-  color: var(--ink); margin-bottom: 14px; line-height: 1.2;
+  font-size: clamp(24px, 4.5vw, 34px); font-weight: 600;
+  color: var(--ink); margin-bottom: 14px; line-height: 1.25;
 }
 .idx-section-desc {
   font-size: 16px; color: var(--muted);
@@ -91,9 +91,9 @@ body {
 .hero-v5-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: block; }
 .hero-v5 h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(36px, 5.5vw, 56px); font-weight: 600;
-  line-height: 1.15; color: var(--ink);
-  margin-bottom: 24px;
+  font-size: clamp(28px, 6vw, 52px); font-weight: 600;
+  line-height: 1.2; color: var(--ink);
+  margin-bottom: 24px; max-width: 720px;
 }
 .hero-v5 h1 em { font-style: italic; color: var(--gold); }
 p.hero-v5-sub {
@@ -251,7 +251,7 @@ a.idx-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfo
   font-family: 'DM Sans', sans-serif; font-size: 11px;
   color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;
 }
-.idx-cta h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 600; color: var(--ink); margin-bottom: 16px; }
+.idx-cta h2 { font-size: clamp(24px, 5vw, 38px); font-weight: 600; color: var(--ink); margin-bottom: 16px; }
 .idx-cta p { font-size: 16px; color: var(--muted); max-width: 500px; margin: 0 auto 36px; line-height: 1.8; }
 .idx-cta-contact { font-size: 14px; color: var(--muted); margin-top: 28px; }
 .idx-cta-contact strong { color: var(--ink); }
@@ -270,9 +270,12 @@ a.idx-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfo
 @media (max-width: 768px) {
   .who-grid, .dual-persona, .service-lines { grid-template-columns: 1fr; }
   .who-grid { gap: 32px; }
-  .hero-v5 { padding: 64px 0 50px; }
-  .idx-section { padding: 50px 0; }
-  .trust-row { gap: 32px; }
+  .hero-v5 { padding: 56px 0 44px; }
+  .idx-section { padding: 44px 0; }
+  .idx-container { padding: 0 18px; }
+  .hero-v5-sub { font-size: 16px; margin: 10px 0 44px; }
+  .idx-cta { padding: 60px 0 80px; }
+  .trust-row { gap: 24px; }
   .opc-banner { grid-template-columns: 1fr; text-align: center; }
 }
 </style>

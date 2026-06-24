@@ -78,11 +78,11 @@ body { padding-top: 50px; background: #ffffff; }
 }
 .ab-section-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 28px;
+  font-size: clamp(23px, 4.5vw, 28px);
   font-weight: 600;
   color: var(--ink);
   margin-bottom: 20px;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .ab-lead {
@@ -221,9 +221,10 @@ body { padding-top: 50px; background: #ffffff; }
 
 @media (max-width: 768px) {
   .ab-dual { grid-template-columns: 1fr; }
-  .ab-hero { padding: 64px 0 50px; }
+  .ab-hero { padding: 56px 0 44px; }
+  .ab-container { padding: 0 18px; }
   .ab-section { padding: 36px 0; }
-  .ab-section-title { font-size: 24px; }
+  .ab-hero-desc { font-size: 16px; }
 }
 </style>
 
