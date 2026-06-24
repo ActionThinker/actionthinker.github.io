@@ -290,7 +290,7 @@ a.idx-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfo
       帮企业和创始人在AI时代做对决策、走通落地。
     </p>
     <div class="hero-v5-ctas idx-fade-up idx-delay-2">
-      <a href="mailto:chenlu@opclab.cn?subject=预约30分钟诊断" class="idx-btn idx-btn-primary">预约30分钟诊断</a>
+      <a href="#" onclick="openWechat();return false" class="idx-btn idx-btn-primary">预约30分钟诊断</a>
       <a href="#idx-services" class="idx-btn idx-btn-outline">查看服务路径</a>
     </div>
     <p style="font-size:13px;color:var(--muted);margin-top:24px">陈露 · ActionThinker</p>
@@ -476,7 +476,7 @@ a.idx-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfo
     <h2>花30分钟，<br>判断值不值得继续</h2>
     <p>告诉我你的业务阶段、当前卡点和期望方向。我会直接告诉你：这件事适不适合现在做，应该走企业路径还是个人路径。</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-      <a href="mailto:chenlu@opclab.cn?subject=预约30分钟诊断" class="idx-btn idx-btn-primary">预约30分钟诊断</a>
+      <a href="#" onclick="openWechat();return false" class="idx-btn idx-btn-primary">预约30分钟诊断</a>
       <a href="/about" class="idx-btn idx-btn-outline">先了解陈露</a>
     </div>
     <div class="idx-cta-contact">
@@ -485,6 +485,20 @@ a.idx-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfo
     </div>
   </div>
 </section>
+
+<!-- WeChat Modal -->
+<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,26,46,0.5);z-index:9999;align-items:center;justify-content:center">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:20px;padding:40px 32px;text-align:center;max-width:380px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2)">
+    <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1A1A2E;margin-bottom:8px">添加微信咨询</p>
+    <img src="/assets/wechat-qr.jpg" alt="微信：ActionThinker" style="width:200px;height:200px;margin:12px auto;display:block;border-radius:12px">
+    <p style="font-size:16px;font-weight:700;color:#1A1A2E;margin-bottom:4px">ActionThinker</p>
+    <p style="font-size:12px;color:#999">扫码或搜索添加 · 24小时内本人回复</p>
+  </div>
+</div>
+<script>
+function openWechat(){var m=document.getElementById('wechat-modal');m.style.display='flex';}
+</script>
 
 </div><!-- /.idx-page -->
 

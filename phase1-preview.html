@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ActionThinker · Phase 1 预览 — 五卡体系驱动版</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1A1A2E;
+  --gold: #C4882F;
+  --gold-light: #FEFBF5;
+  --muted: #78716c;
+  --faint: #E8E5E0;
+  --surface: #ffffff;
+  --bg: #FAFAF8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ═══════════ NAV ═══════════ */
+.nav { display: flex; justify-content: center; gap: 28px; padding: 24px; border-bottom: 1px solid var(--faint); }
+.nav a {
+  font-size: 13px; font-weight: 500; color: var(--muted);
+  text-decoration: none; transition: color 0.2s;
+}
+.nav a:hover, .nav a.new { color: var(--ink); }
+.nav a.new::after { content: ' ▸'; color: var(--gold); font-size: 10px; }
+
+/* ═══════════ HERO v5 ═══════════ */
+.hero {
+  padding: 100px 24px 80px;
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 28px;
+  padding: 8px 20px; border: 1px solid var(--faint); border-radius: 20px;
+}
+.hero-badge .star { font-size: 14px; }
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(44px, 7vw, 68px);
+  font-weight: 600; color: var(--ink);
+  line-height: 1.12; margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+.hero h1 em {
+  font-style: italic; color: var(--gold);
+}
+.hero-sub {
+  font-size: 17px; color: var(--muted);
+  max-width: 540px; margin: 0 auto 10px;
+  line-height: 1.8;
+}
+.hero-sub strong { color: var(--ink); }
+.hero-meta {
+  font-size: 14px; color: var(--gold);
+  margin-top: 6px; font-weight: 500;
+}
+
+/* CTA row */
+.hero-cta {
+  display: flex; justify-content: center; gap: 14px; margin-top: 36px; flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 14px 30px; border-radius: 10px;
+  font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600;
+  text-decoration: none; transition: all 0.25s; cursor: pointer;
+}
+.btn-primary {
+  background: var(--ink); color: var(--gold);
+}
+.btn-primary:hover {
+  background: var(--gold); color: #fff;
+  transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196,136,47,0.25);
+}
+.btn-outline {
+  background: transparent; color: var(--ink);
+  border: 2px solid var(--faint);
+}
+.btn-outline:hover {
+  border-color: var(--gold); color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* ═══════════ CANVAS PREVIEW ═══════════ */
+.canvas-preview {
+  max-width: 720px; margin: 60px auto 0;
+  background: var(--surface);
+  border: 1px solid var(--faint);
+  border-radius: 16px;
+  padding: 36px;
+  text-align: center;
+}
+.canvas-preview h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; color: var(--ink); margin-bottom: 24px;
+}
+.canvas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+}
+.canvas-cell {
+  background: var(--gold-light);
+  border: 1px dashed var(--gold);
+  border-radius: 10px;
+  padding: 16px 12px;
+  font-size: 12px; color: var(--muted);
+  text-align: center;
+}
+.canvas-cell.top { grid-column: 1 / -1; background: var(--ink); border-color: var(--ink); }
+.canvas-cell.top * { color: var(--gold-light) !important; }
+.canvas-cell.mid { background: #fff; }
+.canvas-cell.bot { grid-column: 1 / -1; }
+.canvas-cell strong {
+  display: block; font-size: 13px; color: var(--ink); margin-bottom: 4px;
+}
+.canvas-dl {
+  margin-top: 20px; font-size: 13px;
+}
+.canvas-dl a { color: var(--gold); font-weight: 600; text-decoration: none; }
+.canvas-dl a:hover { text-decoration: underline; }
+
+/* ═══════════ BADGE ═══════════ */
+.section-divider {
+  max-width: 900px; margin: 80px auto 40px; padding: 0 24px;
+}
+.section-divider h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; color: var(--ink); margin-bottom: 12px;
+}
+.section-divider p { color: var(--muted); font-size: 15px; margin-bottom: 40px; }
+
+.badge-demo {
+  max-width: 900px; margin: 0 auto 30px; padding: 0 24px;
+}
+.badge-demo h3 {
+  font-size: 13px; font-weight: 600; color: var(--muted);
+  letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;
+}
+.m-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 10px 20px;
+  background: var(--gold-light);
+  border: 1px solid var(--faint);
+  border-radius: 10px;
+  font-size: 13px; color: var(--ink);
+  margin-bottom: 20px;
+}
+.m-badge strong { color: var(--gold); }
+.m-badge a { color: var(--gold); font-weight: 500; text-decoration: none; margin-left: 4px; }
+.m-badge a:hover { text-decoration: underline; }
+
+/* ═══════════ COMPARISON ═══════════ */
+.comparison {
+  max-width: 900px; margin: 60px auto; padding: 0 24px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+.comp-card {
+  background: var(--surface); border: 1px solid var(--faint);
+  border-radius: 14px; padding: 32px;
+}
+.comp-card.now { border-left: 4px solid var(--faint); }
+.comp-card.new { border-left: 4px solid var(--gold); }
+.comp-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; margin-bottom: 6px;
+}
+.comp-card .tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; margin-bottom: 16px;
+}
+.comp-card.now .tag { color: var(--muted); }
+.comp-card.new .tag { color: var(--gold); }
+.comp-card ul {
+  list-style: none; font-size: 13px; color: var(--muted); line-height: 2;
+}
+.comp-card ul li::before { content: '→ '; color: var(--gold); }
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media (max-width: 768px) {
+  .nav { gap: 14px; flex-wrap: wrap; }
+  .hero { padding: 60px 24px 50px; }
+  .comparison { grid-template-columns: 1fr; }
+  .canvas-grid { grid-template-columns: 1fr; }
+  .canvas-cell.top { grid-column: 1; }
+  .canvas-cell.bot { grid-column: 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ 导航预览 ═══════════ -->
+<nav class="nav">
+  <a href="#">首页</a>
+  <a href="#">个人服务</a>
+  <a href="#">企业培训</a>
+  <a href="#">企业咨询</a>
+  <a href="#" class="new">方法论</a>
+  <a href="#">关于我</a>
+  <a href="#">OPClab</a>
+  <a href="#">Agent服务</a>
+</nav>
+
+<!-- ═══════════ HERO v5 ═══════════ -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="star">⭐</span> GitHub 开源 · CC BY-SA 4.0
+  </div>
+
+  <h1>让你的经验<em>被AI读懂</em></h1>
+
+  <p class="hero-sub">
+    AI 可以读世界上所有的书，但它<strong>读不了你脑子里</strong><br>
+    那二十年没写下来的经验。
+  </p>
+
+  <p class="hero-meta">五卡体系 · Five-Card System — 把隐性经验变成AI可消费的知识资产</p>
+
+  <div class="hero-cta">
+    <a href="#" class="btn btn-primary">📋 了解方法论</a>
+    <a href="#" class="btn btn-outline">⭐ GitHub</a>
+  </div>
+
+  <!-- 画布速览 -->
+  <div class="canvas-preview">
+    <h3>五卡画布 — 一张纸看清你的经验</h3>
+    <div class="canvas-grid">
+      <div class="canvas-cell top">
+        <strong>🌟 决策卡</strong>「什么情况下做了什么选择」
+      </div>
+      <div class="canvas-cell mid">
+        <strong>⚡ 方法论卡</strong>「怎么做」
+      </div>
+      <div class="canvas-cell mid">
+        <strong>📖 案例卡</strong>「真实故事」
+      </div>
+      <div class="canvas-cell mid">
+        <strong>⚠️ 风险卡</strong>「什么会出错」
+      </div>
+      <div class="canvas-cell bot">
+        <strong>💭 偏好卡</strong>「我偏好什么、在意什么」
+      </div>
+    </div>
+    <p class="canvas-dl">
+      📥 <a href="#">下载五卡画布（A4打印版）</a> · 开源 · 免费使用
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════ 服务归属标识预览 ═══════════ -->
+<div class="section-divider">
+  <h2>服务页面归属标识</h2>
+  <p>以下展示每个服务页面顶部新增的「方法论归属行」。不改结构，只加一行。</p>
+</div>
+
+<div class="badge-demo">
+  <h3>个人品牌诊断页</h3>
+  <div class="m-badge">
+    🧠 基于 <strong>五卡体系</strong> · 陈露创立 · <a href="#">了解更多 →</a>
+  </div>
+</div>
+
+<div class="badge-demo">
+  <h3>知识资产化页</h3>
+  <div class="m-badge">
+    🧠 基于 <strong>五卡体系</strong> · 陈露创立 · <a href="#">了解更多 →</a>
+  </div>
+</div>
+
+<div class="badge-demo">
+  <h3>企业AI培训页</h3>
+  <div class="m-badge">
+    🧠 基于 <strong>五卡体系</strong> · 陈露创立 · <a href="#">了解更多 →</a>
+  </div>
+</div>
+
+<div class="badge-demo">
+  <h3>企业咨询页</h3>
+  <div class="m-badge">
+    🧠 基于 <strong>五卡体系</strong> · 方法论驱动交付 · <a href="#">了解更多 →</a>
+  </div>
+</div>
+
+<div class="badge-demo">
+  <h3>OPClab 页</h3>
+  <div class="m-badge">
+    🧠 <strong>五卡体系</strong> 的实践社区 · 陈露创立 · <a href="#">了解更多 →</a>
+  </div>
+</div>
+
+<div class="badge-demo">
+  <h3>AgentBrandLab 页</h3>
+  <div class="m-badge">
+    🧠 <strong>五卡体系</strong> 的Agent化应用 · <a href="#">了解更多 →</a>
+  </div>
+</div>
+
+<!-- ═══════════ 前后对比 ═══════════ -->
+<section class="comparison">
+  <div class="comp-card now">
+    <h3>当前 · v4.0</h3>
+    <div class="tag">产品目录式</div>
+    <ul>
+      <li>Hero = 个人品牌陈述</li>
+      <li>7个服务并列陈列</li>
+      <li>方法论藏在页面内部</li>
+      <li>用户需要自己理解关系</li>
+    </ul>
+  </div>
+  <div class="comp-card new">
+    <h3>Phase 1 · v4.1</h3>
+    <div class="tag">方法论驱动式</div>
+    <ul>
+      <li>Hero = 五卡体系核心叙事</li>
+      <li>画布速览一眼看懂</li>
+      <li>每个服务归属方法论</li>
+      <li>GitHub + 飞书双入口</li>
+    </ul>
+  </div>
+</section>
+
+<div style="text-align:center; padding:40px 0 80px; color:var(--muted); font-size:13px;">
+  ActionThinker · Phase 1 预览 · 待审阅
+</div>
+
+</body>
+</html>

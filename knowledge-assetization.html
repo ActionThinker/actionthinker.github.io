@@ -551,7 +551,7 @@ body { padding-top: 50px; background: #ffffff; }
     <h1>把你10年的项目经验<br>变成一个<em>活的</em>知识资产库</h1>
     <p class="ka-hero-sub">把你的经验变成可搜索、可调用、可增值的知识资产</p>
     <div class="ka-hero-ctas">
-      <a href="mailto:chenlu@opclab.cn?subject=预约知识资产诊断" class="btn btn-primary">预约知识资产诊断</a>
+      <a href="#" onclick="openWechat();return false" class="btn btn-primary">预约知识资产诊断</a>
       <a href="#pain" class="btn btn-outline">查看常见痛点</a>
     </div>
     <p style="font-size:13px;color:var(--muted);margin-top:28px;line-height:1.6">
@@ -953,7 +953,7 @@ body { padding-top: 50px; background: #ffffff; }
     <h2>花一次诊断，看清你的知识资产状态</h2>
     <p>告诉我你的行业背景、做过的主要项目类型和当前的困惑。我会帮你判断：你的经验里哪些最值得结构化，应该从哪一步开始。</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px">
-      <a href="mailto:chenlu@opclab.cn?subject=预约知识资产诊断" class="btn btn-primary" style="font-size:16px;padding:16px 40px;">预约知识资产诊断</a>
+      <a href="#" onclick="openWechat();return false" class="btn btn-primary" style="font-size:16px;padding:16px 40px;">预约知识资产诊断</a>
       <a href="#approach" class="btn btn-outline" style="font-size:16px;padding:16px 40px;">查看知识资产化路径</a>
     </div>
     <p style="margin-top:24px;font-size:14px;color:var(--muted);">
@@ -996,4 +996,18 @@ body { padding-top: 50px; background: #ffffff; }
     "priceCurrency": "CNY"
   }
 }
+</script>
+
+<!-- WeChat Modal -->
+<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,26,46,0.5);z-index:9999;align-items:center;justify-content:center">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:20px;padding:40px 32px;text-align:center;max-width:380px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2)">
+    <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1A1A2E;margin-bottom:8px">添加微信咨询</p>
+    <img src="/assets/wechat-qr.jpg" alt="微信：ActionThinker" style="width:200px;height:200px;margin:12px auto;display:block;border-radius:12px">
+    <p style="font-size:16px;font-weight:700;color:#1A1A2E;margin-bottom:4px">ActionThinker</p>
+    <p style="font-size:12px;color:#999">扫码或搜索添加 · 24小时内本人回复</p>
+  </div>
+</div>
+<script>
+function openWechat(){var m=document.getElementById('wechat-modal');m.style.display='flex';}
 </script>

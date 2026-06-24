@@ -129,7 +129,7 @@ body { padding-top: 50px; background: #ffffff; }
     <h1>你的企业买了AI工具<br>但90%的人<em>只用它聊天</em></h1>
     <p class="et-hero-sub">不是再上一堂AI科普课。是带着你企业部门的真实业务场景，现场练、现场出成果、训后持续落地。</p>
     <div class="et-hero-ctas">
-      <a href="mailto:chenlu@opclab.cn?subject=获取定制培训方案" class="btn btn-primary">获取定制培训方案</a>
+      <a href="#" onclick="openWechat();return false" class="btn btn-primary">获取定制培训方案</a>
       <a href="#pain" class="btn btn-outline">查看培训方式</a>
     </div>
     <p style="font-size:13px;color:var(--muted);margin-top:24px;line-height:1.6">
@@ -381,7 +381,7 @@ document.querySelectorAll('#productTabs .product-tab').forEach(tab => {
     <h2>花一次沟通，<br>判断你的团队适合哪种AI培训</h2>
     <p>告诉我你的行业、团队规模、AI使用现状和期望目标。<br>我会帮你判断：适合全员普及还是骨干实战，还是直接做专家经验萃取——不需要你现在做任何决定。</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px">
-      <a href="mailto:chenlu@opclab.cn?subject=获取定制培训方案" class="btn btn-primary" style="font-size:16px;padding:16px 40px;">获取定制培训方案</a>
+      <a href="#" onclick="openWechat();return false" class="btn btn-primary" style="font-size:16px;padding:16px 40px;">获取定制培训方案</a>
       <a href="#pain" class="btn btn-outline" style="font-size:16px;padding:16px 40px;">查看培训方式</a>
     </div>
     <p style="margin-top:24px;font-size:14px;color:var(--muted);">
@@ -456,4 +456,18 @@ document.querySelectorAll('#productTabs .product-tab').forEach(tab => {
     }
   ]
 }
+</script>
+
+<!-- WeChat Modal -->
+<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,26,46,0.5);z-index:9999;align-items:center;justify-content:center">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:20px;padding:40px 32px;text-align:center;max-width:380px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2)">
+    <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1A1A2E;margin-bottom:8px">添加微信咨询</p>
+    <img src="/assets/wechat-qr.jpg" alt="微信：ActionThinker" style="width:200px;height:200px;margin:12px auto;display:block;border-radius:12px">
+    <p style="font-size:16px;font-weight:700;color:#1A1A2E;margin-bottom:4px">ActionThinker</p>
+    <p style="font-size:12px;color:#999">扫码或搜索添加 · 24小时内本人回复</p>
+  </div>
+</div>
+<script>
+function openWechat(){var m=document.getElementById('wechat-modal');m.style.display='flex';}
 </script>

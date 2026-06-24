@@ -356,7 +356,7 @@ a.ec-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
       销冠的判断、总工的直觉、资深顾问的决策逻辑——他们脑子里的隐性知识，才是企业最值钱也最脆弱的资产。不是写一份咨询报告，也不是部署一个AI系统：是先把专家的隐性判断逻辑结构化，变成团队能复用、AI能调用的知识资产。
     </p>
     <div class="ec-hero-ctas ec-fade-up ec-delay-2">
-      <a href="mailto:chenlu@opclab.cn?subject=申请知识资产诊断" class="ec-btn ec-btn-primary">申请知识资产诊断</a>
+      <a href="#" onclick="openWechat();return false" class="ec-btn ec-btn-primary">申请知识资产诊断</a>
       <a href="#ec-approach" class="ec-btn ec-btn-outline">查看知识资产化路径</a>
     </div>
     <p style="font-size:13px;color:var(--muted);margin-top:28px;line-height:1.6">
@@ -632,13 +632,13 @@ a.ec-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
         <div class="ec-cta-card-label">开始诊断</div>
         <div class="ec-cta-card-title">申请知识资产诊断</div>
         <div class="ec-cta-card-body">电话或微信聊一次。告诉我你的情况，我帮你判断属于哪个阶段、知识流失风险有多大、下一步该做什么。</div>
-        <a href="mailto:chenlu@opclab.cn?subject=申请知识资产诊断" class="ec-cta-card-action">申请诊断</a>
+        <a href="#" onclick="openWechat();return false" class="ec-cta-card-action">申请诊断</a>
       </div>
       <div class="ec-cta-card">
         <div class="ec-cta-card-label">先自测</div>
         <div class="ec-cta-card-title">获取知识资产化自测清单</div>
         <div class="ec-cta-card-body">10个问题帮你看清：你的企业知识资产化处于哪个阶段，最大的知识流失风险在哪里。</div>
-        <a href="mailto:chenlu@opclab.cn?subject=申请知识资产化自测清单" class="ec-cta-card-action">索取自测清单 →</a>
+        <a href="#" onclick="openWechat();return false" class="ec-cta-card-action">索取自测清单 →</a>
       </div>
       <div class="ec-cta-card">
         <div class="ec-cta-card-label">先打基础</div>
@@ -654,6 +654,20 @@ a.ec-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
     </div>
   </div>
 </section>
+
+<!-- WeChat Modal -->
+<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,26,46,0.5);z-index:9999;align-items:center;justify-content:center">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:20px;padding:40px 32px;text-align:center;max-width:380px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2)">
+    <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1A1A2E;margin-bottom:8px">添加微信咨询</p>
+    <img src="/assets/wechat-qr.jpg" alt="微信：ActionThinker" style="width:200px;height:200px;margin:12px auto;display:block;border-radius:12px">
+    <p style="font-size:16px;font-weight:700;color:#1A1A2E;margin-bottom:4px">ActionThinker</p>
+    <p style="font-size:12px;color:#999">扫码或搜索添加 · 24小时内本人回复</p>
+  </div>
+</div>
+<script>
+function openWechat(){var m=document.getElementById('wechat-modal');m.style.display='flex';}
+</script>
 
 </div><!-- /.ec-page -->
 
