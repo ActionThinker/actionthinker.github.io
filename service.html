@@ -10,40 +10,48 @@ use-site-title: false
    SERVICE HUB v2.0 — 双入口精装版
    ================================================ */
 
+body { padding-top: 50px; background: #ffffff; }
+@media (min-width: 768px) { body { padding-top: 90px; } }
+
 /* HERO */
 .svc-hero {
-  text-align: center;
-  padding: 100px 24px 48px;
-  max-width: 680px;
+  background: #FAFAF8;
+  border-bottom: 1px solid #E8E5E0;
+  padding: 96px 0 80px;
+}
+.svc-hero-inner {
+  max-width: 960px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 .svc-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #C4882F;
-  margin-bottom: 16px;
-  font-weight: 600;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+  color: #A06820; background: #FEFBF5;
+  padding: 5px 14px; border-radius: 99px; margin-bottom: 28px;
+  border: 1px solid rgba(196,136,47,0.2);
 }
+.svc-hero-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #C4882F; display: block; }
 .svc-hero h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(36px, 5.5vw, 52px);
+  font-size: clamp(34px, 5vw, 52px);
   font-weight: 600;
   color: #1A1A2E;
-  line-height: 1.15;
-  margin-bottom: 14px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  max-width: 720px;
 }
 .svc-hero h1 em {
-  font-style: italic;
+  font-style: normal;
   color: #C4882F;
 }
 .svc-hero-desc {
-  font-size: 16px;
-  color: #888;
+  font-size: 17px;
+  color: #78716c;
   line-height: 1.8;
-  max-width: 480px;
-  margin: 0 auto;
+  max-width: 580px;
+  margin: 10px 0 40px;
 }
 
 /* DUAL CARDS GRID */
@@ -265,17 +273,19 @@ use-site-title: false
   .svc-grid { grid-template-columns: 1fr; gap: 20px; }
   .svc-divider { display: none; }
   .svc-card { padding: 32px 24px 28px; }
-  .svc-hero { padding: 60px 20px 36px; }
+  .svc-hero { padding: 64px 0 50px; }
   .svc-question-inner { padding: 28px 24px; }
 }
 </style>
 
 <!-- HERO -->
-<div class="svc-hero">
-  <div class="svc-hero-eyebrow">服务方案</div>
-  <h1>选一个<em>入口</em></h1>
-  <p class="svc-hero-desc">同一个方法论内核，两条路径。<br>你的起点取决于你当前最需要解决的问题。</p>
-</div>
+<section class="svc-hero">
+  <div class="svc-hero-inner">
+    <div class="svc-hero-eyebrow">个人服务</div>
+    <h1>两条路径，<br>同一个<em>方法论内核</em></h1>
+    <p class="svc-hero-desc">你的起点取决于你当前最需要解决的问题：是看清自己的定位和品牌方向，还是把多年经验系统化为可调用的知识资产。</p>
+  </div>
+</section>
 
 <!-- DUAL CARDS -->
 <div class="svc-grid">
@@ -284,7 +294,7 @@ use-site-title: false
   <a href="/personal-brand/" class="svc-card svc-card-a">
     <div class="svc-card-icon-row">
       <div class="svc-card-icon-badge">🎯</div>
-      <div class="svc-card-label">服务一</div>
+      <div class="svc-card-label">路径一</div>
     </div>
     <h2>AI个人品牌<br>资产管理</h2>
     <p class="svc-card-subtitle">你不是没有价值，你是没看清自己的价值</p>
@@ -305,7 +315,7 @@ use-site-title: false
   <a href="/knowledge-assetization/" class="svc-card svc-card-b">
     <div class="svc-card-icon-row">
       <div class="svc-card-icon-badge">🧠</div>
-      <div class="svc-card-label">服务二</div>
+      <div class="svc-card-label">路径二</div>
     </div>
     <h2>AI知识<br>资产化服务</h2>
     <p class="svc-card-subtitle">换公司带得走 · 做方案有得抄 · 面试有得讲</p>
@@ -338,4 +348,12 @@ use-site-title: false
       </div>
     </div>
   </div>
+</div>
+
+<!-- CONTACT -->
+<div style="text-align:center;padding:0 24px 100px;max-width:960px;margin:0 auto">
+  <p style="font-size:14px;color:#78716c;line-height:1.8">
+    或直接微信：<strong style="color:#1A1A2E">ActionThinker</strong> · 邮件：<strong style="color:#1A1A2E">chenlu@opclab.cn</strong>
+    <br><span style="font-size:12px;color:#78716c">24小时内本人回复。不合适也会直说。</span>
+  </p>
 </div>
