@@ -1,0 +1,213 @@
+---
+layout: base
+title: 30分钟诊断 · 预诊问卷
+subtitle: 花5分钟准备，让我们的30分钟更有价值
+use-site-title: false
+---
+
+<style>
+body { padding-top: 50px; background: #FAFAF8; }
+@media (min-width: 768px) { body { padding-top: 90px; } }
+
+.diag-container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+.diag-hero {
+  text-align: center;
+  padding: 80px 0 48px;
+}
+.diag-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+  color: #A06820; background: #FEFBF5;
+  padding: 5px 14px; border-radius: 99px; margin-bottom: 24px;
+  border: 1px solid rgba(196,136,47,0.2);
+}
+.diag-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #C4882F; display: block; }
+.diag-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 600; color: #1A1A2E;
+  line-height: 1.2; margin-bottom: 16px;
+}
+.diag-hero-sub {
+  font-size: 16px; color: #78716c;
+  max-width: 480px; margin: 0 auto;
+  line-height: 1.7;
+}
+
+.diag-section {
+  background: #fff;
+  border: 1px solid #E8E5E0;
+  border-radius: 16px;
+  padding: 32px 28px;
+  margin-bottom: 20px;
+}
+.diag-section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px; letter-spacing: 2.5px;
+  text-transform: uppercase; color: #C4882F;
+  margin-bottom: 8px; font-weight: 600;
+}
+.diag-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 600;
+  color: #1A1A2E; margin-bottom: 20px;
+}
+.diag-q {
+  margin-bottom: 20px;
+}
+.diag-q:last-child { margin-bottom: 0; }
+.diag-q-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px; font-weight: 600;
+  color: #1A1A2E; margin-bottom: 6px;
+}
+.diag-q-hint {
+  font-size: 12px; color: #999;
+  margin-bottom: 8px;
+}
+.diag-q textarea {
+  width: 100%; padding: 12px 14px;
+  border: 1px solid #E8E5E0; border-radius: 10px;
+  font-family: 'DM Sans', sans-serif; font-size: 14px;
+  color: #1A1A2E; line-height: 1.6;
+  resize: vertical; min-height: 60px;
+  transition: border-color 0.2s;
+  background: #FAFAF8;
+}
+.diag-q textarea:focus {
+  outline: none;
+  border-color: #C4882F;
+  background: #fff;
+}
+
+.diag-cta {
+  text-align: center;
+  padding: 32px 0 80px;
+}
+.diag-cta-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #1A1A2E; color: #E8A838;
+  text-decoration: none; border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px; font-weight: 600;
+  transition: all 0.25s;
+}
+.diag-cta-btn:hover {
+  background: #C4882F; color: #fff;
+  transform: translateY(-2px);
+}
+.diag-cta-sub {
+  font-size: 13px; color: #999;
+  margin-top: 16px;
+}
+.diag-divider {
+  text-align: center;
+  padding: 8px 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; color: #C4882F;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .diag-hero { padding: 56px 0 36px; }
+  .diag-section { padding: 24px 20px; }
+  .diag-container { padding: 0 18px; }
+}
+</style>
+
+<div class="diag-container">
+
+<div class="diag-hero">
+  <div class="diag-hero-badge">预诊问卷 · 5分钟</div>
+  <h1>在聊天之前<br>先帮我了解你的情况</h1>
+  <p class="diag-hero-sub">这些问题帮我们节省时间——30分钟聊的是判断和方向，不是基本信息。</p>
+</div>
+
+<!-- PART 1: 你是谁 -->
+<div class="diag-section">
+  <div class="diag-section-label">Part 1</div>
+  <div class="diag-section-title">你是谁，做什么的</div>
+
+  <div class="diag-q">
+    <div class="diag-q-label">1. 你的行业和角色</div>
+    <div class="diag-q-hint">例如：制造业 / 企业主；咨询行业 / 独立顾问；互联网 / 技术负责人</div>
+    <textarea placeholder="我是..."></textarea>
+  </div>
+
+  <div class="diag-q">
+    <div class="diag-q-label">2. 团队/公司规模</div>
+    <div class="diag-q-hint">一人公司、小团队（<20人）、中型企业（20-200人）、大型企业（200+）</div>
+    <textarea placeholder="目前规模..."></textarea>
+  </div>
+
+  <div class="diag-q">
+    <div class="diag-q-label">3. 你目前在AI方面做了什么？</div>
+    <div class="diag-q-hint">买了工具？做了培训？试过一些项目？还是完全还没开始？</div>
+    <textarea placeholder="目前的AI使用情况..."></textarea>
+  </div>
+</div>
+
+<!-- PART 2: 你的困惑 -->
+<div class="diag-section">
+  <div class="diag-section-label">Part 2</div>
+  <div class="diag-section-title">你最想解决的问题</div>
+
+  <div class="diag-q">
+    <div class="diag-q-label">4. 现在最让你犹豫/焦虑的一件事是什么？</div>
+    <div class="diag-q-hint">一句话描述即可。例如："团队买了AI工具但用不起来"、"核心专家快退休了经验带不走"、"做了很多项目但品牌一直没立起来"</div>
+    <textarea placeholder="我最犹豫的是..."></textarea>
+  </div>
+
+  <div class="diag-q">
+    <div class="diag-q-label">5. 如果这个问题解决了，你最想看到什么变化？</div>
+    <div class="diag-q-hint">越具体越好。例如："新客户经理3个月能独立上手"、"有个系统能随时查到我之前项目的方案"</div>
+    <textarea placeholder="解决后我希望..."></textarea>
+  </div>
+
+  <div class="diag-q">
+    <div class="diag-q-label">6. 你之前尝试过解决这个问题吗？卡在哪里？</div>
+    <div class="diag-q-hint">试过什么方式？为什么觉得不够？</div>
+    <textarea placeholder="试过...但..."></textarea>
+  </div>
+</div>
+
+<!-- PART 3: 你的期待 -->
+<div class="diag-section">
+  <div class="diag-section-label">Part 3</div>
+  <div class="diag-section-title">你对这次沟通的期待</div>
+
+  <div class="diag-q">
+    <div class="diag-q-label">7. 你希望30分钟后得到什么？</div>
+    <div class="diag-q-hint">例如：判断方向对不对、知道下一步该做什么、了解大概需要多少投入</div>
+    <textarea placeholder="我希望得到..."></textarea>
+  </div>
+
+  <div class="diag-q">
+    <div class="diag-q-label">8. 你是怎么找到我的？</div>
+    <div class="diag-q-hint">文章、朋友推荐、社交媒体、搜索...？（帮我了解什么渠道在起作用）</div>
+    <textarea placeholder="通过..."></textarea>
+  </div>
+</div>
+
+<div class="diag-divider">— 完成后，添加微信发给我 —</div>
+
+<div class="diag-cta">
+  <a href="#" onclick="document.getElementById('wechat-modal').style.display='flex';return false" class="diag-cta-btn">添加微信 · 发送预诊 + 预约时间</a>
+  <p class="diag-cta-sub">微信：ActionThinker · 24小时内本人回复<br>我会提前看完你的回答，不浪费你的30分钟</p>
+</div>
+
+</div>
+
+<!-- WeChat Modal -->
+<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,26,46,0.5);z-index:9999;align-items:center;justify-content:center">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:20px;padding:40px 32px;text-align:center;max-width:380px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2)">
+    <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1A1A2E;margin-bottom:8px">添加微信 · 发送预诊</p>
+    <img src="/assets/wechat-qr.png" alt="微信：ActionThinker" style="width:200px;margin:12px auto;display:block;border-radius:12px">
+    <p style="font-size:16px;font-weight:700;color:#1A1A2E;margin-bottom:4px">ActionThinker</p>
+    <p style="font-size:12px;color:#999">扫码或搜索添加 · 把回答截图发我</p>
+  </div>
+</div>

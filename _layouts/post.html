@@ -52,6 +52,18 @@ layout: base
         {% include social-share.html %}
       {% endif %}
 
+      <!-- Post-end Service CTA -->
+      <div style="margin:40px 0;padding:28px 28px 24px;background:#FAFAF8;border-radius:14px;border:1px solid #E8E5E0">
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#C4882F;margin-bottom:12px;font-weight:600">这篇文章对你有启发？</p>
+        <p style="font-size:15px;color:#1A1A2E;line-height:1.8;margin-bottom:20px">
+          如果你正在思考相关的问题——<strong>不确定AI怎么落地、知识怎么沉淀、方向怎么选</strong>——可以从一次30分钟沟通开始。告诉我你的处境，我帮你判断下一步。
+        </p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="#" onclick="var m=document.getElementById('wechat-modal');if(m){m.style.display='flex'}return false" style="display:inline-block;padding:10px 24px;background:#1A1A2E;color:#E8A838;text-decoration:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600">预约30分钟沟通 →</a>
+          <a href="/service/" style="display:inline-block;padding:10px 24px;border:1.5px solid #D4D0CA;color:#666;text-decoration:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px">查看所有服务</a>
+        </div>
+      </div>
+
       <ul class="pager blog-pager">
         {% if page.previous.url %}
         <li class="previous">
