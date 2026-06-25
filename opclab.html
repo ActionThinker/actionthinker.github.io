@@ -7,52 +7,75 @@ subtitle: 让一个人，活成一支队伍
 
 <style>
 /* ================================================
-   OPCLAB v3.0 — B方案视觉风格
+   OPCLAB v4.0 — 品牌定位化
    ================================================ */
 
-/* HERO — 浅色大留白 */
-.hero-ol {
-  padding: 120px 24px 80px;
-  text-align: center;
-  max-width: 780px;
-  margin: 0 auto;
+body { padding-top: 50px; background: #ffffff; }
+@media (min-width: 768px) { body { padding-top: 90px; } }
+
+:root {
+  --ink: #1A1A2E; --gold: #C4882F; --gold-dark: #A06820;
+  --muted: #78716c; --faint: #E8E5E0; --surface: #ffffff; --bg: #FAFAF8;
 }
+
+/* HERO */
+.hero-ol {
+  background: var(--bg);
+  border-bottom: 1px solid var(--faint);
+  padding: 96px 0 80px;
+}
+.hero-ol-inner { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.hero-ol-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+  color: var(--gold-dark); background: #FEFBF5;
+  padding: 5px 14px; border-radius: 99px; margin-bottom: 28px;
+  border: 1px solid rgba(196,136,47,0.2);
+}
+.hero-ol-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: block; }
 .hero-ol-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(40px, 6vw, 68px);
+  font-size: clamp(28px, 6vw, 52px);
   font-weight: 600;
-  color: #1A1A2E;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  letter-spacing: -0.5px;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 24px;
+  max-width: 720px;
 }
-.hero-ol-title em { font-style: italic; color: #C4882F; }
+.hero-ol-title em { font-style: normal; color: var(--gold); }
 .hero-ol-sub {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 16px;
-  color: #666;
-  line-height: 1.8;
-  max-width: 480px;
-  margin: 0 auto 32px;
-  font-weight: 300;
+  font-size: 17px; color: var(--muted);
+  max-width: 580px; line-height: 1.8;
+  margin: 10px 0 40px;
 }
 .hero-ol-formula {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  color: #999;
-  letter-spacing: 0.5px;
+  font-size: 13px; color: var(--muted);
+  margin-top: 28px; line-height: 1.6;
 }
-.hero-ol-formula .sep { color: #D4D0CA; }
-.hero-ol-formula strong { color: #1A1A2E; font-weight: 500; }
+.hero-ol-formula strong { color: var(--ink); font-weight: 600; }
 
 /* SECTION BASE */
 .ol-section {
-  padding: 80px 24px;
-  max-width: 960px;
-  margin: 0 auto;
+  padding: 80px 0;
+}
+.ol-container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+.section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 10px; font-weight: 600;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 4.5vw, 34px); font-weight: 600;
+  color: var(--ink); margin-bottom: 14px; line-height: 1.25;
+}
+.section-intro {
+  font-size: 16px; color: var(--muted);
+  max-width: 600px; line-height: 1.8; margin-bottom: 48px;
 }
 
 /* MISSION */
@@ -445,22 +468,28 @@ subtitle: 让一个人，活成一支队伍
 @media (max-width: 768px) {
   .mission-ol-grid, .exp-ol-grid, .credits-ol-grid, .path-ol-grid { grid-template-columns: 1fr; }
   .opc-ol-grid { grid-template-columns: 1fr; }
-  .hero-ol { padding: 80px 20px 60px; }
-  .ol-section { padding: 60px 20px; }
+  .hero-ol { padding: 56px 0 44px; }
+  .ol-container { padding: 0 18px; }
+  .ol-section { padding: 44px 0; }
+  .hero-ol-sub { font-size: 16px; margin: 10px 0 44px; }
 }
 </style>
 
 <!-- HERO -->
-<div class="hero-ol">
-  <h1 class="hero-ol-title">让一个人，<br><em>活成一支队伍</em></h1>
-  <p class="hero-ol-sub">在AI时代，让知识成为可积累、可迭代、可资产化的核心资本</p>
-  <div class="hero-ol-formula">
-    <strong>OPClab</strong> <span class="sep">=</span> 知识资产化的研究与实践基地 <span class="sep">·</span> 一人公司的实验场
+<section class="hero-ol">
+  <div class="hero-ol-inner">
+    <div class="hero-ol-badge">OPClab · 一人公司实验室</div>
+    <h1 class="hero-ol-title">让一个人，<br><em>活成一支队伍</em></h1>
+    <p class="hero-ol-sub">OPClab 是陈露持续验证知识资产化、一人公司方法论和 AI 协作实验的实战实验室。这里不讲未来——这里把未来先做出来验证。</p>
+    <div class="hero-ol-formula">
+      <strong>核心公式：</strong>知识资产 × AI杠杆 = 一人公司的复利系统
+    </div>
   </div>
-</div>
+</section>
 
 <!-- MISSION -->
 <div class="ol-section">
+  <div class="ol-container">
   <div class="section-label">核心理念</div>
   <h2 class="section-title">推动知识从信息到资产的范式变革</h2>
   <p class="section-intro">知识是当代最重要的资产，但它极易被忽视、遗忘、随人离职而流失。OPClab的使命，是让每个人都能把自己的知识变成可积累、可迭代、可变现的核心资本。</p>
@@ -480,6 +509,7 @@ subtitle: 让一个人，活成一支队伍
       <span class="var">一人公司</span><span class="eq">=</span><span class="var">知识资产</span><span class="eq">×</span><span class="var">AI杠杆</span><span class="eq">=</span> 可积累 × 可放大
     </div>
     <div class="formula-ol-note">普通人也能规模化</div>
+  </div>
   </div>
 </div>
 
@@ -634,8 +664,30 @@ subtitle: 让一个人，活成一支队伍
   </div>
 </div>
 
+<!-- BRAND RELATIONSHIP -->
+<div class="ol-section" style="background:var(--bg)">
+  <div class="ol-container">
+  <div class="section-label">品牌关系</div>
+  <h2 class="section-title">OPClab 与 ActionThinker</h2>
+  <p class="section-intro">你可能在站内看到两个名字。它们不是两个品牌，而是一体两面。</p>
+  <div class="mission-ol-grid">
+    <div class="mission-ol-card">
+      <h3>🧬 ActionThinker</h3>
+      <p>我个人的数字品牌标识。承载对外表达、内容输出、客户连接——你读到的一切，都是从这里发出的。</p>
+    </div>
+    <div class="mission-ol-card">
+      <h3>🔬 OPClab</h3>
+      <p>我持续验证、打磨系统、运行实验的实战实验室。所有方法论在这里构建、验证、迭代——自己先做一遍，再教给客户。</p>
+    </div>
+  </div>
+  <p style="font-size:14px;color:var(--muted);margin-top:20px;text-align:center;line-height:1.7">ActionThinker 负责"说"和"接"，OPClab 负责"做"和"验"。<br>你看到的是前者，支撑它的是后者持续运转的体系。</p>
+  </div>
+  </div>
+</div>
+
 <!-- INSIGHTS -->
 <div class="ol-section">
+  <div class="ol-container">
   <div class="section-label">观点与洞察</div>
   <h2 class="section-title">AI时代的方法论</h2>
   <div class="insights-ol-list">
@@ -644,47 +696,46 @@ subtitle: 让一个人，活成一支队伍
     <div class="insight-ol-item">最好的AI不是最强大的那个，是最懂你的那个</div>
     <div class="insight-ol-item">不表达的知识，不属于你。不实践的知识，不属于世界。</div>
   </div>
+  </div>
 </div>
 
 <!-- PATHWAY -->
 <div class="ol-section">
-  <div class="section-label">合作路径</div>
-  <h2 class="section-title">找到你的入口</h2>
-  <p class="section-intro">无论你在哪个阶段，都能找到适合的起点。</p>
+  <div class="ol-container">
+  <div class="section-label">下一步</div>
+  <h2 class="section-title">对 OPClab 感兴趣？从这里开始</h2>
+  <p class="section-intro">取决于你当前最关心什么，有三条自然的路径。</p>
   <div class="path-ol-grid">
-    <div class="path-ol-card">
-      <div class="path-ol-level">入门级</div>
-      <h3>OPClab 社群</h3>
-      <p>一起来探索知识资产化的实践路径，真实分享、互相激发。</p>
-      <div class="path-ol-for">适合：想用AI放大个人能力的普通人</div>
-    </div>
-    <div class="path-ol-card">
-      <div class="path-ol-level">团队级</div>
-      <h3>企业内训</h3>
-      <p>知识资产化培训，帮团队把经验沉淀为可复用的组织资产。</p>
-      <div class="path-ol-for">适合：创业公司 / 中小企业</div>
-    </div>
-    <div class="path-ol-card">
-      <div class="path-ol-level">深度级</div>
-      <h3>个人品牌诊断</h3>
-      <p>6维模型+定位象限，一次咨询帮你看清自己的品牌资产。</p>
-      <div class="path-ol-for">适合：职场人/创业者/高管</div>
-    </div>
-    <div class="path-ol-card">
-      <div class="path-ol-level">系统级</div>
-      <h3>知识资产化服务</h3>
-      <p>三步链路：自测→诊断→系统服务。让经验变成可复用的资产。</p>
-      <div class="path-ol-for">适合：有多年跨公司项目经验的专家</div>
-    </div>
+    <a href="/personal-brand/" class="path-ol-card" style="text-decoration:none">
+      <div class="path-ol-level">路径一</div>
+      <h3>先看清自己 → 个人品牌诊断</h3>
+      <p>6维模型+定位象限，一次深度咨询帮你看清自己的品牌资产和定位方向。</p>
+      <div class="path-ol-for">适合：想建立个人品牌但不确定定位的创始人、专家</div>
+    </a>
+    <a href="/knowledge-assetization/" class="path-ol-card" style="text-decoration:none">
+      <div class="path-ol-level">路径二</div>
+      <h3>先整理经验 → 知识资产化服务</h3>
+      <p>把你的项目经验、方法论、判断逻辑结构化，变成可复用的知识资产。</p>
+      <div class="path-ol-for">适合：有丰富经验但散落各处的知识工作者、创业者</div>
+    </a>
+  </div>
+  <p style="text-align:center;margin-top:28px;font-size:14px;color:var(--muted);line-height:1.8">
+    不确定从哪开始？<br>
+    <a href="#" onclick="openWechat();return false" style="color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(196,136,47,0.3)">预约30分钟沟通 →</a>，帮你判断哪条路径最适合你现在的阶段。
+  </p>
   </div>
 </div>
 
-<!-- CTA -->
-<div class="cta-ol">
-  <h2>开启你的知识资产化之路</h2>
-  <p>从15分钟免费自测开始，看清你的知识资产现状</p>
-  <div class="cta-ol-btns">
-    <a href="/service/" class="btn-dark">查看完整服务 →</a>
-    <a href="/about/" class="btn-line">了解陈露</a>
+<!-- WeChat Modal -->
+<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,26,46,0.5);z-index:9999;align-items:center;justify-content:center">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:20px;padding:40px 32px;text-align:center;max-width:380px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2)">
+    <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1A1A2E;margin-bottom:8px">添加微信咨询</p>
+    <img src="/assets/wechat-qr.png" alt="微信：ActionThinker" style="width:200px;margin:12px auto;display:block;border-radius:12px">
+    <p style="font-size:16px;font-weight:700;color:#1A1A2E;margin-bottom:4px">ActionThinker</p>
+    <p style="font-size:12px;color:#999">扫码或搜索添加 · 24小时内本人回复</p>
   </div>
 </div>
+<script>
+function openWechat(){var m=document.getElementById('wechat-modal');m.style.display='flex';}
+</script>
