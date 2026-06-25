@@ -58,9 +58,10 @@ body { padding-top: 50px; background: #ffffff; }
 
 /* SECTION BASE */
 .ol-section {
-  padding: 80px 0;
+  padding: 80px 24px;
+  max-width: 960px;
+  margin: 0 auto;
 }
-.ol-container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 
 .section-label {
   font-family: 'DM Sans', sans-serif;
@@ -469,8 +470,7 @@ body { padding-top: 50px; background: #ffffff; }
   .mission-ol-grid, .exp-ol-grid, .credits-ol-grid, .path-ol-grid { grid-template-columns: 1fr; }
   .opc-ol-grid { grid-template-columns: 1fr; }
   .hero-ol { padding: 56px 0 44px; }
-  .ol-container { padding: 0 18px; }
-  .ol-section { padding: 44px 0; }
+  .ol-section { padding: 44px 20px; }
   .hero-ol-sub { font-size: 16px; margin: 10px 0 44px; }
 }
 </style>
@@ -489,7 +489,6 @@ body { padding-top: 50px; background: #ffffff; }
 
 <!-- MISSION -->
 <div class="ol-section">
-  <div class="ol-container">
   <div class="section-label">核心理念</div>
   <h2 class="section-title">推动知识从信息到资产的范式变革</h2>
   <p class="section-intro">知识是当代最重要的资产，但它极易被忽视、遗忘、随人离职而流失。OPClab的使命，是让每个人都能把自己的知识变成可积累、可迭代、可变现的核心资本。</p>
@@ -509,7 +508,6 @@ body { padding-top: 50px; background: #ffffff; }
       <span class="var">一人公司</span><span class="eq">=</span><span class="var">知识资产</span><span class="eq">×</span><span class="var">AI杠杆</span><span class="eq">=</span> 可积累 × 可放大
     </div>
     <div class="formula-ol-note">普通人也能规模化</div>
-  </div>
   </div>
 </div>
 
@@ -665,8 +663,8 @@ body { padding-top: 50px; background: #ffffff; }
 </div>
 
 <!-- BRAND RELATIONSHIP -->
-<div class="ol-section" style="background:var(--bg)">
-  <div class="ol-container">
+<div class="ol-section" style="background:var(--bg);max-width:none;padding-left:0;padding-right:0">
+  <div style="max-width:960px;margin:0 auto;padding:0 24px">
   <div class="section-label">品牌关系</div>
   <h2 class="section-title">OPClab 与 ActionThinker</h2>
   <p class="section-intro">你可能在站内看到两个名字。它们不是两个品牌，而是一体两面。</p>
@@ -682,12 +680,10 @@ body { padding-top: 50px; background: #ffffff; }
   </div>
   <p style="font-size:14px;color:var(--muted);margin-top:20px;text-align:center;line-height:1.7">ActionThinker 负责"说"和"接"，OPClab 负责"做"和"验"。<br>你看到的是前者，支撑它的是后者持续运转的体系。</p>
   </div>
-  </div>
 </div>
 
 <!-- INSIGHTS -->
 <div class="ol-section">
-  <div class="ol-container">
   <div class="section-label">观点与洞察</div>
   <h2 class="section-title">AI时代的方法论</h2>
   <div class="insights-ol-list">
@@ -696,12 +692,10 @@ body { padding-top: 50px; background: #ffffff; }
     <div class="insight-ol-item">最好的AI不是最强大的那个，是最懂你的那个</div>
     <div class="insight-ol-item">不表达的知识，不属于你。不实践的知识，不属于世界。</div>
   </div>
-  </div>
 </div>
 
 <!-- PATHWAY -->
 <div class="ol-section">
-  <div class="ol-container">
   <div class="section-label">下一步</div>
   <h2 class="section-title">对 OPClab 感兴趣？从这里开始</h2>
   <p class="section-intro">取决于你当前最关心什么，有三条自然的路径。</p>
@@ -723,7 +717,6 @@ body { padding-top: 50px; background: #ffffff; }
     不确定从哪开始？<br>
     <a href="#" onclick="openWechat();return false" style="color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(196,136,47,0.3)">预约30分钟沟通 →</a>，帮你判断哪条路径最适合你现在的阶段。
   </p>
-  </div>
 </div>
 
 <!-- WeChat Modal -->
