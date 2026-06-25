@@ -215,11 +215,11 @@ a.ea-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
   color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;
 }
 .ea-cta h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 600; color: var(--ink); margin-bottom: 20px; }
-.ea-cta-sub { font-size: 16px; color: var(--muted); max-width: 520px; margin: 0 auto 44px; line-height: 1.8; text-align: center; }
-.ea-cta-options { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+p.ea-cta-sub { font-size: 16px; color: var(--muted); max-width: 520px; margin: 0 auto 44px; line-height: 1.8; text-align: center; }
+.ea-cta-options { display: flex; gap: 16px; justify-content: center; }
 .ea-cta-card {
   background: var(--surface); border: 1px solid var(--faint); border-radius: var(--radius-lg);
-  padding: 28px 32px; text-align: left; max-width: 300px; width: 100%;
+  padding: 28px 24px; text-align: left; flex: 1; max-width: 296px;
   transition: border-color 0.2s, transform 0.15s;
 }
 .ea-cta-card:hover { border-color: var(--gold); transform: translateY(-2px); }
@@ -261,6 +261,8 @@ a.ea-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
   .ea-section { padding: 44px 0; }
   .ea-hero-sub { font-size: 16px; margin: 10px 0 44px; }
   .ea-cta { padding: 60px 0 80px; }
+  .ea-cta-options { flex-wrap: wrap; }
+  .ea-cta-card { max-width: 100%; }
 }
 </style>
 

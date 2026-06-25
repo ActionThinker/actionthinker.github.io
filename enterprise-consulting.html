@@ -289,11 +289,11 @@ a.ec-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
   color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;
 }
 .ec-cta h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 600; color: var(--ink); margin-bottom: 20px; }
-.ec-cta-sub { font-size: 16px; color: var(--muted); max-width: 520px; margin: 0 auto 44px; line-height: 1.8; text-align: center; }
-.ec-cta-options { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+p.ec-cta-sub { font-size: 16px; color: var(--muted); max-width: 520px; margin: 0 auto 44px; line-height: 1.8; text-align: center; }
+.ec-cta-options { display: flex; gap: 16px; justify-content: center; }
 .ec-cta-card {
   background: var(--surface); border: 1px solid var(--faint); border-radius: var(--radius-lg);
-  padding: 28px 32px; text-align: left; max-width: 280px; width: 100%;
+  padding: 28px 24px; text-align: left; flex: 1; max-width: 296px;
   transition: border-color 0.2s, transform 0.15s;
 }
 .ec-cta-card:hover { border-color: var(--gold); transform: translateY(-2px); }
@@ -338,6 +338,8 @@ a.ec-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
   .ec-section { padding: 44px 0; }
   .ec-hero-sub { font-size: 16px; margin: 10px 0 44px; }
   .ec-cta { padding: 60px 0 80px; }
+  .ec-cta-options { flex-wrap: wrap; }
+  .ec-cta-card { max-width: 100%; }
   .ec-hero-stats { gap: 28px; flex-wrap: wrap; }
 }
 @media (max-width: 480px) {
