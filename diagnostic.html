@@ -192,14 +192,42 @@ body { padding-top: 50px; background: #FAFAF8; }
   </div>
 </div>
 
-<div class="diag-divider">— 完成后，添加微信发给我 —</div>
+<div class="diag-divider">— 完成后，两步发给我 —</div>
 
 <div class="diag-cta">
-  <a href="#" onclick="document.getElementById('wechat-modal').style.display='flex';return false" class="diag-cta-btn">添加微信 · 发送预诊 + 预约时间</a>
+  <button onclick="copyAnswers()" class="diag-cta-btn" style="background:#fff;color:#1A1A2E;border:1.5px solid #D4D0CA;margin-bottom:12px;font-family:'DM Sans',sans-serif">📋 一键复制我的回答</button>
+  <p id="copy-confirm" style="font-size:13px;color:#C4882F;margin-bottom:16px;display:none;font-weight:600">✓ 已复制到剪贴板！现在添加微信，粘贴发给我</p>
+  <br>
+  <a href="#" onclick="document.getElementById('wechat-modal').style.display='flex';return false" class="diag-cta-btn">添加微信 · 粘贴发送 + 预约时间</a>
   <p class="diag-cta-sub">微信：ActionThinker · 24小时内本人回复<br>我会提前看完你的回答，不浪费你的30分钟</p>
 </div>
 
 </div>
+
+<script>
+function copyAnswers() {
+  var textareas = document.querySelectorAll('.diag-q textarea');
+  var lines = [];
+  var labels = ['1. 行业和角色','2. 团队/公司规模','3. 目前AI方面做了什么','4. 最让你犹豫/焦虑的事','5. 解决问题后最想看到的变化','6. 之前尝试过吗？卡在哪里','7. 希望30分钟后得到什么','8. 怎么找到我的'];
+  textareas.forEach(function(ta, i) {
+    var val = ta.value.trim();
+    lines.push((labels[i] || ('Q'+(i+1))) + '\n' + (val || '（未填写）') + '\n');
+  });
+  var text = '预诊问卷 · ' + new Date().toLocaleDateString('zh-CN') + '\n\n' + lines.join('\n');
+  navigator.clipboard.writeText(text).then(function() {
+    document.getElementById('copy-confirm').style.display = 'block';
+  }).catch(function() {
+    // Fallback for older browsers
+    var tmp = document.createElement('textarea');
+    tmp.value = text;
+    document.body.appendChild(tmp);
+    tmp.select();
+    document.execCommand('copy');
+    document.body.removeChild(tmp);
+    document.getElementById('copy-confirm').style.display = 'block';
+  });
+}
+</script>
 
 <!-- WeChat Modal -->
 <div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,26,46,0.5);z-index:9999;align-items:center;justify-content:center">
