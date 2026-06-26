@@ -192,14 +192,37 @@ body { padding-top: 50px; background: #FAFAF8; }
   </div>
 </div>
 
-<div class="diag-divider">— 完成后，两步发给我 —</div>
+<div class="diag-divider">— 最后一步：保存你的回答 —</div>
 
 <div class="diag-cta">
-  <button onclick="copyAnswers()" class="diag-cta-btn" style="background:#fff;color:#1A1A2E;border:1.5px solid #D4D0CA;margin-bottom:12px;font-family:'DM Sans',sans-serif">📋 一键复制我的回答</button>
-  <p id="copy-confirm" style="font-size:13px;color:#C4882F;margin-bottom:16px;display:none;font-weight:600">✓ 已复制到剪贴板！现在添加微信，粘贴发给我</p>
-  <br>
+  <p style="font-size:14px;color:#78716c;margin-bottom:20px;line-height:1.7">
+    ⚠️ <strong style="color:#1A1A2E">关闭页面后，你的回答会丢失。</strong><br>请先复制内容，再加微信发给我。
+  </p>
+
+  <div style="background:#FEFBF5;border:1px solid rgba(196,136,47,0.2);border-radius:12px;padding:24px 20px;margin-bottom:20px;text-align:left">
+    <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px">
+      <div style="width:28px;height:28px;border-radius:50%;background:#C4882F;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;flex-shrink:0">1</div>
+      <div style="flex:1">
+        <div style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;color:#1A1A2E;margin-bottom:4px">先复制，再离开</div>
+        <div style="font-size:13px;color:#78716c;line-height:1.6">点击下方按钮，你的全部回答会自动复制到剪贴板。粘贴到微信或备忘录里，不会丢。</div>
+      </div>
+    </div>
+    <button onclick="copyAnswers()" style="display:block;width:100%;padding:14px 24px;background:#1A1A2E;color:#E8A838;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.25s;margin-bottom:4px"
+      onmouseover="this.style.background='#C4882F';this.style.color='#fff'"
+      onmouseout="this.style.background='#1A1A2E';this.style.color='#E8A838'">📋 一键复制我的全部回答</button>
+    <p id="copy-confirm" style="font-size:13px;color:#C4882F;margin-top:10px;display:none;font-weight:600;text-align:center">✓ 已复制！你的回答现在在剪贴板里了，不会丢。</p>
+
+    <div style="display:flex;align-items:flex-start;gap:14px;margin-top:20px;padding-top:20px;border-top:1px solid rgba(196,136,47,0.15)">
+      <div style="width:28px;height:28px;border-radius:50%;background:#C4882F;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;flex-shrink:0">2</div>
+      <div style="flex:1">
+        <div style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;color:#1A1A2E;margin-bottom:4px">加微信，粘贴发给我</div>
+        <div style="font-size:13px;color:#78716c;line-height:1.6">扫码添加后，把刚才复制的内容粘贴发过来。我会提前看完，不浪费你的30分钟。</div>
+      </div>
+    </div>
+  </div>
+
   <a href="#" onclick="document.getElementById('wechat-modal').style.display='flex';return false" class="diag-cta-btn">添加微信 · 粘贴发送 + 预约时间</a>
-  <p class="diag-cta-sub">微信：ActionThinker · 24小时内本人回复<br>我会提前看完你的回答，不浪费你的30分钟</p>
+  <p class="diag-cta-sub">微信：ActionThinker · 24小时内本人回复</p>
 </div>
 
 </div>
