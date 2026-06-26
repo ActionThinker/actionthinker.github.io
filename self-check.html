@@ -1,0 +1,326 @@
+---
+layout: base
+title: 快速自检 · 找到你的起点
+subtitle: 6个问题，2分钟，看清你该从哪条路径开始
+use-site-title: false
+---
+
+<style>
+body { padding-top: 50px; background: #FAFAF8; }
+@media (min-width: 768px) { body { padding-top: 90px; } }
+.sc-container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+
+.sc-hero {
+  text-align: center; padding: 80px 0 40px;
+}
+.sc-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+  color: #A06820; background: #FEFBF5;
+  padding: 5px 14px; border-radius: 99px; margin-bottom: 24px;
+  border: 1px solid rgba(196,136,47,0.2);
+}
+.sc-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #C4882F; display: block; }
+.sc-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 600; color: #1A1A2E; line-height: 1.2; margin-bottom: 12px;
+}
+.sc-hero-sub { font-size: 16px; color: #78716c; }
+
+/* Progress Bar */
+.sc-progress {
+  height: 3px; background: #E8E5E0; border-radius: 2px;
+  margin: 0 0 40px; position: relative;
+}
+.sc-progress-fill {
+  height: 100%; background: #C4882F; border-radius: 2px;
+  transition: width 0.4s;
+}
+
+/* Question Card */
+.sc-card {
+  background: #fff; border: 1px solid #E8E5E0;
+  border-radius: 16px; padding: 36px 28px; margin-bottom: 24px;
+}
+.sc-q-num {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: #C4882F; margin-bottom: 8px; font-weight: 600;
+}
+.sc-q-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 600;
+  color: #1A1A2E; margin-bottom: 24px; line-height: 1.3;
+}
+.sc-options { display: flex; flex-direction: column; gap: 10px; }
+.sc-opt {
+  display: block; width: 100%; text-align: left;
+  padding: 16px 18px; border: 1.5px solid #E8E5E0;
+  border-radius: 10px; background: #fff;
+  font-family: 'DM Sans', sans-serif; font-size: 14px;
+  color: #1A1A2E; cursor: pointer;
+  transition: all 0.2s; line-height: 1.5;
+}
+.sc-opt:hover { border-color: #C4882F; background: #FEFBF5; }
+.sc-opt.selected { border-color: #C4882F; background: #FEFBF5; font-weight: 600; }
+
+/* Result */
+.sc-result { display: none; }
+.sc-result-card {
+  background: #fff; border: 1px solid #E8E5E0;
+  border-radius: 16px; padding: 40px 28px; text-align: center;
+  margin-bottom: 24px;
+}
+.sc-result-icon { font-size: 48px; margin-bottom: 16px; }
+.sc-result-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: #C4882F; margin-bottom: 12px; font-weight: 600;
+}
+.sc-result-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 4vw, 32px); font-weight: 600;
+  color: #1A1A2E; margin-bottom: 14px; line-height: 1.25;
+}
+.sc-result-desc {
+  font-size: 15px; color: #78716c; line-height: 1.8;
+  max-width: 460px; margin: 0 auto 28px;
+}
+.sc-result-cta {
+  display: inline-block; padding: 14px 34px;
+  background: #1A1A2E; color: #E8A838;
+  text-decoration: none; border-radius: 10px;
+  font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600;
+  transition: all 0.25s;
+}
+.sc-result-cta:hover { background: #C4882F; color: #fff; transform: translateY(-2px); }
+.sc-restart {
+  display: block; text-align: center; margin-top: 20px;
+  font-size: 13px; color: #999; cursor: pointer;
+  text-decoration: underline; background: none; border: none;
+  font-family: 'DM Sans', sans-serif; padding: 8px;
+}
+.sc-bottom { text-align: center; padding: 0 0 80px; }
+.sc-bottom p { font-size: 13px; color: #999; }
+
+@media (max-width: 768px) {
+  .sc-hero { padding: 56px 0 32px; }
+  .sc-card { padding: 28px 20px; }
+  .sc-container { padding: 0 18px; }
+}
+</style>
+
+<div class="sc-container">
+
+<div class="sc-hero">
+  <div class="sc-hero-badge">快速自检 · 2分钟</div>
+  <h1>找到你的起点</h1>
+  <p class="sc-hero-sub">6个问题，帮你判断该从哪条路径开始</p>
+</div>
+
+<div class="sc-progress"><div class="sc-progress-fill" id="progress" style="width:0%"></div></div>
+
+<!-- Q1 -->
+<div class="sc-card" id="q1">
+  <div class="sc-q-num">问题 1 / 6</div>
+  <div class="sc-q-text">你当前的身份是？</div>
+  <div class="sc-options">
+    <button class="sc-opt" onclick="answer(1,'enterprise')">企业经营 / 业务负责人</button>
+    <button class="sc-opt" onclick="answer(1,'founder')">创始人 / 独立专家 / 知识工作者</button>
+  </div>
+</div>
+
+<!-- Q2 Enterprise -->
+<div class="sc-card" id="q2e" style="display:none">
+  <div class="sc-q-num">问题 2 / 6</div>
+  <div class="sc-q-text">你的企业在AI方面现在处于什么阶段？</div>
+  <div class="sc-options">
+    <button class="sc-opt" onclick="answer(2,'e_start')">还在观望，不知道从哪着手</button>
+    <button class="sc-opt" onclick="answer(2,'e_tools')">买了工具、做过培训，但没真正用起来</button>
+    <button class="sc-opt" onclick="answer(2,'e_knowhow')">已经有一些AI应用，但核心知识在人脑里没沉淀</button>
+  </div>
+</div>
+
+<!-- Q3 Enterprise -->
+<div class="sc-card" id="q3e" style="display:none">
+  <div class="sc-q-num">问题 3 / 6</div>
+  <div class="sc-q-text">你最担心的是什么？</div>
+  <div class="sc-options">
+    <button class="sc-opt" onclick="answer(3,'e_worry_direction')">选错方向，投入了时间和钱但跑不通</button>
+    <button class="sc-opt" onclick="answer(3,'e_worry_people')">核心人才离职，经验和判断力被带走</button>
+    <button class="sc-opt" onclick="answer(3,'e_worry_use')">团队把AI当聊天工具，没嵌入实际业务流程</button>
+  </div>
+</div>
+
+<!-- Q2 Personal -->
+<div class="sc-card" id="q2p" style="display:none">
+  <div class="sc-q-num">问题 2 / 6</div>
+  <div class="sc-q-text">你现在最想解决什么？</div>
+  <div class="sc-options">
+    <button class="sc-opt" onclick="answer(2,'p_brand')">我有深厚积累，但说不清自己的独特定位</button>
+    <button class="sc-opt" onclick="answer(2,'p_knowledge')">我做过很多项目，但经验散落在各处没法复用</button>
+  </div>
+</div>
+
+<!-- Q3 Personal -->
+<div class="sc-card" id="q3p" style="display:none">
+  <div class="sc-q-num">问题 3 / 6</div>
+  <div class="sc-q-text">你期望的结果是？</div>
+  <div class="sc-options">
+    <button class="sc-opt" onclick="answer(3,'p_result_brand')">有人帮我看清方向，知道该聚焦什么、放弃什么</button>
+    <button class="sc-opt" onclick="answer(3,'p_result_ka')">把经验变成系统化的知识库，能随时检索和复用</button>
+  </div>
+</div>
+
+<!-- Q4-6 Common -->
+<div class="sc-card" id="q4" style="display:none">
+  <div class="sc-q-num">问题 4 / 6</div>
+  <div class="sc-q-text">你之前试过解决这个问题吗？</div>
+  <div class="sc-options">
+    <button class="sc-opt" onclick="answer(4,'tried_yes')">试过，但效果不理想</button>
+    <button class="sc-opt" onclick="answer(4,'tried_no')">还没真正行动过</button>
+  </div>
+</div>
+
+<div class="sc-card" id="q5" style="display:none">
+  <div class="sc-q-num">问题 5 / 6</div>
+  <div class="sc-q-text">你对投入的预期是？</div>
+  <div class="sc-options">
+    <button class="sc-opt" onclick="answer(5,'invest_low')">希望先用最小成本验证方向对不对</button>
+    <button class="sc-opt" onclick="answer(5,'invest_ok')">已经有预算，需要找到对的人来执行</button>
+  </div>
+</div>
+
+<div class="sc-card" id="q6" style="display:none">
+  <div class="sc-q-num">问题 6 / 6</div>
+  <div class="sc-q-text">你更倾向于？</div>
+  <div class="sc-options">
+    <button class="sc-opt" onclick="answer(6,'style_self')">给我框架和方法，我自己或团队来推动</button>
+    <button class="sc-opt" onclick="answer(6,'style_with')">我需要一个人陪着走，边做边判断边迭代</button>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div class="sc-result" id="result">
+  <div class="sc-result-card" id="result-card"></div>
+  <button class="sc-restart" onclick="restart()">重新测试</button>
+</div>
+
+<div class="sc-bottom" id="bottom-hint">
+  <p>所有问题填完后，自动显示结果和建议路径</p>
+</div>
+
+</div>
+
+<script>
+var answers = {};
+var totalQ = 6;
+
+function answer(qnum, value) {
+  answers[qnum] = value;
+
+  // Update progress
+  var answered = Object.keys(answers).length;
+  document.getElementById('progress').style.width = (answered / totalQ * 100) + '%';
+
+  // Hide all question cards
+  document.querySelectorAll('.sc-card').forEach(function(c){ c.style.display = 'none'; });
+
+  // Show next question based on path
+  if (qnum === 1) {
+    if (value === 'enterprise') {
+      document.getElementById('q2e').style.display = 'block';
+    } else {
+      document.getElementById('q2p').style.display = 'block';
+    }
+  } else if (qnum === 2) {
+    if (value === 'e_start' || value === 'e_tools' || value === 'e_knowhow') {
+      document.getElementById('q3e').style.display = 'block';
+    } else {
+      document.getElementById('q3p').style.display = 'block';
+    }
+  } else if (qnum === 3) {
+    document.getElementById('q4').style.display = 'block';
+  } else if (qnum === 4) {
+    document.getElementById('q5').style.display = 'block';
+  } else if (qnum === 5) {
+    document.getElementById('q6').style.display = 'block';
+  } else if (qnum === 6) {
+    showResult();
+  }
+}
+
+function showResult() {
+  document.getElementById('progress').style.width = '100%';
+  document.getElementById('bottom-hint').style.display = 'none';
+
+  var result = determineResult();
+  var card = document.getElementById('result-card');
+  card.innerHTML = result.html;
+  document.getElementById('result').style.display = 'block';
+}
+
+function determineResult() {
+  var a = answers;
+  var isEnterprise = a[1] === 'enterprise';
+
+  if (isEnterprise) {
+    // Enterprise paths
+    if (a[2] === 'e_start' || a[3] === 'e_worry_direction') {
+      return {
+        html: '<div class="sc-result-icon">🔍</div>' +
+          '<div class="sc-result-label">你的起点</div>' +
+          '<div class="sc-result-title">企业AI落地 · 方向诊断</div>' +
+          '<div class="sc-result-desc">你目前最需要的是<strong>判断方向</strong>——不是马上买工具或推项目，而是先搞清楚：在你的业务里，AI到底该从哪个场景切入。从场景发现开始，用最小成本验证第一条路。</div>' +
+          '<a href="/enterprise-ai/" class="sc-result-cta">了解企业AI落地服务 →</a>'
+      };
+    } else if (a[3] === 'e_worry_people') {
+      return {
+        html: '<div class="sc-result-icon">🧠</div>' +
+          '<div class="sc-result-label">你的起点</div>' +
+          '<div class="sc-result-title">企业知识资产化咨询</div>' +
+          '<div class="sc-result-desc">你最核心的痛点是<strong>知识在关键人脑子里，随时可能流失</strong>。不是再买一套软件，而是先把专家的隐性判断逻辑萃取出来，变成组织能复用、AI能调用的资产。</div>' +
+          '<a href="/enterprise-consulting/" class="sc-result-cta">了解知识资产化咨询 →</a>'
+      };
+    } else {
+      return {
+        html: '<div class="sc-result-icon">📚</div>' +
+          '<div class="sc-result-label">你的起点</div>' +
+          '<div class="sc-result-title">企业AI培训 · 实战工作坊</div>' +
+          '<div class="sc-result-desc">你的团队需要的是<strong>把AI用进真实业务场景</strong>——不是再上一堂科普课。带着你部门的真实数据和文档来，现场练、现场出成果、训后落地。</div>' +
+          '<a href="/enterprise-ai-training/" class="sc-result-cta">了解企业AI培训 →</a>'
+      };
+    }
+  } else {
+    // Personal paths
+    if (a[2] === 'p_brand' || a[3] === 'p_result_brand') {
+      return {
+        html: '<div class="sc-result-icon">🎯</div>' +
+          '<div class="sc-result-label">你的起点</div>' +
+          '<div class="sc-result-title">创始人品牌顾问</div>' +
+          '<div class="sc-result-desc">你有深度，缺的是<strong>一个人帮你看清方向、做战略级取舍</strong>。从6维品牌诊断开始，一次深度咨询帮你把多年的积累变成清晰、一致、可行动的个人品牌资产。</div>' +
+          '<a href="/personal-brand/" class="sc-result-cta">了解创始人品牌顾问 →</a>'
+      };
+    } else {
+      return {
+        html: '<div class="sc-result-icon">📦</div>' +
+          '<div class="sc-result-label">你的起点</div>' +
+          '<div class="sc-result-title">个人知识资产化</div>' +
+          '<div class="sc-result-desc">你做过的项目、积累的经验，<strong>不应该散落在硬盘和聊天记录里</strong>。把它们系统化、结构化，变成可搜索、可调用、可增值的知识资产——换方向带得走，做新项目有得用。</div>' +
+          '<a href="/knowledge-assetization/" class="sc-result-cta">了解知识资产化服务 →</a>'
+      };
+    }
+  }
+}
+
+function restart() {
+  answers = {};
+  document.getElementById('progress').style.width = '0%';
+  document.getElementById('result').style.display = 'none';
+  document.getElementById('bottom-hint').style.display = 'block';
+  document.querySelectorAll('.sc-card').forEach(function(c){ c.style.display = 'none'; });
+  document.getElementById('q1').style.display = 'block';
+}
+</script>
