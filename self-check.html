@@ -117,7 +117,7 @@ body { padding-top: 50px; background: #FAFAF8; }
 <div class="sc-hero">
   <div class="sc-hero-badge">快速自检 · 2分钟</div>
   <h1>找到你的起点</h1>
-  <p class="sc-hero-sub">6个问题，帮你判断该从哪条路径开始</p>
+  <p class="sc-hero-sub">6个问题，帮你判断该从哪条路径开始。<br>完成自测后，赠送对应主题的白皮书。</p>
 </div>
 
 <div class="sc-progress"><div class="sc-progress-fill" id="progress" style="width:0%"></div></div>
@@ -265,51 +265,70 @@ function showResult() {
 function determineResult() {
   var a = answers;
   var isEnterprise = a[1] === 'enterprise';
+  var wpSection = '';
 
   if (isEnterprise) {
-    // Enterprise paths
     if (a[2] === 'e_start' || a[3] === 'e_worry_direction') {
+      wpSection = '<div style="margin-top:28px;padding-top:24px;border-top:1px solid #E8E5E0">' +
+        '<p style="font-size:12px;color:#C4882F;font-weight:600;letter-spacing:1px;margin-bottom:8px">🎁 完成自测 · 赠白皮书</p>' +
+        '<p style="font-size:14px;color:#78716c;line-height:1.7;margin-bottom:12px">你的结果指向<strong style="color:#1A1A2E">方向判断</strong>是当下第一要务。这份白皮书帮你系统理解如何做对AI落地的第一判断。</p>' +
+        '<a href="/whitepaper/enterprise-ai-first-judgment/" target="_blank" style="display:inline-block;padding:8px 18px;border:1.5px solid #C4882F;color:#C4882F;text-decoration:none;border-radius:8px;font-family:\'DM Sans\',sans-serif;font-size:13px;font-weight:600">📖 阅读《企业AI落地第一判断》→</a></div>';
       return {
         html: '<div class="sc-result-icon">🔍</div>' +
           '<div class="sc-result-label">你的起点</div>' +
           '<div class="sc-result-title">企业AI落地 · 方向诊断</div>' +
           '<div class="sc-result-desc">你目前最需要的是<strong>判断方向</strong>——不是马上买工具或推项目，而是先搞清楚：在你的业务里，AI到底该从哪个场景切入。从场景发现开始，用最小成本验证第一条路。</div>' +
-          '<a href="/enterprise-ai/" class="sc-result-cta">了解企业AI落地服务 →</a>'
+          '<a href="/enterprise-ai/" class="sc-result-cta">了解企业AI落地服务 →</a>' + wpSection
       };
     } else if (a[3] === 'e_worry_people') {
+      wpSection = '<div style="margin-top:28px;padding-top:24px;border-top:1px solid #E8E5E0">' +
+        '<p style="font-size:12px;color:#C4882F;font-weight:600;letter-spacing:1px;margin-bottom:8px">🎁 完成自测 · 赠白皮书</p>' +
+        '<p style="font-size:14px;color:#78716c;line-height:1.7;margin-bottom:12px">你的核心痛点是<strong style="color:#1A1A2E">知识资产化</strong>。这份白皮书详解五卡体系和专家经验萃取方法。</p>' +
+        '<a href="/whitepaper/knowledge-assetization-guide/" target="_blank" style="display:inline-block;padding:8px 18px;border:1.5px solid #C4882F;color:#C4882F;text-decoration:none;border-radius:8px;font-family:\'DM Sans\',sans-serif;font-size:13px;font-weight:600">📖 阅读《知识资产化实战指南》→</a></div>';
       return {
         html: '<div class="sc-result-icon">🧠</div>' +
           '<div class="sc-result-label">你的起点</div>' +
           '<div class="sc-result-title">企业知识资产化咨询</div>' +
           '<div class="sc-result-desc">你最核心的痛点是<strong>知识在关键人脑子里，随时可能流失</strong>。不是再买一套软件，而是先把专家的隐性判断逻辑萃取出来，变成组织能复用、AI能调用的资产。</div>' +
-          '<a href="/enterprise-consulting/" class="sc-result-cta">了解知识资产化咨询 →</a>'
+          '<a href="/enterprise-consulting/" class="sc-result-cta">了解知识资产化咨询 →</a>' + wpSection
       };
     } else {
+      wpSection = '<div style="margin-top:28px;padding-top:24px;border-top:1px solid #E8E5E0">' +
+        '<p style="font-size:12px;color:#C4882F;font-weight:600;letter-spacing:1px;margin-bottom:8px">🎁 完成自测 · 赠白皮书</p>' +
+        '<p style="font-size:14px;color:#78716c;line-height:1.7;margin-bottom:12px">培训解决"会不会用"，但<strong style="color:#1A1A2E">方向判断</strong>是更前置的问题。这份白皮书帮你补上这一环。</p>' +
+        '<a href="/whitepaper/enterprise-ai-first-judgment/" target="_blank" style="display:inline-block;padding:8px 18px;border:1.5px solid #C4882F;color:#C4882F;text-decoration:none;border-radius:8px;font-family:\'DM Sans\',sans-serif;font-size:13px;font-weight:600">📖 阅读《企业AI落地第一判断》→</a></div>';
       return {
         html: '<div class="sc-result-icon">📚</div>' +
           '<div class="sc-result-label">你的起点</div>' +
           '<div class="sc-result-title">企业AI培训 · 实战工作坊</div>' +
           '<div class="sc-result-desc">你的团队需要的是<strong>把AI用进真实业务场景</strong>——不是再上一堂科普课。带着你部门的真实数据和文档来，现场练、现场出成果、训后落地。</div>' +
-          '<a href="/enterprise-ai-training/" class="sc-result-cta">了解企业AI培训 →</a>'
+          '<a href="/enterprise-ai-training/" class="sc-result-cta">了解企业AI培训 →</a>' + wpSection
       };
     }
   } else {
-    // Personal paths
     if (a[2] === 'p_brand' || a[3] === 'p_result_brand') {
+      wpSection = '<div style="margin-top:28px;padding-top:24px;border-top:1px solid #E8E5E0">' +
+        '<p style="font-size:12px;color:#C4882F;font-weight:600;letter-spacing:1px;margin-bottom:8px">🎁 完成自测 · 赠白皮书</p>' +
+        '<p style="font-size:14px;color:#78716c;line-height:1.7;margin-bottom:12px">品牌定位清晰之后，下一步就是把经验<strong style="color:#1A1A2E">变成可复用的知识资产</strong>。这份白皮书是你的实战手册。</p>' +
+        '<a href="/whitepaper/knowledge-assetization-guide/" target="_blank" style="display:inline-block;padding:8px 18px;border:1.5px solid #C4882F;color:#C4882F;text-decoration:none;border-radius:8px;font-family:\'DM Sans\',sans-serif;font-size:13px;font-weight:600">📖 阅读《知识资产化实战指南》→</a></div>';
       return {
         html: '<div class="sc-result-icon">🎯</div>' +
           '<div class="sc-result-label">你的起点</div>' +
           '<div class="sc-result-title">创始人品牌顾问</div>' +
           '<div class="sc-result-desc">你有深度，缺的是<strong>一个人帮你看清方向、做战略级取舍</strong>。从6维品牌诊断开始，一次深度咨询帮你把多年的积累变成清晰、一致、可行动的个人品牌资产。</div>' +
-          '<a href="/personal-brand/" class="sc-result-cta">了解创始人品牌顾问 →</a>'
+          '<a href="/personal-brand/" class="sc-result-cta">了解创始人品牌顾问 →</a>' + wpSection
       };
     } else {
+      wpSection = '<div style="margin-top:28px;padding-top:24px;border-top:1px solid #E8E5E0">' +
+        '<p style="font-size:12px;color:#C4882F;font-weight:600;letter-spacing:1px;margin-bottom:8px">🎁 完成自测 · 赠白皮书</p>' +
+        '<p style="font-size:14px;color:#78716c;line-height:1.7;margin-bottom:12px">你的结果指向<strong style="color:#1A1A2E">知识资产化</strong>是最该做的事。这份白皮书就是你的起步指南。</p>' +
+        '<a href="/whitepaper/knowledge-assetization-guide/" target="_blank" style="display:inline-block;padding:8px 18px;border:1.5px solid #C4882F;color:#C4882F;text-decoration:none;border-radius:8px;font-family:\'DM Sans\',sans-serif;font-size:13px;font-weight:600">📖 阅读《知识资产化实战指南》→</a></div>';
       return {
         html: '<div class="sc-result-icon">📦</div>' +
           '<div class="sc-result-label">你的起点</div>' +
           '<div class="sc-result-title">个人知识资产化</div>' +
           '<div class="sc-result-desc">你做过的项目、积累的经验，<strong>不应该散落在硬盘和聊天记录里</strong>。把它们系统化、结构化，变成可搜索、可调用、可增值的知识资产——换方向带得走，做新项目有得用。</div>' +
-          '<a href="/knowledge-assetization/" class="sc-result-cta">了解知识资产化服务 →</a>'
+          '<a href="/knowledge-assetization/" class="sc-result-cta">了解知识资产化服务 →</a>' + wpSection
       };
     }
   }
