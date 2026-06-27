@@ -86,9 +86,9 @@ weibo:
 # Select which links to show in the footer
 footer-links-active:
   rss: true
-  facebook: true
+  facebook: false
   email: true
-  twitter: true
+  twitter: false
   google-plus: false
   github: true
   reddit: false
@@ -96,7 +96,7 @@ footer-links-active:
   xing: false
   stackoverflow: false
   snapchat: false
-  instagram: true
+  instagram: false
   youtube: false
   spotify: false
   telephone: false
