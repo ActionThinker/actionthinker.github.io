@@ -1,0 +1,280 @@
+---
+layout: base
+title: 企业AI落地第一判断 · ActionThinker白皮书
+subtitle: 如何判断哪些AI场景值得做，哪些先别碰
+use-site-title: false
+---
+
+<style>
+:root {
+  --ink: #1A1A2E; --gold: #C4882F; --gold-dark: #A06820;
+  --muted: #5C5C5C; --light: #F7F5F0; --rule: #E8E5E0;
+}
+
+body { padding-top: 50px; background: #fff; font-family: 'DM Sans', 'Noto Sans SC', sans-serif; font-size: 15px; color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+@media (min-width: 768px) { body { padding-top: 90px; } }
+
+.wp-container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+/* Cover */
+.wp-cover {
+  text-align: center; padding: 80px 0 64px;
+  border-bottom: 1px solid var(--rule); margin-bottom: 56px;
+}
+.wp-cover-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--gold-dark); background: #FEFBF5;
+  padding: 5px 14px; border-radius: 99px; margin-bottom: 28px;
+  border: 1px solid rgba(196,136,47,0.2);
+}
+.wp-cover-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: block; }
+.wp-cover h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 5vw, 42px); font-weight: 600;
+  color: var(--ink); line-height: 1.2; margin-bottom: 16px;
+}
+.wp-cover-sub {
+  font-size: 17px; color: var(--muted); line-height: 1.7;
+  max-width: 480px; margin: 0 auto 32px;
+}
+.wp-cover-meta {
+  font-size: 13px; color: #999; letter-spacing: 1px;
+}
+
+/* Chapter */
+.wp-chapter { margin-bottom: 56px; }
+.wp-chapter-num {
+  font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 8px;
+}
+.wp-chapter h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 4vw, 30px); font-weight: 600;
+  color: var(--ink); line-height: 1.25; margin-bottom: 20px;
+}
+.wp-chapter h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 600; color: var(--ink);
+  margin: 32px 0 12px; line-height: 1.3;
+}
+.wp-chapter p { margin: 0 0 16px; color: var(--ink); }
+.wp-chapter ul, .wp-chapter ol { margin: 0 0 20px; padding-left: 24px; }
+.wp-chapter li { margin-bottom: 8px; color: var(--ink); }
+
+/* Callout */
+.wp-callout {
+  background: #FEFBF5; border-left: 3px solid var(--gold);
+  padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0;
+}
+.wp-callout p { margin: 0; font-size: 15px; color: var(--gold-dark); }
+.wp-callout strong { color: var(--ink); }
+
+/* Checklist */
+.wp-checklist {
+  background: var(--light); border-radius: 12px;
+  padding: 28px 28px 16px; margin: 32px 0;
+}
+.wp-checklist h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 600; margin: 0 0 16px; color: var(--ink);
+}
+.wp-checklist-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--rule);
+  font-size: 14px; color: var(--ink);
+}
+.wp-checklist-item:last-child { border-bottom: none; }
+.wp-checklist-box {
+  width: 20px; height: 20px; border: 2px solid #C4B99A;
+  border-radius: 4px; flex-shrink: 0; margin-top: 2px;
+}
+
+/* Scenario table */
+.wp-table {
+  width: 100%; border-collapse: collapse; margin: 24px 0;
+  font-size: 14px;
+}
+.wp-table th {
+  text-align: left; padding: 12px 16px;
+  background: var(--ink); color: #FAFAF8;
+  font-weight: 600; font-size: 12px; letter-spacing: 1px;
+}
+.wp-table td {
+  padding: 12px 16px; border-bottom: 1px solid var(--rule);
+  vertical-align: top; line-height: 1.6;
+}
+.wp-table tr:last-child td { border-bottom: none; }
+
+/* Footer */
+.wp-footer {
+  text-align: center; padding: 56px 0 80px;
+  border-top: 1px solid var(--rule); margin-top: 24px;
+}
+.wp-footer p { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+.wp-footer strong { color: var(--ink); }
+
+@media (max-width: 768px) {
+  .wp-cover { padding: 56px 0 44px; }
+  .wp-container { padding: 0 18px; }
+  .wp-chapter { margin-bottom: 44px; }
+  .wp-table { font-size: 12px; }
+  .wp-table th, .wp-table td { padding: 8px 10px; }
+}
+
+@media print {
+  body { padding-top: 0; font-size: 13px; }
+  .wp-container { max-width: 100%; }
+  .wp-cover { padding: 40px 0 32px; page-break-after: always; }
+  .wp-chapter { page-break-inside: avoid; }
+  .wp-checklist { page-break-inside: avoid; }
+  .wp-footer { page-break-before: always; }
+}
+</style>
+
+<div class="wp-container">
+
+<!-- COVER -->
+<div class="wp-cover">
+  <div class="wp-cover-badge">ActionThinker 白皮书</div>
+  <h1>企业AI落地<br>第一判断</h1>
+  <p class="wp-cover-sub">如何判断哪些AI场景值得做，哪些先别碰——来自15年知识管理实践和50+品牌服务的实战方法论</p>
+  <p class="wp-cover-meta">陈露 · ActionThinker &nbsp;|&nbsp; 2026</p>
+</div>
+
+<!-- CH1 -->
+<div class="wp-chapter">
+  <div class="wp-chapter-num">第一章</div>
+  <h2>为什么大多数企业AI项目，死在第一步</h2>
+
+  <p>过去两年，我接触了上百家企业的AI落地过程。一个反复出现的模式是：<strong>大部分失败不是因为技术不行，而是第一步就走错了。</strong></p>
+
+  <p>典型场景是这样的：老板看到AI新闻，感到焦虑。供应商来演示了一个看起来很厉害的功能。管理层决定"我们也上一个"。IT部门开始选型、比价、部署。三个月后，系统上线了，但业务部门不用。或者用了，但发现解决的不是最疼的问题。最终项目被搁置，所有人得出一个结论——"AI还不太成熟"。</p>
+
+  <p><strong>问题不在AI，在于没有做对第一判断。</strong></p>
+
+  <div class="wp-callout">
+    <p><strong>核心洞察：</strong>企业AI落地最大的风险不是"技术选错"，而是"场景选错"。选错场景，投入越大损失越大；选对场景，工具差一点也能跑通。</p>
+  </div>
+
+  <h3>三类最常见的错误开局</h3>
+
+  <p><strong>错误一：从技术出发，不从业务出发。</strong>"我们公司应该用大模型做点什么"——这是倒过来的。正确的问题是"我们业务里哪个环节最耗人、最依赖经验、最值得被AI增强"。</p>
+
+  <p><strong>错误二：追求完整的解决方案。</strong>想一步到位搭一个"企业AI中台"，结果项目周期太长，中途领导换人、预算被砍、需求变了。AI落地应该从小切口开始，验证后再扩展。</p>
+
+  <p><strong>错误三：把培训当落地。</strong>给员工上了AI课，以为这就是"AI转型"。培训解决的是"会不会用"，落地解决的是"有没有在用、有没有产生实际价值"。两者之间差着一层——把AI嵌入具体业务流程。</p>
+</div>
+
+<!-- CH2 -->
+<div class="wp-chapter">
+  <div class="wp-chapter-num">第二章</div>
+  <h2>AI机会地图：你的业务里，哪些环节最值得看</h2>
+
+  <p>不是所有业务环节都适合用AI。我用的判断框架只有两个维度：<strong>价值高低</strong>和<strong>可行性高低</strong>。</p>
+
+  <table class="wp-table">
+    <tr><th>维度</th><th>高价值</th><th>低价值</th></tr>
+    <tr>
+      <td><strong>高可行性</strong></td>
+      <td>⭐ 优先做<br>数据充足、流程清晰、AI能力成熟</td>
+      <td>可做可不做<br>容易实现但业务影响小</td>
+    </tr>
+    <tr>
+      <td><strong>低可行性</strong></td>
+      <td>⚠️ 需要准备<br>价值高但数据质量差、流程混乱</td>
+      <td>✕ 先别碰<br>投入产出不成比例</td>
+    </tr>
+  </table>
+
+  <p>跟企业做场景发现工作坊时，我们通常能找到 15-30 个AI机会点。但其中真正值得优先做的，一般只有 2-3 个。<strong>判断力，就是知道哪些不做。</strong></p>
+
+  <h3>五个最常被忽略的高价值场景</h3>
+
+  <p><strong>1. 老员工的知识提取。</strong>不是客服机器人，是把资深员工处理复杂情况的判断逻辑结构化。一个30年经验的工程师，退休前花两周把他的决策框架萃取出来，新人上手时间可以缩短一半。</p>
+
+  <p><strong>2. 重复性判断型工作。</strong>不是替代人，是辅助人做更快更一致的判断。例如合同审核中的风险条款识别、简历筛选中的关键经验匹配。</p>
+
+  <p><strong>3. 信息聚合型报告。</strong>竞品分析、行业周报、投标前的客户背景调研——这些需要从多个来源搜集信息再整合输出的工作，AI的效率提升最明显。</p>
+
+  <p><strong>4. 非标文档的结构化。</strong>每个企业都有大量散落的文档——项目总结、客户邮件、会议纪要、技术方案。把这些变成可检索、可调用的结构化知识库，价值巨大但常被忽略。</p>
+
+  <p><strong>5. 内部"求助"场景。</strong>"这个情况以前遇到过吗？""公司的标准做法是什么？"——企业里每天发生无数次这样的求助，回答质量完全取决于被问到的那个人。AI知识助手可以让所有人随时调用最佳实践。</p>
+</div>
+
+<!-- CH3 -->
+<div class="wp-chapter">
+  <div class="wp-chapter-num">第三章</div>
+  <h2>三步验证法：用最小成本试出第一条路</h2>
+
+  <p>确定了想试的场景之后，怎么试？我的方法论是三步走。每一步有看得见的产出，每一步做完再决定要不要往下走。</p>
+
+  <h3>第一步：场景发现（1-2周）</h3>
+  <p>不是写报告。是和业务负责人一起拆流程：哪些环节最耗人？哪些判断最依赖经验值？把所有可能的AI机会列出来，按价值和可行性排序。</p>
+  <p><strong>产出：</strong>一张你的团队看得懂、能讨论的AI机会地图。</p>
+
+  <h3>第二步：快速验证（2-4周）</h3>
+  <p>从机会地图里挑 1-2 个最高价值的场景，做一个可用的原型。关键点：<strong>用真实业务数据和真实用户在真实场景里测试</strong>——不是 Demo，是能产生实际判断或实际输出的东西。</p>
+  <p><strong>产出：</strong>一个验证过的场景原型 + 真实的用户反馈数据。</p>
+
+  <h3>第三步：落地迭代（4-8周）</h3>
+  <p>验证跑通之后，把它真正装进业务流程：打磨细节、优化效果、培训使用人员、建立使用规范。让那个场景从"还行能用"变成团队日常工作的一部分。</p>
+  <p><strong>产出：</strong>一个稳定运行的AI能力 + 使用数据 + 下一个场景的候选清单。</p>
+
+  <div class="wp-callout">
+    <p><strong>关键原则：</strong>每一步做完再决定下一步。从场景发现你就能判断值不值得继续。如果你决定停在任何一步，你拿到的东西已经可以独立使用——不需要"全部做完才有价值"。</p>
+  </div>
+</div>
+
+<!-- CH4 -->
+<div class="wp-chapter">
+  <div class="wp-chapter-num">第四章</div>
+  <h2>常见误区：三个"看起来对、做起来贵"的陷阱</h2>
+
+  <h3>陷阱一：工具采购陷阱</h3>
+  <p>症状：花大量时间选型、比价、POC测试，最后选了一个"功能最全"的平台。结果业务部门不会用、不想用、不知道用在哪。</p>
+  <p><strong>真相：</strong>工具是最后一步。先想清楚"要解决什么问题"和"怎么衡量成功"，工具自然就选出来了。大多数情况下，现有的通用工具（ChatGPT、Claude等）配合好的提示词和流程设计就够用了。</p>
+
+  <h3>陷阱二：通用培训陷阱</h3>
+  <p>症状：请老师来讲AI趋势、教Prompt工程，员工听完觉得有启发，回到工位依然不会做。</p>
+  <p><strong>真相：</strong>培训效果和业务相关性成正比。用员工自己的真实工作文档、真实业务场景来练，培训后直接产出可用的工作成果。不是"听完了"，是"做出来了"。</p>
+
+  <h3>陷阱三：咨询报告陷阱</h3>
+  <p>症状：花几十万请咨询公司出了一份精美的AI战略规划，开了一次汇报会，然后放在书架上落灰。</p>
+  <p><strong>真相：</strong>战略规划的价值取决于执行。一份能推动行动的报告，应该薄到一页纸，写着"先试这个场景，用这个方法，预计花这么多时间和预算，成功的标志是XX"。</p>
+</div>
+
+<!-- CH5 -->
+<div class="wp-chapter">
+  <div class="wp-chapter-num">第五章</div>
+  <h2>自检清单：你的企业AI就绪度</h2>
+
+  <p>在投入任何AI项目之前，先诚实地回答这 10 个问题。不是为了打分，是为了帮你找到<strong>真正的起点</strong>。</p>
+
+  <div class="wp-checklist">
+    <h3>企业AI就绪度自检</h3>
+
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 1. 你能说出业务里最耗人力的 3 个环节是什么吗？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 2. 这些环节中，哪些涉及大量重复性判断（不是纯创意工作）？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 3. 你的核心业务数据（文档、流程、案例）目前是结构化的还是散落的？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 4. 有没有一个具体的、可以被量化的业务指标，你会用AI来改善它？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 5. 你的团队中是否有人愿意花时间配合AI落地实验（不是全职，每周几小时）？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 6. 如果核心员工离职，他的判断力和经验是否留在了组织里？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 7. 你之前的AI尝试，是卡在"不知道怎么开始"还是"开始了但没效果"？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 8. 你愿意先用一个具体业务场景做小规模验证，而不是追求完整方案吗？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 9. 验证成功之后，你有能力把这个场景推广到其他部门或场景吗？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 10. 你现在最需要的是一个工具推荐，还是一个能帮你判断的人？</div>
+  </div>
+
+  <p style="margin-top:24px">如果大部分答案是"不确定"或"没有"——你的起点应该是<strong>一个30分钟的方向诊断</strong>，而不是立刻开始一个AI项目。</p>
+</div>
+
+<!-- FOOTER -->
+<div class="wp-footer">
+  <p><strong>陈露 · ActionThinker</strong></p>
+  <p>企业AI落地顾问 · 15年知识管理实践 · 50+品牌服务经验</p>
+  <p style="margin-top:16px">微信：ActionThinker &nbsp;|&nbsp; 邮件：chenlu@opclab.cn</p>
+  <p style="font-size:12px;color:#999;margin-top:8px">如需深度诊断或团队培训，欢迎联系。24小时内本人回复。</p>
+</div>
+
+</div>

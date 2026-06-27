@@ -1,0 +1,310 @@
+---
+layout: base
+title: 知识资产化实战指南 · ActionThinker白皮书
+subtitle: 五卡体系 + 专家经验萃取 + 从个人知识到组织AI能力
+use-site-title: false
+---
+
+<style>
+:root {
+  --ink: #1A1A2E; --gold: #C4882F; --gold-dark: #A06820;
+  --muted: #5C5C5C; --light: #F7F5F0; --rule: #E8E5E0;
+}
+
+body { padding-top: 50px; background: #fff; font-family: 'DM Sans', 'Noto Sans SC', sans-serif; font-size: 15px; color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+@media (min-width: 768px) { body { padding-top: 90px; } }
+.wp-container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+.wp-cover {
+  text-align: center; padding: 80px 0 64px;
+  border-bottom: 1px solid var(--rule); margin-bottom: 56px;
+}
+.wp-cover-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--gold-dark); background: #FEFBF5;
+  padding: 5px 14px; border-radius: 99px; margin-bottom: 28px;
+  border: 1px solid rgba(196,136,47,0.2);
+}
+.wp-cover-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: block; }
+.wp-cover h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 5vw, 42px); font-weight: 600;
+  color: var(--ink); line-height: 1.2; margin-bottom: 16px;
+}
+.wp-cover-sub { font-size: 17px; color: var(--muted); line-height: 1.7; max-width: 480px; margin: 0 auto 32px; }
+.wp-cover-meta { font-size: 13px; color: #999; letter-spacing: 1px; }
+
+.wp-chapter { margin-bottom: 56px; }
+.wp-chapter-num {
+  font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 8px;
+}
+.wp-chapter h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 4vw, 30px); font-weight: 600;
+  color: var(--ink); line-height: 1.25; margin-bottom: 20px;
+}
+.wp-chapter h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 600; color: var(--ink);
+  margin: 32px 0 12px; line-height: 1.3;
+}
+.wp-chapter p { margin: 0 0 16px; color: var(--ink); }
+.wp-chapter ul, .wp-chapter ol { margin: 0 0 20px; padding-left: 24px; }
+.wp-chapter li { margin-bottom: 8px; color: var(--ink); }
+
+.wp-callout {
+  background: #FEFBF5; border-left: 3px solid var(--gold);
+  padding: 20px 24px; margin: 28px 0; border-radius: 0 8px 8px 0;
+}
+.wp-callout p { margin: 0; font-size: 15px; color: var(--gold-dark); }
+.wp-callout strong { color: var(--ink); }
+
+.wp-card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0; }
+.wp-card {
+  background: var(--light); border-radius: 10px; padding: 24px 20px;
+  border: 1px solid var(--rule);
+}
+.wp-card-icon { font-size: 28px; margin-bottom: 10px; }
+.wp-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: var(--ink); margin: 0 0 6px; }
+.wp-card .wp-card-q { font-size: 12px; color: var(--gold-dark); font-weight: 600; margin-bottom: 8px; }
+.wp-card p { font-size: 13px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+.wp-checklist {
+  background: var(--light); border-radius: 12px;
+  padding: 28px 28px 16px; margin: 32px 0;
+}
+.wp-checklist h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; margin: 0 0 16px; color: var(--ink); }
+.wp-checklist-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--rule);
+  font-size: 14px; color: var(--ink);
+}
+.wp-checklist-item:last-child { border-bottom: none; }
+.wp-checklist-box {
+  width: 20px; height: 20px; border: 2px solid #C4B99A;
+  border-radius: 4px; flex-shrink: 0; margin-top: 2px;
+}
+
+.wp-steps { margin: 24px 0; }
+.wp-step {
+  display: flex; gap: 16px; margin-bottom: 20px;
+  padding: 20px; background: var(--light); border-radius: 10px;
+  border: 1px solid var(--rule);
+}
+.wp-step-num {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--ink); color: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700;
+  flex-shrink: 0;
+}
+.wp-step-text h4 { font-size: 15px; font-weight: 600; color: var(--ink); margin: 0 0 4px; }
+.wp-step-text p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.7; }
+
+.wp-footer {
+  text-align: center; padding: 56px 0 80px;
+  border-top: 1px solid var(--rule); margin-top: 24px;
+}
+.wp-footer p { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+.wp-footer strong { color: var(--ink); }
+
+@media (max-width: 768px) {
+  .wp-cover { padding: 56px 0 44px; }
+  .wp-container { padding: 0 18px; }
+  .wp-chapter { margin-bottom: 44px; }
+  .wp-card-grid { grid-template-columns: 1fr; }
+}
+
+@media print {
+  body { padding-top: 0; font-size: 13px; }
+  .wp-container { max-width: 100%; }
+  .wp-cover { padding: 40px 0 32px; page-break-after: always; }
+  .wp-chapter { page-break-inside: avoid; }
+  .wp-card-grid { page-break-inside: avoid; }
+  .wp-checklist { page-break-inside: avoid; }
+  .wp-footer { page-break-before: always; }
+}
+</style>
+
+<div class="wp-container">
+
+<!-- COVER -->
+<div class="wp-cover">
+  <div class="wp-cover-badge">ActionThinker 白皮书</div>
+  <h1>知识资产化<br>实战指南</h1>
+  <p class="wp-cover-sub">把核心人才的经验和判断力，变成组织留得住、用得上、AI能调用的知识资产</p>
+  <p class="wp-cover-meta">陈露 · ActionThinker &nbsp;|&nbsp; 2026</p>
+</div>
+
+<!-- CH1 -->
+<div class="wp-chapter">
+  <div class="wp-chapter-num">第一章</div>
+  <h2>为什么最值钱的知识，锁在最值钱的人脑子里</h2>
+
+  <p>问任何一个企业管理者一个问题：如果你们公司最厉害的那个人明天离职，你会失去什么？</p>
+
+  <p>答案是：<strong>不只是失去一个人，是失去一套判断系统。</strong></p>
+
+  <p>销冠知道"这个客户快签了"不是因为他说了要签，而是因为他问了一个特定问题。总工扫一眼图纸就知道哪里会出问题，不是因为看到了错误，而是因为他见过一百次同样的错误。资深顾问给客户做方案的时候，脑子里调用的不是PPT模板，是过去二十年类似项目的决策逻辑。</p>
+
+  <p>这些判断力、直觉、决策框架——<strong>是企业最值钱的资产，也是最脆弱的资产。</strong>因为它们存在人的脑子里，人一走，资产归零。</p>
+
+  <div class="wp-callout">
+    <p><strong>核心洞察：</strong>AI工具本身不解决"知识从哪来"的问题。Agent需要业务知识底座——而大多数企业的知识，现在还锁在关键人的脑子里。</p>
+  </div>
+
+  <h3>知识流失的三个信号</h3>
+  <p>如果你的企业出现以下任何一种情况，说明知识资产化已经刻不容缓：</p>
+  <p><strong>信号一：同样的问题反复出现。</strong>新人犯老错误，不是因为不聪明，是因为前人踩过的坑没有变成组织记忆。</p>
+  <p><strong>信号二：关键人不敢休假。</strong>某个人不在，某个业务就停摆。不是流程问题，是知识只在他脑子里。</p>
+  <p><strong>信号三：招聘时要求"3-5年经验"。</strong>其实是希望找到一个人，他脑子里刚好有你们需要的判断力。这是在赌运气。</p>
+</div>
+
+<!-- CH2 -->
+<div class="wp-chapter">
+  <div class="wp-chapter-num">第二章</div>
+  <h2>五卡体系：把隐性经验变成结构化知识</h2>
+
+  <p>15年知识管理实践，我提炼了一套知识表达标准——<strong>五卡体系</strong>。它的核心思想是：不是所有知识都该用同一种方式记录。不同类型的经验，需要不同的卡片格式。</p>
+
+  <div class="wp-card-grid">
+    <div class="wp-card">
+      <div class="wp-card-icon">📋</div>
+      <h4>案例卡</h4>
+      <div class="wp-card-q">发生了什么？</div>
+      <p>完整项目叙事 + 可复用模式。新人来了能学，老人做方案能参考。不只是描述结果，要还原当时的判断依据。</p>
+    </div>
+    <div class="wp-card">
+      <div class="wp-card-icon">📐</div>
+      <h4>方法论卡</h4>
+      <div class="wp-card-q">怎么做？</div>
+      <p>可复用的框架和SOP。含版本管理和有效期标记。方法论不是教条——每次使用都在验证和迭代。</p>
+    </div>
+    <div class="wp-card">
+      <div class="wp-card-icon">🧭</div>
+      <h4>决策卡</h4>
+      <div class="wp-card-q">为什么选A不选B？</div>
+      <p>最昂贵的知识流失。把专家的决策逻辑链还原——当时的选项、判断标准、权衡过程、最终选择。</p>
+    </div>
+    <div class="wp-card">
+      <div class="wp-card-icon">⚠️</div>
+      <h4>风险卡</h4>
+      <div class="wp-card-q">不能做什么？</div>
+      <p>踩过的坑、交过的学费。新人最快的成长路径，就是不走别人走过的弯路。每一次试错成本都应该变成组织资产。</p>
+    </div>
+    <div class="wp-card">
+      <div class="wp-card-icon">🎯</div>
+      <h4>偏好卡</h4>
+      <div class="wp-card-q">关键人偏好什么？</div>
+      <p>领导、客户、合作方的沟通风格和决策偏好——决定方案能不能通过的隐性知识。这是最容易被忽略、但最影响结果的知识类型。</p>
+    </div>
+    <div class="wp-card" style="display:flex;align-items:center;justify-content:center;background:#FEFBF5;border-color:rgba(196,136,47,0.25);border-style:dashed">
+      <div style="text-align:center">
+        <div style="font-size:28px;margin-bottom:8px">🔗</div>
+        <h4 style="color:var(--gold-dark)">汇聚 → AI Agent训练</h4>
+        <p>五类卡片汇聚后，编码为Agent系统提示，知识可被团队对话式查询。这就是企业自己的AI知识底座。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wp-callout">
+    <p><strong>为什么五卡而不是一个文档库：</strong>通用文档库的问题是"什么都往里扔，什么都找不到"。五卡体系强制你在记录前先判断"这是什么类型的知识"，这个分类动作本身就是知识结构化的第一步。</p>
+  </div>
+</div>
+
+<!-- CH3 -->
+<div class="wp-chapter">
+  <div class="wp-chapter-num">第三章</div>
+  <h2>专家经验萃取四步法</h2>
+
+  <p>五卡体系是"怎么存"，萃取是"怎么取"。从专家脑子里把隐性判断逻辑"取"出来，是一门手艺。</p>
+
+  <div class="wp-steps">
+    <div class="wp-step">
+      <div class="wp-step-num">1</div>
+      <div class="wp-step-text">
+        <h4>选对人：识别高价值知识源</h4>
+        <p>不是每个人都值得萃取。判断标准：这个人离职后，什么能力会断层？他的决策是否有可复用的模式，还是纯靠天赋直觉？</p>
+      </div>
+    </div>
+    <div class="wp-step">
+      <div class="wp-step-num">2</div>
+      <div class="wp-step-text">
+        <h4>问对问题：挖掘"自己都没意识到的判断逻辑"</h4>
+        <p>不问"你怎么做的"，问"你当时看到了什么让你决定这么做"。追问具体案例，还原决策瞬间的信息环境、选项和判断标准。</p>
+      </div>
+    </div>
+    <div class="wp-step">
+      <div class="wp-step-num">3</div>
+      <div class="wp-step-text">
+        <h4>结构编码：匹配五卡格式</h4>
+        <p>把访谈内容分类：这是案例还是方法论？是决策逻辑还是风险认知？同一段经历可能同时产出多张卡——一个项目既有决策卡也有风险卡。</p>
+      </div>
+    </div>
+    <div class="wp-step">
+      <div class="wp-step-num">4</div>
+      <div class="wp-step-text">
+        <h4>验证闭环：让专家本人确认 + 让新手测试</h4>
+        <p>把编码结果给专家审核："这是你想表达的意思吗？"然后把卡片给一个新人，看他能否基于卡片做出接近专家水平的判断。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wp-callout">
+    <p><strong>关键提醒：</strong>萃取的目标不是把专家的每一个想法都记录下来——那不可能也不必要。目标是捕捉<strong>可复用的判断模式和决策框架</strong>。一个专家通常能萃取出 15-30 张核心知识卡片，这已经足够显著提升团队的整体判断水平。</p>
+  </div>
+</div>
+
+<!-- CH4 -->
+<div class="wp-chapter">
+  <div class="wp-chapter-num">第四章</div>
+  <h2>从个人知识到组织AI能力：跃迁路径</h2>
+
+  <p>知识资产化的最终目标不是建一个"知识库"，而是让组织的判断能力不再依赖特定个人。<strong>这是一条从个人到组织、从隐性到显性、从人类到AI的跃迁路径。</strong></p>
+
+  <h3>阶段一：个人知识显性化</h3>
+  <p>目标：关键岗位的核心知识不再只存在一个人脑子里。产出：3-5位核心专家的知识卡片库（50-100张）。</p>
+
+  <h3>阶段二：组织知识体系化</h3>
+  <p>目标：知识可以跨部门、跨层级流动。产出：覆盖核心岗位的知识资产网络 + 更新机制 + 激励制度。</p>
+
+  <h3>阶段三：AI知识可调用</h3>
+  <p>目标：知识可以被AI理解、检索和应用。产出：Agent-ready知识底座 + 内部AI知识助手，团队7×24可调用专家级判断。</p>
+
+  <p>三个阶段不需要一次做完。大部分企业从阶段一开始就能看到显著效果——一个岗位的知识卡片，已经能让新人上手时间明显缩短。</p>
+</div>
+
+<!-- CH5 -->
+<div class="wp-chapter">
+  <div class="wp-chapter-num">第五章</div>
+  <h2>自检清单：你的知识资产流失风险评估</h2>
+
+  <div class="wp-checklist">
+    <h3>知识资产流失风险自检</h3>
+
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 1. 你能立刻说出公司里最不可替代的 3 个人是谁吗？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 2. 他们的判断力和经验，目前有系统化的记录吗（不是简历或绩效评语）？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 3. 新员工入职后，一般需要多长时间才能独立做出靠谱判断？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 4. 过去一年里，有没有因为某人离职或休假导致重要工作出过问题？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 5. 你的团队里，同样的错误是否反复出现（说明踩过的坑没变成组织记忆）？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 6. 你的公司文档（项目总结、方案、报告）能找到吗？能找到有用的信息吗？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 7. 如果明天需要做一个跟过去类似的项目，你能从过去的经验中获得多少有效参考？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 8. 你现在的AI工具（如果有的话），是否接入了你自己的业务知识而不仅仅是通用语料？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 9. 核心专家的经验萃取，是否被列为公司的一项正式工作而非"顺便做做"？</div>
+    <div class="wp-checklist-item"><div class="wp-checklist-box"></div> 10. 你最担心的知识流失场景是什么？过去一年这件事发生的概率有多大？</div>
+  </div>
+
+  <p style="margin-top:24px">如果 3 个以上问题让你感到不安——你的企业已经有实质性的知识流失风险。好消息是，从风险最高的那个岗位开始，2-3次深度访谈就能看到显著变化。</p>
+</div>
+
+<!-- FOOTER -->
+<div class="wp-footer">
+  <p><strong>陈露 · ActionThinker</strong></p>
+  <p>企业知识资产化顾问 · 15年知识管理实践 · 前NPLUS首席知识官</p>
+  <p style="margin-top:16px">微信：ActionThinker &nbsp;|&nbsp; 邮件：chenlu@opclab.cn</p>
+  <p style="font-size:12px;color:#999;margin-top:8px">如需知识资产诊断或专家萃取服务，欢迎联系。24小时内本人回复。</p>
+</div>
+
+</div>
