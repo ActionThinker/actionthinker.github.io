@@ -26,3 +26,4 @@ _posts/2015-01-04-first-post.md
 _posts/2015-02-28-test-markdown.md
 _posts/2017-12-10-welcome-to-our-wedding-party.md
 .gstack/
+__pycache__/
