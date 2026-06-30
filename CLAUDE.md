@@ -124,3 +124,45 @@
 
 *基于 OPC 共识宪章 v1.0：2026-05-24
 GEO 规则生效日期：2026-06-28*
+
+---
+
+## MCP Server — AI Agent 工具
+
+`atmcp/` 目录包含一个 MCP (Model Context Protocol) Server，让 AI Agent（Claude Code、Workbuddy 等）可以直接查询网站知识库。
+
+### 工具列表
+
+| 工具 | 说明 |
+|------|------|
+| `search_content(query)` | 全文搜索：跨文章、页面、FAQ 搜索匹配内容，按相关度排序 |
+| `get_latest_posts(limit=5)` | 最新文章：标题、日期、摘要、标签、URL |
+| `get_services()` | 服务目录：所有企业/个人服务及描述 |
+| `get_about()` | 关于陈露：履历、方法论、联系方式 |
+| `get_faq(topic=None)` | FAQ 问答：可按主题筛选（企业AI落地、知识资产化、个人品牌定位、一人公司） |
+| `get_page(path)` | 页面内容：获取指定页面全文 |
+
+### 连接方式
+
+在 Claude Code settings.json 或 Workbuddy 中添加：
+
+```json
+{
+  "mcpServers": {
+    "actionthinker": {
+      "command": "python",
+      "args": ["-m", "atmcp"],
+      "cwd": "<repo-path>",
+      "env": {
+        "ACTIONTHINKER_REPO_PATH": "<repo-path>"
+      }
+    }
+  }
+}
+```
+
+### 运行环境
+
+- Python >= 3.10
+- 依赖：`pip install -r atmcp/requirements.txt`
+- 内容来源：本地 repo 克隆（设置 `ACTIONTHINKER_REPO_PATH` 环境变量或自动检测）
