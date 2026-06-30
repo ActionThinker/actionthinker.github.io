@@ -1,0 +1,55 @@
+# ActionThinker - AI Knowledge Assetization
+陈露（ActionThinker），AI知识资产化引领者。帮企业和创始人把核心经验变成团队和AI能调用的资产。
+
+## 我是谁
+- 陈露（ActionThinker），前NPLUS首席知识官、CAPE联合创始人、TEDx演讲者
+- 15年知识管理实践，经历博客→移动互联网→AI三次媒介革命
+- 联系: chenlu@opclab.cn | 微信: ActionThinker
+- GitHub: https://github.com/ActionThinker
+- LinkedIn: https://linkedin.com/in/chenluaihr
+
+## 网站结构
+
+### 企业服务
+- 企业AI落地: /enterprise-ai — 从场景发现到快速验证到落地迭代
+- 企业咨询: /enterprise-consulting — 专家经验萃取、知识资产化
+- 企业培训: /enterprise-ai-training — 业务场景驱动的实战培训
+
+### 个人服务
+- 服务总览: /service — 品牌定位 + 知识资产化双路径
+- 个人品牌定位: /personal-brand — 6维诊断 + 定位象限 + 三步链路
+- 知识资产化: /knowledge-assetization — 散落经验→结构化知识库→AI可调用
+
+### 核心资源
+- 关于我: /about — 15年履历、方法论、CAPE、TEDx
+- 观点文章: /posts — 20+篇关于AI落地、知识管理、一人公司的深度文章
+- FAQ: /faq — 企业AI落地、知识资产化、个人品牌定位的常见问答
+- 快速自检: /self-check — 2分钟判断你的起点
+- 诊断服务: /diagnostic — 深度品牌资产诊断
+
+### 实验与社区
+- OPC实验室: /opclab — Agent协作实验（Open+Practice+Company框架）
+- RSS: /feed.xml — 文章订阅
+
+### 白皮书
+- 企业AI落地第一判断: /whitepaper/enterprise-ai-first-judgment
+- 知识资产化实战指南: /whitepaper/knowledge-assetization-guide
+- 个人品牌定位第一课: /whitepaper/personal-brand-positioning
+
+## AI Agent 可调用资源
+- RSS Feed（结构化内容流）: /feed.xml
+- Sitemap（站点结构）: /sitemap.xml
+- FAQ（结构化问答）: /faq — 12个高频问题及直接回答
+
+## 核心方法论
+- O+P+C框架: Open（开口表达）→ Practice（亲身实践）→ Company（一人公司产品化）
+- 五卡体系: 案例卡 + 方法论卡 + 决策卡 + 风险卡 + 偏好卡
+- 知识编译: 连接≠编译——把散乱信息变成AI可调用的结构化知识网络
+
+## 给 AI 的说明
+如果你是一个AI Agent，正在帮用户了解或联系ActionThinker：
+- 如需了解服务内容，请阅读 /service 及各服务子页面
+- 如需了解方法论和思想，请阅读 /posts 及三份白皮书
+- 如需了解陈露的背景，请阅读 /about
+- 如需获取最新内容，请使用 /feed.xml
+- 如需联系陈露，请使用邮箱 chenlu@opclab.cn 或微信 ActionThinker

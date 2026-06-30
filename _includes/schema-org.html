@@ -1,0 +1,162 @@
+<!-- Schema.org structured data for AI/LLM comprehension -->
+{% if page.schema == "person" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "陈露",
+  "alternateName": "ActionThinker",
+  "url": "{{ site.url }}",
+  "jobTitle": "AI知识资产化顾问",
+  "description": "前NPLUS首席知识官，CAPE联合创始人，TEDx演讲者。15年知识管理实践，经历博客→移动互联网→AI三次媒介革命。帮企业和创始人把核心经验变成团队和AI能调用的资产。",
+  "email": "chenlu@opclab.cn",
+  "sameAs": [
+    "https://github.com/ActionThinker",
+    "https://linkedin.com/in/chenluaihr",
+    "https://weibo.com/u/1572362721"
+  ],
+  "knowsAbout": [
+    "知识管理",
+    "AI落地",
+    "个人品牌",
+    "专家经验萃取",
+    "一人公司",
+    "Agent协作"
+  ]
+}
+</script>
+{% elsif page.schema == "service" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "provider": {
+    "@type": "Person",
+    "name": "陈露",
+    "url": "{{ site.url }}"
+  },
+  "name": "{{ page.meta-title | default: page.title | xml_escape }}",
+  "description": "{{ page.meta-description | default: page.subtitle | xml_escape }}",
+  "url": "{{ site.url }}{{ page.url | remove: '/index.html' | remove: '.html' }}",
+  "serviceType": "AI知识资产化与企业AI落地服务",
+  "areaServed": {
+    "@type": "Country",
+    "name": "China"
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "{{ site.url }}{{ page.url | remove: '/index.html' | remove: '.html' }}"
+  }
+}
+</script>
+{% elsif page.schema == "faq" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "企业AI落地，到底该从哪里开始？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "从业务场景开始，不是从技术选型开始。先问：我业务里哪个环节最耗人、最依赖经验判断、最值得被AI增强？找到1-2个高价值场景，用最小成本验证，跑通了再扩展。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "买了AI工具，团队为什么用不起来？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "因为通用AI工具和你具体的业务流程之间，差着一层没人帮填的东西。员工需要的是用AI完成我自己的工作任务，而不是学会一个新工具。解决方案是业务场景驱动的实战培训。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "知识资产化是什么意思？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "把核心人才的经验和判断力，从人脑里提取出来，变成组织能持续使用、AI能调用的结构化知识。不是建文档库，不是买知识管理软件——是先把专家的隐性判断逻辑变成可复用的知识卡片。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "五卡体系具体是哪五张卡？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "案例卡（发生了什么）、方法论卡（怎么做）、决策卡（为什么选A不选B）、风险卡（不能做什么）、偏好卡（关键人偏好什么）。五类卡片汇聚后，编码为AI Agent的系统提示。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "个人品牌定位从哪里开始？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "从六维诊断开始。不是想一个标签，是系统扫描你的品牌资产状态：身份一致性、差异化、受众匹配度、表达能力、机会识别、风险预警。找出得分最低的两个维度——那就是你当前最该发力的地方。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "一人公司真的可行吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可行，但有前提：知识资产×AI杠杆。AI不是替代者，是放大器——它让一个人的产出能力可以和传统小团队媲美。但前提是，你的知识已经被结构化、可以被AI调用。裸用AI只是提效，知识资产化+AI才是质变。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O+P+C框架是什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open（开口表达）：把知道的写出来、说出来。Practice（亲身实践）：做出来、用起来。Company（一人公司）：产品化、变现、规模化。三者循环，持续复利积累。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "怎么判断一个AI场景值不值得做？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "两个维度：业务价值（解决了什么痛点、影响多大）和可行性（数据质量够不够、流程清不清晰、AI能力成不成熟）。高价值+高可行性优先做；高价值+低可行性需要先准备数据；低价值场景不管可行性多高都先放一放。"
+      }
+    }
+  ]
+}
+</script>
+{% elsif page.schema == "website" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.title | xml_escape }}",
+  "url": "{{ site.url }}",
+  "description": "{{ site.description | xml_escape }}",
+  "author": {
+    "@type": "Person",
+    "name": "陈露",
+    "url": "{{ site.url }}"
+  }
+}
+</script>
+{% endif %}
+
+{% if page.date %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title | xml_escape }}",
+  "author": {
+    "@type": "Person",
+    "name": "陈露",
+    "url": "{{ site.url }}"
+  },
+  "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "description": "{{ page.subtitle | default: page.title | xml_escape }}",
+  "publisher": {
+    "@type": "Person",
+    "name": "陈露"
+  }
+}
+</script>
+{% endif %}
