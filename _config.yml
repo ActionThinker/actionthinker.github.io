@@ -17,7 +17,7 @@ baseurl: ""
 title: 陈露 · ActionThinker
 
 # Short description of your site
-description: AI知识资产化引领者 · 个人品牌资产顾问 — 让经验成为可积累、可增值、可传承的核心资产
+description: 陈露（ActionThinker），前NPLUS首席知识官，AI知识资产化引领者。企业AI落地 · 知识资产化 · 企业AI培训 · WorkBuddy商业生态 — 让经验成为可积累、可增值、可传承的核心资产
 
 # Google Fonts (P0 视觉升级：品牌字体系统)
 googlefonts:
@@ -60,7 +60,7 @@ page-col: "#FAFAF8"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: ActionThinker
-  email: "chenlu@opclab.cn"
+  email: "Lu@NexFDE.com"
   facebook: chenluaihr  # eg. daattali
   github: ActionThinker    # eg. daattali
   twitter: Action_Thinker   # eg. daattali
