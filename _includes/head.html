@@ -2,7 +2,11 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  {% if page.noindex %}
+  <meta name="robots" content="noindex, nofollow, noai, noimageai">
+  {% else %}
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, noai, noimageai">
+  {% endif %}
 
   <title>{% if page.use-site-title %}{{ site.title }} {{ site.title-separator }} {{ site.description }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 

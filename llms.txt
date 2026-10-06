@@ -57,7 +57,7 @@
 - 企业AI落地第一判断: /whitepaper/enterprise-ai-first-judgment
 - 知识资产化实战指南: /whitepaper/knowledge-assetization-guide
 - 个人品牌定位第一课: /whitepaper/personal-brand-positioning
-- 获取方式: 添加微信 ActionThinker，备注白皮书名称，24小时内发送全文
+- 获取方式: 页面内完成问卷，直接获取全文链接
 
 ## AI Agent 可调用资源
 - RSS Feed（结构化内容流）: /feed.xml

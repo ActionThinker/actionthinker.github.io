@@ -86,7 +86,7 @@ DFC中国、中南屋、微学英语、Yingfluence、iJoin社会创新咨询、C
 1. **企业AI落地第一判断**（/whitepaper/enterprise-ai-first-judgment/）：五章——为什么大多数企业AI项目死在第一步；AI机会地图；三步验证法；三个常见误区；企业AI就绪度自检清单
 2. **知识资产化实战指南**（/whitepaper/knowledge-assetization-guide/）：五章结构，诊断→萃取→体系化方法论
 3. **个人品牌定位第一课**（/whitepaper/personal-brand-positioning/）：五章结构，6维诊断与定位象限
-- 获取方式：添加微信ActionThinker，备注白皮书名称，24小时内发送全文
+- 获取方式：公开页完成问卷（称呼/公司/职位/关注问题）后直接展示全文链接；全文页为隐藏路径+noindex，仅供学习，请勿外传
 
 ## OPClab 实验室
 一人公司实验室，陈露持续验证知识资产化、一人公司方法论和AI协作实验的实战场所；所有教给客户的方法都在自己的体系里持续验证。
