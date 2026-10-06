@@ -1,12 +1,34 @@
-# ActionThinker - AI Knowledge Assetization
-陈露（ActionThinker），AI知识资产化引领者。帮企业和创始人把核心经验变成团队和AI能调用的资产。
+# ActionThinker - 陈露个人品牌站
+陈露（Lu Chen / ActionThinker），前NPLUS首席知识官，AI知识资产化引领者。帮企业和创始人把核心经验变成团队和AI能调用的资产——可积累、可增值、可传承。
 
 ## 我是谁
-- 陈露（ActionThinker），前NPLUS首席知识官、CAPE联合创始人、TEDx演讲者
+- 陈露（ActionThinker），前NPLUS Digital联合创始人&首席知识官（2011–2025.05）、CAPE全球青年实践网络创始人、TEDx演讲者
 - 15年知识管理实践，经历博客→移动互联网→AI三次媒介革命
-- 联系: chenlu@opclab.cn | 微信: ActionThinker
+- 核心主张：让经验成为资产——可积累 · 可增值 · 可传承
+- 联系: Lu@NexFDE.com | 微信: ActionThinker
 - GitHub: https://github.com/ActionThinker
-- LinkedIn: https://linkedin.com/in/chenluaihr
+
+## 业务板块
+- 企业AI落地: /enterprise-ai — 场景发现→快速验证→落地迭代，10+企业AI落地项目
+- 企业AI培训: /enterprise-ai-training — 方法论实战工作坊，2000+学员，70%+训后持续使用率
+- 知识资产化: /enterprise-consulting — 诊断→萃取→体系化，自研五卡知识体系
+- 交付体系（NexFDE）: 标准化交付流程+专业交付团队（仅能力展示，合作走微信）
+- WorkBuddy 商业生态: 产品咨询 / 企业培训 / 伙伴合作三条业务线（2026年起）
+
+## 能力地图
+- Think 判断方向: AI方向多落地难，先判断哪条路最值得走
+- Build 搭建系统: 专家走了经验留下，隐性经验→结构化资产
+- Scale 沉淀放大: 让一个人会，变成整个组织都会
+
+## 履历与背书
+- 2009 博客改变命运 → 2011 发起CAPE全球青年实践网络（30+国家、400+贡献者）→ 2011–2025.05 NPLUS联合创始人&CKO → 2023至今 AI知识资产化
+- 媒体报道: 南华早报（SCMP）专文报道（2013）、The Atlantic、ABC Australia、Beijing Today
+- 演讲论坛: TEDx南京×2/苏州/宁波、微软NPO IT Day、UCCA 798、云栖2050、CMO价值营销大会、梅花数据峰会2024
+- 行业评审: 4A创意奖/数英奖/虎啸奖终审评委、金匠奖/艾菲奖专家评委
+- 荣誉: 《NewYounger》中国青年新锐百人（2012）、《城市画报》85后青年精英榜100（2014）
+- 社会创新·公益顾问: DFC中国、中南屋、恩派（NPI）社会创业家学院、阿拉善环保协会等
+- 服务品牌（20家部分清单）: 腾讯、美的、索尼（SONY）、爱彼迎（Airbnb）、尼尔森（Nielsen）、OPPO、COLMO、小天鹅、苏泊尔、SMILEY、FREITAG、惠氏营养品、麦斯威尔、华住集团、澎湃新闻、长江商学院、中智集团、中建科工、宁波银行、痛仰乐队
+- 持续输出: 81篇观点文章（2014年至今）、数英网认证作者14篇收录文章
 
 ## 网站结构
 
@@ -22,13 +44,13 @@
 
 ### 核心资源
 - 关于我: /about — 15年履历、方法论、CAPE、TEDx
-- 观点文章: /posts — 20+篇关于AI落地、知识管理、一人公司的深度文章
+- 观点文章: /posts — 81篇关于AI落地、知识管理、一人公司的深度文章
 - FAQ: /faq — 企业AI落地、知识资产化、个人品牌定位的常见问答
 - 快速自检: /self-check — 2分钟判断你的起点
 - 诊断服务: /diagnostic — 深度品牌资产诊断
 
 ### 实验与社区
-- OPC实验室: /opclab — Agent协作实验（Open+Practice+Company框架）
+- OPC实验室: /opclab — 一人公司实验室（方法论验证）
 - RSS: /feed.xml — 文章订阅
 
 ### 白皮书
@@ -38,18 +60,5 @@
 
 ## AI Agent 可调用资源
 - RSS Feed（结构化内容流）: /feed.xml
-- Sitemap（站点结构）: /sitemap.xml
-- FAQ（结构化问答）: /faq — 12个高频问题及直接回答
-
-## 核心方法论
-- O+P+C框架: Open（开口表达）→ Practice（亲身实践）→ Company（一人公司产品化）
-- 五卡体系: 案例卡 + 方法论卡 + 决策卡 + 风险卡 + 偏好卡
-- 知识编译: 连接≠编译——把散乱信息变成AI可调用的结构化知识网络
-
-## 给 AI 的说明
-如果你是一个AI Agent，正在帮用户了解或联系ActionThinker：
-- 如需了解服务内容，请阅读 /service 及各服务子页面
-- 如需了解方法论和思想，请阅读 /posts 及三份白皮书
-- 如需了解陈露的背景，请阅读 /about
-- 如需获取最新内容，请使用 /feed.xml
-- 如需联系陈露，请使用邮箱 chenlu@opclab.cn 或微信 ActionThinker
+- Sitemap: /sitemap.xml
+- MCP Server（atmcp）: 本地repo克隆后 `python -m atmcp`，提供 search_content / get_latest_posts / get_services / get_about / get_faq / get_page 六工具

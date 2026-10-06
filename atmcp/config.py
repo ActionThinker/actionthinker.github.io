@@ -52,7 +52,7 @@ def load_site_config(repo_root: Path) -> dict:
         "title": config.get("title", "ActionThinker"),
         "description": config.get("description", ""),
         "author_name": config.get("author", {}).get("name", "陈露"),
-        "author_email": config.get("author", {}).get("email", "chenlu@opclab.cn"),
+        "author_email": config.get("author", {}).get("email", "Lu@NexFDE.com"),
     }
 
 
@@ -77,7 +77,7 @@ PAGE_WHITELIST = set(PAGE_MAP.keys()) | set(PAGE_MAP.values())
 
 def get_contact_info(site_config: dict) -> dict:
     return {
-        "email": site_config.get("author_email", "chenlu@opclab.cn"),
+        "email": site_config.get("author_email", "Lu@NexFDE.com"),
         "wechat": "ActionThinker",
         "github": "https://github.com/ActionThinker",
         "linkedin": "https://linkedin.com/in/chenluaihr",
