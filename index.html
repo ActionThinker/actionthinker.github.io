@@ -212,25 +212,6 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
   display: grid; grid-template-columns: repeat(4, 1fr);
   gap: 14px; margin-top: 8px;
 }
-.br-photo-slot {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  border: 1.5px dashed var(--faint);
-  border-radius: var(--radius);
-  background: var(--surface);
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  gap: 6px;
-  overflow: hidden;
-  transition: all 0.25s;
-}
-.br-photo-slot .slot-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px; font-weight: 600; color: var(--faint);
-}
-.br-photo-slot .slot-hint {
-  font-size: 11px; color: #C4BEB6; letter-spacing: 0.06em;
-}
 .br-photo {
   position: relative;
   aspect-ratio: 4 / 3;
@@ -246,14 +227,6 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
   transition: transform 0.4s;
 }
 .br-photo:hover img { transform: scale(1.04); }
-.br-photo-caption {
-  position: absolute; left: 0; right: 0; bottom: 0;
-  padding: 22px 12px 10px;
-  background: linear-gradient(180deg, transparent, rgba(26,26,46,0.72));
-  color: #fff; font-size: 12px; letter-spacing: 0.04em;
-  text-align: center;
-}
-
 /* ═══ S4 履历时间线（视觉化） ═══ */
 .br-timeline {
   position: relative;
@@ -517,31 +490,24 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
     <div class="br-gallery">
       <div class="br-photo">
         <img src="/assets/photos/training/1.jpg" alt="企业培训现场">
-        <div class="br-photo-caption">培训现场 · 1</div>
       </div>
       <div class="br-photo">
         <img src="/assets/photos/training/2.webp" alt="企业培训现场">
-        <div class="br-photo-caption">培训现场 · 2</div>
       </div>
       <div class="br-photo">
         <img src="/assets/photos/training/3.jpg" alt="企业培训现场">
-        <div class="br-photo-caption">培训现场 · 3</div>
       </div>
       <div class="br-photo">
         <img src="/assets/photos/training/4.jpg" alt="企业培训现场">
-        <div class="br-photo-caption">培训现场 · 4</div>
       </div>
       <div class="br-photo">
         <img src="/assets/photos/training/5.jpg" alt="企业培训现场">
-        <div class="br-photo-caption">培训现场 · 5</div>
       </div>
       <div class="br-photo">
         <img src="/assets/photos/training/6.jpg" alt="企业培训现场">
-        <div class="br-photo-caption">培训现场 · 6</div>
       </div>
       <div class="br-photo">
         <img src="/assets/photos/training/7.jpg" alt="企业培训现场">
-        <div class="br-photo-caption">培训现场 · 7</div>
       </div>
     </div>
   </div>
