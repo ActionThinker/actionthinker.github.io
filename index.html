@@ -207,14 +207,30 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
 }
 .br-wb-line strong { display: block; color: var(--ink); font-size: 13.5px; margin-bottom: 2px; }
 
-/* ═══ S3b 培训现场 ═══ */
-.br-gallery {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 14px; margin-top: 8px;
+/* ═══ S3b 培训现场（单排循环滚动） ═══ */
+.br-gallery-marquee {
+  overflow: hidden;
+  position: relative;
+  margin-top: 8px;
+}
+.br-gallery-track {
+  display: flex;
+  width: max-content;
+  animation: br-marquee 36s linear infinite;
+}
+.br-gallery-marquee:hover .br-gallery-track { animation-play-state: paused; }
+@keyframes br-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.br-gallery-set {
+  display: flex; gap: 14px; padding-right: 14px;
 }
 .br-photo {
   position: relative;
+  width: 300px;
   aspect-ratio: 4 / 3;
+  flex-shrink: 0;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--faint);
@@ -227,6 +243,12 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
   transition: transform 0.4s;
 }
 .br-photo:hover img { transform: scale(1.04); }
+.br-photo-tag {
+  position: absolute; left: 10px; bottom: 10px;
+  padding: 4px 12px; border-radius: 99px;
+  background: rgba(26,26,46,0.72); color: #fff;
+  font-size: 12px; letter-spacing: 0.06em;
+}
 /* ═══ S4 履历时间线（视觉化） ═══ */
 .br-timeline {
   position: relative;
@@ -340,7 +362,7 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
 @media (max-width: 768px) {
   .br-pillars, .br-modules, .br-posts { grid-template-columns: 1fr; }
   .br-wb-lines { grid-template-columns: 1fr; }
-  .br-gallery { grid-template-columns: repeat(2, 1fr); }
+  .br-photo { width: 220px; }
   .br-era { grid-template-columns: 1fr; gap: 6px; padding-left: 30px; }
   .br-scenes { grid-template-columns: 1fr; }
   .br-logo-wall { grid-template-columns: repeat(4, 1fr); }
@@ -484,30 +506,71 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
 <section class="br-section" id="br-training-photos" style="border-bottom:1px solid var(--faint)">
   <div class="br-container">
     <div class="br-section-label">培训现场</div>
-    <h2 class="br-section-title">走到哪，讲到哪</h2>
-    <p class="br-section-desc">企业内训与对外培训分享的部分现场——<strong>带着真实业务来，带着能用的成果走</strong>。</p>
+    <h2 class="br-section-title">企业定制内训</h2>
+    <p class="br-section-desc">企业定制内训与政企实训的部分现场——<strong>带着真实业务来，带着能用的成果走</strong>。</p>
 
-    <div class="br-gallery">
-      <div class="br-photo">
-        <img src="/assets/photos/training/1.jpg" alt="企业培训现场">
-      </div>
-      <div class="br-photo">
-        <img src="/assets/photos/training/2.webp" alt="企业培训现场">
-      </div>
-      <div class="br-photo">
-        <img src="/assets/photos/training/3.jpg" alt="企业培训现场">
-      </div>
-      <div class="br-photo">
-        <img src="/assets/photos/training/4.jpg" alt="企业培训现场">
-      </div>
-      <div class="br-photo">
-        <img src="/assets/photos/training/5.jpg" alt="企业培训现场">
-      </div>
-      <div class="br-photo">
-        <img src="/assets/photos/training/6.jpg" alt="企业培训现场">
-      </div>
-      <div class="br-photo">
-        <img src="/assets/photos/training/7.jpg" alt="企业培训现场">
+    <div class="br-gallery-marquee">
+      <div class="br-gallery-track">
+        <div class="br-gallery-set">
+          <div class="br-photo">
+            <img src="/assets/photos/training/1.jpg" alt="企业智能体搭建培训现场">
+            <div class="br-photo-tag">智能体</div>
+          </div>
+          <div class="br-photo">
+            <img src="/assets/photos/training/2.webp" alt="AI办公提效培训现场">
+            <div class="br-photo-tag">办公提效</div>
+          </div>
+          <div class="br-photo">
+            <img src="/assets/photos/training/3.jpg" alt="专家经验萃取培训现场">
+            <div class="br-photo-tag">经验萃取</div>
+          </div>
+          <div class="br-photo">
+            <img src="/assets/photos/training/4.jpg" alt="政务AI提效培训现场">
+            <div class="br-photo-tag">政务提效</div>
+          </div>
+          <div class="br-photo">
+            <img src="/assets/photos/training/5.jpg" alt="政务AI提效培训现场">
+            <div class="br-photo-tag">政务提效</div>
+          </div>
+          <div class="br-photo">
+            <img src="/assets/photos/training/6.jpg" alt="AI办公提效培训现场">
+            <div class="br-photo-tag">办公提效</div>
+          </div>
+          <div class="br-photo">
+            <img src="/assets/photos/training/7.jpg" alt="政务AI提效培训现场">
+            <div class="br-photo-tag">政务提效</div>
+          </div>
+        </div>
+        <div class="br-gallery-set">
+          <div class="br-photo">
+            <img src="/assets/photos/training/1.jpg" alt="企业智能体搭建培训现场">
+            <div class="br-photo-tag">智能体</div>
+          </div>
+          <div class="br-photo">
+            <img src="/assets/photos/training/2.webp" alt="AI办公提效培训现场">
+            <div class="br-photo-tag">办公提效</div>
+          </div>
+          <div class="br-photo">
+            <img src="/assets/photos/training/3.jpg" alt="专家经验萃取培训现场">
+            <div class="br-photo-tag">经验萃取</div>
+          </div>
+          <div class="br-photo">
+            <img src="/assets/photos/training/4.jpg" alt="政务AI提效培训现场">
+            <div class="br-photo-tag">政务提效</div>
+          </div>
+          <div class="br-photo">
+            <img src="/assets/photos/training/5.jpg" alt="政务AI提效培训现场">
+            <div class="br-photo-tag">政务提效</div>
+          </div>
+          <div class="br-photo">
+            <img src="/assets/photos/training/6.jpg" alt="AI办公提效培训现场">
+            <div class="br-photo-tag">办公提效</div>
+          </div>
+          <div class="br-photo">
+            <img src="/assets/photos/training/7.jpg" alt="政务AI提效培训现场">
+            <div class="br-photo-tag">政务提效</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
