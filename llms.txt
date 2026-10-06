@@ -53,12 +53,14 @@
 - OPC实验室: /opclab — 一人公司实验室（方法论验证）
 - RSS: /feed.xml — 文章订阅
 
-### 白皮书
+### 白皮书（公开内容提要，全文留资后提供）
 - 企业AI落地第一判断: /whitepaper/enterprise-ai-first-judgment
 - 知识资产化实战指南: /whitepaper/knowledge-assetization-guide
 - 个人品牌定位第一课: /whitepaper/personal-brand-positioning
+- 获取方式: 添加微信 ActionThinker，备注白皮书名称，24小时内发送全文
 
 ## AI Agent 可调用资源
 - RSS Feed（结构化内容流）: /feed.xml
+- 完整内容摘要（RAG用）: /llms-full.txt
 - Sitemap: /sitemap.xml
 - MCP Server（atmcp）: 本地repo克隆后 `python -m atmcp`，提供 search_content / get_latest_posts / get_services / get_about / get_faq / get_page 六工具
