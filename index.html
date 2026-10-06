@@ -207,6 +207,53 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
 }
 .br-wb-line strong { display: block; color: var(--ink); font-size: 13.5px; margin-bottom: 2px; }
 
+/* ═══ S3b 培训现场 ═══ */
+.br-gallery {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 14px; margin-top: 8px;
+}
+.br-photo-slot {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border: 1.5px dashed var(--faint);
+  border-radius: var(--radius);
+  background: var(--surface);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 6px;
+  overflow: hidden;
+  transition: all 0.25s;
+}
+.br-photo-slot .slot-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 600; color: var(--faint);
+}
+.br-photo-slot .slot-hint {
+  font-size: 11px; color: #C4BEB6; letter-spacing: 0.06em;
+}
+.br-photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--faint);
+  background: var(--bg);
+}
+.br-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+.br-photo:hover img { transform: scale(1.04); }
+.br-photo-caption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 22px 12px 10px;
+  background: linear-gradient(180deg, transparent, rgba(26,26,46,0.72));
+  color: #fff; font-size: 12px; letter-spacing: 0.04em;
+  text-align: center;
+}
+
 /* ═══ S4 履历时间线（视觉化） ═══ */
 .br-timeline {
   position: relative;
@@ -320,6 +367,7 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
 @media (max-width: 768px) {
   .br-pillars, .br-modules, .br-posts { grid-template-columns: 1fr; }
   .br-wb-lines { grid-template-columns: 1fr; }
+  .br-gallery { grid-template-columns: repeat(2, 1fr); }
   .br-era { grid-template-columns: 1fr; gap: 6px; padding-left: 30px; }
   .br-scenes { grid-template-columns: 1fr; }
   .br-logo-wall { grid-template-columns: repeat(4, 1fr); }
@@ -454,6 +502,50 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
           <div class="br-wb-line"><strong>伙伴合作</strong>共建 WorkBuddy 商业生态网络</div>
         </div>
         <div class="br-module-display">合作沟通请加微信</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ S3b 培训现场 ═══ -->
+<section class="br-section" id="br-training-photos" style="border-bottom:1px solid var(--faint)">
+  <div class="br-container">
+    <div class="br-section-label">培训现场</div>
+    <h2 class="br-section-title">走到哪，讲到哪</h2>
+    <p class="br-section-desc">企业内训与对外培训分享的部分现场——<strong>带着真实业务来，带着能用的成果走</strong>。</p>
+
+    <div class="br-gallery">
+      <div class="br-photo-slot">
+        <div class="slot-num">01</div>
+        <div class="slot-hint">照片位 · 素材放 assets/photos/training/01.jpg</div>
+      </div>
+      <div class="br-photo-slot">
+        <div class="slot-num">02</div>
+        <div class="slot-hint">照片位 · 素材放 assets/photos/training/02.jpg</div>
+      </div>
+      <div class="br-photo-slot">
+        <div class="slot-num">03</div>
+        <div class="slot-hint">照片位 · 素材放 assets/photos/training/03.jpg</div>
+      </div>
+      <div class="br-photo-slot">
+        <div class="slot-num">04</div>
+        <div class="slot-hint">照片位 · 素材放 assets/photos/training/04.jpg</div>
+      </div>
+      <div class="br-photo-slot">
+        <div class="slot-num">05</div>
+        <div class="slot-hint">照片位 · 素材放 assets/photos/training/05.jpg</div>
+      </div>
+      <div class="br-photo-slot">
+        <div class="slot-num">06</div>
+        <div class="slot-hint">照片位 · 素材放 assets/photos/training/06.jpg</div>
+      </div>
+      <div class="br-photo-slot">
+        <div class="slot-num">07</div>
+        <div class="slot-hint">照片位 · 素材放 assets/photos/training/07.jpg</div>
+      </div>
+      <div class="br-photo-slot">
+        <div class="slot-num">08</div>
+        <div class="slot-hint">照片位 · 素材放 assets/photos/training/08.jpg</div>
       </div>
     </div>
   </div>
