@@ -1,0 +1,102 @@
+<!-- 《落地一线》01：AI 落地 5 级验证阶梯｜纯 HTML/CSS，文字可读 -->
+<div class="atl-ladder" role="group" aria-labelledby="atl-ladder-title" markdown="0">
+<style>
+  .atl-ladder{--atl-navy:#1a1a2e;--atl-gold:#c4882f;--atl-paper:#fbf9f5;--atl-line:#e6e0d4;--atl-muted:#6b7280;--atl-red:#b23b2e;box-sizing:border-box;max-width:760px;margin:36px auto;padding:28px 28px 24px;background:var(--atl-paper);border:1px solid rgba(26,26,46,.08);border-radius:16px;font-family:"DM Sans","PingFang SC","Microsoft YaHei",sans-serif;color:var(--atl-navy);line-height:1.6;text-align:left}
+  .atl-ladder *,.atl-ladder *::before,.atl-ladder *::after{box-sizing:border-box}
+  .atl-ladder__eyebrow{margin:0 0 6px;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--atl-gold)}
+  .atl-ladder__title{margin:0;font-family:"Cormorant Garamond",Georgia,"Songti SC",serif;font-size:28px;font-weight:600;line-height:1.25;color:var(--atl-navy)}
+  .atl-ladder__deck{margin:8px 0 0;font-size:14px;color:var(--atl-muted)}
+  .atl-ladder__deck strong{color:var(--atl-gold);font-weight:600}
+  .atl-ladder__track{margin-top:26px}
+  .atl-step{display:grid;grid-template-columns:52px minmax(0,1fr);gap:16px}
+  .atl-step__rail{position:relative;display:flex;justify-content:center}
+  .atl-step__rail::after{content:"";position:absolute;top:44px;bottom:-6px;left:50%;width:2px;transform:translateX(-50%);background:var(--atl-line)}
+  .atl-step:last-child .atl-step__rail::after{display:none}
+  .atl-step__num{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:2px solid var(--atl-navy);border-radius:50%;background:var(--atl-paper);font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--atl-navy)}
+  .atl-step--muted .atl-step__num{border-color:var(--atl-line);background:#f3f0ea;color:var(--atl-muted)}
+  .atl-step--key .atl-step__num{border-color:var(--atl-gold);background:var(--atl-gold);color:#fff;box-shadow:0 0 0 5px rgba(196,136,47,.14)}
+  .atl-step__body{padding:4px 0 24px}
+  .atl-step:last-child .atl-step__body{padding-bottom:0}
+  .atl-step__top{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+  .atl-step__name{font-size:15px;font-weight:700;color:var(--atl-navy)}
+  .atl-step--muted .atl-step__name{color:#4b5563}
+  .atl-step__tag{padding:2px 8px;border-radius:999px;background:rgba(196,136,47,.14);font-size:11px;font-weight:700;letter-spacing:.06em;color:#8a5f1f}
+  .atl-step__pass{margin:4px 0 0;font-size:13px;color:var(--atl-muted)}
+  .atl-step__pass strong{color:var(--atl-navy);font-weight:600}
+  .atl-step__fake{margin:4px 0 0;font-size:12px;color:#9b5b4d}
+  .atl-gap{margin:0 0 24px 68px;padding:12px 16px;background:#fdf4f1;border:1px dashed rgba(178,59,46,.45);border-radius:10px}
+  .atl-gap__label{display:inline-block;margin-right:8px;padding:2px 8px;border-radius:999px;background:var(--atl-red);font-size:11px;font-weight:700;letter-spacing:.08em;color:#fff;vertical-align:1px}
+  .atl-gap__text{display:inline;font-size:13px;color:#7a3a30}
+  .atl-gap__text strong{color:var(--atl-red);font-weight:700}
+  .atl-ladder__foot{margin-top:22px;padding-top:16px;border-top:1px solid var(--atl-line);font-size:13px;color:var(--atl-muted)}
+  .atl-ladder__foot strong{color:var(--atl-navy)}
+  @media (max-width:560px){
+    .atl-ladder{margin:28px auto;padding:22px 18px;border-radius:12px}
+    .atl-ladder__title{font-size:23px}
+    .atl-step{grid-template-columns:44px minmax(0,1fr);gap:12px}
+    .atl-step__rail::after{top:40px}
+    .atl-step__body{padding-bottom:20px}
+    .atl-gap{margin-left:56px;padding:10px 12px}
+    .atl-gap__text{display:block;margin-top:6px}
+    .atl-ladder__foot{margin-top:18px}
+  }
+</style>
+
+  <p class="atl-ladder__eyebrow">AI 落地验证框架</p>
+  <h3 class="atl-ladder__title" id="atl-ladder-title">AI 落地 5 级验证阶梯</h3>
+  <p class="atl-ladder__deck">技术过关只是 L1，<strong>客户上手才是 L2</strong></p>
+
+  <div class="atl-ladder__track">
+    <div class="atl-step atl-step--muted">
+      <div class="atl-step__rail"><span class="atl-step__num">L0</span></div>
+      <div class="atl-step__body">
+        <div class="atl-step__top"><span class="atl-step__name">场景识别</span></div>
+        <p class="atl-step__pass"><strong>通过标准：</strong>问题、基线、负责人明确</p>
+        <p class="atl-step__fake">假通过信号：“老板说要做”</p>
+      </div>
+    </div>
+
+    <div class="atl-step atl-step--muted">
+      <div class="atl-step__rail"><span class="atl-step__num">L1</span></div>
+      <div class="atl-step__body">
+        <div class="atl-step__top"><span class="atl-step__name">原型验证</span></div>
+        <p class="atl-step__pass"><strong>通过标准：</strong>技术能跑、Demo 可演示</p>
+        <p class="atl-step__fake">假通过信号：“接口通了”</p>
+      </div>
+    </div>
+
+    <div class="atl-gap">
+      <span class="atl-gap__label">死亡谷</span>
+      <span class="atl-gap__text"><strong>L1 → L2 是分水岭。</strong>技术验证到客户上手，中间隔着流程改造、责任分配、习惯迁移。</span>
+    </div>
+
+    <div class="atl-step atl-step--key">
+      <div class="atl-step__rail"><span class="atl-step__num">L2</span></div>
+      <div class="atl-step__body">
+        <div class="atl-step__top"><span class="atl-step__name">试点上手</span><span class="atl-step__tag">分水岭</span></div>
+        <p class="atl-step__pass"><strong>通过标准：</strong>真实用户在真实流程里用</p>
+        <p class="atl-step__fake">假通过信号：“培训过了”</p>
+      </div>
+    </div>
+
+    <div class="atl-step">
+      <div class="atl-step__rail"><span class="atl-step__num">L3</span></div>
+      <div class="atl-step__body">
+        <div class="atl-step__top"><span class="atl-step__name">生产运行</span></div>
+        <p class="atl-step__pass"><strong>通过标准：</strong>稳定、权限、治理、规模</p>
+        <p class="atl-step__fake">假通过信号：“试点挺顺利”</p>
+      </div>
+    </div>
+
+    <div class="atl-step">
+      <div class="atl-step__rail"><span class="atl-step__num">L4</span></div>
+      <div class="atl-step__body">
+        <div class="atl-step__top"><span class="atl-step__name">价值复利</span></div>
+        <p class="atl-step__pass"><strong>通过标准：</strong>ROI 可计量、资产可复用</p>
+        <p class="atl-step__fake">假通过信号：“感觉效果不错”</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="atl-ladder__foot"><strong>一句话：</strong>没有客户上手的 POC，只是昂贵的 Demo。</p>
+</div>
