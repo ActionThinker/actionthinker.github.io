@@ -73,6 +73,14 @@
     },
     {
       "@type": "Question",
+      "name": "POC 通过了，为什么客户还是不用？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "因为 POC 通过只证明技术能跑，属于 L1 原型验证；客户在真实工作流里用起来，才是 L2 试点上手。L1 到 L2 之间隔着流程改造、责任分配和习惯迁移，这一段最容易没人管，项目就停在那了。判断标准很简单：不问“系统能不能跑”，问“谁在用、在哪个流程用、用完改了哪个数字”。"
+      }
+    },
+    {
+      "@type": "Question",
       "name": "知识资产化是什么意思？",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -145,14 +153,22 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "{{ page.title | xml_escape }}",
+  "description": "{{ page.subtitle | default: page.excerpt | default: page.title | strip_html | truncate: 160 | xml_escape }}",
   "author": {
     "@type": "Person",
     "name": "陈露",
     "url": "{{ site.url }}"
   },
-  "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
   "url": "{{ site.url }}{{ page.url }}",
-  "description": "{{ page.subtitle | default: page.title | xml_escape }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "keywords": "{{ page.tags | join: ', ' | xml_escape }}",
+  "articleSection": "{{ page.category | default: page.tags[0] | default: '观点' | xml_escape }}",
+  "inLanguage": "zh-CN",
   "publisher": {
     "@type": "Person",
     "name": "陈露"
