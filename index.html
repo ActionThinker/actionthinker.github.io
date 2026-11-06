@@ -300,6 +300,39 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
 .br-clients { font-size: 14px; color: var(--muted); line-height: 2; margin-top: 6px; }
 .br-clients strong { color: var(--ink); }
 
+/* ═══ S4c 专业认证 ═══ */
+.br-cert {
+  display: grid; grid-template-columns: 300px 1fr; gap: 26px;
+  align-items: center; padding: 20px;
+  border: 1px solid rgba(196,136,47,0.25); border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--gold-light) 0%, #fff 68%);
+}
+.br-cert-thumb {
+  position: relative; display: block; width: 100%; padding: 0;
+  border: 1px solid var(--faint); border-radius: 10px; overflow: hidden;
+  background: #fff; cursor: zoom-in; box-shadow: 0 4px 16px rgba(26,26,46,0.06);
+}
+.br-cert-thumb img { display: block; width: 100%; height: auto; transition: transform 0.35s; }
+.br-cert-thumb:hover img { transform: scale(1.025); }
+.br-cert-zoom {
+  display: block; padding: 7px 10px; text-align: center;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.05em;
+  color: var(--gold-dark); background: rgba(255,255,255,0.94);
+}
+.br-cert-body { min-width: 0; }
+.br-cert-kicker {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold-dark); margin-bottom: 8px;
+}
+.br-cert-title { font-size: 21px; line-height: 1.4; margin-bottom: 10px; }
+.br-page p.br-cert-desc { font-size: 13px; color: var(--muted); line-height: 1.8; margin-bottom: 12px; }
+.br-cert-meta { font-size: 11.5px; color: var(--muted); }
+.br-cert-meta strong { color: var(--ink); }
+@media (max-width: 640px) {
+  .br-cert { grid-template-columns: 1fr; gap: 18px; padding: 16px; }
+  .br-cert-thumb { max-width: 420px; margin: 0 auto; }
+}
+
 /* ═══ Logo 墙 ═══ */
 .br-logo-wall {
   display: grid; grid-template-columns: repeat(5, 1fr);
@@ -496,6 +529,7 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
           <div class="br-wb-line"><strong>企业培训</strong>基于 WorkBuddy 平台的政企 AI 办公提效实训</div>
           <div class="br-wb-line"><strong>伙伴合作</strong>共建 WorkBuddy 商业生态网络</div>
         </div>
+        <div class="br-module-evidence">🎓 腾讯云认证 · WorkBuddy 效率智能体 OPC 从业者</div>
         <div class="br-module-display">合作沟通请加微信</div>
       </div>
     </div>
@@ -657,6 +691,22 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
     </div>
 
     <div class="br-proof-block">
+      <div class="br-proof-label">🎓 专业认证</div>
+      <div class="br-cert">
+        <button type="button" class="br-cert-thumb" onclick="openCert()" aria-label="查看腾讯云认证证书大图">
+          <img src="/assets/certificates/tencent-workbuddy-opc-practitioner-card.jpg" alt="腾讯云认证证书：腾讯 WorkBuddy 效率智能体 OPC 从业者（陈露）" loading="lazy">
+          <span class="br-cert-zoom">点击查看证书大图 →</span>
+        </button>
+        <div class="br-cert-body">
+          <div class="br-cert-kicker">腾讯云专项认证 · Practitioner</div>
+          <h3 class="br-cert-title">腾讯 WorkBuddy 效率智能体 OPC 从业者</h3>
+          <p class="br-cert-desc">腾讯云官方专项认证，验证 WorkBuddy 效率智能体的方案设计、搭建与运营能力——作为 WorkBuddy 商业生态业务的能力背书。</p>
+          <div class="br-cert-meta"><strong>证书编号</strong> TCLC-CWB-10996 · <strong>有效期至</strong> 2028.11.06</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="br-proof-block">
       <div class="br-proof-label">🌱 社会创新 · 公益顾问</div>
       <div class="br-proof-bar">
         <span class="br-proof-tag">DFC 中国</span>
@@ -766,6 +816,14 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
   </div>
 </section>
 
+<!-- Certificate Modal -->
+<div id="cert-modal" onclick="closeCert()" role="dialog" aria-modal="true" aria-label="腾讯云认证证书" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,20,30,0.85);z-index:10000;align-items:center;justify-content:center;padding:24px">
+  <div onclick="event.stopPropagation()" style="position:relative;max-width:1100px;width:100%;max-height:92vh;background:#fff;border-radius:14px;padding:12px;box-shadow:0 24px 80px rgba(0,0,0,0.35)">
+    <button onclick="closeCert()" aria-label="关闭证书大图" style="position:absolute;top:8px;right:12px;z-index:2;width:34px;height:34px;border:none;border-radius:50%;background:rgba(255,255,255,0.92);color:#555;font-size:20px;line-height:1;cursor:pointer">&times;</button>
+    <img id="cert-modal-img" src="" alt="腾讯云认证证书：腾讯 WorkBuddy 效率智能体 OPC 从业者（陈露）" style="display:block;width:100%;height:auto;max-height:calc(92vh - 24px);object-fit:contain;border-radius:8px">
+  </div>
+</div>
+
 <!-- WeChat Modal -->
 <div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,26,46,0.5);z-index:9999;align-items:center;justify-content:center">
   <div onclick="event.stopPropagation()" style="background:#fff;border-radius:20px;padding:40px 32px;text-align:center;max-width:380px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2)">
@@ -778,6 +836,16 @@ a.br-btn-outline:hover { border-color: var(--gold); color: var(--gold); transfor
 </div>
 <script>
 function openWechat(){var m=document.getElementById('wechat-modal');m.style.display='flex';}
+function openCert(){
+  var m=document.getElementById('cert-modal');
+  var img=document.getElementById('cert-modal-img');
+  if(img.getAttribute('src')!=='/assets/certificates/tencent-workbuddy-opc-practitioner.jpg'){
+    img.setAttribute('src','/assets/certificates/tencent-workbuddy-opc-practitioner.jpg');
+  }
+  m.style.display='flex';
+}
+function closeCert(){var m=document.getElementById('cert-modal');if(m)m.style.display='none';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeCert();}});
 </script>
 
 </div><!-- /.br-page -->
@@ -803,6 +871,20 @@ function openWechat(){var m=document.getElementById('wechat-modal');m.style.disp
     "五卡知识体系",
     "六维品牌诊断模型"
   ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "腾讯 WorkBuddy 效率智能体 OPC 从业者",
+    "credentialCategory": "腾讯云专项认证（Practitioner）",
+    "identifier": "TCLC-CWB-10996",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "腾讯云"
+    },
+    "validIn": {
+      "@type": "AdministrativeArea",
+      "name": "中国"
+    }
+  },
   "sameAs": [
     "https://github.com/actionthinker",
     "https://www.digitaling.com/people/10035598"

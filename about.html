@@ -200,6 +200,70 @@ body { padding-top: 50px; background: #ffffff; }
 }
 .ab-proof-tag strong { color: var(--ink); }
 
+/* 专业认证 */
+.ab-cert {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 20px;
+  margin: 8px 0 28px;
+  border: 1px solid rgba(196,136,47,0.25);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--gold-light) 0%, #fff 68%);
+}
+.ab-cert-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--faint);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  cursor: zoom-in;
+  box-shadow: 0 4px 16px rgba(26,26,46,0.06);
+}
+.ab-cert-thumb img { display: block; width: 100%; height: auto; transition: transform 0.35s; }
+.ab-cert-thumb:hover img { transform: scale(1.025); }
+.ab-cert-zoom {
+  display: block;
+  padding: 7px 10px;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--gold-dark);
+  background: rgba(255,255,255,0.94);
+}
+.ab-cert-body { min-width: 0; }
+.ab-cert-kicker {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 8px;
+}
+.ab-cert-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.ab-cert-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+.ab-cert-meta { font-family: 'DM Sans', sans-serif; font-size: 11.5px; color: var(--muted); }
+.ab-cert-meta strong { color: var(--ink); }
+
 .ab-clients {
   font-size: 14px;
   color: var(--muted);
@@ -226,6 +290,8 @@ body { padding-top: 50px; background: #ffffff; }
   .ab-container { padding: 0 18px; }
   .ab-section { padding: 36px 0; }
   .ab-hero-desc { font-size: 16px; }
+  .ab-cert { grid-template-columns: 1fr; gap: 18px; padding: 16px; }
+  .ab-cert-thumb { max-width: 420px; margin: 0 auto; }
 }
 </style>
 
@@ -367,6 +433,20 @@ body { padding-top: 50px; background: #ffffff; }
     <span class="ab-proof-tag"><strong>艾菲奖</strong> 专家评委</span>
   </div>
 
+  <p class="ab-body" style="margin-bottom:24px"><strong>专业认证：</strong></p>
+  <div class="ab-cert">
+    <button type="button" class="ab-cert-thumb" onclick="openCert()" aria-label="查看腾讯云认证证书大图">
+      <img src="/assets/certificates/tencent-workbuddy-opc-practitioner-card.jpg" alt="腾讯云认证证书：腾讯 WorkBuddy 效率智能体 OPC 从业者（陈露）" loading="lazy">
+      <span class="ab-cert-zoom">点击查看证书大图 →</span>
+    </button>
+    <div class="ab-cert-body">
+      <div class="ab-cert-kicker">腾讯云专项认证 · Practitioner</div>
+      <h3 class="ab-cert-title">腾讯 WorkBuddy 效率智能体 OPC 从业者</h3>
+      <p class="ab-cert-desc">腾讯云官方专项认证，验证 WorkBuddy 效率智能体的方案设计、搭建与运营能力——作为 WorkBuddy 商业生态业务的能力背书。</p>
+      <div class="ab-cert-meta"><strong>证书编号</strong> TCLC-CWB-10996 · <strong>有效期至</strong> 2028.11.06</div>
+    </div>
+  </div>
+
   <p class="ab-body" style="margin-bottom:24px"><strong>社会创新 · 公益顾问：</strong></p>
   <div class="ab-proof-bar">
     <span class="ab-proof-tag">DFC 中国</span>
@@ -416,6 +496,14 @@ body { padding-top: 50px; background: #ffffff; }
 </div>
 </div>
 
+<!-- Certificate Modal -->
+<div id="cert-modal" onclick="closeCert()" role="dialog" aria-modal="true" aria-label="腾讯云认证证书" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,20,30,0.85);z-index:10000;align-items:center;justify-content:center;padding:24px">
+  <div onclick="event.stopPropagation()" style="position:relative;max-width:1100px;width:100%;max-height:92vh;background:#fff;border-radius:14px;padding:12px;box-shadow:0 24px 80px rgba(0,0,0,0.35)">
+    <button onclick="closeCert()" aria-label="关闭证书大图" style="position:absolute;top:8px;right:12px;z-index:2;width:34px;height:34px;border:none;border-radius:50%;background:rgba(255,255,255,0.92);color:#555;font-size:20px;line-height:1;cursor:pointer">&times;</button>
+    <img id="cert-modal-img" src="" alt="腾讯云认证证书：腾讯 WorkBuddy 效率智能体 OPC 从业者（陈露）" style="display:block;width:100%;height:auto;max-height:calc(92vh - 24px);object-fit:contain;border-radius:8px">
+  </div>
+</div>
+
 <!-- WeChat Modal -->
 <div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,26,46,0.5);z-index:9999;align-items:center;justify-content:center">
   <div onclick="event.stopPropagation()" style="background:#fff;border-radius:20px;padding:40px 32px;text-align:center;max-width:380px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2)">
@@ -428,6 +516,16 @@ body { padding-top: 50px; background: #ffffff; }
 </div>
 <script>
 function openWechat(){var m=document.getElementById('wechat-modal');m.style.display='flex';}
+function openCert(){
+  var m=document.getElementById('cert-modal');
+  var img=document.getElementById('cert-modal-img');
+  if(img.getAttribute('src')!=='/assets/certificates/tencent-workbuddy-opc-practitioner.jpg'){
+    img.setAttribute('src','/assets/certificates/tencent-workbuddy-opc-practitioner.jpg');
+  }
+  m.style.display='flex';
+}
+function closeCert(){var m=document.getElementById('cert-modal');if(m)m.style.display='none';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeCert();}});
 </script>
 
 <script type="application/ld+json">
@@ -450,6 +548,20 @@ function openWechat(){var m=document.getElementById('wechat-modal');m.style.disp
     "企业AI化转型",
     "专家经验萃取"
   ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "腾讯 WorkBuddy 效率智能体 OPC 从业者",
+    "credentialCategory": "腾讯云专项认证（Practitioner）",
+    "identifier": "TCLC-CWB-10996",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "腾讯云"
+    },
+    "validIn": {
+      "@type": "AdministrativeArea",
+      "name": "中国"
+    }
+  },
   "sameAs": [
     "https://github.com/actionthinker",
     "https://www.actionthinker.com"
